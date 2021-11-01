@@ -1,0 +1,1401 @@
+thm lemma__parallelcollinear :
+  plth.Prf
+    (plth.forall
+       euclidean__axioms.Point
+       (A:(plth.El euclidean__axioms.Point) =>
+        plth.forall
+          euclidean__axioms.Point
+          (B:(plth.El euclidean__axioms.Point) =>
+           plth.forall
+             euclidean__axioms.Point
+             (C:(plth.El euclidean__axioms.Point) =>
+              plth.forall
+                euclidean__axioms.Point
+                (c:(plth.El euclidean__axioms.Point) =>
+                 plth.forall
+                   euclidean__axioms.Point
+                   (d:(plth.El euclidean__axioms.Point) =>
+                    plth.imp
+                      (euclidean__defs.TP A B c d)
+                      (plth.imp
+                         (euclidean__axioms.Col c d C)
+                         (plth.imp (euclidean__axioms.neq C d) (euclidean__defs.TP A B C d)))))))))
+  :=
+  A:(plth.El euclidean__axioms.Point) =>
+  B:(plth.El euclidean__axioms.Point) =>
+  C:(plth.El euclidean__axioms.Point) =>
+  c:(plth.El euclidean__axioms.Point) =>
+  d:(plth.El euclidean__axioms.Point) =>
+  H:(plth.Prf (euclidean__defs.TP A B c d)) =>
+  H0:(plth.Prf (euclidean__axioms.Col c d C)) =>
+  H1:(plth.Prf (euclidean__axioms.neq C d)) =>
+  (H2:(plth.Prf
+         (plth.and
+            (euclidean__axioms.neq A B)
+            (plth.and
+               (euclidean__axioms.neq c d)
+               (plth.and
+                  (plth.not (euclidean__defs.Meet A B c d))
+                  (euclidean__defs.OS c d A B))))) =>
+   (H3:(plth.Prf
+          (plth.or
+             (euclidean__axioms.eq c d)
+             (plth.or
+                (euclidean__axioms.eq c C)
+                (plth.or
+                   (euclidean__axioms.eq d C)
+                   (plth.or
+                      (euclidean__axioms.BetS d c C)
+                      (plth.or
+                         (euclidean__axioms.BetS c d C)
+                         (euclidean__axioms.BetS c C d))))))) =>
+    (H4:(plth.Prf (euclidean__defs.TP A B C d)) => H4)
+      ((H4:(plth.Prf
+              (plth.or
+                 (euclidean__axioms.eq c d)
+                 (plth.or
+                    (euclidean__axioms.eq c C)
+                    (plth.or
+                       (euclidean__axioms.eq d C)
+                       (plth.or
+                          (euclidean__axioms.BetS d c C)
+                          (plth.or
+                             (euclidean__axioms.BetS c d C)
+                             (euclidean__axioms.BetS c C d))))))) =>
+        (__TmpHyp:(plth.Prf
+                     (plth.or
+                        (euclidean__axioms.eq c d)
+                        (plth.or
+                           (euclidean__axioms.eq c C)
+                           (plth.or
+                              (euclidean__axioms.eq d C)
+                              (plth.or
+                                 (euclidean__axioms.BetS d c C)
+                                 (plth.or
+                                    (euclidean__axioms.BetS c d C)
+                                    (euclidean__axioms.BetS c C d))))))) =>
+         logic.or__ind
+           (euclidean__axioms.eq c d)
+           (plth.or
+              (euclidean__axioms.eq c C)
+              (plth.or
+                 (euclidean__axioms.eq d C)
+                 (plth.or
+                    (euclidean__axioms.BetS d c C)
+                    (plth.or
+                       (euclidean__axioms.BetS c d C)
+                       (euclidean__axioms.BetS c C d)))))
+           (euclidean__defs.TP A B C d)
+           (H5:(plth.Prf (euclidean__axioms.eq c d)) =>
+            (H6:(plth.Prf (plth.not (plth.not (euclidean__defs.TP A B C d)))) =>
+             euclidean__tactics.NNPP
+               (euclidean__defs.TP A B C d)
+               (H7:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
+                logic.and__ind
+                  (plth.not (euclidean__axioms.eq A B))
+                  (plth.and
+                     (plth.not (euclidean__axioms.eq c d))
+                     (plth.and
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B)))
+                  plth.false
+                  (H8:(plth.Prf (plth.not (euclidean__axioms.eq A B))) =>
+                   H9:(plth.Prf
+                         (plth.and
+                            (plth.not (euclidean__axioms.eq c d))
+                            (plth.and
+                               (plth.not (euclidean__defs.Meet A B c d))
+                               (euclidean__defs.OS c d A B)))) =>
+                   logic.and__ind
+                     (plth.not (euclidean__axioms.eq c d))
+                     (plth.and
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B))
+                     plth.false
+                     (H10:(plth.Prf (plth.not (euclidean__axioms.eq c d))) =>
+                      H11:(plth.Prf
+                             (plth.and
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B))) =>
+                      logic.and__ind
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B)
+                        plth.false
+                        (H12:(plth.Prf
+                                (plth.not (euclidean__defs.Meet A B c d))) =>
+                         H13:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                         (H14:(plth.Prf plth.false) =>
+                          (H15:(plth.Prf plth.false) =>
+                           logic.false__ind plth.false H15)
+                            (H6 H7))
+                           (H10 H5))
+                        H11)
+                     H9)
+                  H2))
+              (H6:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
+               logic.and__ind
+                 (euclidean__axioms.neq A B)
+                 (plth.and
+                    (euclidean__axioms.neq c d)
+                    (plth.and
+                       (plth.not (euclidean__defs.Meet A B c d))
+                       (euclidean__defs.OS c d A B)))
+                 plth.false
+                 (H7:(plth.Prf (euclidean__axioms.neq A B)) =>
+                  H8:(plth.Prf
+                        (plth.and
+                           (euclidean__axioms.neq c d)
+                           (plth.and
+                              (plth.not (euclidean__defs.Meet A B c d))
+                              (euclidean__defs.OS c d A B)))) =>
+                  logic.and__ind
+                    (euclidean__axioms.neq c d)
+                    (plth.and
+                       (plth.not (euclidean__defs.Meet A B c d))
+                       (euclidean__defs.OS c d A B))
+                    plth.false
+                    (H9:(plth.Prf (euclidean__axioms.neq c d)) =>
+                     H10:(plth.Prf
+                            (plth.and
+                               (plth.not (euclidean__defs.Meet A B c d))
+                               (euclidean__defs.OS c d A B))) =>
+                     logic.and__ind
+                       (plth.not (euclidean__defs.Meet A B c d))
+                       (euclidean__defs.OS c d A B)
+                       plth.false
+                       (H11:(plth.Prf (plth.not (euclidean__defs.Meet A B c d))) =>
+                        H12:(plth.Prf (euclidean__defs.OS c d A B)) => H9 H5)
+                       H10)
+                    H8)
+                 H2))
+           (H5:(plth.Prf
+                  (plth.or
+                     (euclidean__axioms.eq c C)
+                     (plth.or
+                        (euclidean__axioms.eq d C)
+                        (plth.or
+                           (euclidean__axioms.BetS d c C)
+                           (plth.or
+                              (euclidean__axioms.BetS c d C)
+                              (euclidean__axioms.BetS c C d)))))) =>
+            logic.or__ind
+              (euclidean__axioms.eq c C)
+              (plth.or
+                 (euclidean__axioms.eq d C)
+                 (plth.or
+                    (euclidean__axioms.BetS d c C)
+                    (plth.or
+                       (euclidean__axioms.BetS c d C)
+                       (euclidean__axioms.BetS c C d))))
+              (euclidean__defs.TP A B C d)
+              (H6:(plth.Prf (euclidean__axioms.eq c C)) =>
+               (H7:(plth.Prf (euclidean__defs.TP A B C d)) => H7)
+                 (logic.and__ind
+                    (euclidean__axioms.neq A B)
+                    (plth.and
+                       (euclidean__axioms.neq c d)
+                       (plth.and
+                          (plth.not (euclidean__defs.Meet A B c d))
+                          (euclidean__defs.OS c d A B)))
+                    (euclidean__defs.TP A B C d)
+                    (H7:(plth.Prf (euclidean__axioms.neq A B)) =>
+                     H8:(plth.Prf
+                           (plth.and
+                              (euclidean__axioms.neq c d)
+                              (plth.and
+                                 (plth.not (euclidean__defs.Meet A B c d))
+                                 (euclidean__defs.OS c d A B)))) =>
+                     logic.and__ind
+                       (euclidean__axioms.neq c d)
+                       (plth.and
+                          (plth.not (euclidean__defs.Meet A B c d))
+                          (euclidean__defs.OS c d A B))
+                       (euclidean__defs.TP A B C d)
+                       (H9:(plth.Prf (euclidean__axioms.neq c d)) =>
+                        H10:(plth.Prf
+                               (plth.and
+                                  (plth.not (euclidean__defs.Meet A B c d))
+                                  (euclidean__defs.OS c d A B))) =>
+                        logic.and__ind
+                          (plth.not (euclidean__defs.Meet A B c d))
+                          (euclidean__defs.OS c d A B)
+                          (euclidean__defs.TP A B C d)
+                          (H11:(plth.Prf
+                                  (plth.not (euclidean__defs.Meet A B c d))) =>
+                           H12:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                           logic.eq__ind__r
+                             euclidean__axioms.Point
+                             C
+                             (c0:(plth.El euclidean__axioms.Point) =>
+                              plth.imp
+                                (euclidean__defs.TP A B c0 d)
+                                (plth.imp
+                                   (euclidean__axioms.Col c0 d C)
+                                   (plth.imp
+                                      (euclidean__axioms.neq c0 d)
+                                      (plth.imp
+                                         (plth.not
+                                            (euclidean__defs.Meet A B c0 d))
+                                         (plth.imp
+                                            (euclidean__defs.OS c0 d A B)
+                                            (euclidean__defs.TP A B C d))))))
+                             (H13:(plth.Prf (euclidean__defs.TP A B C d)) =>
+                              H14:(plth.Prf (euclidean__axioms.Col C d C)) =>
+                              H15:(plth.Prf (euclidean__axioms.neq C d)) =>
+                              H16:(plth.Prf
+                                     (plth.not (euclidean__defs.Meet A B C d))) =>
+                              H17:(plth.Prf (euclidean__defs.OS C d A B)) => H13)
+                             c
+                             H6
+                             H
+                             H0
+                             H9
+                             H11
+                             H12)
+                          H10)
+                       H8)
+                    H2))
+              (H6:(plth.Prf
+                     (plth.or
+                        (euclidean__axioms.eq d C)
+                        (plth.or
+                           (euclidean__axioms.BetS d c C)
+                           (plth.or
+                              (euclidean__axioms.BetS c d C)
+                              (euclidean__axioms.BetS c C d))))) =>
+               logic.or__ind
+                 (euclidean__axioms.eq d C)
+                 (plth.or
+                    (euclidean__axioms.BetS d c C)
+                    (plth.or
+                       (euclidean__axioms.BetS c d C)
+                       (euclidean__axioms.BetS c C d)))
+                 (euclidean__defs.TP A B C d)
+                 (H7:(plth.Prf (euclidean__axioms.eq d C)) =>
+                  (H8:(plth.Prf
+                         (plth.not (plth.not (euclidean__defs.TP A B C d)))) =>
+                   euclidean__tactics.NNPP
+                     (euclidean__defs.TP A B C d)
+                     (H9:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
+                      logic.and__ind
+                        (plth.not (euclidean__axioms.eq A B))
+                        (plth.and
+                           (plth.not (euclidean__axioms.eq c d))
+                           (plth.and
+                              (plth.not (euclidean__defs.Meet A B c d))
+                              (euclidean__defs.OS c d A B)))
+                        plth.false
+                        (H10:(plth.Prf (plth.not (euclidean__axioms.eq A B))) =>
+                         H11:(plth.Prf
+                                (plth.and
+                                   (plth.not (euclidean__axioms.eq c d))
+                                   (plth.and
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))
+                                      (euclidean__defs.OS c d A B)))) =>
+                         logic.and__ind
+                           (plth.not (euclidean__axioms.eq c d))
+                           (plth.and
+                              (plth.not (euclidean__defs.Meet A B c d))
+                              (euclidean__defs.OS c d A B))
+                           plth.false
+                           (H12:(plth.Prf
+                                   (plth.not (euclidean__axioms.eq c d))) =>
+                            H13:(plth.Prf
+                                   (plth.and
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))
+                                      (euclidean__defs.OS c d A B))) =>
+                            logic.and__ind
+                              (plth.not (euclidean__defs.Meet A B c d))
+                              (euclidean__defs.OS c d A B)
+                              plth.false
+                              (H14:(plth.Prf
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))) =>
+                               H15:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                               (H16:(plth.Prf plth.false) =>
+                                logic.false__ind plth.false H16)
+                                 (H8 H9))
+                              H13)
+                           H11)
+                        H2))
+                    (H8:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
+                     (H9:(plth.Prf (euclidean__axioms.eq C d)) => H1 H9)
+                       (logic.and__ind
+                          (euclidean__axioms.neq A B)
+                          (plth.and
+                             (euclidean__axioms.neq c d)
+                             (plth.and
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B)))
+                          (euclidean__axioms.eq C d)
+                          (H9:(plth.Prf (euclidean__axioms.neq A B)) =>
+                           H10:(plth.Prf
+                                  (plth.and
+                                     (euclidean__axioms.neq c d)
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))
+                                        (euclidean__defs.OS c d A B)))) =>
+                           logic.and__ind
+                             (euclidean__axioms.neq c d)
+                             (plth.and
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B))
+                             (euclidean__axioms.eq C d)
+                             (H11:(plth.Prf (euclidean__axioms.neq c d)) =>
+                              H12:(plth.Prf
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))
+                                        (euclidean__defs.OS c d A B))) =>
+                              logic.and__ind
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B)
+                                (euclidean__axioms.eq C d)
+                                (H13:(plth.Prf
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))) =>
+                                 H14:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                                 lemma__equalitysymmetric.lemma__equalitysymmetric
+                                   C
+                                   d
+                                   H7)
+                                H12)
+                             H10)
+                          H2)))
+                 (H7:(plth.Prf
+                        (plth.or
+                           (euclidean__axioms.BetS d c C)
+                           (plth.or
+                              (euclidean__axioms.BetS c d C)
+                              (euclidean__axioms.BetS c C d)))) =>
+                  logic.or__ind
+                    (euclidean__axioms.BetS d c C)
+                    (plth.or
+                       (euclidean__axioms.BetS c d C)
+                       (euclidean__axioms.BetS c C d))
+                    (euclidean__defs.TP A B C d)
+                    (H8:(plth.Prf (euclidean__axioms.BetS d c C)) =>
+                     (H9:(plth.Prf (euclidean__axioms.BetS C c d)) =>
+                      (H10:(plth.Prf (euclidean__defs.TP A B C d)) => H10)
+                        (logic.and__ind
+                           (euclidean__axioms.neq A B)
+                           (plth.and
+                              (euclidean__axioms.neq c d)
+                              (plth.and
+                                 (plth.not (euclidean__defs.Meet A B c d))
+                                 (euclidean__defs.OS c d A B)))
+                           (euclidean__defs.TP A B C d)
+                           (H10:(plth.Prf (euclidean__axioms.neq A B)) =>
+                            H11:(plth.Prf
+                                   (plth.and
+                                      (euclidean__axioms.neq c d)
+                                      (plth.and
+                                         (plth.not
+                                            (euclidean__defs.Meet A B c d))
+                                         (euclidean__defs.OS c d A B)))) =>
+                            logic.and__ind
+                              (euclidean__axioms.neq c d)
+                              (plth.and
+                                 (plth.not (euclidean__defs.Meet A B c d))
+                                 (euclidean__defs.OS c d A B))
+                              (euclidean__defs.TP A B C d)
+                              (H12:(plth.Prf (euclidean__axioms.neq c d)) =>
+                               H13:(plth.Prf
+                                      (plth.and
+                                         (plth.not
+                                            (euclidean__defs.Meet A B c d))
+                                         (euclidean__defs.OS c d A B))) =>
+                               logic.and__ind
+                                 (plth.not (euclidean__defs.Meet A B c d))
+                                 (euclidean__defs.OS c d A B)
+                                 (euclidean__defs.TP A B C d)
+                                 (H14:(plth.Prf
+                                         (plth.not
+                                            (euclidean__defs.Meet A B c d))) =>
+                                  H15:(plth.Prf
+                                         (euclidean__defs.OS c d A B)) =>
+                                  lemma__parallelcollinear1.lemma__parallelcollinear1
+                                    A
+                                    B
+                                    C
+                                    c
+                                    d
+                                    H
+                                    H9)
+                                 H13)
+                              H11)
+                           H2))
+                       (logic.and__ind
+                          (euclidean__axioms.neq A B)
+                          (plth.and
+                             (euclidean__axioms.neq c d)
+                             (plth.and
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B)))
+                          (euclidean__axioms.BetS C c d)
+                          (H9:(plth.Prf (euclidean__axioms.neq A B)) =>
+                           H10:(plth.Prf
+                                  (plth.and
+                                     (euclidean__axioms.neq c d)
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))
+                                        (euclidean__defs.OS c d A B)))) =>
+                           logic.and__ind
+                             (euclidean__axioms.neq c d)
+                             (plth.and
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B))
+                             (euclidean__axioms.BetS C c d)
+                             (H11:(plth.Prf (euclidean__axioms.neq c d)) =>
+                              H12:(plth.Prf
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))
+                                        (euclidean__defs.OS c d A B))) =>
+                              logic.and__ind
+                                (plth.not (euclidean__defs.Meet A B c d))
+                                (euclidean__defs.OS c d A B)
+                                (euclidean__axioms.BetS C c d)
+                                (H13:(plth.Prf
+                                        (plth.not
+                                           (euclidean__defs.Meet A B c d))) =>
+                                 H14:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                                 euclidean__axioms.axiom__betweennesssymmetry
+                                   d
+                                   c
+                                   C
+                                   H8)
+                                H12)
+                             H10)
+                          H2))
+                    (H8:(plth.Prf
+                           (plth.or
+                              (euclidean__axioms.BetS c d C)
+                              (euclidean__axioms.BetS c C d))) =>
+                     logic.or__ind
+                       (euclidean__axioms.BetS c d C)
+                       (euclidean__axioms.BetS c C d)
+                       (euclidean__defs.TP A B C d)
+                       (H9:(plth.Prf (euclidean__axioms.BetS c d C)) =>
+                        (H10:(plth.Prf (euclidean__axioms.BetS C d c)) =>
+                         (H11:(plth.Prf (euclidean__defs.TP A B d c)) =>
+                          (H12:(plth.Prf (euclidean__defs.TP A B C c)) =>
+                           (H13:(plth.Prf
+                                   (euclidean__defs.TP A B c C)) =>
+                            (H14:(plth.Prf
+                                    (euclidean__defs.TP A B d C)) =>
+                             (H15:(plth.Prf
+                                     (euclidean__defs.TP
+                                        A
+                                        B
+                                        C
+                                        d)) =>
+                              H15)
+                               (logic.and__ind
+                                  (euclidean__axioms.neq A B)
+                                  (plth.and
+                                     (euclidean__axioms.neq c d)
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet
+                                              A
+                                              B
+                                              c
+                                              d))
+                                        (euclidean__defs.OS
+                                           c
+                                           d
+                                           A
+                                           B)))
+                                  (euclidean__defs.TP A B C d)
+                                  (H15:(plth.Prf
+                                          (euclidean__axioms.neq
+                                             A
+                                             B)) =>
+                                   H16:(plth.Prf
+                                          (plth.and
+                                             (euclidean__axioms.neq
+                                                c
+                                                d)
+                                             (plth.and
+                                                (plth.not
+                                                   (euclidean__defs.Meet
+                                                      A
+                                                      B
+                                                      c
+                                                      d))
+                                                (euclidean__defs.OS
+                                                   c
+                                                   d
+                                                   A
+                                                   B)))) =>
+                                   logic.and__ind
+                                     (euclidean__axioms.neq c d)
+                                     (plth.and
+                                        (plth.not
+                                           (euclidean__defs.Meet
+                                              A
+                                              B
+                                              c
+                                              d))
+                                        (euclidean__defs.OS
+                                           c
+                                           d
+                                           A
+                                           B))
+                                     (euclidean__defs.TP A B C d)
+                                     (H17:(plth.Prf
+                                             (euclidean__axioms.neq
+                                                c
+                                                d)) =>
+                                      H18:(plth.Prf
+                                             (plth.and
+                                                (plth.not
+                                                   (euclidean__defs.Meet
+                                                      A
+                                                      B
+                                                      c
+                                                      d))
+                                                (euclidean__defs.OS
+                                                   c
+                                                   d
+                                                   A
+                                                   B))) =>
+                                      logic.and__ind
+                                        (plth.not
+                                           (euclidean__defs.Meet
+                                              A
+                                              B
+                                              c
+                                              d))
+                                        (euclidean__defs.OS
+                                           c
+                                           d
+                                           A
+                                           B)
+                                        (euclidean__defs.TP
+                                           A
+                                           B
+                                           C
+                                           d)
+                                        (H19:(plth.Prf
+                                                (plth.not
+                                                   (euclidean__defs.Meet
+                                                      A
+                                                      B
+                                                      c
+                                                      d))) =>
+                                         H20:(plth.Prf
+                                                (euclidean__defs.OS
+                                                   c
+                                                   d
+                                                   A
+                                                   B)) =>
+                                         (H21:(plth.Prf
+                                                 (plth.and
+                                                    (euclidean__defs.TP
+                                                       B
+                                                       A
+                                                       d
+                                                       C)
+                                                    (plth.and
+                                                       (euclidean__defs.TP
+                                                          A
+                                                          B
+                                                          C
+                                                          d)
+                                                       (euclidean__defs.TP
+                                                          B
+                                                          A
+                                                          C
+                                                          d)))) =>
+                                          logic.and__ind
+                                            (euclidean__defs.TP
+                                               B
+                                               A
+                                               d
+                                               C)
+                                            (plth.and
+                                               (euclidean__defs.TP
+                                                  A
+                                                  B
+                                                  C
+                                                  d)
+                                               (euclidean__defs.TP
+                                                  B
+                                                  A
+                                                  C
+                                                  d))
+                                            (euclidean__defs.TP
+                                               A
+                                               B
+                                               C
+                                               d)
+                                            (H22:(plth.Prf
+                                                    (euclidean__defs.TP
+                                                       B
+                                                       A
+                                                       d
+                                                       C)) =>
+                                             H23:(plth.Prf
+                                                    (plth.and
+                                                       (euclidean__defs.TP
+                                                          A
+                                                          B
+                                                          C
+                                                          d)
+                                                       (euclidean__defs.TP
+                                                          B
+                                                          A
+                                                          C
+                                                          d))) =>
+                                             logic.and__ind
+                                               (euclidean__defs.TP
+                                                  A
+                                                  B
+                                                  C
+                                                  d)
+                                               (euclidean__defs.TP
+                                                  B
+                                                  A
+                                                  C
+                                                  d)
+                                               (euclidean__defs.TP
+                                                  A
+                                                  B
+                                                  C
+                                                  d)
+                                               (H24:(plth.Prf
+                                                       (euclidean__defs.TP
+                                                          A
+                                                          B
+                                                          C
+                                                          d)) =>
+                                                H25:(plth.Prf
+                                                       (euclidean__defs.TP
+                                                          B
+                                                          A
+                                                          C
+                                                          d)) =>
+                                                H24)
+                                               H23)
+                                            H21)
+                                           (lemma__tarskiparallelflip.lemma__tarskiparallelflip
+                                              A
+                                              B
+                                              d
+                                              C
+                                              H14))
+                                        H18)
+                                     H16)
+                                  H2))
+                              (logic.and__ind
+                                 (euclidean__axioms.neq A B)
+                                 (plth.and
+                                    (euclidean__axioms.neq c d)
+                                    (plth.and
+                                       (plth.not
+                                          (euclidean__defs.Meet
+                                             A
+                                             B
+                                             c
+                                             d))
+                                       (euclidean__defs.OS c d A B)))
+                                 (euclidean__defs.TP A B d C)
+                                 (H14:(plth.Prf
+                                         (euclidean__axioms.neq
+                                            A
+                                            B)) =>
+                                  H15:(plth.Prf
+                                         (plth.and
+                                            (euclidean__axioms.neq
+                                               c
+                                               d)
+                                            (plth.and
+                                               (plth.not
+                                                  (euclidean__defs.Meet
+                                                     A
+                                                     B
+                                                     c
+                                                     d))
+                                               (euclidean__defs.OS
+                                                  c
+                                                  d
+                                                  A
+                                                  B)))) =>
+                                  logic.and__ind
+                                    (euclidean__axioms.neq c d)
+                                    (plth.and
+                                       (plth.not
+                                          (euclidean__defs.Meet
+                                             A
+                                             B
+                                             c
+                                             d))
+                                       (euclidean__defs.OS c d A B))
+                                    (euclidean__defs.TP A B d C)
+                                    (H16:(plth.Prf
+                                            (euclidean__axioms.neq
+                                               c
+                                               d)) =>
+                                     H17:(plth.Prf
+                                            (plth.and
+                                               (plth.not
+                                                  (euclidean__defs.Meet
+                                                     A
+                                                     B
+                                                     c
+                                                     d))
+                                               (euclidean__defs.OS
+                                                  c
+                                                  d
+                                                  A
+                                                  B))) =>
+                                     logic.and__ind
+                                       (plth.not
+                                          (euclidean__defs.Meet
+                                             A
+                                             B
+                                             c
+                                             d))
+                                       (euclidean__defs.OS c d A B)
+                                       (euclidean__defs.TP A B d C)
+                                       (H18:(plth.Prf
+                                               (plth.not
+                                                  (euclidean__defs.Meet
+                                                     A
+                                                     B
+                                                     c
+                                                     d))) =>
+                                        H19:(plth.Prf
+                                               (euclidean__defs.OS
+                                                  c
+                                                  d
+                                                  A
+                                                  B)) =>
+                                        lemma__parallelcollinear2.lemma__parallelcollinear2
+                                          A
+                                          B
+                                          d
+                                          c
+                                          C
+                                          H13
+                                          H9)
+                                       H17)
+                                    H15)
+                                 H2))
+                             (logic.and__ind
+                                (euclidean__axioms.neq A B)
+                                (plth.and
+                                   (euclidean__axioms.neq c d)
+                                   (plth.and
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))
+                                      (euclidean__defs.OS c d A B)))
+                                (euclidean__defs.TP A B c C)
+                                (H13:(plth.Prf
+                                        (euclidean__axioms.neq A B)) =>
+                                 H14:(plth.Prf
+                                        (plth.and
+                                           (euclidean__axioms.neq
+                                              c
+                                              d)
+                                           (plth.and
+                                              (plth.not
+                                                 (euclidean__defs.Meet
+                                                    A
+                                                    B
+                                                    c
+                                                    d))
+                                              (euclidean__defs.OS
+                                                 c
+                                                 d
+                                                 A
+                                                 B)))) =>
+                                 logic.and__ind
+                                   (euclidean__axioms.neq c d)
+                                   (plth.and
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))
+                                      (euclidean__defs.OS c d A B))
+                                   (euclidean__defs.TP A B c C)
+                                   (H15:(plth.Prf
+                                           (euclidean__axioms.neq
+                                              c
+                                              d)) =>
+                                    H16:(plth.Prf
+                                           (plth.and
+                                              (plth.not
+                                                 (euclidean__defs.Meet
+                                                    A
+                                                    B
+                                                    c
+                                                    d))
+                                              (euclidean__defs.OS
+                                                 c
+                                                 d
+                                                 A
+                                                 B))) =>
+                                    logic.and__ind
+                                      (plth.not
+                                         (euclidean__defs.Meet A B c d))
+                                      (euclidean__defs.OS c d A B)
+                                      (euclidean__defs.TP A B c C)
+                                      (H17:(plth.Prf
+                                              (plth.not
+                                                 (euclidean__defs.Meet
+                                                    A
+                                                    B
+                                                    c
+                                                    d))) =>
+                                       H18:(plth.Prf
+                                              (euclidean__defs.OS
+                                                 c
+                                                 d
+                                                 A
+                                                 B)) =>
+                                       (H19:(plth.Prf
+                                               (plth.and
+                                                  (euclidean__defs.TP
+                                                     B
+                                                     A
+                                                     C
+                                                     c)
+                                                  (plth.and
+                                                     (euclidean__defs.TP
+                                                        A
+                                                        B
+                                                        c
+                                                        C)
+                                                     (euclidean__defs.TP
+                                                        B
+                                                        A
+                                                        c
+                                                        C)))) =>
+                                        logic.and__ind
+                                          (euclidean__defs.TP
+                                             B
+                                             A
+                                             C
+                                             c)
+                                          (plth.and
+                                             (euclidean__defs.TP
+                                                A
+                                                B
+                                                c
+                                                C)
+                                             (euclidean__defs.TP
+                                                B
+                                                A
+                                                c
+                                                C))
+                                          (euclidean__defs.TP
+                                             A
+                                             B
+                                             c
+                                             C)
+                                          (H20:(plth.Prf
+                                                  (euclidean__defs.TP
+                                                     B
+                                                     A
+                                                     C
+                                                     c)) =>
+                                           H21:(plth.Prf
+                                                  (plth.and
+                                                     (euclidean__defs.TP
+                                                        A
+                                                        B
+                                                        c
+                                                        C)
+                                                     (euclidean__defs.TP
+                                                        B
+                                                        A
+                                                        c
+                                                        C))) =>
+                                           logic.and__ind
+                                             (euclidean__defs.TP
+                                                A
+                                                B
+                                                c
+                                                C)
+                                             (euclidean__defs.TP
+                                                B
+                                                A
+                                                c
+                                                C)
+                                             (euclidean__defs.TP
+                                                A
+                                                B
+                                                c
+                                                C)
+                                             (H22:(plth.Prf
+                                                     (euclidean__defs.TP
+                                                        A
+                                                        B
+                                                        c
+                                                        C)) =>
+                                              H23:(plth.Prf
+                                                     (euclidean__defs.TP
+                                                        B
+                                                        A
+                                                        c
+                                                        C)) =>
+                                              H22)
+                                             H21)
+                                          H19)
+                                         (lemma__tarskiparallelflip.lemma__tarskiparallelflip
+                                            A
+                                            B
+                                            C
+                                            c
+                                            H12))
+                                      H16)
+                                   H14)
+                                H2))
+                            (logic.and__ind
+                               (euclidean__axioms.neq A B)
+                               (plth.and
+                                  (euclidean__axioms.neq c d)
+                                  (plth.and
+                                     (plth.not
+                                        (euclidean__defs.Meet A B c d))
+                                     (euclidean__defs.OS c d A B)))
+                               (euclidean__defs.TP A B C c)
+                               (H12:(plth.Prf (euclidean__axioms.neq A B)) =>
+                                H13:(plth.Prf
+                                       (plth.and
+                                          (euclidean__axioms.neq c d)
+                                          (plth.and
+                                             (plth.not
+                                                (euclidean__defs.Meet
+                                                   A
+                                                   B
+                                                   c
+                                                   d))
+                                             (euclidean__defs.OS
+                                                c
+                                                d
+                                                A
+                                                B)))) =>
+                                logic.and__ind
+                                  (euclidean__axioms.neq c d)
+                                  (plth.and
+                                     (plth.not
+                                        (euclidean__defs.Meet A B c d))
+                                     (euclidean__defs.OS c d A B))
+                                  (euclidean__defs.TP A B C c)
+                                  (H14:(plth.Prf
+                                          (euclidean__axioms.neq c d)) =>
+                                   H15:(plth.Prf
+                                          (plth.and
+                                             (plth.not
+                                                (euclidean__defs.Meet
+                                                   A
+                                                   B
+                                                   c
+                                                   d))
+                                             (euclidean__defs.OS
+                                                c
+                                                d
+                                                A
+                                                B))) =>
+                                   logic.and__ind
+                                     (plth.not
+                                        (euclidean__defs.Meet A B c d))
+                                     (euclidean__defs.OS c d A B)
+                                     (euclidean__defs.TP A B C c)
+                                     (H16:(plth.Prf
+                                             (plth.not
+                                                (euclidean__defs.Meet
+                                                   A
+                                                   B
+                                                   c
+                                                   d))) =>
+                                      H17:(plth.Prf
+                                             (euclidean__defs.OS
+                                                c
+                                                d
+                                                A
+                                                B)) =>
+                                      lemma__parallelcollinear1.lemma__parallelcollinear1
+                                        A
+                                        B
+                                        C
+                                        d
+                                        c
+                                        H11
+                                        H10)
+                                     H15)
+                                  H13)
+                               H2))
+                           (logic.and__ind
+                              (euclidean__axioms.neq A B)
+                              (plth.and
+                                 (euclidean__axioms.neq c d)
+                                 (plth.and
+                                    (plth.not (euclidean__defs.Meet A B c d))
+                                    (euclidean__defs.OS c d A B)))
+                              (euclidean__defs.TP A B d c)
+                              (H11:(plth.Prf (euclidean__axioms.neq A B)) =>
+                               H12:(plth.Prf
+                                      (plth.and
+                                         (euclidean__axioms.neq c d)
+                                         (plth.and
+                                            (plth.not
+                                               (euclidean__defs.Meet
+                                                  A
+                                                  B
+                                                  c
+                                                  d))
+                                            (euclidean__defs.OS c d A B)))) =>
+                               logic.and__ind
+                                 (euclidean__axioms.neq c d)
+                                 (plth.and
+                                    (plth.not (euclidean__defs.Meet A B c d))
+                                    (euclidean__defs.OS c d A B))
+                                 (euclidean__defs.TP A B d c)
+                                 (H13:(plth.Prf (euclidean__axioms.neq c d)) =>
+                                  H14:(plth.Prf
+                                         (plth.and
+                                            (plth.not
+                                               (euclidean__defs.Meet
+                                                  A
+                                                  B
+                                                  c
+                                                  d))
+                                            (euclidean__defs.OS c d A B))) =>
+                                  logic.and__ind
+                                    (plth.not (euclidean__defs.Meet A B c d))
+                                    (euclidean__defs.OS c d A B)
+                                    (euclidean__defs.TP A B d c)
+                                    (H15:(plth.Prf
+                                            (plth.not
+                                               (euclidean__defs.Meet
+                                                  A
+                                                  B
+                                                  c
+                                                  d))) =>
+                                     H16:(plth.Prf
+                                            (euclidean__defs.OS c d A B)) =>
+                                     (H17:(plth.Prf
+                                             (plth.and
+                                                (euclidean__defs.TP
+                                                   B
+                                                   A
+                                                   c
+                                                   d)
+                                                (plth.and
+                                                   (euclidean__defs.TP
+                                                      A
+                                                      B
+                                                      d
+                                                      c)
+                                                   (euclidean__defs.TP
+                                                      B
+                                                      A
+                                                      d
+                                                      c)))) =>
+                                      logic.and__ind
+                                        (euclidean__defs.TP B A c d)
+                                        (plth.and
+                                           (euclidean__defs.TP A B d c)
+                                           (euclidean__defs.TP B A d c))
+                                        (euclidean__defs.TP A B d c)
+                                        (H18:(plth.Prf
+                                                (euclidean__defs.TP
+                                                   B
+                                                   A
+                                                   c
+                                                   d)) =>
+                                         H19:(plth.Prf
+                                                (plth.and
+                                                   (euclidean__defs.TP
+                                                      A
+                                                      B
+                                                      d
+                                                      c)
+                                                   (euclidean__defs.TP
+                                                      B
+                                                      A
+                                                      d
+                                                      c))) =>
+                                         logic.and__ind
+                                           (euclidean__defs.TP A B d c)
+                                           (euclidean__defs.TP B A d c)
+                                           (euclidean__defs.TP A B d c)
+                                           (H20:(plth.Prf
+                                                   (euclidean__defs.TP
+                                                      A
+                                                      B
+                                                      d
+                                                      c)) =>
+                                            H21:(plth.Prf
+                                                   (euclidean__defs.TP
+                                                      B
+                                                      A
+                                                      d
+                                                      c)) =>
+                                            H20)
+                                           H19)
+                                        H17)
+                                       (lemma__tarskiparallelflip.lemma__tarskiparallelflip
+                                          A
+                                          B
+                                          c
+                                          d
+                                          H))
+                                    H14)
+                                 H12)
+                              H2))
+                          (logic.and__ind
+                             (euclidean__axioms.neq A B)
+                             (plth.and
+                                (euclidean__axioms.neq c d)
+                                (plth.and
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B)))
+                             (euclidean__axioms.BetS C d c)
+                             (H10:(plth.Prf (euclidean__axioms.neq A B)) =>
+                              H11:(plth.Prf
+                                     (plth.and
+                                        (euclidean__axioms.neq c d)
+                                        (plth.and
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))
+                                           (euclidean__defs.OS c d A B)))) =>
+                              logic.and__ind
+                                (euclidean__axioms.neq c d)
+                                (plth.and
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B))
+                                (euclidean__axioms.BetS C d c)
+                                (H12:(plth.Prf (euclidean__axioms.neq c d)) =>
+                                 H13:(plth.Prf
+                                        (plth.and
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))
+                                           (euclidean__defs.OS c d A B))) =>
+                                 logic.and__ind
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B)
+                                   (euclidean__axioms.BetS C d c)
+                                   (H14:(plth.Prf
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))) =>
+                                    H15:(plth.Prf
+                                           (euclidean__defs.OS c d A B)) =>
+                                    euclidean__axioms.axiom__betweennesssymmetry
+                                      c
+                                      d
+                                      C
+                                      H9)
+                                   H13)
+                                H11)
+                             H2))
+                       (H9:(plth.Prf (euclidean__axioms.BetS c C d)) =>
+                        (H10:(plth.Prf (euclidean__defs.TP A B C d)) => H10)
+                          (logic.and__ind
+                             (euclidean__axioms.neq A B)
+                             (plth.and
+                                (euclidean__axioms.neq c d)
+                                (plth.and
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B)))
+                             (euclidean__defs.TP A B C d)
+                             (H10:(plth.Prf (euclidean__axioms.neq A B)) =>
+                              H11:(plth.Prf
+                                     (plth.and
+                                        (euclidean__axioms.neq c d)
+                                        (plth.and
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))
+                                           (euclidean__defs.OS c d A B)))) =>
+                              logic.and__ind
+                                (euclidean__axioms.neq c d)
+                                (plth.and
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B))
+                                (euclidean__defs.TP A B C d)
+                                (H12:(plth.Prf (euclidean__axioms.neq c d)) =>
+                                 H13:(plth.Prf
+                                        (plth.and
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))
+                                           (euclidean__defs.OS c d A B))) =>
+                                 logic.and__ind
+                                   (plth.not (euclidean__defs.Meet A B c d))
+                                   (euclidean__defs.OS c d A B)
+                                   (euclidean__defs.TP A B C d)
+                                   (H14:(plth.Prf
+                                           (plth.not
+                                              (euclidean__defs.Meet A B c d))) =>
+                                    H15:(plth.Prf
+                                           (euclidean__defs.OS c d A B)) =>
+                                    lemma__parallelcollinear2.lemma__parallelcollinear2
+                                      A
+                                      B
+                                      C
+                                      c
+                                      d
+                                      H
+                                      H9)
+                                   H13)
+                                H11)
+                             H2))
+                       H8)
+                    H7)
+                 H6)
+              H5)
+           __TmpHyp)
+          H4)
+         H3))
+     (logic.and__ind
+        (euclidean__axioms.neq A B)
+        (plth.and
+           (euclidean__axioms.neq c d)
+           (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B)))
+        (plth.or
+           (euclidean__axioms.eq c d)
+           (plth.or
+              (euclidean__axioms.eq c C)
+              (plth.or
+                 (euclidean__axioms.eq d C)
+                 (plth.or
+                    (euclidean__axioms.BetS d c C)
+                    (plth.or (euclidean__axioms.BetS c d C) (euclidean__axioms.BetS c C d))))))
+        (H3:(plth.Prf (euclidean__axioms.neq A B)) =>
+         H4:(plth.Prf
+               (plth.and
+                  (euclidean__axioms.neq c d)
+                  (plth.and
+                     (plth.not (euclidean__defs.Meet A B c d))
+                     (euclidean__defs.OS c d A B)))) =>
+         logic.and__ind
+           (euclidean__axioms.neq c d)
+           (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B))
+           (plth.or
+              (euclidean__axioms.eq c d)
+              (plth.or
+                 (euclidean__axioms.eq c C)
+                 (plth.or
+                    (euclidean__axioms.eq d C)
+                    (plth.or
+                       (euclidean__axioms.BetS d c C)
+                       (plth.or
+                          (euclidean__axioms.BetS c d C)
+                          (euclidean__axioms.BetS c C d))))))
+           (H5:(plth.Prf (euclidean__axioms.neq c d)) =>
+            H6:(plth.Prf
+                  (plth.and
+                     (plth.not (euclidean__defs.Meet A B c d))
+                     (euclidean__defs.OS c d A B))) =>
+            logic.and__ind
+              (plth.not (euclidean__defs.Meet A B c d))
+              (euclidean__defs.OS c d A B)
+              (plth.or
+                 (euclidean__axioms.eq c d)
+                 (plth.or
+                    (euclidean__axioms.eq c C)
+                    (plth.or
+                       (euclidean__axioms.eq d C)
+                       (plth.or
+                          (euclidean__axioms.BetS d c C)
+                          (plth.or
+                             (euclidean__axioms.BetS c d C)
+                             (euclidean__axioms.BetS c C d))))))
+              (H7:(plth.Prf (plth.not (euclidean__defs.Meet A B c d))) =>
+               H8:(plth.Prf (euclidean__defs.OS c d A B)) => H0)
+              H6)
+           H4)
+        H2))
+    ((H2:(plth.Prf
+            (plth.and
+               (euclidean__axioms.neq A B)
+               (plth.and
+                  (euclidean__axioms.neq c d)
+                  (plth.and
+                     (plth.not (euclidean__defs.Meet A B c d))
+                     (euclidean__defs.OS c d A B))))) =>
+      (__TmpHyp:(plth.Prf
+                   (plth.and
+                      (euclidean__axioms.neq A B)
+                      (plth.and
+                         (euclidean__axioms.neq c d)
+                         (plth.and
+                            (plth.not (euclidean__defs.Meet A B c d))
+                            (euclidean__defs.OS c d A B))))) =>
+       logic.and__ind
+         (euclidean__axioms.neq A B)
+         (plth.and
+            (euclidean__axioms.neq c d)
+            (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B)))
+         (plth.and
+            (euclidean__axioms.neq A B)
+            (plth.and
+               (euclidean__axioms.neq c d)
+               (plth.and
+                  (plth.not (euclidean__defs.Meet A B c d))
+                  (euclidean__defs.OS c d A B))))
+         (H3:(plth.Prf (euclidean__axioms.neq A B)) =>
+          H4:(plth.Prf
+                (plth.and
+                   (euclidean__axioms.neq c d)
+                   (plth.and
+                      (plth.not (euclidean__defs.Meet A B c d))
+                      (euclidean__defs.OS c d A B)))) =>
+          logic.and__ind
+            (euclidean__axioms.neq c d)
+            (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B))
+            (plth.and
+               (euclidean__axioms.neq A B)
+               (plth.and
+                  (euclidean__axioms.neq c d)
+                  (plth.and
+                     (plth.not (euclidean__defs.Meet A B c d))
+                     (euclidean__defs.OS c d A B))))
+            (H5:(plth.Prf (euclidean__axioms.neq c d)) =>
+             H6:(plth.Prf
+                   (plth.and
+                      (plth.not (euclidean__defs.Meet A B c d))
+                      (euclidean__defs.OS c d A B))) =>
+             logic.and__ind
+               (plth.not (euclidean__defs.Meet A B c d))
+               (euclidean__defs.OS c d A B)
+               (plth.and
+                  (euclidean__axioms.neq A B)
+                  (plth.and
+                     (euclidean__axioms.neq c d)
+                     (plth.and
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B))))
+               (H7:(plth.Prf (plth.not (euclidean__defs.Meet A B c d))) =>
+                H8:(plth.Prf (euclidean__defs.OS c d A B)) =>
+                logic.conj
+                  (euclidean__axioms.neq A B)
+                  (plth.and
+                     (euclidean__axioms.neq c d)
+                     (plth.and
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B)))
+                  H3
+                  (logic.conj
+                     (euclidean__axioms.neq c d)
+                     (plth.and
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B))
+                     H5
+                     (logic.conj
+                        (plth.not (euclidean__defs.Meet A B c d))
+                        (euclidean__defs.OS c d A B)
+                        H7
+                        H8)))
+               H6)
+            H4)
+         __TmpHyp)
+        H2)
+       H).
+

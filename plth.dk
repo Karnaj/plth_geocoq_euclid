@@ -1,0 +1,96 @@
+Prop : Type.
+
+def Prf : Prop -> Type.
+
+imp : Prop -> Prop -> Prop.
+
+[y, x] Prf (imp x y) --> (Prf x) -> Prf y.
+
+def Set : Type.
+
+def El : Set -> Type.
+
+forall : x:Set -> ((El x) -> Prop) -> Prop.
+
+[p, x] Prf (forall x p) --> z:(El x) -> Prf (p z).
+
+(; Allow only correct predicates : we can have predicate 
+   of arity n, so the type `N -> N -> Prop` should be 
+   authorized, but `(N -> N) -> Prop` should not since 
+   `N -> N` is not a set.
+
+   We create a Type `type` that represents sets and
+   functions type. It corresponds to all the set of
+   simple type theory. `Set` reduces to `type` and 
+   we define `parrow` of type `Set -> type -> type`.
+
+   Hence with `arrow s t`, `s` is necesarily a `Set`,
+   while `t` could be another type.
+   It allow us to define `predicate` in such a way
+   that `(N -> N) -> Prop` is not correct. 
+;)
+type : Type.
+
+[] Set --> type.
+
+def parrow : Set -> type -> type.
+
+def predicate : type -> Type.
+
+[t, s] predicate (parrow s t) --> (El s) -> predicate t.
+
+[s :
+ Set] predicate s --> (El s) -> Prop.
+
+ (; In simple type theory, we would have 
+   `arrow: Set -> Set -> Set`, and then
+   `predicate (arrow N N)` would correspond
+   to predicate over functions from N -> N,
+   while predicate (parrow N N) corresponds
+   to predicate of arity 2 over N. 
+;)
+
+(; Besides, one can also define terms for
+   functions. In the same way, N -> N -> N
+   should be authorized, but (N -> N) -> N
+   should not. 
+;)
+
+def function : Set -> type -> Type.
+
+[t, s2, s1] function s1 (parrow s2 t) --> (El s1) -> function s2 t.
+
+[s2 :
+ Set, s1] function s1 s2 --> (El s1) -> El s2.
+
+true : Prop.
+
+false : Prop.
+
+not : Prop -> Prop.
+
+and : Prop -> Prop -> Prop.
+
+or : Prop -> Prop -> Prop.
+
+ex : A:Set -> (__:(El A) -> Prop) -> Prop.
+
+eq : A:Set -> x:(El A) -> __:(El A) -> Prop.
+
+[b, a, A] Prf (eq A a b) --> P:((El A) -> Prop) -> Prf (imp (P a) (P b)).
+
+[p0, x]
+  Prf (ex x p0) --> p:Prop -> (z:(El x) -> (Prf (p0 z)) -> Prf p) -> Prf p.
+
+[] Prf (false) --> p:Prop -> Prf p.
+
+[p0] Prf (not p0) --> (Prf p0) -> p:Prop -> Prf p.
+
+[p2, p1]
+  Prf (and p1 p2) --> p:Prop -> ((Prf p1) -> (Prf p2) -> Prf p) -> Prf p.
+
+[p2, p1]
+  Prf (or p1 p2)
+  -->
+  p:Prop -> ((Prf p1) -> Prf p) -> ((Prf p2) -> Prf p) -> Prf p.
+

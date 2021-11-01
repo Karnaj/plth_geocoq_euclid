@@ -1,0 +1,18 @@
+thm lemma__inequalitysymmetric :
+  plth.Prf
+    (plth.forall
+       euclidean__axioms.Point
+       (A:(plth.El euclidean__axioms.Point) =>
+        plth.forall
+          euclidean__axioms.Point
+          (B:(plth.El euclidean__axioms.Point) =>
+           plth.imp (euclidean__axioms.neq A B) (euclidean__axioms.neq B A))))
+  :=
+  A:(plth.El euclidean__axioms.Point) =>
+  B:(plth.El euclidean__axioms.Point) =>
+  H:(plth.Prf (euclidean__axioms.neq A B)) =>
+  (H0:(plth.Prf (plth.not (euclidean__axioms.eq B A))) => H0)
+    (H0:(plth.Prf (euclidean__axioms.eq B A)) =>
+     (H1:(plth.Prf (euclidean__axioms.eq A B)) => H H1)
+       (lemma__equalitysymmetric.lemma__equalitysymmetric A B H0)).
+

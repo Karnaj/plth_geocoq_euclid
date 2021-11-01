@@ -1,0 +1,146 @@
+thm lemma__NCdistinct :
+  plth.Prf
+    (plth.forall
+       euclidean__axioms.Point
+       (A:(plth.El euclidean__axioms.Point) =>
+        plth.forall
+          euclidean__axioms.Point
+          (B:(plth.El euclidean__axioms.Point) =>
+           plth.forall
+             euclidean__axioms.Point
+             (C:(plth.El euclidean__axioms.Point) =>
+              plth.imp
+                (euclidean__axioms.nCol A B C)
+                (plth.and
+                   (euclidean__axioms.neq A B)
+                   (plth.and
+                      (euclidean__axioms.neq B C)
+                      (plth.and
+                         (euclidean__axioms.neq A C)
+                         (plth.and
+                            (euclidean__axioms.neq B A)
+                            (plth.and (euclidean__axioms.neq C B) (euclidean__axioms.neq C A))))))))))
+  :=
+  A:(plth.El euclidean__axioms.Point) =>
+  B:(plth.El euclidean__axioms.Point) =>
+  C:(plth.El euclidean__axioms.Point) =>
+  H:(plth.Prf (euclidean__axioms.nCol A B C)) =>
+  (H0:(plth.Prf (plth.not (euclidean__axioms.eq A B))) =>
+   (H1:(plth.Prf (euclidean__axioms.neq B A)) =>
+    (H2:(plth.Prf (plth.not (euclidean__axioms.eq A C))) =>
+     (H3:(plth.Prf (euclidean__axioms.neq C A)) =>
+      (H4:(plth.Prf (plth.not (euclidean__axioms.eq B C))) =>
+       (H5:(plth.Prf (euclidean__axioms.neq C B)) =>
+        logic.conj
+          (euclidean__axioms.neq A B)
+          (plth.and
+             (euclidean__axioms.neq B C)
+             (plth.and
+                (euclidean__axioms.neq A C)
+                (plth.and
+                   (euclidean__axioms.neq B A)
+                   (plth.and
+                      (euclidean__axioms.neq C B)
+                      (euclidean__axioms.neq C A)))))
+          H0
+          (logic.conj
+             (euclidean__axioms.neq B C)
+             (plth.and
+                (euclidean__axioms.neq A C)
+                (plth.and
+                   (euclidean__axioms.neq B A)
+                   (plth.and
+                      (euclidean__axioms.neq C B)
+                      (euclidean__axioms.neq C A))))
+             H4
+             (logic.conj
+                (euclidean__axioms.neq A C)
+                (plth.and
+                   (euclidean__axioms.neq B A)
+                   (plth.and
+                      (euclidean__axioms.neq C B)
+                      (euclidean__axioms.neq C A)))
+                H2
+                (logic.conj
+                   (euclidean__axioms.neq B A)
+                   (plth.and
+                      (euclidean__axioms.neq C B)
+                      (euclidean__axioms.neq C A))
+                   H1
+                   (logic.conj
+                      (euclidean__axioms.neq C B)
+                      (euclidean__axioms.neq C A)
+                      H5
+                      H3)))))
+         (lemma__inequalitysymmetric.lemma__inequalitysymmetric B C H4))
+        (H4:(plth.Prf (euclidean__axioms.eq B C)) =>
+         (H5:(plth.Prf (euclidean__axioms.Col A B C)) =>
+          euclidean__tactics.Col__nCol__False A B C H H5)
+           (logic.or__intror
+              (euclidean__axioms.eq A B)
+              (plth.or
+                 (euclidean__axioms.eq A C)
+                 (plth.or
+                    (euclidean__axioms.eq B C)
+                    (plth.or
+                       (euclidean__axioms.BetS B A C)
+                       (plth.or
+                          (euclidean__axioms.BetS A B C)
+                          (euclidean__axioms.BetS A C B)))))
+              (logic.or__intror
+                 (euclidean__axioms.eq A C)
+                 (plth.or
+                    (euclidean__axioms.eq B C)
+                    (plth.or
+                       (euclidean__axioms.BetS B A C)
+                       (plth.or
+                          (euclidean__axioms.BetS A B C)
+                          (euclidean__axioms.BetS A C B))))
+                 (logic.or__introl
+                    (euclidean__axioms.eq B C)
+                    (plth.or
+                       (euclidean__axioms.BetS B A C)
+                       (plth.or
+                          (euclidean__axioms.BetS A B C)
+                          (euclidean__axioms.BetS A C B)))
+                    H4)))))
+       (lemma__inequalitysymmetric.lemma__inequalitysymmetric A C H2))
+      (H2:(plth.Prf (euclidean__axioms.eq A C)) =>
+       (H3:(plth.Prf (euclidean__axioms.Col A B C)) =>
+        euclidean__tactics.Col__nCol__False A B C H H3)
+         (logic.or__intror
+            (euclidean__axioms.eq A B)
+            (plth.or
+               (euclidean__axioms.eq A C)
+               (plth.or
+                  (euclidean__axioms.eq B C)
+                  (plth.or
+                     (euclidean__axioms.BetS B A C)
+                     (plth.or
+                        (euclidean__axioms.BetS A B C)
+                        (euclidean__axioms.BetS A C B)))))
+            (logic.or__introl
+               (euclidean__axioms.eq A C)
+               (plth.or
+                  (euclidean__axioms.eq B C)
+                  (plth.or
+                     (euclidean__axioms.BetS B A C)
+                     (plth.or
+                        (euclidean__axioms.BetS A B C)
+                        (euclidean__axioms.BetS A C B))))
+               H2))))
+     (lemma__inequalitysymmetric.lemma__inequalitysymmetric A B H0))
+    (H0:(plth.Prf (euclidean__axioms.eq A B)) =>
+     (H1:(plth.Prf (euclidean__axioms.Col A B C)) =>
+      euclidean__tactics.Col__nCol__False A B C H H1)
+       (logic.or__introl
+          (euclidean__axioms.eq A B)
+          (plth.or
+             (euclidean__axioms.eq A C)
+             (plth.or
+                (euclidean__axioms.eq B C)
+                (plth.or
+                   (euclidean__axioms.BetS B A C)
+                   (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B)))))
+          H0)).
+
