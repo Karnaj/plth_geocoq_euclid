@@ -3,9 +3,9 @@ Point : plth.Set.
 Circle : plth.Set.
 
 Cong :
-  plth.predicate (plth.parrow Point (plth.parrow Point (plth.parrow Point Point))).
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))).
 
-BetS : plth.predicate (plth.parrow Point (plth.parrow Point Point)).
+BetS : plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil))).
 
 PA : plth.El Point.
 
@@ -14,24 +14,24 @@ PB : plth.El Point.
 PC : plth.El Point.
 
 CI :
-  plth.predicate (plth.parrow Circle (plth.parrow Point (plth.parrow Point Point))).
+  plth.predicate (plth.cons Circle (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))).
 
-def eq : plth.predicate (plth.parrow Point Point) := plth.eq Point.
+def eq : plth.predicate (plth.cons Point (plth.cons Point plth.nil)) := plth.eq Point.
 
 def neq :
-  plth.predicate (plth.parrow Point Point)
+  plth.predicate (plth.cons Point (plth.cons Point plth.nil))
   :=
   A:(plth.El Point) => B:(plth.El Point) => plth.not (eq A B).
 
 def TE :
-  plth.predicate (plth.parrow Point (plth.parrow Point Point))
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))
   :=
   A:(plth.El Point) =>
   B:(plth.El Point) =>
   C:(plth.El Point) => plth.not (plth.and (neq A B) (plth.and (neq B C) (plth.not (BetS A B C)))).
 
 def nCol :
-  plth.predicate (plth.parrow Point (plth.parrow Point Point))
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))
   :=
   A:(plth.El Point) =>
   B:(plth.El Point) =>
@@ -47,7 +47,7 @@ def nCol :
              (plth.and (plth.not (BetS A C B)) (plth.not (BetS B A C)))))).
 
 def Col :
-  plth.predicate (plth.parrow Point (plth.parrow Point Point))
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))
   :=
   A:(plth.El Point) =>
   B:(plth.El Point) =>
@@ -58,9 +58,9 @@ def Col :
 
 def Cong__3 :
   plth.predicate
-    (plth.parrow
+    (plth.cons
        Point
-       (plth.parrow Point (plth.parrow Point (plth.parrow Point (plth.parrow Point Point)))))
+       (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point plth.nil))))))
   :=
   A:(plth.El Point) =>
   B:(plth.El Point) =>
@@ -70,7 +70,7 @@ def Cong__3 :
   c:(plth.El Point) => plth.and (Cong A B a b) (plth.and (Cong B C b c) (Cong A C a c)).
 
 def TS :
-  plth.predicate (plth.parrow Point (plth.parrow Point (plth.parrow Point Point)))
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point plth.nil))))
   :=
   P:(plth.El Point) =>
   A:(plth.El Point) =>
@@ -79,12 +79,12 @@ def TS :
   plth.ex Point (X:(plth.El Point) => plth.and (BetS P X Q) (plth.and (Col A B X) (nCol A B P))).
 
 def Triangle :
-  plth.predicate (plth.parrow Point (plth.parrow Point Point))
+  plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))
   :=
   A:(plth.El Point) => B:(plth.El Point) => C:(plth.El Point) => nCol A B C.
 
 def OnCirc :
-  plth.predicate (plth.parrow Point Circle)
+  plth.predicate (plth.cons Point (plth.cons Circle plth.nil))
   :=
   B:(plth.El Point) =>
   J:(plth.El Circle) =>
@@ -97,7 +97,7 @@ def OnCirc :
         plth.ex Point (U:(plth.El Point) => plth.and (CI J U X Y) (Cong U B X Y)))).
 
 def InCirc :
-  plth.predicate (plth.parrow Point Circle)
+  plth.predicate (plth.cons Point (plth.cons Circle plth.nil))
   :=
   P:(plth.El Point) =>
   J:(plth.El Circle) =>
@@ -123,7 +123,7 @@ def InCirc :
                       (plth.and (BetS U Y X) (plth.and (Cong U X V W) (Cong U P U Y))))))))).
 
 def OutCirc :
-  plth.predicate (plth.parrow Point Circle)
+  plth.predicate (plth.cons Point (plth.cons Circle plth.nil))
   :=
   P:(plth.El Point) =>
   J:(plth.El Circle) =>
@@ -534,19 +534,19 @@ postulate__Euclid5 :
 
 EF :
   plth.predicate
-    (plth.parrow
+    (plth.cons
        Point
-       (plth.parrow
+       (plth.cons
           Point
-          (plth.parrow
+          (plth.cons
              Point
-             (plth.parrow Point (plth.parrow Point (plth.parrow Point (plth.parrow Point Point))))))).
+             (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))))))).
 
 ET :
   plth.predicate
-    (plth.parrow
+    (plth.cons
        Point
-       (plth.parrow Point (plth.parrow Point (plth.parrow Point (plth.parrow Point Point))))).
+       (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))))).
 
 axiom__congruentequal :
   plth.Prf

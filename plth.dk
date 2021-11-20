@@ -14,55 +14,6 @@ forall : x:Set -> ((El x) -> Prop) -> Prop.
 
 [p, x] Prf (forall x p) --> z:(El x) -> Prf (p z).
 
-(; Allow only correct predicates : we can have predicate 
-   of arity n, so the type `N -> N -> Prop` should be 
-   authorized, but `(N -> N) -> Prop` should not since 
-   `N -> N` is not a set.
-
-   We create a Type `type` that represents sets and
-   functions type. It corresponds to all the set of
-   simple type theory. `Set` reduces to `type` and 
-   we define `parrow` of type `Set -> type -> type`.
-
-   Hence with `arrow s t`, `s` is necesarily a `Set`,
-   while `t` could be another type.
-   It allow us to define `predicate` in such a way
-   that `(N -> N) -> Prop` is not correct. 
-;)
-type : Type.
-
-[] Set --> type.
-
-def parrow : Set -> type -> type.
-
-def predicate : type -> Type.
-
-[t, s] predicate (parrow s t) --> (El s) -> predicate t.
-
-[s :
- Set] predicate s --> (El s) -> Prop.
-
- (; In simple type theory, we would have 
-   `arrow: Set -> Set -> Set`, and then
-   `predicate (arrow N N)` would correspond
-   to predicate over functions from N -> N,
-   while predicate (parrow N N) corresponds
-   to predicate of arity 2 over N. 
-;)
-
-(; Besides, one can also define terms for
-   functions. In the same way, N -> N -> N
-   should be authorized, but (N -> N) -> N
-   should not. 
-;)
-
-def function : Set -> type -> Type.
-
-[t, s2, s1] function s1 (parrow s2 t) --> (El s1) -> function s2 t.
-
-[s2 :
- Set, s1] function s1 s2 --> (El s1) -> El s2.
-
 true : Prop.
 
 false : Prop.
@@ -94,3 +45,21 @@ eq : A:Set -> x:(El A) -> __:(El A) -> Prop.
   -->
   p:Prop -> ((Prf p1) -> Prf p) -> ((Prf p2) -> Prf p) -> Prf p.
 
+
+argList: Type.
+
+nil : argList.
+
+cons : Set -> argList -> argList. 
+
+def predicate : argList -> Type.
+
+[] predicate nil --> Prop.
+
+[s, q] predicate (cons s q) --> El s -> (predicate q).
+
+def function : argList -> Set -> Type.
+
+[s] function nil s --> El s.
+
+[s1, q, s2] function (cons s1 q) s2 --> El s1 -> (function q s2).
