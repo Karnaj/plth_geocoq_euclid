@@ -57,20 +57,20 @@ thm lemma__fiveline :
   H5:(plth.Prf (euclidean__axioms.neq A C)) =>
   (H6:(plth.Prf
          (plth.or
-            (euclidean__axioms.eq A B)
+            (plth.eq euclidean__axioms.Point A B)
             (plth.or
-               (euclidean__axioms.eq A C)
+               (plth.eq euclidean__axioms.Point A C)
                (plth.or
-                  (euclidean__axioms.eq B C)
+                  (plth.eq euclidean__axioms.Point B C)
                   (plth.or
                      (euclidean__axioms.BetS B A C)
                      (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B))))))) =>
    (H7:(plth.Prf (euclidean__axioms.Cong B D b d)) => H7)
      ((H7:(plth.Prf
              (plth.or
-                (euclidean__axioms.eq A B)
+                (plth.eq euclidean__axioms.Point A B)
                 (plth.or
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (plth.or
                       (euclidean__axioms.BetS B A C)
                       (plth.or
@@ -78,9 +78,9 @@ thm lemma__fiveline :
                          (euclidean__axioms.BetS A C B)))))) =>
        (H8:(plth.Prf
               (plth.or
-                 (euclidean__axioms.eq A B)
+                 (plth.eq euclidean__axioms.Point A B)
                  (plth.or
-                    (euclidean__axioms.eq B C)
+                    (plth.eq euclidean__axioms.Point B C)
                     (plth.or
                        (euclidean__axioms.BetS B A C)
                        (plth.or
@@ -88,25 +88,25 @@ thm lemma__fiveline :
                           (euclidean__axioms.BetS A C B)))))) =>
         (__TmpHyp:(plth.Prf
                      (plth.or
-                        (euclidean__axioms.eq A B)
+                        (plth.eq euclidean__axioms.Point A B)
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B)))))) =>
          logic.or__ind
-           (euclidean__axioms.eq A B)
+           (plth.eq euclidean__axioms.Point A B)
            (plth.or
-              (euclidean__axioms.eq B C)
+              (plth.eq euclidean__axioms.Point B C)
               (plth.or
                  (euclidean__axioms.BetS B A C)
                  (plth.or
                     (euclidean__axioms.BetS A B C)
                     (euclidean__axioms.BetS A C B))))
            (euclidean__axioms.Cong B D b d)
-           (H9:(plth.Prf (euclidean__axioms.eq A B)) =>
+           (H9:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
             (H10:(plth.Prf (euclidean__axioms.Cong B B a b)) =>
              (H11:(plth.Prf (euclidean__axioms.Cong a b B B)) =>
               (H12:(plth.Prf (plth.not (euclidean__axioms.neq a b))) =>
@@ -204,7 +204,7 @@ thm lemma__fiveline :
                     H6))
                 (H12:(plth.Prf (euclidean__axioms.neq a b)) =>
                  (H13:(plth.Prf (euclidean__axioms.neq B B)) =>
-                  (H14:(plth.Prf (euclidean__axioms.eq B B)) => H13 H14)
+                  (H14:(plth.Prf (plth.eq euclidean__axioms.Point B B)) => H13 H14)
                     (logic.eq__refl euclidean__axioms.Point B))
                    (euclidean__axioms.axiom__nocollapse a b B B H12 H11)))
                (lemma__congruencesymmetric.lemma__congruencesymmetric a B B b H10))
@@ -275,21 +275,21 @@ thm lemma__fiveline :
                  H6))
            (H9:(plth.Prf
                   (plth.or
-                     (euclidean__axioms.eq B C)
+                     (plth.eq euclidean__axioms.Point B C)
                      (plth.or
                         (euclidean__axioms.BetS B A C)
                         (plth.or
                            (euclidean__axioms.BetS A B C)
                            (euclidean__axioms.BetS A C B))))) =>
             logic.or__ind
-              (euclidean__axioms.eq B C)
+              (plth.eq euclidean__axioms.Point B C)
               (plth.or
                  (euclidean__axioms.BetS B A C)
                  (plth.or
                     (euclidean__axioms.BetS A B C)
                     (euclidean__axioms.BetS A C B)))
               (euclidean__axioms.Cong B D b d)
-              (H10:(plth.Prf (euclidean__axioms.eq B C)) =>
+              (H10:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                (H11:(plth.Prf (euclidean__axioms.Cong B B b c)) =>
                 (H12:(plth.Prf (euclidean__axioms.Cong b c B B)) =>
                  (H13:(plth.Prf (plth.not (euclidean__axioms.neq b c))) =>
@@ -402,7 +402,7 @@ thm lemma__fiveline :
                        H12))
                    (H13:(plth.Prf (euclidean__axioms.neq b c)) =>
                     (H14:(plth.Prf (euclidean__axioms.neq B B)) =>
-                     (H15:(plth.Prf (euclidean__axioms.eq B B)) => H14 H15)
+                     (H15:(plth.Prf (plth.eq euclidean__axioms.Point B B)) => H14 H15)
                        (logic.eq__refl euclidean__axioms.Point B))
                       (euclidean__axioms.axiom__nocollapse b c B B H13 H12)))
                   (lemma__congruencesymmetric.lemma__congruencesymmetric
@@ -816,41 +816,41 @@ thm lemma__fiveline :
          H7)
         (euclidean__tactics.NNPP
            (plth.or
-              (euclidean__axioms.eq A B)
+              (plth.eq euclidean__axioms.Point A B)
               (plth.or
-                 (euclidean__axioms.eq B C)
+                 (plth.eq euclidean__axioms.Point B C)
                  (plth.or
                     (euclidean__axioms.BetS B A C)
                     (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B)))))
            (H7:(plth.Prf
                   (plth.not
                      (plth.or
-                        (euclidean__axioms.eq A B)
+                        (plth.eq euclidean__axioms.Point A B)
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B))))))) =>
             logic.or__ind
-              (euclidean__axioms.eq A B)
+              (plth.eq euclidean__axioms.Point A B)
               (plth.or
-                 (euclidean__axioms.eq A C)
+                 (plth.eq euclidean__axioms.Point A C)
                  (plth.or
-                    (euclidean__axioms.eq B C)
+                    (plth.eq euclidean__axioms.Point B C)
                     (plth.or
                        (euclidean__axioms.BetS B A C)
                        (plth.or
                           (euclidean__axioms.BetS A B C)
                           (euclidean__axioms.BetS A C B)))))
               plth.false
-              (H8:(plth.Prf (euclidean__axioms.eq A B)) =>
-               (H9:(plth.Prf (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+              (H8:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
+               (H9:(plth.Prf (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                 (H10:(plth.Prf
                         (plth.imp
                            (plth.or
-                              (euclidean__axioms.eq B C)
+                              (plth.eq euclidean__axioms.Point B C)
                               (plth.or
                                  (euclidean__axioms.BetS B A C)
                                  (plth.or
@@ -859,7 +859,7 @@ thm lemma__fiveline :
                            plth.false)) =>
                  (H11:(plth.Prf plth.false) =>
                   (H12:(plth.Prf
-                          (plth.imp (euclidean__axioms.eq B C) plth.false)) =>
+                          (plth.imp (plth.eq euclidean__axioms.Point B C) plth.false)) =>
                    (H13:(plth.Prf
                            (plth.imp
                               (plth.or
@@ -927,17 +927,17 @@ thm lemma__fiveline :
                                    (euclidean__axioms.BetS A C B)))) =>
                       H10
                         (logic.or__intror
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B)))
                            H13)))
-                    (H12:(plth.Prf (euclidean__axioms.eq B C)) =>
+                    (H12:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                      H10
                        (logic.or__introl
-                          (euclidean__axioms.eq B C)
+                          (plth.eq euclidean__axioms.Point B C)
                           (plth.or
                              (euclidean__axioms.BetS B A C)
                              (plth.or
@@ -947,7 +947,7 @@ thm lemma__fiveline :
                    (H9 H8))
                   (H10:(plth.Prf
                           (plth.or
-                             (euclidean__axioms.eq B C)
+                             (plth.eq euclidean__axioms.Point B C)
                              (plth.or
                                 (euclidean__axioms.BetS B A C)
                                 (plth.or
@@ -955,21 +955,21 @@ thm lemma__fiveline :
                                    (euclidean__axioms.BetS A C B))))) =>
                    H7
                      (logic.or__intror
-                        (euclidean__axioms.eq A B)
+                        (plth.eq euclidean__axioms.Point A B)
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B))))
                         H10)))
-                 (H9:(plth.Prf (euclidean__axioms.eq A B)) =>
+                 (H9:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                   H7
                     (logic.or__introl
-                       (euclidean__axioms.eq A B)
+                       (plth.eq euclidean__axioms.Point A B)
                        (plth.or
-                          (euclidean__axioms.eq B C)
+                          (plth.eq euclidean__axioms.Point B C)
                           (plth.or
                              (euclidean__axioms.BetS B A C)
                              (plth.or
@@ -978,31 +978,31 @@ thm lemma__fiveline :
                        H9)))
               (H8:(plth.Prf
                      (plth.or
-                        (euclidean__axioms.eq A C)
+                        (plth.eq euclidean__axioms.Point A C)
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B)))))) =>
                logic.or__ind
-                 (euclidean__axioms.eq A C)
+                 (plth.eq euclidean__axioms.Point A C)
                  (plth.or
-                    (euclidean__axioms.eq B C)
+                    (plth.eq euclidean__axioms.Point B C)
                     (plth.or
                        (euclidean__axioms.BetS B A C)
                        (plth.or
                           (euclidean__axioms.BetS A B C)
                           (euclidean__axioms.BetS A C B))))
                  plth.false
-                 (H9:(plth.Prf (euclidean__axioms.eq A C)) =>
+                 (H9:(plth.Prf (plth.eq euclidean__axioms.Point A C)) =>
                   (H10:(plth.Prf plth.false) =>
-                   (H11:(plth.Prf (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+                   (H11:(plth.Prf (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                     (H12:(plth.Prf
                             (plth.imp
                                (plth.or
-                                  (euclidean__axioms.eq B C)
+                                  (plth.eq euclidean__axioms.Point B C)
                                   (plth.or
                                      (euclidean__axioms.BetS B A C)
                                      (plth.or
@@ -1010,7 +1010,7 @@ thm lemma__fiveline :
                                         (euclidean__axioms.BetS A C B))))
                                plth.false)) =>
                      (H13:(plth.Prf
-                             (plth.imp (euclidean__axioms.eq B C) plth.false)) =>
+                             (plth.imp (plth.eq euclidean__axioms.Point B C) plth.false)) =>
                       (H14:(plth.Prf
                               (plth.imp
                                  (plth.or
@@ -1082,17 +1082,17 @@ thm lemma__fiveline :
                                       (euclidean__axioms.BetS A C B)))) =>
                          H12
                            (logic.or__intror
-                              (euclidean__axioms.eq B C)
+                              (plth.eq euclidean__axioms.Point B C)
                               (plth.or
                                  (euclidean__axioms.BetS B A C)
                                  (plth.or
                                     (euclidean__axioms.BetS A B C)
                                     (euclidean__axioms.BetS A C B)))
                               H14)))
-                       (H13:(plth.Prf (euclidean__axioms.eq B C)) =>
+                       (H13:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                         H12
                           (logic.or__introl
-                             (euclidean__axioms.eq B C)
+                             (plth.eq euclidean__axioms.Point B C)
                              (plth.or
                                 (euclidean__axioms.BetS B A C)
                                 (plth.or
@@ -1101,7 +1101,7 @@ thm lemma__fiveline :
                              H13)))
                       (H12:(plth.Prf
                               (plth.or
-                                 (euclidean__axioms.eq B C)
+                                 (plth.eq euclidean__axioms.Point B C)
                                  (plth.or
                                     (euclidean__axioms.BetS B A C)
                                     (plth.or
@@ -1109,21 +1109,21 @@ thm lemma__fiveline :
                                        (euclidean__axioms.BetS A C B))))) =>
                        H7
                          (logic.or__intror
-                            (euclidean__axioms.eq A B)
+                            (plth.eq euclidean__axioms.Point A B)
                             (plth.or
-                               (euclidean__axioms.eq B C)
+                               (plth.eq euclidean__axioms.Point B C)
                                (plth.or
                                   (euclidean__axioms.BetS B A C)
                                   (plth.or
                                      (euclidean__axioms.BetS A B C)
                                      (euclidean__axioms.BetS A C B))))
                             H12)))
-                     (H11:(plth.Prf (euclidean__axioms.eq A B)) =>
+                     (H11:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                       H7
                         (logic.or__introl
-                           (euclidean__axioms.eq A B)
+                           (plth.eq euclidean__axioms.Point A B)
                            (plth.or
-                              (euclidean__axioms.eq B C)
+                              (plth.eq euclidean__axioms.Point B C)
                               (plth.or
                                  (euclidean__axioms.BetS B A C)
                                  (plth.or
@@ -1133,26 +1133,26 @@ thm lemma__fiveline :
                     (H5 H9))
                  (H9:(plth.Prf
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (euclidean__axioms.BetS B A C)
                               (plth.or
                                  (euclidean__axioms.BetS A B C)
                                  (euclidean__axioms.BetS A C B))))) =>
                   logic.or__ind
-                    (euclidean__axioms.eq B C)
+                    (plth.eq euclidean__axioms.Point B C)
                     (plth.or
                        (euclidean__axioms.BetS B A C)
                        (plth.or
                           (euclidean__axioms.BetS A B C)
                           (euclidean__axioms.BetS A C B)))
                     plth.false
-                    (H10:(plth.Prf (euclidean__axioms.eq B C)) =>
-                     (H11:(plth.Prf (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+                    (H10:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
+                     (H11:(plth.Prf (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                       (H12:(plth.Prf
                               (plth.imp
                                  (plth.or
-                                    (euclidean__axioms.eq B C)
+                                    (plth.eq euclidean__axioms.Point B C)
                                     (plth.or
                                        (euclidean__axioms.BetS B A C)
                                        (plth.or
@@ -1160,7 +1160,7 @@ thm lemma__fiveline :
                                           (euclidean__axioms.BetS A C B))))
                                  plth.false)) =>
                        (H13:(plth.Prf
-                               (plth.imp (euclidean__axioms.eq B C) plth.false)) =>
+                               (plth.imp (plth.eq euclidean__axioms.Point B C) plth.false)) =>
                         (H14:(plth.Prf
                                 (plth.imp
                                    (plth.or
@@ -1246,17 +1246,17 @@ thm lemma__fiveline :
                                         (euclidean__axioms.BetS A C B)))) =>
                            H12
                              (logic.or__intror
-                                (euclidean__axioms.eq B C)
+                                (plth.eq euclidean__axioms.Point B C)
                                 (plth.or
                                    (euclidean__axioms.BetS B A C)
                                    (plth.or
                                       (euclidean__axioms.BetS A B C)
                                       (euclidean__axioms.BetS A C B)))
                                 H14)))
-                         (H13:(plth.Prf (euclidean__axioms.eq B C)) =>
+                         (H13:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                           H12
                             (logic.or__introl
-                               (euclidean__axioms.eq B C)
+                               (plth.eq euclidean__axioms.Point B C)
                                (plth.or
                                   (euclidean__axioms.BetS B A C)
                                   (plth.or
@@ -1265,7 +1265,7 @@ thm lemma__fiveline :
                                H13)))
                         (H12:(plth.Prf
                                 (plth.or
-                                   (euclidean__axioms.eq B C)
+                                   (plth.eq euclidean__axioms.Point B C)
                                    (plth.or
                                       (euclidean__axioms.BetS B A C)
                                       (plth.or
@@ -1273,21 +1273,21 @@ thm lemma__fiveline :
                                          (euclidean__axioms.BetS A C B))))) =>
                          H7
                            (logic.or__intror
-                              (euclidean__axioms.eq A B)
+                              (plth.eq euclidean__axioms.Point A B)
                               (plth.or
-                                 (euclidean__axioms.eq B C)
+                                 (plth.eq euclidean__axioms.Point B C)
                                  (plth.or
                                     (euclidean__axioms.BetS B A C)
                                     (plth.or
                                        (euclidean__axioms.BetS A B C)
                                        (euclidean__axioms.BetS A C B))))
                               H12)))
-                       (H11:(plth.Prf (euclidean__axioms.eq A B)) =>
+                       (H11:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                         H7
                           (logic.or__introl
-                             (euclidean__axioms.eq A B)
+                             (plth.eq euclidean__axioms.Point A B)
                              (plth.or
-                                (euclidean__axioms.eq B C)
+                                (plth.eq euclidean__axioms.Point B C)
                                 (plth.or
                                    (euclidean__axioms.BetS B A C)
                                    (plth.or
@@ -1308,11 +1308,11 @@ thm lemma__fiveline :
                        plth.false
                        (H11:(plth.Prf (euclidean__axioms.BetS B A C)) =>
                         (H12:(plth.Prf
-                                (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+                                (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                          (H13:(plth.Prf
                                  (plth.imp
                                     (plth.or
-                                       (euclidean__axioms.eq B C)
+                                       (plth.eq euclidean__axioms.Point B C)
                                        (plth.or
                                           (euclidean__axioms.BetS B A C)
                                           (plth.or
@@ -1321,7 +1321,7 @@ thm lemma__fiveline :
                                     plth.false)) =>
                           (H14:(plth.Prf
                                   (plth.imp
-                                     (euclidean__axioms.eq B C)
+                                     (plth.eq euclidean__axioms.Point B C)
                                      plth.false)) =>
                            (H15:(plth.Prf
                                    (plth.imp
@@ -1417,17 +1417,17 @@ thm lemma__fiveline :
                                            (euclidean__axioms.BetS A C B)))) =>
                               H13
                                 (logic.or__intror
-                                   (euclidean__axioms.eq B C)
+                                   (plth.eq euclidean__axioms.Point B C)
                                    (plth.or
                                       (euclidean__axioms.BetS B A C)
                                       (plth.or
                                          (euclidean__axioms.BetS A B C)
                                          (euclidean__axioms.BetS A C B)))
                                    H15)))
-                            (H14:(plth.Prf (euclidean__axioms.eq B C)) =>
+                            (H14:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                              H13
                                (logic.or__introl
-                                  (euclidean__axioms.eq B C)
+                                  (plth.eq euclidean__axioms.Point B C)
                                   (plth.or
                                      (euclidean__axioms.BetS B A C)
                                      (plth.or
@@ -1436,7 +1436,7 @@ thm lemma__fiveline :
                                   H14)))
                            (H13:(plth.Prf
                                    (plth.or
-                                      (euclidean__axioms.eq B C)
+                                      (plth.eq euclidean__axioms.Point B C)
                                       (plth.or
                                          (euclidean__axioms.BetS B A C)
                                          (plth.or
@@ -1444,21 +1444,21 @@ thm lemma__fiveline :
                                             (euclidean__axioms.BetS A C B))))) =>
                             H7
                               (logic.or__intror
-                                 (euclidean__axioms.eq A B)
+                                 (plth.eq euclidean__axioms.Point A B)
                                  (plth.or
-                                    (euclidean__axioms.eq B C)
+                                    (plth.eq euclidean__axioms.Point B C)
                                     (plth.or
                                        (euclidean__axioms.BetS B A C)
                                        (plth.or
                                           (euclidean__axioms.BetS A B C)
                                           (euclidean__axioms.BetS A C B))))
                                  H13)))
-                          (H12:(plth.Prf (euclidean__axioms.eq A B)) =>
+                          (H12:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                            H7
                              (logic.or__introl
-                                (euclidean__axioms.eq A B)
+                                (plth.eq euclidean__axioms.Point A B)
                                 (plth.or
-                                   (euclidean__axioms.eq B C)
+                                   (plth.eq euclidean__axioms.Point B C)
                                    (plth.or
                                       (euclidean__axioms.BetS B A C)
                                       (plth.or
@@ -1475,11 +1475,11 @@ thm lemma__fiveline :
                           plth.false
                           (H12:(plth.Prf (euclidean__axioms.BetS A B C)) =>
                            (H13:(plth.Prf
-                                   (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+                                   (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                             (H14:(plth.Prf
                                     (plth.imp
                                        (plth.or
-                                          (euclidean__axioms.eq B C)
+                                          (plth.eq euclidean__axioms.Point B C)
                                           (plth.or
                                              (euclidean__axioms.BetS B A C)
                                              (plth.or
@@ -1488,7 +1488,7 @@ thm lemma__fiveline :
                                        plth.false)) =>
                              (H15:(plth.Prf
                                      (plth.imp
-                                        (euclidean__axioms.eq B C)
+                                        (plth.eq euclidean__axioms.Point B C)
                                         plth.false)) =>
                               (H16:(plth.Prf
                                       (plth.imp
@@ -1599,17 +1599,17 @@ thm lemma__fiveline :
                                               (euclidean__axioms.BetS A C B)))) =>
                                  H14
                                    (logic.or__intror
-                                      (euclidean__axioms.eq B C)
+                                      (plth.eq euclidean__axioms.Point B C)
                                       (plth.or
                                          (euclidean__axioms.BetS B A C)
                                          (plth.or
                                             (euclidean__axioms.BetS A B C)
                                             (euclidean__axioms.BetS A C B)))
                                       H16)))
-                               (H15:(plth.Prf (euclidean__axioms.eq B C)) =>
+                               (H15:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                                 H14
                                   (logic.or__introl
-                                     (euclidean__axioms.eq B C)
+                                     (plth.eq euclidean__axioms.Point B C)
                                      (plth.or
                                         (euclidean__axioms.BetS B A C)
                                         (plth.or
@@ -1618,7 +1618,7 @@ thm lemma__fiveline :
                                      H15)))
                               (H14:(plth.Prf
                                       (plth.or
-                                         (euclidean__axioms.eq B C)
+                                         (plth.eq euclidean__axioms.Point B C)
                                          (plth.or
                                             (euclidean__axioms.BetS B A C)
                                             (plth.or
@@ -1626,21 +1626,21 @@ thm lemma__fiveline :
                                                (euclidean__axioms.BetS A C B))))) =>
                                H7
                                  (logic.or__intror
-                                    (euclidean__axioms.eq A B)
+                                    (plth.eq euclidean__axioms.Point A B)
                                     (plth.or
-                                       (euclidean__axioms.eq B C)
+                                       (plth.eq euclidean__axioms.Point B C)
                                        (plth.or
                                           (euclidean__axioms.BetS B A C)
                                           (plth.or
                                              (euclidean__axioms.BetS A B C)
                                              (euclidean__axioms.BetS A C B))))
                                     H14)))
-                             (H13:(plth.Prf (euclidean__axioms.eq A B)) =>
+                             (H13:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                               H7
                                 (logic.or__introl
-                                   (euclidean__axioms.eq A B)
+                                   (plth.eq euclidean__axioms.Point A B)
                                    (plth.or
-                                      (euclidean__axioms.eq B C)
+                                      (plth.eq euclidean__axioms.Point B C)
                                       (plth.or
                                          (euclidean__axioms.BetS B A C)
                                          (plth.or
@@ -1649,11 +1649,11 @@ thm lemma__fiveline :
                                    H13)))
                           (H12:(plth.Prf (euclidean__axioms.BetS A C B)) =>
                            (H13:(plth.Prf
-                                   (plth.imp (euclidean__axioms.eq A B) plth.false)) =>
+                                   (plth.imp (plth.eq euclidean__axioms.Point A B) plth.false)) =>
                             (H14:(plth.Prf
                                     (plth.imp
                                        (plth.or
-                                          (euclidean__axioms.eq B C)
+                                          (plth.eq euclidean__axioms.Point B C)
                                           (plth.or
                                              (euclidean__axioms.BetS B A C)
                                              (plth.or
@@ -1662,7 +1662,7 @@ thm lemma__fiveline :
                                        plth.false)) =>
                              (H15:(plth.Prf
                                      (plth.imp
-                                        (euclidean__axioms.eq B C)
+                                        (plth.eq euclidean__axioms.Point B C)
                                         plth.false)) =>
                               (H16:(plth.Prf
                                       (plth.imp
@@ -1773,17 +1773,17 @@ thm lemma__fiveline :
                                               (euclidean__axioms.BetS A C B)))) =>
                                  H14
                                    (logic.or__intror
-                                      (euclidean__axioms.eq B C)
+                                      (plth.eq euclidean__axioms.Point B C)
                                       (plth.or
                                          (euclidean__axioms.BetS B A C)
                                          (plth.or
                                             (euclidean__axioms.BetS A B C)
                                             (euclidean__axioms.BetS A C B)))
                                       H16)))
-                               (H15:(plth.Prf (euclidean__axioms.eq B C)) =>
+                               (H15:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                                 H14
                                   (logic.or__introl
-                                     (euclidean__axioms.eq B C)
+                                     (plth.eq euclidean__axioms.Point B C)
                                      (plth.or
                                         (euclidean__axioms.BetS B A C)
                                         (plth.or
@@ -1792,7 +1792,7 @@ thm lemma__fiveline :
                                      H15)))
                               (H14:(plth.Prf
                                       (plth.or
-                                         (euclidean__axioms.eq B C)
+                                         (plth.eq euclidean__axioms.Point B C)
                                          (plth.or
                                             (euclidean__axioms.BetS B A C)
                                             (plth.or
@@ -1800,21 +1800,21 @@ thm lemma__fiveline :
                                                (euclidean__axioms.BetS A C B))))) =>
                                H7
                                  (logic.or__intror
-                                    (euclidean__axioms.eq A B)
+                                    (plth.eq euclidean__axioms.Point A B)
                                     (plth.or
-                                       (euclidean__axioms.eq B C)
+                                       (plth.eq euclidean__axioms.Point B C)
                                        (plth.or
                                           (euclidean__axioms.BetS B A C)
                                           (plth.or
                                              (euclidean__axioms.BetS A B C)
                                              (euclidean__axioms.BetS A C B))))
                                     H14)))
-                             (H13:(plth.Prf (euclidean__axioms.eq A B)) =>
+                             (H13:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                               H7
                                 (logic.or__introl
-                                   (euclidean__axioms.eq A B)
+                                   (plth.eq euclidean__axioms.Point A B)
                                    (plth.or
-                                      (euclidean__axioms.eq B C)
+                                      (plth.eq euclidean__axioms.Point B C)
                                       (plth.or
                                          (euclidean__axioms.BetS B A C)
                                          (plth.or

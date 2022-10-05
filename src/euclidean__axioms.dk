@@ -16,12 +16,10 @@ PC : plth.El Point.
 CI :
   plth.predicate (plth.cons Circle (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))).
 
-def eq : plth.predicate (plth.cons Point (plth.cons Point plth.nil)) := plth.eq Point.
-
 def neq :
   plth.predicate (plth.cons Point (plth.cons Point plth.nil))
   :=
-  A:(plth.El Point) => B:(plth.El Point) => plth.not (eq A B).
+  A:(plth.El Point) => B:(plth.El Point) => plth.not (plth.eq Point A B).
 
 def TE :
   plth.predicate (plth.cons Point (plth.cons Point (plth.cons Point plth.nil)))
@@ -53,8 +51,8 @@ def Col :
   B:(plth.El Point) =>
   C:(plth.El Point) =>
   plth.or
-    (eq A B)
-    (plth.or (eq A C) (plth.or (eq B C) (plth.or (BetS B A C) (plth.or (BetS A B C) (BetS A C B))))).
+    (plth.eq Point A B)
+    (plth.or (plth.eq Point A C) (plth.or (plth.eq Point B C) (plth.or (BetS B A C) (plth.or (BetS A B C) (BetS A C B))))).
 
 def Cong__3 :
   plth.predicate
@@ -119,7 +117,7 @@ def InCirc :
                  plth.and
                    (CI J U V W)
                    (plth.or
-                      (eq P U)
+                      (plth.eq Point P U)
                       (plth.and (BetS U Y X) (plth.and (Cong U X V W) (Cong U P U Y))))))))).
 
 def OutCirc :
@@ -201,7 +199,7 @@ cn__stability :
     (plth.forall
        Point
        (A:(plth.El Point) =>
-        plth.forall Point (B:(plth.El Point) => plth.imp (plth.not (neq A B)) (eq A B)))).
+        plth.forall Point (B:(plth.El Point) => plth.imp (plth.not (neq A B)) (plth.eq Point A B)))).
 
 axiom__circle__center__radius :
   plth.Prf
@@ -275,7 +273,7 @@ axiom__connectivity :
                       (BetS A C D)
                       (plth.imp
                          (plth.not (BetS A B C))
-                         (plth.imp (plth.not (BetS A C B)) (eq B C))))))))).
+                         (plth.imp (plth.not (BetS A C B)) (plth.eq Point B C))))))))).
 
 axiom__nocollapse :
   plth.Prf
@@ -1080,13 +1078,13 @@ axiom__paste3 :
                                            (plth.imp
                                               (plth.or
                                                  (BetS A M B)
-                                                 (plth.or (eq A M) (eq M B)))
+                                                 (plth.or (plth.eq Point A M) (plth.eq Point M B)))
                                               (plth.imp
                                                  (BetS c m d)
                                                  (plth.imp
                                                     (plth.or
                                                        (BetS a m b)
-                                                       (plth.or (eq a m) (eq m b)))
+                                                       (plth.or (plth.eq Point a m) (plth.eq Point m b)))
                                                     (EF A C B D a c b d))))))))))))))))).
 
 axiom__paste4 :

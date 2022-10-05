@@ -38,7 +38,7 @@ thm lemma__9__5 :
   (H2:(plth.Prf
          (plth.or
             (euclidean__axioms.BetS R P Q)
-            (plth.or (euclidean__axioms.eq Q P) (euclidean__axioms.BetS R Q P)))) =>
+            (plth.or (plth.eq euclidean__axioms.Point Q P) (euclidean__axioms.BetS R Q P)))) =>
    (H3:(plth.Prf (euclidean__axioms.TS Q A B C)) => H3)
      ((H3:(plth.Prf (plth.or (euclidean__axioms.nCol C P R) (euclidean__axioms.Col C P R))) =>
        (H4:(plth.Prf
@@ -57,18 +57,18 @@ thm lemma__9__5 :
                       (plth.or
                          (euclidean__axioms.BetS R P Q)
                          (plth.or
-                            (euclidean__axioms.eq Q P)
+                            (plth.eq euclidean__axioms.Point Q P)
                             (euclidean__axioms.BetS R Q P)))) =>
                 (__TmpHyp0:(plth.Prf
                               (plth.or
                                  (euclidean__axioms.BetS R P Q)
                                  (plth.or
-                                    (euclidean__axioms.eq Q P)
+                                    (plth.eq euclidean__axioms.Point Q P)
                                     (euclidean__axioms.BetS R Q P)))) =>
                  logic.or__ind
                    (euclidean__axioms.BetS R P Q)
                    (plth.or
-                      (euclidean__axioms.eq Q P)
+                      (plth.eq euclidean__axioms.Point Q P)
                       (euclidean__axioms.BetS R Q P))
                    (euclidean__axioms.TS Q A B C)
                    (H7:(plth.Prf (euclidean__axioms.BetS R P Q)) =>
@@ -660,13 +660,13 @@ thm lemma__9__5 :
                                H8))))
                    (H7:(plth.Prf
                           (plth.or
-                             (euclidean__axioms.eq Q P)
+                             (plth.eq euclidean__axioms.Point Q P)
                              (euclidean__axioms.BetS R Q P))) =>
                     logic.or__ind
-                      (euclidean__axioms.eq Q P)
+                      (plth.eq euclidean__axioms.Point Q P)
                       (euclidean__axioms.BetS R Q P)
                       (euclidean__axioms.TS Q A B C)
-                      (H8:(plth.Prf (euclidean__axioms.eq Q P)) =>
+                      (H8:(plth.Prf (plth.eq euclidean__axioms.Point Q P)) =>
                        (H9:(plth.Prf (euclidean__axioms.TS Q A B C)) => H9)
                          (logic.eq__ind__r
                             euclidean__axioms.Point
@@ -742,7 +742,7 @@ thm lemma__9__5 :
                                       R)) =>
                             (H18:(plth.Prf
                                     (plth.not
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           A
                                           B))) =>
                              (H19:(plth.Prf
@@ -3403,15 +3403,15 @@ thm lemma__9__5 :
                                                     H1
                                                     H18))))
                                           (logic.or__intror
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 Q
                                                 R)
                                              (plth.or
-                                                (euclidean__axioms.eq
+                                                (plth.eq euclidean__axioms.Point
                                                    Q
                                                    C)
                                                 (plth.or
-                                                   (euclidean__axioms.eq
+                                                   (plth.eq euclidean__axioms.Point
                                                       R
                                                       C)
                                                    (plth.or
@@ -3429,11 +3429,11 @@ thm lemma__9__5 :
                                                             C
                                                             R)))))
                                              (logic.or__intror
-                                                (euclidean__axioms.eq
+                                                (plth.eq euclidean__axioms.Point
                                                    Q
                                                    C)
                                                 (plth.or
-                                                   (euclidean__axioms.eq
+                                                   (plth.eq euclidean__axioms.Point
                                                       R
                                                       C)
                                                    (plth.or
@@ -3451,7 +3451,7 @@ thm lemma__9__5 :
                                                             C
                                                             R))))
                                                 (logic.or__intror
-                                                   (euclidean__axioms.eq
+                                                   (plth.eq euclidean__axioms.Point
                                                       R
                                                       C)
                                                    (plth.or
@@ -3504,7 +3504,7 @@ thm lemma__9__5 :
                                                     P
                                                     Q)
                                                  (plth.or
-                                                    (euclidean__axioms.eq
+                                                    (plth.eq euclidean__axioms.Point
                                                        Q
                                                        P)
                                                     (euclidean__axioms.BetS
@@ -3518,7 +3518,7 @@ thm lemma__9__5 :
                                                            P
                                                            Q)
                                                         (plth.or
-                                                           (euclidean__axioms.eq
+                                                           (plth.eq euclidean__axioms.Point
                                                               Q
                                                               P)
                                                            (euclidean__axioms.BetS
@@ -3531,7 +3531,7 @@ thm lemma__9__5 :
                                              P
                                              Q)
                                           (plth.or
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 Q
                                                 P)
                                              (euclidean__axioms.BetS
@@ -3562,7 +3562,7 @@ thm lemma__9__5 :
                                                 H26))
                                           (H26:(plth.Prf
                                                   (plth.or
-                                                     (euclidean__axioms.eq
+                                                     (plth.eq euclidean__axioms.Point
                                                         Q
                                                         P)
                                                      (euclidean__axioms.BetS
@@ -3570,7 +3570,7 @@ thm lemma__9__5 :
                                                         Q
                                                         P))) =>
                                            logic.or__ind
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 Q
                                                 P)
                                              (euclidean__axioms.BetS
@@ -3582,7 +3582,7 @@ thm lemma__9__5 :
                                                 R
                                                 Q)
                                              (H27:(plth.Prf
-                                                     (euclidean__axioms.eq
+                                                     (plth.eq euclidean__axioms.Point
                                                         Q
                                                         P)) =>
                                               (H28:(plth.Prf
@@ -6004,7 +6004,7 @@ thm lemma__9__5 :
                                         H1
                                         H18))))
                               (H18:(plth.Prf
-                                      (euclidean__axioms.eq
+                                      (plth.eq euclidean__axioms.Point
                                          A
                                          B)) =>
                                (H19:(plth.Prf
@@ -6019,13 +6019,13 @@ thm lemma__9__5 :
                                   H11
                                   H19)
                                  (logic.or__introl
-                                    (euclidean__axioms.eq A B)
+                                    (plth.eq euclidean__axioms.Point A B)
                                     (plth.or
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           A
                                           P)
                                        (plth.or
-                                          (euclidean__axioms.eq
+                                          (plth.eq euclidean__axioms.Point
                                              B
                                              P)
                                           (plth.or
@@ -6247,27 +6247,27 @@ thm lemma__9__5 :
                                 L
                                 H13)))
                          (logic.or__intror
-                            (euclidean__axioms.eq P C)
+                            (plth.eq euclidean__axioms.Point P C)
                             (plth.or
-                               (euclidean__axioms.eq P L)
+                               (plth.eq euclidean__axioms.Point P L)
                                (plth.or
-                                  (euclidean__axioms.eq C L)
+                                  (plth.eq euclidean__axioms.Point C L)
                                   (plth.or
                                      (euclidean__axioms.BetS C P L)
                                      (plth.or
                                         (euclidean__axioms.BetS P C L)
                                         (euclidean__axioms.BetS P L C)))))
                             (logic.or__intror
-                               (euclidean__axioms.eq P L)
+                               (plth.eq euclidean__axioms.Point P L)
                                (plth.or
-                                  (euclidean__axioms.eq C L)
+                                  (plth.eq euclidean__axioms.Point C L)
                                   (plth.or
                                      (euclidean__axioms.BetS C P L)
                                      (plth.or
                                         (euclidean__axioms.BetS P C L)
                                         (euclidean__axioms.BetS P L C))))
                                (logic.or__intror
-                                  (euclidean__axioms.eq C L)
+                                  (plth.eq euclidean__axioms.Point C L)
                                   (plth.or
                                      (euclidean__axioms.BetS C P L)
                                      (plth.or

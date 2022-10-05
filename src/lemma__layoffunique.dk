@@ -16,7 +16,7 @@ thm lemma__layoffunique :
                    (euclidean__defs.Out A B C)
                    (plth.imp
                       (euclidean__defs.Out A B D)
-                      (plth.imp (euclidean__axioms.Cong A C A D) (euclidean__axioms.eq C D))))))))
+                      (plth.imp (euclidean__axioms.Cong A C A D) (plth.eq euclidean__axioms.Point C D))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
@@ -29,41 +29,41 @@ thm lemma__layoffunique :
    (H3:(plth.Prf
           (plth.or
              (euclidean__axioms.BetS A C B)
-             (plth.or (euclidean__axioms.eq B C) (euclidean__axioms.BetS A B C)))) =>
+             (plth.or (plth.eq euclidean__axioms.Point B C) (euclidean__axioms.BetS A B C)))) =>
     (H4:(plth.Prf
            (plth.or
               (euclidean__axioms.BetS A D B)
-              (plth.or (euclidean__axioms.eq B D) (euclidean__axioms.BetS A B D)))) =>
+              (plth.or (plth.eq euclidean__axioms.Point B D) (euclidean__axioms.BetS A B D)))) =>
      (H5:(plth.Prf (euclidean__axioms.Cong A B A B)) =>
       (H6:(plth.Prf (euclidean__axioms.Cong B C B C)) =>
        (H7:(plth.Prf (euclidean__axioms.Cong C B C B)) =>
         (H8:(plth.Prf (euclidean__axioms.Cong A C A C)) =>
-         (H9:(plth.Prf (euclidean__axioms.eq C D)) => H9)
+         (H9:(plth.Prf (plth.eq euclidean__axioms.Point C D)) => H9)
            ((H9:(plth.Prf
                    (plth.or
                       (euclidean__axioms.BetS A C B)
                       (plth.or
-                         (euclidean__axioms.eq B C)
+                         (plth.eq euclidean__axioms.Point B C)
                          (euclidean__axioms.BetS A B C)))) =>
              (__TmpHyp:(plth.Prf
                           (plth.or
                              (euclidean__axioms.BetS A C B)
                              (plth.or
-                                (euclidean__axioms.eq B C)
+                                (plth.eq euclidean__axioms.Point B C)
                                 (euclidean__axioms.BetS A B C)))) =>
               logic.or__ind
                 (euclidean__axioms.BetS A C B)
                 (plth.or
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (euclidean__axioms.BetS A B C))
-                (euclidean__axioms.eq C D)
+                (plth.eq euclidean__axioms.Point C D)
                 (H10:(plth.Prf (euclidean__axioms.BetS A C B)) =>
-                 (H11:(plth.Prf (euclidean__axioms.eq C D)) => H11)
+                 (H11:(plth.Prf (plth.eq euclidean__axioms.Point C D)) => H11)
                    ((H11:(plth.Prf
                             (plth.or
                                (euclidean__axioms.BetS A D B)
                                (plth.or
-                                  (euclidean__axioms.eq B D)
+                                  (plth.eq euclidean__axioms.Point B D)
                                   (euclidean__axioms.BetS A B D)))) =>
                      (__TmpHyp0:(plth.Prf
                                    (plth.or
@@ -72,7 +72,7 @@ thm lemma__layoffunique :
                                          D
                                          B)
                                       (plth.or
-                                         (euclidean__axioms.eq
+                                         (plth.eq euclidean__axioms.Point
                                             B
                                             D)
                                          (euclidean__axioms.BetS
@@ -82,9 +82,9 @@ thm lemma__layoffunique :
                       logic.or__ind
                         (euclidean__axioms.BetS A D B)
                         (plth.or
-                           (euclidean__axioms.eq B D)
+                           (plth.eq euclidean__axioms.Point B D)
                            (euclidean__axioms.BetS A B D))
-                        (euclidean__axioms.eq C D)
+                        (plth.eq euclidean__axioms.Point C D)
                         (H12:(plth.Prf
                                 (euclidean__axioms.BetS A D B)) =>
                          (H13:(plth.Prf
@@ -117,12 +117,12 @@ thm lemma__layoffunique :
                                            C
                                            D))) =>
                               euclidean__tactics.NNPP
-                                (euclidean__axioms.eq
+                                (plth.eq euclidean__axioms.Point
                                    C
                                    D)
                                 (H18:(plth.Prf
                                         (plth.not
-                                           (euclidean__axioms.eq
+                                           (plth.eq euclidean__axioms.Point
                                               C
                                               D))) =>
                                  (H19:(plth.Prf
@@ -140,7 +140,7 @@ thm lemma__layoffunique :
                                            C
                                            C)) =>
                                  (H19:(plth.Prf
-                                         (euclidean__axioms.eq
+                                         (plth.eq euclidean__axioms.Point
                                             C
                                             C)) =>
                                   H18 H19)
@@ -298,17 +298,17 @@ thm lemma__layoffunique :
                               H12))
                         (H12:(plth.Prf
                                 (plth.or
-                                   (euclidean__axioms.eq B D)
+                                   (plth.eq euclidean__axioms.Point B D)
                                    (euclidean__axioms.BetS
                                       A
                                       B
                                       D))) =>
                          logic.or__ind
-                           (euclidean__axioms.eq B D)
+                           (plth.eq euclidean__axioms.Point B D)
                            (euclidean__axioms.BetS A B D)
-                           (euclidean__axioms.eq C D)
+                           (plth.eq euclidean__axioms.Point C D)
                            (H13:(plth.Prf
-                                   (euclidean__axioms.eq B D)) =>
+                                   (plth.eq euclidean__axioms.Point B D)) =>
                             (H14:(plth.Prf
                                     (euclidean__axioms.BetS
                                        A
@@ -320,10 +320,10 @@ thm lemma__layoffunique :
                                            C
                                            D))) =>
                               euclidean__tactics.NNPP
-                                (euclidean__axioms.eq C D)
+                                (plth.eq euclidean__axioms.Point C D)
                                 (H16:(plth.Prf
                                         (plth.not
-                                           (euclidean__axioms.eq
+                                           (plth.eq euclidean__axioms.Point
                                               C
                                               D))) =>
                                  (H17:(plth.Prf
@@ -449,10 +449,10 @@ thm lemma__layoffunique :
                                            C
                                            D))) =>
                               euclidean__tactics.NNPP
-                                (euclidean__axioms.eq C D)
+                                (plth.eq euclidean__axioms.Point C D)
                                 (H16:(plth.Prf
                                         (plth.not
-                                           (euclidean__axioms.eq
+                                           (plth.eq euclidean__axioms.Point
                                               C
                                               D))) =>
                                  (H17:(plth.Prf
@@ -491,19 +491,19 @@ thm lemma__layoffunique :
                       H4))
                 (H10:(plth.Prf
                         (plth.or
-                           (euclidean__axioms.eq B C)
+                           (plth.eq euclidean__axioms.Point B C)
                            (euclidean__axioms.BetS A B C))) =>
                  logic.or__ind
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (euclidean__axioms.BetS A B C)
-                   (euclidean__axioms.eq C D)
-                   (H11:(plth.Prf (euclidean__axioms.eq B C)) =>
+                   (plth.eq euclidean__axioms.Point C D)
+                   (H11:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
                     (H12:(plth.Prf
                             (euclidean__axioms.Cong A B A D)) =>
                      (H13:(plth.Prf
                              (euclidean__axioms.Cong A D A B)) =>
                       (H14:(plth.Prf
-                              (euclidean__axioms.eq C D)) =>
+                              (plth.eq euclidean__axioms.Point C D)) =>
                        H14)
                         ((H14:(plth.Prf
                                  (plth.or
@@ -512,7 +512,7 @@ thm lemma__layoffunique :
                                        D
                                        B)
                                     (plth.or
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           B
                                           D)
                                        (euclidean__axioms.BetS
@@ -526,7 +526,7 @@ thm lemma__layoffunique :
                                               D
                                               B)
                                            (plth.or
-                                              (euclidean__axioms.eq
+                                              (plth.eq euclidean__axioms.Point
                                                  B
                                                  D)
                                               (euclidean__axioms.BetS
@@ -536,12 +536,12 @@ thm lemma__layoffunique :
                            logic.or__ind
                              (euclidean__axioms.BetS A D B)
                              (plth.or
-                                (euclidean__axioms.eq B D)
+                                (plth.eq euclidean__axioms.Point B D)
                                 (euclidean__axioms.BetS
                                    A
                                    B
                                    D))
-                             (euclidean__axioms.eq C D)
+                             (plth.eq euclidean__axioms.Point C D)
                              (H15:(plth.Prf
                                      (euclidean__axioms.BetS
                                         A
@@ -553,12 +553,12 @@ thm lemma__layoffunique :
                                             C
                                             D))) =>
                                euclidean__tactics.NNPP
-                                 (euclidean__axioms.eq
+                                 (plth.eq euclidean__axioms.Point
                                     C
                                     D)
                                  (H17:(plth.Prf
                                          (plth.not
-                                            (euclidean__axioms.eq
+                                            (plth.eq euclidean__axioms.Point
                                                C
                                                D))) =>
                                   (H18:(plth.Prf
@@ -586,7 +586,7 @@ thm lemma__layoffunique :
                                       H15)))
                              (H15:(plth.Prf
                                      (plth.or
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            B
                                            D)
                                         (euclidean__axioms.BetS
@@ -594,26 +594,26 @@ thm lemma__layoffunique :
                                            B
                                            D))) =>
                               logic.or__ind
-                                (euclidean__axioms.eq B D)
+                                (plth.eq euclidean__axioms.Point B D)
                                 (euclidean__axioms.BetS
                                    A
                                    B
                                    D)
-                                (euclidean__axioms.eq C D)
+                                (plth.eq euclidean__axioms.Point C D)
                                 (H16:(plth.Prf
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            B
                                            D)) =>
                                  (H17:(plth.Prf
-                                         (euclidean__axioms.eq
+                                         (plth.eq euclidean__axioms.Point
                                             C
                                             B)) =>
                                   (H18:(plth.Prf
-                                          (euclidean__axioms.eq
+                                          (plth.eq euclidean__axioms.Point
                                              D
                                              B)) =>
                                    (H19:(plth.Prf
-                                           (euclidean__axioms.eq
+                                           (plth.eq euclidean__axioms.Point
                                               C
                                               D)) =>
                                     H19)
@@ -1085,12 +1085,12 @@ thm lemma__layoffunique :
                                                 C
                                                 D))) =>
                                    euclidean__tactics.NNPP
-                                     (euclidean__axioms.eq
+                                     (plth.eq euclidean__axioms.Point
                                         C
                                         D)
                                      (H19:(plth.Prf
                                              (plth.not
-                                                (euclidean__axioms.eq
+                                                (plth.eq euclidean__axioms.Point
                                                    C
                                                    D))) =>
                                       (H20:(plth.Prf
@@ -1411,12 +1411,12 @@ thm lemma__layoffunique :
                          H6
                          H7))
                    (H11:(plth.Prf (euclidean__axioms.BetS A B C)) =>
-                    (H12:(plth.Prf (euclidean__axioms.eq C D)) => H12)
+                    (H12:(plth.Prf (plth.eq euclidean__axioms.Point C D)) => H12)
                       ((H12:(plth.Prf
                                (plth.or
                                   (euclidean__axioms.BetS A D B)
                                   (plth.or
-                                     (euclidean__axioms.eq B D)
+                                     (plth.eq euclidean__axioms.Point B D)
                                      (euclidean__axioms.BetS
                                         A
                                         B
@@ -1428,7 +1428,7 @@ thm lemma__layoffunique :
                                             D
                                             B)
                                          (plth.or
-                                            (euclidean__axioms.eq
+                                            (plth.eq euclidean__axioms.Point
                                                B
                                                D)
                                             (euclidean__axioms.BetS
@@ -1438,9 +1438,9 @@ thm lemma__layoffunique :
                          logic.or__ind
                            (euclidean__axioms.BetS A D B)
                            (plth.or
-                              (euclidean__axioms.eq B D)
+                              (plth.eq euclidean__axioms.Point B D)
                               (euclidean__axioms.BetS A B D))
-                           (euclidean__axioms.eq C D)
+                           (plth.eq euclidean__axioms.Point C D)
                            (H13:(plth.Prf
                                    (euclidean__axioms.BetS
                                       A
@@ -1463,12 +1463,12 @@ thm lemma__layoffunique :
                                             C
                                             D))) =>
                                euclidean__tactics.NNPP
-                                 (euclidean__axioms.eq
+                                 (plth.eq euclidean__axioms.Point
                                     C
                                     D)
                                  (H17:(plth.Prf
                                          (plth.not
-                                            (euclidean__axioms.eq
+                                            (plth.eq euclidean__axioms.Point
                                                C
                                                D))) =>
                                   (H18:(plth.Prf
@@ -1504,7 +1504,7 @@ thm lemma__layoffunique :
                                  H11))
                            (H13:(plth.Prf
                                    (plth.or
-                                      (euclidean__axioms.eq
+                                      (plth.eq euclidean__axioms.Point
                                          B
                                          D)
                                       (euclidean__axioms.BetS
@@ -1512,11 +1512,11 @@ thm lemma__layoffunique :
                                          B
                                          D))) =>
                             logic.or__ind
-                              (euclidean__axioms.eq B D)
+                              (plth.eq euclidean__axioms.Point B D)
                               (euclidean__axioms.BetS A B D)
-                              (euclidean__axioms.eq C D)
+                              (plth.eq euclidean__axioms.Point C D)
                               (H14:(plth.Prf
-                                      (euclidean__axioms.eq
+                                      (plth.eq euclidean__axioms.Point
                                          B
                                          D)) =>
                                (H15:(plth.Prf
@@ -1530,12 +1530,12 @@ thm lemma__layoffunique :
                                               C
                                               D))) =>
                                  euclidean__tactics.NNPP
-                                   (euclidean__axioms.eq
+                                   (plth.eq euclidean__axioms.Point
                                       C
                                       D)
                                    (H17:(plth.Prf
                                            (plth.not
-                                              (euclidean__axioms.eq
+                                              (plth.eq euclidean__axioms.Point
                                                  C
                                                  D))) =>
                                     (H18:(plth.Prf
@@ -1661,7 +1661,7 @@ thm lemma__layoffunique :
                                            B
                                            D)) =>
                                  (H17:(plth.Prf
-                                         (euclidean__axioms.eq
+                                         (plth.eq euclidean__axioms.Point
                                             C
                                             D)) =>
                                   H17)

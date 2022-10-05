@@ -46,15 +46,15 @@ thm proposition__26A :
   H2:(plth.Prf (euclidean__defs.CongA B C A E F D)) =>
   H3:(plth.Prf (euclidean__axioms.Cong B C E F)) =>
   (H4:(plth.Prf (euclidean__axioms.nCol A B C)) =>
-   (H5:(plth.Prf (plth.not (euclidean__axioms.eq A B))) =>
+   (H5:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A B))) =>
     (H6:(plth.Prf (euclidean__axioms.neq B A)) =>
-     (H7:(plth.Prf (plth.not (euclidean__axioms.eq B C))) =>
+     (H7:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point B C))) =>
       (H8:(plth.Prf (euclidean__axioms.neq C B)) =>
-       (H9:(plth.Prf (plth.not (euclidean__axioms.eq A C))) =>
+       (H9:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A C))) =>
         (H10:(plth.Prf (euclidean__axioms.neq C A)) =>
          (H11:(plth.Prf (plth.not (euclidean__defs.Lt D E A B))) =>
           (H12:(plth.Prf (plth.not (euclidean__defs.Lt A B D E))) =>
-           (H13:(plth.Prf (plth.not (euclidean__axioms.eq D E))) =>
+           (H13:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point D E))) =>
             (H14:(plth.Prf (euclidean__axioms.Cong A B D E)) =>
              (H15:(plth.Prf (euclidean__axioms.Cong B A E D)) =>
               (H16:(plth.Prf
@@ -609,17 +609,17 @@ thm proposition__26A :
                  H11
                  H5
                  H13))
-             (H13:(plth.Prf (euclidean__axioms.eq D E)) =>
+             (H13:(plth.Prf (plth.eq euclidean__axioms.Point D E)) =>
               (H14:(plth.Prf (euclidean__axioms.Col D E F)) =>
                (H15:(plth.Prf (euclidean__axioms.nCol D E F)) =>
                 euclidean__tactics.Col__nCol__False D E F H15 H14)
                  H0)
                 (logic.or__introl
-                   (euclidean__axioms.eq D E)
+                   (plth.eq euclidean__axioms.Point D E)
                    (plth.or
-                      (euclidean__axioms.eq D F)
+                      (plth.eq euclidean__axioms.Point D F)
                       (plth.or
-                         (euclidean__axioms.eq E F)
+                         (plth.eq euclidean__axioms.Point E F)
                          (plth.or
                             (euclidean__axioms.BetS E D F)
                             (plth.or
@@ -673,11 +673,11 @@ thm proposition__26A :
                                    D
                                    G)) =>
                          (H22:(plth.Prf
-                                 (euclidean__axioms.eq
+                                 (plth.eq euclidean__axioms.Point
                                     D
                                     D)) =>
                           (H23:(plth.Prf
-                                  (euclidean__axioms.eq
+                                  (plth.eq euclidean__axioms.Point
                                      F
                                      F)) =>
                            (H24:(plth.Prf
@@ -687,7 +687,7 @@ thm proposition__26A :
                                       F)) =>
                             (H25:(plth.Prf
                                     (plth.not
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           E
                                           F))) =>
                              (H26:(plth.Prf
@@ -702,11 +702,11 @@ thm proposition__26A :
                                          G
                                          F)) =>
                                (H28:(plth.Prf
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           E
                                           E)) =>
                                 (H29:(plth.Prf
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            G
                                            G)) =>
                                  (H30:(plth.Prf
@@ -1201,7 +1201,7 @@ thm proposition__26A :
                                                                     D)
                                                                  (plth.or
                                                                     (
-                                                                    euclidean__axioms.eq
+                                                                    plth.eq euclidean__axioms.Point
                                                                     D
                                                                     D)
                                                                     (
@@ -1211,7 +1211,7 @@ thm proposition__26A :
                                                                     D))
                                                                  (logic.or__introl
                                                                     (
-                                                                    euclidean__axioms.eq
+                                                                    plth.eq euclidean__axioms.Point
                                                                     D
                                                                     D)
                                                                     (
@@ -1623,7 +1623,7 @@ thm proposition__26A :
                                                                   E
                                                                   E)
                                                                (plth.or
-                                                                  (euclidean__axioms.eq
+                                                                  (plth.eq euclidean__axioms.Point
                                                                     E
                                                                     E)
                                                                   (euclidean__axioms.BetS
@@ -1631,7 +1631,7 @@ thm proposition__26A :
                                                                     E
                                                                     E))
                                                                (logic.or__introl
-                                                                  (euclidean__axioms.eq
+                                                                  (plth.eq euclidean__axioms.Point
                                                                     E
                                                                     E)
                                                                   (euclidean__axioms.BetS
@@ -2897,7 +2897,7 @@ thm proposition__26A :
                                              G
                                              G)
                                           (plth.or
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 G
                                                 G)
                                              (euclidean__axioms.BetS
@@ -2905,7 +2905,7 @@ thm proposition__26A :
                                                 G
                                                 G))
                                           (logic.or__introl
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 G
                                                 G)
                                              (euclidean__axioms.BetS
@@ -2938,7 +2938,7 @@ thm proposition__26A :
                                         F
                                         F)
                                      (plth.or
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            F
                                            F)
                                         (euclidean__axioms.BetS
@@ -2946,7 +2946,7 @@ thm proposition__26A :
                                            F
                                            F))
                                      (logic.or__introl
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            F
                                            F)
                                         (euclidean__axioms.BetS
@@ -2956,7 +2956,7 @@ thm proposition__26A :
                                         H23))
                                   H25))
                               (H25:(plth.Prf
-                                      (euclidean__axioms.eq
+                                      (plth.eq euclidean__axioms.Point
                                          E
                                          F)) =>
                                (H26:(plth.Prf
@@ -2971,15 +2971,15 @@ thm proposition__26A :
                                   H24
                                   H26)
                                  (logic.or__intror
-                                    (euclidean__axioms.eq
+                                    (plth.eq euclidean__axioms.Point
                                        D
                                        E)
                                     (plth.or
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           D
                                           F)
                                        (plth.or
-                                          (euclidean__axioms.eq
+                                          (plth.eq euclidean__axioms.Point
                                              E
                                              F)
                                           (plth.or
@@ -2997,11 +2997,11 @@ thm proposition__26A :
                                                    F
                                                    E)))))
                                     (logic.or__intror
-                                       (euclidean__axioms.eq
+                                       (plth.eq euclidean__axioms.Point
                                           D
                                           F)
                                        (plth.or
-                                          (euclidean__axioms.eq
+                                          (plth.eq euclidean__axioms.Point
                                              E
                                              F)
                                           (plth.or
@@ -3019,7 +3019,7 @@ thm proposition__26A :
                                                    F
                                                    E))))
                                        (logic.or__introl
-                                          (euclidean__axioms.eq
+                                          (plth.eq euclidean__axioms.Point
                                              E
                                              F)
                                           (plth.or
@@ -3054,7 +3054,7 @@ thm proposition__26A :
                                    G
                                    D)
                                 (plth.or
-                                   (euclidean__axioms.eq
+                                   (plth.eq euclidean__axioms.Point
                                       G
                                       D)
                                    (euclidean__axioms.BetS
@@ -3265,7 +3265,7 @@ thm proposition__26A :
                                   A
                                   G)) =>
                         (H21:(plth.Prf
-                                (euclidean__axioms.eq
+                                (plth.eq euclidean__axioms.Point
                                    C
                                    C)) =>
                          (H22:(plth.Prf
@@ -3280,11 +3280,11 @@ thm proposition__26A :
                                      G
                                      C)) =>
                            (H24:(plth.Prf
-                                   (euclidean__axioms.eq
+                                   (plth.eq euclidean__axioms.Point
                                       B
                                       B)) =>
                             (H25:(plth.Prf
-                                    (euclidean__axioms.eq
+                                    (plth.eq euclidean__axioms.Point
                                        G
                                        G)) =>
                              (H26:(plth.Prf
@@ -3380,7 +3380,7 @@ thm proposition__26A :
                                                   B
                                                   B)) =>
                                         (H37:(plth.Prf
-                                                (euclidean__axioms.eq
+                                                (plth.eq euclidean__axioms.Point
                                                    A
                                                    A)) =>
                                          (H38:(plth.Prf
@@ -3747,7 +3747,7 @@ thm proposition__26A :
                                                           A
                                                           A)
                                                        (plth.or
-                                                          (euclidean__axioms.eq
+                                                          (plth.eq euclidean__axioms.Point
                                                              A
                                                              A)
                                                           (euclidean__axioms.BetS
@@ -3755,7 +3755,7 @@ thm proposition__26A :
                                                              A
                                                              A))
                                                        (logic.or__introl
-                                                          (euclidean__axioms.eq
+                                                          (plth.eq euclidean__axioms.Point
                                                              A
                                                              A)
                                                           (euclidean__axioms.BetS
@@ -3787,7 +3787,7 @@ thm proposition__26A :
                                                    E
                                                    F
                                                    D))
-                                             (euclidean__axioms.eq
+                                             (plth.eq euclidean__axioms.Point
                                                 A
                                                 A)
                                              (H37:(plth.Prf
@@ -3827,7 +3827,7 @@ thm proposition__26A :
                                                    E
                                                    F
                                                    D)
-                                                (euclidean__axioms.eq
+                                                (plth.eq euclidean__axioms.Point
                                                    A
                                                    A)
                                                 (H39:(plth.Prf
@@ -3943,7 +3943,7 @@ thm proposition__26A :
                                                         B
                                                         B)
                                                      (plth.or
-                                                        (euclidean__axioms.eq
+                                                        (plth.eq euclidean__axioms.Point
                                                            B
                                                            B)
                                                         (euclidean__axioms.BetS
@@ -3951,7 +3951,7 @@ thm proposition__26A :
                                                            B
                                                            B))
                                                      (logic.or__introl
-                                                        (euclidean__axioms.eq
+                                                        (plth.eq euclidean__axioms.Point
                                                            B
                                                            B)
                                                         (euclidean__axioms.BetS
@@ -4712,7 +4712,7 @@ thm proposition__26A :
                                         G
                                         G)
                                      (plth.or
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            G
                                            G)
                                         (euclidean__axioms.BetS
@@ -4720,7 +4720,7 @@ thm proposition__26A :
                                            G
                                            G))
                                      (logic.or__introl
-                                        (euclidean__axioms.eq
+                                        (plth.eq euclidean__axioms.Point
                                            G
                                            G)
                                         (euclidean__axioms.BetS
@@ -4748,7 +4748,7 @@ thm proposition__26A :
                                     C
                                     C)
                                  (plth.or
-                                    (euclidean__axioms.eq
+                                    (plth.eq euclidean__axioms.Point
                                        C
                                        C)
                                     (euclidean__axioms.BetS
@@ -4756,7 +4756,7 @@ thm proposition__26A :
                                        C
                                        C))
                                  (logic.or__introl
-                                    (euclidean__axioms.eq
+                                    (plth.eq euclidean__axioms.Point
                                        C
                                        C)
                                     (euclidean__axioms.BetS
@@ -4775,7 +4775,7 @@ thm proposition__26A :
                             (logic.or__introl
                                (euclidean__axioms.BetS B G A)
                                (plth.or
-                                  (euclidean__axioms.eq G A)
+                                  (plth.eq euclidean__axioms.Point G A)
                                   (euclidean__axioms.BetS
                                      B
                                      A
@@ -4933,24 +4933,24 @@ thm proposition__26A :
                   H12))
               (euclidean__axioms.cn__equalityreverse A B)))
           (lemma__inequalitysymmetric.lemma__inequalitysymmetric A C H9))
-         (H9:(plth.Prf (euclidean__axioms.eq A C)) =>
+         (H9:(plth.Prf (plth.eq euclidean__axioms.Point A C)) =>
           (H10:(plth.Prf (euclidean__axioms.Col A B C)) =>
            euclidean__tactics.Col__nCol__False A B C H4 H10)
             (logic.or__intror
-               (euclidean__axioms.eq A B)
+               (plth.eq euclidean__axioms.Point A B)
                (plth.or
-                  (euclidean__axioms.eq A C)
+                  (plth.eq euclidean__axioms.Point A C)
                   (plth.or
-                     (euclidean__axioms.eq B C)
+                     (plth.eq euclidean__axioms.Point B C)
                      (plth.or
                         (euclidean__axioms.BetS B A C)
                         (plth.or
                            (euclidean__axioms.BetS A B C)
                            (euclidean__axioms.BetS A C B)))))
                (logic.or__introl
-                  (euclidean__axioms.eq A C)
+                  (plth.eq euclidean__axioms.Point A C)
                   (plth.or
-                     (euclidean__axioms.eq B C)
+                     (plth.eq euclidean__axioms.Point B C)
                      (plth.or
                         (euclidean__axioms.BetS B A C)
                         (plth.or
@@ -4958,31 +4958,31 @@ thm proposition__26A :
                            (euclidean__axioms.BetS A C B))))
                   H9))))
         (lemma__inequalitysymmetric.lemma__inequalitysymmetric B C H7))
-       (H7:(plth.Prf (euclidean__axioms.eq B C)) =>
+       (H7:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
         (H8:(plth.Prf (euclidean__axioms.Col A B C)) =>
          euclidean__tactics.Col__nCol__False A B C H4 H8)
           (logic.or__intror
-             (euclidean__axioms.eq A B)
+             (plth.eq euclidean__axioms.Point A B)
              (plth.or
-                (euclidean__axioms.eq A C)
+                (plth.eq euclidean__axioms.Point A C)
                 (plth.or
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (plth.or
                       (euclidean__axioms.BetS B A C)
                       (plth.or
                          (euclidean__axioms.BetS A B C)
                          (euclidean__axioms.BetS A C B)))))
              (logic.or__intror
-                (euclidean__axioms.eq A C)
+                (plth.eq euclidean__axioms.Point A C)
                 (plth.or
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (plth.or
                       (euclidean__axioms.BetS B A C)
                       (plth.or
                          (euclidean__axioms.BetS A B C)
                          (euclidean__axioms.BetS A C B))))
                 (logic.or__introl
-                   (euclidean__axioms.eq B C)
+                   (plth.eq euclidean__axioms.Point B C)
                    (plth.or
                       (euclidean__axioms.BetS B A C)
                       (plth.or
@@ -4990,15 +4990,15 @@ thm proposition__26A :
                          (euclidean__axioms.BetS A C B)))
                    H7)))))
       (lemma__inequalitysymmetric.lemma__inequalitysymmetric A B H5))
-     (H5:(plth.Prf (euclidean__axioms.eq A B)) =>
+     (H5:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
       (H6:(plth.Prf (euclidean__axioms.Col A B C)) =>
        euclidean__tactics.Col__nCol__False A B C H4 H6)
         (logic.or__introl
-           (euclidean__axioms.eq A B)
+           (plth.eq euclidean__axioms.Point A B)
            (plth.or
-              (euclidean__axioms.eq A C)
+              (plth.eq euclidean__axioms.Point A C)
               (plth.or
-                 (euclidean__axioms.eq B C)
+                 (plth.eq euclidean__axioms.Point B C)
                  (plth.or
                     (euclidean__axioms.BetS B A C)
                     (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B)))))
