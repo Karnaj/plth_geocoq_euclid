@@ -13,9 +13,9 @@ thm lemma__layoff :
                 euclidean__axioms.Point
                 (D:(plth.El euclidean__axioms.Point) =>
                  plth.imp
-                   (euclidean__axioms.neq A B)
+                   (plth.neq euclidean__axioms.Point A B)
                    (plth.imp
-                      (euclidean__axioms.neq C D)
+                      (plth.neq euclidean__axioms.Point C D)
                       (plth.ex
                          euclidean__axioms.Point
                          (X:(plth.El euclidean__axioms.Point) =>
@@ -27,8 +27,8 @@ thm lemma__layoff :
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
   D:(plth.El euclidean__axioms.Point) =>
-  H:(plth.Prf (euclidean__axioms.neq A B)) =>
-  H0:(plth.Prf (euclidean__axioms.neq C D)) =>
+  H:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
+  H0:(plth.Prf (plth.neq euclidean__axioms.Point C D)) =>
   (H1:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point B A))) =>
    (H2:(plth.Prf
           (plth.ex
@@ -56,7 +56,7 @@ thm lemma__layoff :
          (H4:(plth.Prf (euclidean__axioms.BetS B A E)) =>
           H5:(plth.Prf (euclidean__axioms.Cong A E C D)) =>
           (H6:(plth.Prf (euclidean__axioms.BetS E A B)) =>
-           (H7:(plth.Prf (euclidean__axioms.neq E A)) =>
+           (H7:(plth.Prf (plth.neq euclidean__axioms.Point E A)) =>
             (H8:(plth.Prf (euclidean__axioms.BetS E A B)) =>
              (H9:(plth.Prf
                     (plth.ex
@@ -124,25 +124,27 @@ thm lemma__layoff :
               H6)
              ((H7:(plth.Prf
                      (plth.and
-                        (euclidean__axioms.neq A B)
+                        (plth.neq euclidean__axioms.Point A B)
                         (plth.and
-                           (euclidean__axioms.neq E A)
-                           (euclidean__axioms.neq E B)))) =>
+                           (plth.neq euclidean__axioms.Point E A)
+                           (plth.neq euclidean__axioms.Point E B)))) =>
                logic.and__ind
-                 (euclidean__axioms.neq A B)
-                 (plth.and (euclidean__axioms.neq E A) (euclidean__axioms.neq E B))
-                 (euclidean__axioms.neq E A)
-                 (H8:(plth.Prf (euclidean__axioms.neq A B)) =>
+                 (plth.neq euclidean__axioms.Point A B)
+                 (plth.and
+                    (plth.neq euclidean__axioms.Point E A)
+                    (plth.neq euclidean__axioms.Point E B))
+                 (plth.neq euclidean__axioms.Point E A)
+                 (H8:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
                   H9:(plth.Prf
                         (plth.and
-                           (euclidean__axioms.neq E A)
-                           (euclidean__axioms.neq E B))) =>
+                           (plth.neq euclidean__axioms.Point E A)
+                           (plth.neq euclidean__axioms.Point E B))) =>
                   logic.and__ind
-                    (euclidean__axioms.neq E A)
-                    (euclidean__axioms.neq E B)
-                    (euclidean__axioms.neq E A)
-                    (H10:(plth.Prf (euclidean__axioms.neq E A)) =>
-                     H11:(plth.Prf (euclidean__axioms.neq E B)) => H10)
+                    (plth.neq euclidean__axioms.Point E A)
+                    (plth.neq euclidean__axioms.Point E B)
+                    (plth.neq euclidean__axioms.Point E A)
+                    (H10:(plth.Prf (plth.neq euclidean__axioms.Point E A)) =>
+                     H11:(plth.Prf (plth.neq euclidean__axioms.Point E B)) => H10)
                     H9)
                  H7)
                 (lemma__betweennotequal.lemma__betweennotequal E A B H6)))

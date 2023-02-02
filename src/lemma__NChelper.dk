@@ -22,7 +22,7 @@ thm lemma__NChelper :
                          (plth.imp
                             (euclidean__axioms.Col A B Q)
                             (plth.imp
-                               (euclidean__axioms.neq P Q)
+                               (plth.neq euclidean__axioms.Point P Q)
                                (euclidean__axioms.nCol P Q C))))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
@@ -33,10 +33,10 @@ thm lemma__NChelper :
   H:(plth.Prf (euclidean__axioms.nCol A B C)) =>
   H0:(plth.Prf (euclidean__axioms.Col A B P)) =>
   H1:(plth.Prf (euclidean__axioms.Col A B Q)) =>
-  H2:(plth.Prf (euclidean__axioms.neq P Q)) =>
+  H2:(plth.Prf (plth.neq euclidean__axioms.Point P Q)) =>
   (H3:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A B))) =>
    (H4:(plth.Prf (euclidean__axioms.Col B P Q)) =>
-    (H5:(plth.Prf (euclidean__axioms.neq B A)) =>
+    (H5:(plth.Prf (plth.neq euclidean__axioms.Point B A)) =>
      (H6:(plth.Prf (euclidean__axioms.Col B A P)) =>
       (H7:(plth.Prf (euclidean__axioms.Col B A Q)) =>
        (H8:(plth.Prf (euclidean__axioms.Col A P Q)) =>

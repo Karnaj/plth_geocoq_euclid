@@ -160,7 +160,7 @@ def Per :
        (euclidean__axioms.BetS A B X)
        (plth.and
           (euclidean__axioms.Cong A B X B)
-          (plth.and (euclidean__axioms.Cong A C X C) (euclidean__axioms.neq B C)))).
+          (plth.and (euclidean__axioms.Cong A C X C) (plth.neq euclidean__axioms.Point B C)))).
 
 def Perp__at :
   plth.predicate
@@ -367,7 +367,9 @@ def TT :
                    euclidean__axioms.Point
                    (plth.cons
                       euclidean__axioms.Point
-                      (plth.cons euclidean__axioms.Point (plth.cons euclidean__axioms.Point plth.nil))))))))
+                      (plth.cons
+                         euclidean__axioms.Point
+                         (plth.cons euclidean__axioms.Point plth.nil))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
@@ -435,9 +437,9 @@ def Meet :
     euclidean__axioms.Point
     (X:(plth.El euclidean__axioms.Point) =>
      plth.and
-       (euclidean__axioms.neq A B)
+       (plth.neq euclidean__axioms.Point A B)
        (plth.and
-          (euclidean__axioms.neq C D)
+          (plth.neq euclidean__axioms.Point C D)
           (plth.and (euclidean__axioms.Col A B X) (euclidean__axioms.Col C D X)))).
 
 def CR :
@@ -470,8 +472,10 @@ def TP :
   C:(plth.El euclidean__axioms.Point) =>
   D:(plth.El euclidean__axioms.Point) =>
   plth.and
-    (euclidean__axioms.neq A B)
-    (plth.and (euclidean__axioms.neq C D) (plth.and (plth.not (Meet A B C D)) (OS C D A B))).
+    (plth.neq euclidean__axioms.Point A B)
+    (plth.and
+       (plth.neq euclidean__axioms.Point C D)
+       (plth.and (plth.not (Meet A B C D)) (OS C D A B))).
 
 def Par :
   plth.predicate
@@ -501,21 +505,21 @@ def Par :
                 euclidean__axioms.Point
                 (X:(plth.El euclidean__axioms.Point) =>
                  plth.and
-                   (euclidean__axioms.neq A B)
+                   (plth.neq euclidean__axioms.Point A B)
                    (plth.and
-                      (euclidean__axioms.neq C D)
+                      (plth.neq euclidean__axioms.Point C D)
                       (plth.and
                          (euclidean__axioms.Col A B U)
                          (plth.and
                             (euclidean__axioms.Col A B V)
                             (plth.and
-                               (euclidean__axioms.neq U V)
+                               (plth.neq euclidean__axioms.Point U V)
                                (plth.and
                                   (euclidean__axioms.Col C D u)
                                   (plth.and
                                      (euclidean__axioms.Col C D v)
                                      (plth.and
-                                        (euclidean__axioms.neq u v)
+                                        (plth.neq euclidean__axioms.Point u v)
                                         (plth.and
                                            (plth.not (Meet A B C D))
                                            (plth.and
@@ -538,7 +542,9 @@ def SumA :
                       euclidean__axioms.Point
                       (plth.cons
                          euclidean__axioms.Point
-                         (plth.cons euclidean__axioms.Point (plth.cons euclidean__axioms.Point plth.nil)))))))))
+                         (plth.cons
+                            euclidean__axioms.Point
+                            (plth.cons euclidean__axioms.Point plth.nil)))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
@@ -617,7 +623,9 @@ def RC :
                    euclidean__axioms.Point
                    (plth.cons
                       euclidean__axioms.Point
-                      (plth.cons euclidean__axioms.Point (plth.cons euclidean__axioms.Point plth.nil))))))))
+                      (plth.cons
+                         euclidean__axioms.Point
+                         (plth.cons euclidean__axioms.Point plth.nil))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
@@ -647,7 +655,9 @@ def ER :
                    euclidean__axioms.Point
                    (plth.cons
                       euclidean__axioms.Point
-                      (plth.cons euclidean__axioms.Point (plth.cons euclidean__axioms.Point plth.nil))))))))
+                      (plth.cons
+                         euclidean__axioms.Point
+                         (plth.cons euclidean__axioms.Point plth.nil))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>

@@ -13,7 +13,7 @@ thm lemma__ray4 :
                 (plth.or
                    (euclidean__axioms.BetS A E B)
                    (plth.or (plth.eq euclidean__axioms.Point E B) (euclidean__axioms.BetS A B E)))
-                (plth.imp (euclidean__axioms.neq A B) (euclidean__defs.Out A B E))))))
+                (plth.imp (plth.neq euclidean__axioms.Point A B) (euclidean__defs.Out A B E))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
@@ -22,7 +22,7 @@ thm lemma__ray4 :
        (plth.or
           (euclidean__axioms.BetS A E B)
           (plth.or (plth.eq euclidean__axioms.Point E B) (euclidean__axioms.BetS A B E)))) =>
-  H0:(plth.Prf (euclidean__axioms.neq A B)) =>
+  H0:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
   (H1:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point B A))) =>
    (H2:(plth.Prf
           (plth.ex

@@ -45,14 +45,16 @@ thm lemma__ondiameter :
   H1:(plth.Prf (euclidean__axioms.Cong F M P Q)) =>
   H2:(plth.Prf (euclidean__axioms.BetS D F M)) =>
   H3:(plth.Prf (euclidean__axioms.BetS D N M)) =>
-  (H4:(plth.Prf (euclidean__axioms.neq D F)) =>
-   (H5:(plth.Prf (euclidean__axioms.neq F D)) =>
+  (H4:(plth.Prf (plth.neq euclidean__axioms.Point D F)) =>
+   (H5:(plth.Prf (plth.neq euclidean__axioms.Point F D)) =>
     (H6:(plth.Prf
            (plth.not
               (plth.not
                  (plth.or
                     (euclidean__axioms.BetS D N F)
-                    (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N)))))) =>
+                    (plth.or
+                       (euclidean__axioms.BetS F N M)
+                       (plth.eq euclidean__axioms.Point F N)))))) =>
      (H7:(plth.Prf (euclidean__axioms.Cong F N F N)) =>
       (H8:(plth.Prf (euclidean__axioms.InCirc N K)) => H8)
         ((H8:(plth.Prf
@@ -87,7 +89,10 @@ thm lemma__ondiameter :
                               (euclidean__axioms.BetS D N F)
                               (plth.or
                                  (euclidean__axioms.BetS F N M)
-                                 (plth.eq euclidean__axioms.Point F N)))) =>
+                                 (plth.eq
+                                    euclidean__axioms.Point
+                                    F
+                                    N)))) =>
                     logic.ex__intro
                       euclidean__axioms.Point
                       (X:(plth.El euclidean__axioms.Point) =>
@@ -108,7 +113,10 @@ thm lemma__ondiameter :
                                    plth.and
                                      (euclidean__axioms.CI K U V W)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N U)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           U)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               U
@@ -143,7 +151,10 @@ thm lemma__ondiameter :
                                    plth.and
                                      (euclidean__axioms.CI K U V W)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N U)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           U)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               U
@@ -175,7 +186,10 @@ thm lemma__ondiameter :
                                    plth.and
                                      (euclidean__axioms.CI K U V W)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N U)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           U)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               U
@@ -204,7 +218,10 @@ thm lemma__ondiameter :
                                    plth.and
                                      (euclidean__axioms.CI K F V W)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N F)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           F)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               F
@@ -229,7 +246,10 @@ thm lemma__ondiameter :
                                    plth.and
                                      (euclidean__axioms.CI K F P W)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N F)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           F)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               F
@@ -250,7 +270,10 @@ thm lemma__ondiameter :
                                   (logic.conj
                                      (euclidean__axioms.CI K F P Q)
                                      (plth.or
-                                        (plth.eq euclidean__axioms.Point N F)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           F)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               F
@@ -269,7 +292,10 @@ thm lemma__ondiameter :
                                                  N))))
                                      H
                                      (logic.or__intror
-                                        (plth.eq euclidean__axioms.Point N F)
+                                        (plth.eq
+                                           euclidean__axioms.Point
+                                           N
+                                           F)
                                         (plth.and
                                            (euclidean__axioms.BetS
                                               F
@@ -352,7 +378,10 @@ thm lemma__ondiameter :
                                 (euclidean__axioms.BetS D N F)
                                 (plth.or
                                    (euclidean__axioms.BetS F N M)
-                                   (plth.eq euclidean__axioms.Point F N)))) =>
+                                   (plth.eq
+                                      euclidean__axioms.Point
+                                      F
+                                      N)))) =>
                       logic.ex__intro
                         euclidean__axioms.Point
                         (X:(plth.El euclidean__axioms.Point) =>
@@ -373,7 +402,10 @@ thm lemma__ondiameter :
                                      plth.and
                                        (euclidean__axioms.CI K U V W)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N U)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             U)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 U
@@ -408,7 +440,10 @@ thm lemma__ondiameter :
                                      plth.and
                                        (euclidean__axioms.CI K U V W)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N U)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             U)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 U
@@ -440,7 +475,10 @@ thm lemma__ondiameter :
                                      plth.and
                                        (euclidean__axioms.CI K U V W)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N U)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             U)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 U
@@ -469,7 +507,10 @@ thm lemma__ondiameter :
                                      plth.and
                                        (euclidean__axioms.CI K F V W)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N F)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             F)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 F
@@ -494,7 +535,10 @@ thm lemma__ondiameter :
                                      plth.and
                                        (euclidean__axioms.CI K F P W)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N F)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             F)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 F
@@ -515,7 +559,10 @@ thm lemma__ondiameter :
                                     (logic.conj
                                        (euclidean__axioms.CI K F P Q)
                                        (plth.or
-                                          (plth.eq euclidean__axioms.Point N F)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             F)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 F
@@ -534,7 +581,10 @@ thm lemma__ondiameter :
                                                    N))))
                                        H
                                        (logic.or__intror
-                                          (plth.eq euclidean__axioms.Point N F)
+                                          (plth.eq
+                                             euclidean__axioms.Point
+                                             N
+                                             F)
                                           (plth.and
                                              (euclidean__axioms.BetS
                                                 F
@@ -596,7 +646,10 @@ thm lemma__ondiameter :
                                  (euclidean__axioms.BetS D N F)
                                  (plth.or
                                     (euclidean__axioms.BetS F N M)
-                                    (plth.eq euclidean__axioms.Point F N)))) =>
+                                    (plth.eq
+                                       euclidean__axioms.Point
+                                       F
+                                       N)))) =>
                        logic.ex__intro
                          euclidean__axioms.Point
                          (X:(plth.El euclidean__axioms.Point) =>
@@ -622,7 +675,8 @@ thm lemma__ondiameter :
                                            V
                                            W)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               U)
                                            (plth.and
@@ -664,7 +718,8 @@ thm lemma__ondiameter :
                                            V
                                            W)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               U)
                                            (plth.and
@@ -703,7 +758,8 @@ thm lemma__ondiameter :
                                            V
                                            W)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               U)
                                            (plth.and
@@ -738,7 +794,8 @@ thm lemma__ondiameter :
                                            V
                                            W)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               F)
                                            (plth.and
@@ -769,7 +826,8 @@ thm lemma__ondiameter :
                                            P
                                            W)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               F)
                                            (plth.and
@@ -796,7 +854,8 @@ thm lemma__ondiameter :
                                            P
                                            Q)
                                         (plth.or
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               F)
                                            (plth.and
@@ -817,7 +876,8 @@ thm lemma__ondiameter :
                                                     M))))
                                         H
                                         (logic.or__introl
-                                           (plth.eq euclidean__axioms.Point
+                                           (plth.eq
+                                              euclidean__axioms.Point
                                               N
                                               F)
                                            (plth.and
@@ -849,7 +909,10 @@ thm lemma__ondiameter :
                                 (euclidean__axioms.BetS D N F)
                                 (plth.or
                                    (euclidean__axioms.BetS F N M)
-                                   (plth.eq euclidean__axioms.Point F N)))) =>
+                                   (plth.eq
+                                      euclidean__axioms.Point
+                                      F
+                                      N)))) =>
                       lemma__equalitysymmetric.lemma__equalitysymmetric
                         N
                         F
@@ -868,7 +931,9 @@ thm lemma__ondiameter :
            (euclidean__tactics.NNPP
               (plth.or
                  (euclidean__axioms.BetS D N F)
-                 (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N)))
+                 (plth.or
+                    (euclidean__axioms.BetS F N M)
+                    (plth.eq euclidean__axioms.Point F N)))
               (H8:(plth.Prf
                      (plth.not
                         (plth.or
@@ -894,7 +959,8 @@ thm lemma__ondiameter :
                               (plth.eq euclidean__axioms.Point F N)
                               plth.false)) =>
                     logic.false__ind plth.false H9)
-                     (H13:(plth.Prf (plth.eq euclidean__axioms.Point F N)) =>
+                     (H13:(plth.Prf
+                             (plth.eq euclidean__axioms.Point F N)) =>
                       H11
                         (logic.or__intror
                            (euclidean__axioms.BetS F N M)
@@ -929,24 +995,32 @@ thm lemma__ondiameter :
        ((H7:(plth.Prf
                (plth.or
                   (euclidean__axioms.BetS D N F)
-                  (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N)))) =>
+                  (plth.or
+                     (euclidean__axioms.BetS F N M)
+                     (plth.eq euclidean__axioms.Point F N)))) =>
          euclidean__axioms.cn__congruencereflexive F N)
           (euclidean__tactics.NNPP
              (plth.or
                 (euclidean__axioms.BetS D N F)
-                (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N)))
+                (plth.or
+                   (euclidean__axioms.BetS F N M)
+                   (plth.eq euclidean__axioms.Point F N)))
              H6)))
       (H6:(plth.Prf
              (plth.not
                 (plth.or
                    (euclidean__axioms.BetS D N F)
-                   (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N))))) =>
+                   (plth.or
+                      (euclidean__axioms.BetS F N M)
+                      (plth.eq euclidean__axioms.Point F N))))) =>
        (H7:(plth.Prf (plth.not (euclidean__axioms.BetS D F N))) =>
         (H8:(plth.Prf (plth.eq euclidean__axioms.Point F N)) =>
          H6
            (logic.or__intror
               (euclidean__axioms.BetS D N F)
-              (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N))
+              (plth.or
+                 (euclidean__axioms.BetS F N M)
+                 (plth.eq euclidean__axioms.Point F N))
               (logic.or__intror
                  (euclidean__axioms.BetS F N M)
                  (plth.eq euclidean__axioms.Point F N)
@@ -963,14 +1037,18 @@ thm lemma__ondiameter :
               H6
                 (logic.or__introl
                    (euclidean__axioms.BetS D N F)
-                   (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N))
+                   (plth.or
+                      (euclidean__axioms.BetS F N M)
+                      (plth.eq euclidean__axioms.Point F N))
                    H8))))
          (H7:(plth.Prf (euclidean__axioms.BetS D F N)) =>
           (H8:(plth.Prf (euclidean__axioms.BetS F N M)) =>
            H6
              (logic.or__intror
                 (euclidean__axioms.BetS D N F)
-                (plth.or (euclidean__axioms.BetS F N M) (plth.eq euclidean__axioms.Point F N))
+                (plth.or
+                   (euclidean__axioms.BetS F N M)
+                   (plth.eq euclidean__axioms.Point F N))
                 (logic.or__introl
                    (euclidean__axioms.BetS F N M)
                    (plth.eq euclidean__axioms.Point F N)
@@ -979,20 +1057,25 @@ thm lemma__ondiameter :
      (lemma__inequalitysymmetric.lemma__inequalitysymmetric D F H4))
     ((H4:(plth.Prf
             (plth.and
-               (euclidean__axioms.neq F M)
-               (plth.and (euclidean__axioms.neq D F) (euclidean__axioms.neq D M)))) =>
+               (plth.neq euclidean__axioms.Point F M)
+               (plth.and
+                  (plth.neq euclidean__axioms.Point D F)
+                  (plth.neq euclidean__axioms.Point D M)))) =>
       logic.and__ind
-        (euclidean__axioms.neq F M)
-        (plth.and (euclidean__axioms.neq D F) (euclidean__axioms.neq D M))
-        (euclidean__axioms.neq D F)
-        (H5:(plth.Prf (euclidean__axioms.neq F M)) =>
-         H6:(plth.Prf (plth.and (euclidean__axioms.neq D F) (euclidean__axioms.neq D M))) =>
+        (plth.neq euclidean__axioms.Point F M)
+        (plth.and (plth.neq euclidean__axioms.Point D F) (plth.neq euclidean__axioms.Point D M))
+        (plth.neq euclidean__axioms.Point D F)
+        (H5:(plth.Prf (plth.neq euclidean__axioms.Point F M)) =>
+         H6:(plth.Prf
+               (plth.and
+                  (plth.neq euclidean__axioms.Point D F)
+                  (plth.neq euclidean__axioms.Point D M))) =>
          logic.and__ind
-           (euclidean__axioms.neq D F)
-           (euclidean__axioms.neq D M)
-           (euclidean__axioms.neq D F)
-           (H7:(plth.Prf (euclidean__axioms.neq D F)) =>
-            H8:(plth.Prf (euclidean__axioms.neq D M)) => H7)
+           (plth.neq euclidean__axioms.Point D F)
+           (plth.neq euclidean__axioms.Point D M)
+           (plth.neq euclidean__axioms.Point D F)
+           (H7:(plth.Prf (plth.neq euclidean__axioms.Point D F)) =>
+            H8:(plth.Prf (plth.neq euclidean__axioms.Point D M)) => H7)
            H6)
         H4)
        (lemma__betweennotequal.lemma__betweennotequal D F M H2)).

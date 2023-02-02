@@ -12,64 +12,66 @@ thm lemma__NCdistinct :
               plth.imp
                 (euclidean__axioms.nCol A B C)
                 (plth.and
-                   (euclidean__axioms.neq A B)
+                   (plth.neq euclidean__axioms.Point A B)
                    (plth.and
-                      (euclidean__axioms.neq B C)
+                      (plth.neq euclidean__axioms.Point B C)
                       (plth.and
-                         (euclidean__axioms.neq A C)
+                         (plth.neq euclidean__axioms.Point A C)
                          (plth.and
-                            (euclidean__axioms.neq B A)
-                            (plth.and (euclidean__axioms.neq C B) (euclidean__axioms.neq C A))))))))))
+                            (plth.neq euclidean__axioms.Point B A)
+                            (plth.and
+                               (plth.neq euclidean__axioms.Point C B)
+                               (plth.neq euclidean__axioms.Point C A))))))))))
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
   H:(plth.Prf (euclidean__axioms.nCol A B C)) =>
   (H0:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A B))) =>
-   (H1:(plth.Prf (euclidean__axioms.neq B A)) =>
+   (H1:(plth.Prf (plth.neq euclidean__axioms.Point B A)) =>
     (H2:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A C))) =>
-     (H3:(plth.Prf (euclidean__axioms.neq C A)) =>
+     (H3:(plth.Prf (plth.neq euclidean__axioms.Point C A)) =>
       (H4:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point B C))) =>
-       (H5:(plth.Prf (euclidean__axioms.neq C B)) =>
+       (H5:(plth.Prf (plth.neq euclidean__axioms.Point C B)) =>
         logic.conj
-          (euclidean__axioms.neq A B)
+          (plth.neq euclidean__axioms.Point A B)
           (plth.and
-             (euclidean__axioms.neq B C)
+             (plth.neq euclidean__axioms.Point B C)
              (plth.and
-                (euclidean__axioms.neq A C)
+                (plth.neq euclidean__axioms.Point A C)
                 (plth.and
-                   (euclidean__axioms.neq B A)
+                   (plth.neq euclidean__axioms.Point B A)
                    (plth.and
-                      (euclidean__axioms.neq C B)
-                      (euclidean__axioms.neq C A)))))
+                      (plth.neq euclidean__axioms.Point C B)
+                      (plth.neq euclidean__axioms.Point C A)))))
           H0
           (logic.conj
-             (euclidean__axioms.neq B C)
+             (plth.neq euclidean__axioms.Point B C)
              (plth.and
-                (euclidean__axioms.neq A C)
+                (plth.neq euclidean__axioms.Point A C)
                 (plth.and
-                   (euclidean__axioms.neq B A)
+                   (plth.neq euclidean__axioms.Point B A)
                    (plth.and
-                      (euclidean__axioms.neq C B)
-                      (euclidean__axioms.neq C A))))
+                      (plth.neq euclidean__axioms.Point C B)
+                      (plth.neq euclidean__axioms.Point C A))))
              H4
              (logic.conj
-                (euclidean__axioms.neq A C)
+                (plth.neq euclidean__axioms.Point A C)
                 (plth.and
-                   (euclidean__axioms.neq B A)
+                   (plth.neq euclidean__axioms.Point B A)
                    (plth.and
-                      (euclidean__axioms.neq C B)
-                      (euclidean__axioms.neq C A)))
+                      (plth.neq euclidean__axioms.Point C B)
+                      (plth.neq euclidean__axioms.Point C A)))
                 H2
                 (logic.conj
-                   (euclidean__axioms.neq B A)
+                   (plth.neq euclidean__axioms.Point B A)
                    (plth.and
-                      (euclidean__axioms.neq C B)
-                      (euclidean__axioms.neq C A))
+                      (plth.neq euclidean__axioms.Point C B)
+                      (plth.neq euclidean__axioms.Point C A))
                    H1
                    (logic.conj
-                      (euclidean__axioms.neq C B)
-                      (euclidean__axioms.neq C A)
+                      (plth.neq euclidean__axioms.Point C B)
+                      (plth.neq euclidean__axioms.Point C A)
                       H5
                       H3)))))
          (lemma__inequalitysymmetric.lemma__inequalitysymmetric B C H4))

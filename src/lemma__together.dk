@@ -46,14 +46,17 @@ thm lemma__together :
                                                     (plth.and
                                                        (euclidean__defs.Lt P Q D G)
                                                        (plth.and
-                                                          (euclidean__axioms.neq
+                                                          (plth.neq
+                                                             euclidean__axioms.Point
                                                              A
                                                              a)
                                                           (plth.and
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 B
                                                                 b)
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 C
                                                                 c))))))))))))))))))))
   :=
@@ -89,8 +92,10 @@ thm lemma__together :
      (plth.and
         (euclidean__defs.Lt P Q D G)
         (plth.and
-           (euclidean__axioms.neq A a)
-           (plth.and (euclidean__axioms.neq B b) (euclidean__axioms.neq C c))))
+           (plth.neq euclidean__axioms.Point A a)
+           (plth.and
+              (plth.neq euclidean__axioms.Point B b)
+              (plth.neq euclidean__axioms.Point C c))))
      (R:(plth.El euclidean__axioms.Point) =>
       H5:(plth.Prf
             (plth.and
@@ -102,8 +107,10 @@ thm lemma__together :
         (plth.and
            (euclidean__defs.Lt P Q D G)
            (plth.and
-              (euclidean__axioms.neq A a)
-              (plth.and (euclidean__axioms.neq B b) (euclidean__axioms.neq C c))))
+              (plth.neq euclidean__axioms.Point A a)
+              (plth.and
+                 (plth.neq euclidean__axioms.Point B b)
+                 (plth.neq euclidean__axioms.Point C c))))
         (H6:(plth.Prf (euclidean__axioms.BetS A a R)) =>
          H7:(plth.Prf (plth.and (euclidean__axioms.Cong a R B b) (euclidean__defs.Lt C c A R))) =>
          logic.and__ind
@@ -112,8 +119,10 @@ thm lemma__together :
            (plth.and
               (euclidean__defs.Lt P Q D G)
               (plth.and
-                 (euclidean__axioms.neq A a)
-                 (plth.and (euclidean__axioms.neq B b) (euclidean__axioms.neq C c))))
+                 (plth.neq euclidean__axioms.Point A a)
+                 (plth.and
+                    (plth.neq euclidean__axioms.Point B b)
+                    (plth.neq euclidean__axioms.Point C c))))
            (H8:(plth.Prf (euclidean__axioms.Cong a R B b)) =>
             H9:(plth.Prf (euclidean__defs.Lt C c A R)) =>
             (H10:(plth.Prf (euclidean__axioms.Cong A a A a)) =>
@@ -124,10 +133,18 @@ thm lemma__together :
                  (H15:(plth.Prf (euclidean__axioms.Cong C c P Q)) =>
                   (H16:(plth.Prf (euclidean__defs.Lt P Q A R)) =>
                    (H17:(plth.Prf (euclidean__defs.Lt P Q D G)) =>
-                    (H18:(plth.Prf (euclidean__axioms.neq A a)) =>
-                     (H19:(plth.Prf (euclidean__axioms.neq a R)) =>
+                    (H18:(plth.Prf
+                            (plth.neq euclidean__axioms.Point A a)) =>
+                     (H19:(plth.Prf
+                             (plth.neq
+                                euclidean__axioms.Point
+                                a
+                                R)) =>
                       (H20:(plth.Prf
-                              (euclidean__axioms.neq B b)) =>
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 B
+                                 b)) =>
                        (H21:(plth.Prf
                                (plth.ex
                                   euclidean__axioms.Point
@@ -157,14 +174,17 @@ thm lemma__together :
                           (plth.and
                              (euclidean__defs.Lt P Q D G)
                              (plth.and
-                                (euclidean__axioms.neq
+                                (plth.neq
+                                   euclidean__axioms.Point
                                    A
                                    a)
                                 (plth.and
-                                   (euclidean__axioms.neq
+                                   (plth.neq
+                                      euclidean__axioms.Point
                                       B
                                       b)
-                                   (euclidean__axioms.neq
+                                   (plth.neq
+                                      euclidean__axioms.Point
                                       C
                                       c))))
                           (S:(plth.El
@@ -194,14 +214,17 @@ thm lemma__together :
                                    D
                                    G)
                                 (plth.and
-                                   (euclidean__axioms.neq
+                                   (plth.neq
+                                      euclidean__axioms.Point
                                       A
                                       a)
                                    (plth.and
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          B
                                          b)
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          C
                                          c))))
                              (H23:(plth.Prf
@@ -216,11 +239,13 @@ thm lemma__together :
                                         C
                                         c)) =>
                               (H25:(plth.Prf
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          S)) =>
                                (H26:(plth.Prf
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           C
                                           c)) =>
                                 logic.conj
@@ -230,34 +255,42 @@ thm lemma__together :
                                      D
                                      G)
                                   (plth.and
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         a)
                                      (plth.and
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            B
                                            b)
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            C
                                            c)))
                                   H17
                                   (logic.conj
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         a)
                                      (plth.and
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            B
                                            b)
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            C
                                            c))
                                      H18
                                      (logic.conj
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            B
                                            b)
-                                        (euclidean__axioms.neq
+                                        (plth.neq
+                                           euclidean__axioms.Point
                                            C
                                            c)
                                         H20
@@ -271,58 +304,73 @@ thm lemma__together :
                                     H24))
                                 ((H25:(plth.Prf
                                          (plth.and
-                                            (euclidean__axioms.neq
+                                            (plth.neq
+                                               euclidean__axioms.Point
                                                S
                                                R)
                                             (plth.and
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   S)
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   R)))) =>
                                   logic.and__ind
-                                    (euclidean__axioms.neq
+                                    (plth.neq
+                                       euclidean__axioms.Point
                                        S
                                        R)
                                     (plth.and
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           A
                                           S)
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           A
                                           R))
-                                    (euclidean__axioms.neq
+                                    (plth.neq
+                                       euclidean__axioms.Point
                                        A
                                        S)
                                     (H26:(plth.Prf
-                                            (euclidean__axioms.neq
+                                            (plth.neq
+                                               euclidean__axioms.Point
                                                S
                                                R)) =>
                                      H27:(plth.Prf
                                             (plth.and
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   S)
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   R))) =>
                                      logic.and__ind
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           A
                                           S)
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           A
                                           R)
-                                       (euclidean__axioms.neq
+                                       (plth.neq
+                                          euclidean__axioms.Point
                                           A
                                           S)
                                        (H28:(plth.Prf
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   S)) =>
                                         H29:(plth.Prf
-                                               (euclidean__axioms.neq
+                                               (plth.neq
+                                                  euclidean__axioms.Point
                                                   A
                                                   R)) =>
                                         H28)
@@ -345,44 +393,67 @@ thm lemma__together :
                            H8))
                        ((H19:(plth.Prf
                                 (plth.and
-                                   (euclidean__axioms.neq
+                                   (plth.neq
+                                      euclidean__axioms.Point
                                       a
                                       R)
                                    (plth.and
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          a)
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          R)))) =>
                          logic.and__ind
-                           (euclidean__axioms.neq a R)
+                           (plth.neq euclidean__axioms.Point a R)
                            (plth.and
-                              (euclidean__axioms.neq A a)
-                              (euclidean__axioms.neq A R))
-                           (euclidean__axioms.neq a R)
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 A
+                                 a)
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 A
+                                 R))
+                           (plth.neq euclidean__axioms.Point a R)
                            (H20:(plth.Prf
-                                   (euclidean__axioms.neq
+                                   (plth.neq
+                                      euclidean__axioms.Point
                                       a
                                       R)) =>
                             H21:(plth.Prf
                                    (plth.and
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          a)
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          R))) =>
                             logic.and__ind
-                              (euclidean__axioms.neq A a)
-                              (euclidean__axioms.neq A R)
-                              (euclidean__axioms.neq a R)
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 A
+                                 a)
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 A
+                                 R)
+                              (plth.neq
+                                 euclidean__axioms.Point
+                                 a
+                                 R)
                               (H22:(plth.Prf
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          a)) =>
                                H23:(plth.Prf
-                                      (euclidean__axioms.neq
+                                      (plth.neq
+                                         euclidean__axioms.Point
                                          A
                                          R)) =>
                                H20)
@@ -395,40 +466,52 @@ thm lemma__together :
                              H6)))
                       ((H18:(plth.Prf
                                (plth.and
-                                  (euclidean__axioms.neq a R)
+                                  (plth.neq
+                                     euclidean__axioms.Point
+                                     a
+                                     R)
                                   (plth.and
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         a)
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         R)))) =>
                         logic.and__ind
-                          (euclidean__axioms.neq a R)
+                          (plth.neq euclidean__axioms.Point a R)
                           (plth.and
-                             (euclidean__axioms.neq A a)
-                             (euclidean__axioms.neq A R))
-                          (euclidean__axioms.neq A a)
+                             (plth.neq euclidean__axioms.Point A a)
+                             (plth.neq euclidean__axioms.Point A R))
+                          (plth.neq euclidean__axioms.Point A a)
                           (H19:(plth.Prf
-                                  (euclidean__axioms.neq a R)) =>
+                                  (plth.neq
+                                     euclidean__axioms.Point
+                                     a
+                                     R)) =>
                            H20:(plth.Prf
                                   (plth.and
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         a)
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         R))) =>
                            logic.and__ind
-                             (euclidean__axioms.neq A a)
-                             (euclidean__axioms.neq A R)
-                             (euclidean__axioms.neq A a)
+                             (plth.neq euclidean__axioms.Point A a)
+                             (plth.neq euclidean__axioms.Point A R)
+                             (plth.neq euclidean__axioms.Point A a)
                              (H21:(plth.Prf
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         a)) =>
                               H22:(plth.Prf
-                                     (euclidean__axioms.neq
+                                     (plth.neq
+                                        euclidean__axioms.Point
                                         A
                                         R)) =>
                               H21)

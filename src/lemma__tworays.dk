@@ -30,7 +30,9 @@ thm lemma__tworays :
       ((H3:(plth.Prf
               (plth.or
                  (euclidean__axioms.BetS A C B)
-                 (plth.or (plth.eq euclidean__axioms.Point B C) (euclidean__axioms.BetS A B C)))) =>
+                 (plth.or
+                    (plth.eq euclidean__axioms.Point B C)
+                    (euclidean__axioms.BetS A B C)))) =>
         (__TmpHyp:(plth.Prf
                      (plth.or
                         (euclidean__axioms.BetS A C B)
@@ -43,7 +45,9 @@ thm lemma__tworays :
            (euclidean__axioms.BetS A C B)
            (H4:(plth.Prf (euclidean__axioms.BetS A C B)) => H4)
            (H4:(plth.Prf
-                  (plth.or (plth.eq euclidean__axioms.Point B C) (euclidean__axioms.BetS A B C))) =>
+                  (plth.or
+                     (plth.eq euclidean__axioms.Point B C)
+                     (euclidean__axioms.BetS A B C))) =>
             logic.or__ind
               (plth.eq euclidean__axioms.Point B C)
               (euclidean__axioms.BetS A B C)
@@ -82,7 +86,7 @@ thm lemma__tworays :
                         H8)
                      H2))
                  (H6:(plth.Prf (plth.not (euclidean__axioms.BetS A C B))) =>
-                  (H7:(plth.Prf (euclidean__axioms.neq B C)) => H7 H5)
+                  (H7:(plth.Prf (plth.neq euclidean__axioms.Point B C)) => H7 H5)
                     (lemma__raystrict.lemma__raystrict B A C H0)))
               (H5:(plth.Prf (euclidean__axioms.BetS A B C)) =>
                (H6:(plth.Prf (euclidean__axioms.BetS A C B)) => H6)
@@ -96,7 +100,10 @@ thm lemma__tworays :
                                  (plth.or
                                     (euclidean__axioms.BetS B C A)
                                     (plth.or
-                                       (plth.eq euclidean__axioms.Point A C)
+                                       (plth.eq
+                                          euclidean__axioms.Point
+                                          A
+                                          C)
                                        (euclidean__axioms.BetS B A C)))) =>
                     logic.or__ind
                       (euclidean__axioms.BetS B C A)
@@ -119,7 +126,8 @@ thm lemma__tworays :
                          (plth.eq euclidean__axioms.Point A C)
                          (euclidean__axioms.BetS B A C)
                          (euclidean__axioms.BetS A C B)
-                         (H8:(plth.Prf (plth.eq euclidean__axioms.Point A C)) =>
+                         (H8:(plth.Prf
+                                (plth.eq euclidean__axioms.Point A C)) =>
                           (H9:(plth.Prf
                                  (plth.not
                                     (plth.not
@@ -135,7 +143,11 @@ thm lemma__tworays :
                             (H9:(plth.Prf
                                    (plth.not
                                       (euclidean__axioms.BetS A C B))) =>
-                             (H10:(plth.Prf (euclidean__axioms.neq A C)) =>
+                             (H10:(plth.Prf
+                                     (plth.neq
+                                        euclidean__axioms.Point
+                                        A
+                                        C)) =>
                               H10 H8)
                                (lemma__raystrict.lemma__raystrict A B C H)))
                          (H8:(plth.Prf (euclidean__axioms.BetS B A C)) =>

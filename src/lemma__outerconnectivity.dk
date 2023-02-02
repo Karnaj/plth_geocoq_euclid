@@ -31,7 +31,7 @@ thm lemma__outerconnectivity :
   H1:(plth.Prf (plth.not (euclidean__axioms.BetS B C D))) =>
   H2:(plth.Prf (plth.not (euclidean__axioms.BetS B D C))) =>
   (H3:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A C))) =>
-   (H4:(plth.Prf (euclidean__axioms.neq A D)) =>
+   (H4:(plth.Prf (plth.neq euclidean__axioms.Point A D)) =>
     (H5:(plth.Prf
            (plth.ex
               euclidean__axioms.Point
@@ -53,7 +53,7 @@ thm lemma__outerconnectivity :
            H8:(plth.Prf (euclidean__axioms.Cong C E A D)) =>
            (H9:(plth.Prf (euclidean__axioms.BetS A B E)) =>
             (H10:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A D))) =>
-             (H11:(plth.Prf (euclidean__axioms.neq A C)) =>
+             (H11:(plth.Prf (plth.neq euclidean__axioms.Point A C)) =>
               (H12:(plth.Prf
                       (plth.ex
                          euclidean__axioms.Point
@@ -152,7 +152,8 @@ thm lemma__outerconnectivity :
                                               B
                                               F)) =>
                                     (H31:(plth.Prf
-                                            (plth.eq euclidean__axioms.Point
+                                            (plth.eq
+                                               euclidean__axioms.Point
                                                E
                                                F)) =>
                                      (H32:(plth.Prf
@@ -171,7 +172,8 @@ thm lemma__outerconnectivity :
                                                   D
                                                   E)) =>
                                         (H35:(plth.Prf
-                                                (plth.eq euclidean__axioms.Point
+                                                (plth.eq
+                                                   euclidean__axioms.Point
                                                    C
                                                    D)) =>
                                          H35)
@@ -425,27 +427,28 @@ thm lemma__outerconnectivity :
                 (lemma__extension.lemma__extension A D A C H10 H11))
                ((H11:(plth.Prf
                         (plth.and
-                           (euclidean__axioms.neq B E)
+                           (plth.neq euclidean__axioms.Point B E)
                            (plth.and
-                              (euclidean__axioms.neq A B)
-                              (euclidean__axioms.neq A E)))) =>
+                              (plth.neq euclidean__axioms.Point A B)
+                              (plth.neq euclidean__axioms.Point A E)))) =>
                  logic.and__ind
-                   (euclidean__axioms.neq B E)
+                   (plth.neq euclidean__axioms.Point B E)
                    (plth.and
-                      (euclidean__axioms.neq A B)
-                      (euclidean__axioms.neq A E))
-                   (euclidean__axioms.neq A C)
-                   (H12:(plth.Prf (euclidean__axioms.neq B E)) =>
+                      (plth.neq euclidean__axioms.Point A B)
+                      (plth.neq euclidean__axioms.Point A E))
+                   (plth.neq euclidean__axioms.Point A C)
+                   (H12:(plth.Prf (plth.neq euclidean__axioms.Point B E)) =>
                     H13:(plth.Prf
                            (plth.and
-                              (euclidean__axioms.neq A B)
-                              (euclidean__axioms.neq A E))) =>
+                              (plth.neq euclidean__axioms.Point A B)
+                              (plth.neq euclidean__axioms.Point A E))) =>
                     logic.and__ind
-                      (euclidean__axioms.neq A B)
-                      (euclidean__axioms.neq A E)
-                      (euclidean__axioms.neq A C)
-                      (H14:(plth.Prf (euclidean__axioms.neq A B)) =>
-                       H15:(plth.Prf (euclidean__axioms.neq A E)) => H3)
+                      (plth.neq euclidean__axioms.Point A B)
+                      (plth.neq euclidean__axioms.Point A E)
+                      (plth.neq euclidean__axioms.Point A C)
+                      (H14:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
+                       H15:(plth.Prf (plth.neq euclidean__axioms.Point A E)) =>
+                       H3)
                       H13)
                    H11)
                   (lemma__betweennotequal.lemma__betweennotequal A B E H9)))
@@ -465,7 +468,7 @@ thm lemma__outerconnectivity :
                           (plth.imp
                              (plth.not (plth.eq euclidean__axioms.Point A0 C))
                              (plth.imp
-                                (euclidean__axioms.neq A0 D)
+                                (plth.neq euclidean__axioms.Point A0 D)
                                 (plth.imp
                                    (euclidean__axioms.BetS A0 C E)
                                    (plth.imp
@@ -477,7 +480,7 @@ thm lemma__outerconnectivity :
                      H12:(plth.Prf (euclidean__axioms.BetS D B D)) =>
                      H13:(plth.Prf
                             (plth.not (plth.eq euclidean__axioms.Point D C))) =>
-                     H14:(plth.Prf (euclidean__axioms.neq D D)) =>
+                     H14:(plth.Prf (plth.neq euclidean__axioms.Point D D)) =>
                      H15:(plth.Prf (euclidean__axioms.BetS D C E)) =>
                      H16:(plth.Prf (euclidean__axioms.Cong C E D D)) =>
                      H17:(plth.Prf (euclidean__axioms.BetS D B E)) => H12)
@@ -496,20 +499,27 @@ thm lemma__outerconnectivity :
       (lemma__extension.lemma__extension A C A D H3 H4))
      ((H4:(plth.Prf
              (plth.and
-                (euclidean__axioms.neq B D)
-                (plth.and (euclidean__axioms.neq A B) (euclidean__axioms.neq A D)))) =>
+                (plth.neq euclidean__axioms.Point B D)
+                (plth.and
+                   (plth.neq euclidean__axioms.Point A B)
+                   (plth.neq euclidean__axioms.Point A D)))) =>
        logic.and__ind
-         (euclidean__axioms.neq B D)
-         (plth.and (euclidean__axioms.neq A B) (euclidean__axioms.neq A D))
-         (euclidean__axioms.neq A D)
-         (H5:(plth.Prf (euclidean__axioms.neq B D)) =>
-          H6:(plth.Prf (plth.and (euclidean__axioms.neq A B) (euclidean__axioms.neq A D))) =>
+         (plth.neq euclidean__axioms.Point B D)
+         (plth.and
+            (plth.neq euclidean__axioms.Point A B)
+            (plth.neq euclidean__axioms.Point A D))
+         (plth.neq euclidean__axioms.Point A D)
+         (H5:(plth.Prf (plth.neq euclidean__axioms.Point B D)) =>
+          H6:(plth.Prf
+                (plth.and
+                   (plth.neq euclidean__axioms.Point A B)
+                   (plth.neq euclidean__axioms.Point A D))) =>
           logic.and__ind
-            (euclidean__axioms.neq A B)
-            (euclidean__axioms.neq A D)
-            (euclidean__axioms.neq A D)
-            (H7:(plth.Prf (euclidean__axioms.neq A B)) =>
-             H8:(plth.Prf (euclidean__axioms.neq A D)) => H8)
+            (plth.neq euclidean__axioms.Point A B)
+            (plth.neq euclidean__axioms.Point A D)
+            (plth.neq euclidean__axioms.Point A D)
+            (H7:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
+             H8:(plth.Prf (plth.neq euclidean__axioms.Point A D)) => H8)
             H6)
          H4)
         (lemma__betweennotequal.lemma__betweennotequal A B D H0)))

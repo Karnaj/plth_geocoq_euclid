@@ -29,9 +29,9 @@ thm lemma__parallelcollinear2 :
   (H1:(plth.Prf (euclidean__axioms.BetS d C c)) =>
    (H2:(plth.Prf
           (plth.and
-             (euclidean__axioms.neq A B)
+             (plth.neq euclidean__axioms.Point A B)
              (plth.and
-                (euclidean__axioms.neq c d)
+                (plth.neq euclidean__axioms.Point c d)
                 (plth.and
                    (plth.not (euclidean__defs.Meet A B c d))
                    (euclidean__defs.OS c d A B))))) =>
@@ -233,28 +233,30 @@ thm lemma__parallelcollinear2 :
                             (H15:(plth.Prf (euclidean__axioms.nCol A B c)) =>
                              H16:(plth.Prf (euclidean__axioms.nCol A B d)) =>
                              logic.and__ind
-                               (euclidean__axioms.neq A B)
+                               (plth.neq euclidean__axioms.Point A B)
                                (plth.and
-                                  (euclidean__axioms.neq c d)
+                                  (plth.neq euclidean__axioms.Point c d)
                                   (plth.and
                                      (plth.not (euclidean__defs.Meet A B c d))
                                      (euclidean__defs.OS c d A B)))
                                (euclidean__defs.TP A B C d)
-                               (H17:(plth.Prf (euclidean__axioms.neq A B)) =>
+                               (H17:(plth.Prf
+                                       (plth.neq euclidean__axioms.Point A B)) =>
                                 H18:(plth.Prf
                                        (plth.and
-                                          (euclidean__axioms.neq c d)
+                                          (plth.neq euclidean__axioms.Point c d)
                                           (plth.and
                                              (plth.not
                                                 (euclidean__defs.Meet A B c d))
                                              (euclidean__defs.OS c d A B)))) =>
                                 logic.and__ind
-                                  (euclidean__axioms.neq c d)
+                                  (plth.neq euclidean__axioms.Point c d)
                                   (plth.and
                                      (plth.not (euclidean__defs.Meet A B c d))
                                      (euclidean__defs.OS c d A B))
                                   (euclidean__defs.TP A B C d)
-                                  (H19:(plth.Prf (euclidean__axioms.neq c d)) =>
+                                  (H19:(plth.Prf
+                                          (plth.neq euclidean__axioms.Point c d)) =>
                                    H20:(plth.Prf
                                           (plth.and
                                              (plth.not
@@ -270,7 +272,10 @@ thm lemma__parallelcollinear2 :
                                       H22:(plth.Prf
                                              (euclidean__defs.OS c d A B)) =>
                                       (H23:(plth.Prf
-                                              (euclidean__axioms.neq C d)) =>
+                                              (plth.neq
+                                                 euclidean__axioms.Point
+                                                 C
+                                                 d)) =>
                                        (H24:(plth.Prf
                                                (euclidean__axioms.BetS
                                                   q
@@ -298,7 +303,8 @@ thm lemma__parallelcollinear2 :
                                                       c)) =>
                                             (H29:(plth.Prf
                                                     (plth.not
-                                                       (plth.eq euclidean__axioms.Point
+                                                       (plth.eq
+                                                          euclidean__axioms.Point
                                                           p
                                                           r))) =>
                                              (H30:(plth.Prf
@@ -327,7 +333,8 @@ thm lemma__parallelcollinear2 :
                                                             d
                                                             q)) =>
                                                   (H35:(plth.Prf
-                                                          (plth.eq euclidean__axioms.Point
+                                                          (plth.eq
+                                                             euclidean__axioms.Point
                                                              d
                                                              d)) =>
                                                    (H36:(plth.Prf
@@ -336,7 +343,8 @@ thm lemma__parallelcollinear2 :
                                                               d
                                                               d)) =>
                                                     (H37:(plth.Prf
-                                                            (euclidean__axioms.neq
+                                                            (plth.neq
+                                                               euclidean__axioms.Point
                                                                q
                                                                d)) =>
                                                      (H38:(plth.Prf
@@ -355,17 +363,20 @@ thm lemma__parallelcollinear2 :
                                                                   p
                                                                   c)) =>
                                                         (H41:(plth.Prf
-                                                                (plth.eq euclidean__axioms.Point
+                                                                (plth.eq
+                                                                   euclidean__axioms.Point
                                                                    c
                                                                    c)) =>
                                                          (H42:(plth.Prf
                                                                  (plth.not
                                                                     (
-                                                                    plth.eq euclidean__axioms.Point
+                                                                    plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     p))) =>
                                                           (H43:(plth.Prf
-                                                                  (plth.eq euclidean__axioms.Point
+                                                                  (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     p)) =>
                                                            (H44:(plth.Prf
@@ -385,7 +396,8 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     q)) =>
                                                               (H47:(plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     c)) =>
                                                                (H48:(
@@ -396,7 +408,8 @@ thm lemma__parallelcollinear2 :
                                                                     c)) =>
                                                                 (H49:(
                                                                  plth.Prf
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)) =>
                                                                  (H50:(
@@ -600,7 +613,8 @@ thm lemma__parallelcollinear2 :
                                                                     r)) =>
                                                                     (H66:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)) =>
                                                                     (H67:(
@@ -667,11 +681,13 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     B)) =>
                                                                     logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -688,7 +704,8 @@ thm lemma__parallelcollinear2 :
                                                                     B)))
                                                                     H17
                                                                     (logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -740,11 +757,13 @@ thm lemma__parallelcollinear2 :
                                                                     plth.El
                                                                     euclidean__axioms.Point) =>
                                                                     plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -762,11 +781,13 @@ thm lemma__parallelcollinear2 :
                                                                     plth.El
                                                                     euclidean__axioms.Point) =>
                                                                     plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -785,11 +806,13 @@ thm lemma__parallelcollinear2 :
                                                                     H75:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -802,11 +825,13 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     R))))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -821,13 +846,15 @@ thm lemma__parallelcollinear2 :
                                                                     plth.false
                                                                     (H76:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)) =>
                                                                     H77:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -840,7 +867,8 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     R)))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.and
@@ -855,7 +883,8 @@ thm lemma__parallelcollinear2 :
                                                                     plth.false
                                                                     (H78:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)) =>
                                                                     H79:(
@@ -905,7 +934,8 @@ thm lemma__parallelcollinear2 :
                                                                     c)) =>
                                                                     (H84:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)) =>
                                                                     (H85:(
@@ -942,11 +972,13 @@ thm lemma__parallelcollinear2 :
                                                                     plth.El
                                                                     euclidean__axioms.Point) =>
                                                                     plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -960,11 +992,13 @@ thm lemma__parallelcollinear2 :
                                                                     X))))
                                                                     R
                                                                     (logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -978,7 +1012,8 @@ thm lemma__parallelcollinear2 :
                                                                     R)))
                                                                     H76
                                                                     (logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -1245,62 +1280,77 @@ thm lemma__parallelcollinear2 :
                                                                     ((H84:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q))
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (H85:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)) =>
                                                                     H86:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (H87:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)) =>
                                                                     H88:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)) =>
                                                                     H78)
@@ -1515,15 +1565,18 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     B)) =>
                                                                     logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     C)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -1541,11 +1594,13 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C)))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -1563,7 +1618,8 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -1627,12 +1683,14 @@ thm lemma__parallelcollinear2 :
                                                                     (H73:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     p))) =>
                                                                     (H74:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     p)) =>
                                                                     (H75:(
@@ -1643,7 +1701,8 @@ thm lemma__parallelcollinear2 :
                                                                     B)) =>
                                                                     (H76:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)) =>
                                                                     (H77:(
@@ -2797,15 +2856,18 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     H77)))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)
                                                                     (plth.or
@@ -2823,11 +2885,13 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     A)))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)
                                                                     (plth.or
@@ -2845,7 +2909,8 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     A))))
                                                                     (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)
                                                                     (plth.or
@@ -3103,7 +3168,8 @@ thm lemma__parallelcollinear2 :
                                                                     H73)))
                                                                     (H73:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     p)) =>
                                                                     (H74:(
@@ -3127,7 +3193,8 @@ thm lemma__parallelcollinear2 :
                                                                     (H77:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     p))) =>
                                                                     (H78:(
@@ -3151,7 +3218,8 @@ thm lemma__parallelcollinear2 :
                                                                     (H81:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     A))) =>
                                                                     (H82:(
@@ -3632,22 +3700,26 @@ thm lemma__parallelcollinear2 :
                                                                     H81))))
                                                                     (H81:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     A)) =>
                                                                     (H82:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     p)) =>
                                                                     (H83:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     r)) =>
                                                                     (H84:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     p)) =>
                                                                     H69
@@ -3670,62 +3742,77 @@ thm lemma__parallelcollinear2 :
                                                                     ((H83:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q))
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     r)
                                                                     (H84:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     F
                                                                     q)) =>
                                                                     H85:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     r)
                                                                     (H86:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     F)) =>
                                                                     H87:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     q)) =>
                                                                     H29)
@@ -4167,7 +4254,8 @@ thm lemma__parallelcollinear2 :
                                                                     H77)))
                                                                     (H77:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     p)) =>
                                                                     (H78:(
@@ -4935,11 +5023,13 @@ thm lemma__parallelcollinear2 :
                                                                     plth.El
                                                                     euclidean__axioms.Point) =>
                                                                     plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -4953,11 +5043,13 @@ thm lemma__parallelcollinear2 :
                                                                     X))))
                                                                     C
                                                                     (logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -4971,7 +5063,8 @@ thm lemma__parallelcollinear2 :
                                                                     C)))
                                                                     H17
                                                                     (logic.conj
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.and
@@ -5192,15 +5285,18 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     H70)))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     C)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -5218,11 +5314,13 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C)))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     d)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -5240,7 +5338,8 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     C
                                                                     d)
                                                                     (plth.or
@@ -6093,15 +6192,18 @@ thm lemma__parallelcollinear2 :
                                                                     H7
                                                                     H17))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     r)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     F)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     F)
                                                                     (plth.or
@@ -6119,11 +6221,13 @@ thm lemma__parallelcollinear2 :
                                                                     F
                                                                     r)))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     F)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     F)
                                                                     (plth.or
@@ -6141,7 +6245,8 @@ thm lemma__parallelcollinear2 :
                                                                     F
                                                                     r))))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     F)
                                                                     (plth.or
@@ -6232,62 +6337,77 @@ thm lemma__parallelcollinear2 :
                                                                   ((H49:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c))
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)
                                                                     (H50:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)) =>
                                                                     H51:(
                                                                     plth.Prf
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c))) =>
                                                                     logic.and__ind
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)
                                                                     (H52:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)) =>
                                                                     H53:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)) =>
                                                                     H53)
@@ -6300,16 +6420,19 @@ thm lemma__parallelcollinear2 :
                                                                     H27)))
                                                                  (logic.or__intror
                                                                     (
-                                                                    plth.eq euclidean__axioms.Point
+                                                                    plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     p)
                                                                     (
                                                                     plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     c)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.or
@@ -6328,11 +6451,13 @@ thm lemma__parallelcollinear2 :
                                                                     p)))))
                                                                     (
                                                                     logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     c)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.or
@@ -6567,15 +6692,18 @@ thm lemma__parallelcollinear2 :
                                                                     H44
                                                                     H42))))
                                                              (logic.or__intror
-                                                                (plth.eq euclidean__axioms.Point
+                                                                (plth.eq
+                                                                   euclidean__axioms.Point
                                                                    q
                                                                    p)
                                                                 (plth.or
-                                                                   (plth.eq euclidean__axioms.Point
+                                                                   (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
                                                                    (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     p)
                                                                     (plth.or
@@ -6593,11 +6721,13 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     p)))))
                                                                 (logic.or__intror
-                                                                   (plth.eq euclidean__axioms.Point
+                                                                   (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
                                                                    (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     p)
                                                                     (plth.or
@@ -6615,7 +6745,8 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     p))))
                                                                    (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     p)
                                                                     (plth.or
@@ -6637,12 +6768,14 @@ thm lemma__parallelcollinear2 :
                                                                euclidean__axioms.Point
                                                                p))
                                                            (H42:(plth.Prf
-                                                                   (plth.eq euclidean__axioms.Point
+                                                                   (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     c
                                                                     p)) =>
                                                             (H43:(plth.Prf
                                                                     (
-                                                                    plth.eq euclidean__axioms.Point
+                                                                    plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)) =>
                                                              (H44:(plth.Prf
@@ -6672,15 +6805,18 @@ thm lemma__parallelcollinear2 :
                                                                     H30
                                                                     H44)))
                                                                (logic.or__intror
-                                                                  (plth.eq euclidean__axioms.Point
+                                                                  (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     r)
                                                                   (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     c)
                                                                     (plth.or
@@ -6698,11 +6834,13 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     r)))))
                                                                   (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     c)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     c)
                                                                     (plth.or
@@ -6745,7 +6883,8 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     c0)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     c0
                                                                     d)
                                                                     (plth.imp
@@ -6835,7 +6974,8 @@ thm lemma__parallelcollinear2 :
                                                                   H46:(
                                                                   plth.Prf
                                                                     (
-                                                                    euclidean__axioms.neq
+                                                                    plth.neq
+                                                                    euclidean__axioms.Point
                                                                     p
                                                                     d)) =>
                                                                   H47:(
@@ -7157,58 +7297,73 @@ thm lemma__parallelcollinear2 :
                                                                 H37))))
                                                       ((H37:(plth.Prf
                                                                (plth.and
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     d)
                                                                   (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     r)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     d)))) =>
                                                         logic.and__ind
-                                                          (euclidean__axioms.neq
+                                                          (plth.neq
+                                                             euclidean__axioms.Point
                                                              r
                                                              d)
                                                           (plth.and
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 q
                                                                 r)
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 q
                                                                 d))
-                                                          (euclidean__axioms.neq
+                                                          (plth.neq
+                                                             euclidean__axioms.Point
                                                              q
                                                              d)
                                                           (H38:(plth.Prf
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     r
                                                                     d)) =>
                                                            H39:(plth.Prf
                                                                   (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     r)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     d))) =>
                                                            logic.and__ind
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 q
                                                                 r)
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 q
                                                                 d)
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 q
                                                                 d)
                                                              (H40:(plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     r)) =>
                                                               H41:(plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     d)) =>
                                                               H41)
@@ -7220,15 +7375,18 @@ thm lemma__parallelcollinear2 :
                                                             d
                                                             H25)))
                                                      (logic.or__intror
-                                                        (plth.eq euclidean__axioms.Point
+                                                        (plth.eq
+                                                           euclidean__axioms.Point
                                                            r
                                                            d)
                                                         (plth.or
-                                                           (plth.eq euclidean__axioms.Point
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               r
                                                               d)
                                                            (plth.or
-                                                              (plth.eq euclidean__axioms.Point
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
                                                                  d
                                                                  d)
                                                               (plth.or
@@ -7248,11 +7406,13 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     d)))))
                                                         (logic.or__intror
-                                                           (plth.eq euclidean__axioms.Point
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               r
                                                               d)
                                                            (plth.or
-                                                              (plth.eq euclidean__axioms.Point
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
                                                                  d
                                                                  d)
                                                               (plth.or
@@ -7272,7 +7432,8 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     d))))
                                                            (logic.or__introl
-                                                              (plth.eq euclidean__axioms.Point
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
                                                                  d
                                                                  d)
                                                               (plth.or
@@ -7485,15 +7646,18 @@ thm lemma__parallelcollinear2 :
                                                          d
                                                          H33)))
                                                   (logic.or__intror
-                                                     (plth.eq euclidean__axioms.Point
+                                                     (plth.eq
+                                                        euclidean__axioms.Point
                                                         q
                                                         r)
                                                      (plth.or
-                                                        (plth.eq euclidean__axioms.Point
+                                                        (plth.eq
+                                                           euclidean__axioms.Point
                                                            q
                                                            d)
                                                         (plth.or
-                                                           (plth.eq euclidean__axioms.Point
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               r
                                                               d)
                                                            (plth.or
@@ -7511,11 +7675,13 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r)))))
                                                      (logic.or__intror
-                                                        (plth.eq euclidean__axioms.Point
+                                                        (plth.eq
+                                                           euclidean__axioms.Point
                                                            q
                                                            d)
                                                         (plth.or
-                                                           (plth.eq euclidean__axioms.Point
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               r
                                                               d)
                                                            (plth.or
@@ -7533,7 +7699,8 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r))))
                                                         (logic.or__intror
-                                                           (plth.eq euclidean__axioms.Point
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               r
                                                               d)
                                                            (plth.or
@@ -7798,7 +7965,8 @@ thm lemma__parallelcollinear2 :
                                                         H9
                                                         H29))))
                                               (H29:(plth.Prf
-                                                      (plth.eq euclidean__axioms.Point
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
                                                          p
                                                          r)) =>
                                                (H30:(plth.Prf
@@ -7817,7 +7985,8 @@ thm lemma__parallelcollinear2 :
                                                             p
                                                             d)) =>
                                                   (H33:(plth.Prf
-                                                          (euclidean__axioms.neq
+                                                          (plth.neq
+                                                             euclidean__axioms.Point
                                                              q
                                                              p)) =>
                                                    (H34:(plth.Prf
@@ -7843,11 +8012,13 @@ thm lemma__parallelcollinear2 :
                                                           (X:(plth.El
                                                                 euclidean__axioms.Point) =>
                                                            plth.and
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 A
                                                                 B)
                                                              (plth.and
-                                                                (euclidean__axioms.neq
+                                                                (plth.neq
+                                                                   euclidean__axioms.Point
                                                                    c
                                                                    d)
                                                                 (plth.and
@@ -7861,11 +8032,13 @@ thm lemma__parallelcollinear2 :
                                                                     X))))
                                                           p
                                                           (logic.conj
-                                                             (euclidean__axioms.neq
+                                                             (plth.neq
+                                                                euclidean__axioms.Point
                                                                 A
                                                                 B)
                                                              (plth.and
-                                                                (euclidean__axioms.neq
+                                                                (plth.neq
+                                                                   euclidean__axioms.Point
                                                                    c
                                                                    d)
                                                                 (plth.and
@@ -7879,7 +8052,8 @@ thm lemma__parallelcollinear2 :
                                                                     p)))
                                                              H17
                                                              (logic.conj
-                                                                (euclidean__axioms.neq
+                                                                (plth.neq
+                                                                   euclidean__axioms.Point
                                                                    c
                                                                    d)
                                                                 (plth.and
@@ -8118,58 +8292,73 @@ thm lemma__parallelcollinear2 :
                                                               H33))))
                                                     ((H33:(plth.Prf
                                                              (plth.and
-                                                                (euclidean__axioms.neq
+                                                                (plth.neq
+                                                                   euclidean__axioms.Point
                                                                    p
                                                                    c)
                                                                 (plth.and
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)))) =>
                                                       logic.and__ind
-                                                        (euclidean__axioms.neq
+                                                        (plth.neq
+                                                           euclidean__axioms.Point
                                                            p
                                                            c)
                                                         (plth.and
-                                                           (euclidean__axioms.neq
+                                                           (plth.neq
+                                                              euclidean__axioms.Point
                                                               q
                                                               p)
-                                                           (euclidean__axioms.neq
+                                                           (plth.neq
+                                                              euclidean__axioms.Point
                                                               q
                                                               c))
-                                                        (euclidean__axioms.neq
+                                                        (plth.neq
+                                                           euclidean__axioms.Point
                                                            q
                                                            p)
                                                         (H34:(plth.Prf
-                                                                (euclidean__axioms.neq
+                                                                (plth.neq
+                                                                   euclidean__axioms.Point
                                                                    p
                                                                    c)) =>
                                                          H35:(plth.Prf
                                                                 (plth.and
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c))) =>
                                                          logic.and__ind
-                                                           (euclidean__axioms.neq
+                                                           (plth.neq
+                                                              euclidean__axioms.Point
                                                               q
                                                               p)
-                                                           (euclidean__axioms.neq
+                                                           (plth.neq
+                                                              euclidean__axioms.Point
                                                               q
                                                               c)
-                                                           (euclidean__axioms.neq
+                                                           (plth.neq
+                                                              euclidean__axioms.Point
                                                               q
                                                               p)
                                                            (H36:(plth.Prf
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     p)) =>
                                                             H37:(plth.Prf
-                                                                   (euclidean__axioms.neq
+                                                                   (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     q
                                                                     c)) =>
                                                             H36)
@@ -8260,15 +8449,18 @@ thm lemma__parallelcollinear2 :
                                                       H31))
                                                   H28)
                                                  (logic.or__intror
-                                                    (plth.eq euclidean__axioms.Point
+                                                    (plth.eq
+                                                       euclidean__axioms.Point
                                                        q
                                                        r)
                                                     (plth.or
-                                                       (plth.eq euclidean__axioms.Point
+                                                       (plth.eq
+                                                          euclidean__axioms.Point
                                                           q
                                                           d)
                                                        (plth.or
-                                                          (plth.eq euclidean__axioms.Point
+                                                          (plth.eq
+                                                             euclidean__axioms.Point
                                                              r
                                                              d)
                                                           (plth.or
@@ -8286,11 +8478,13 @@ thm lemma__parallelcollinear2 :
                                                                    d
                                                                    r)))))
                                                     (logic.or__intror
-                                                       (plth.eq euclidean__axioms.Point
+                                                       (plth.eq
+                                                          euclidean__axioms.Point
                                                           q
                                                           d)
                                                        (plth.or
-                                                          (plth.eq euclidean__axioms.Point
+                                                          (plth.eq
+                                                             euclidean__axioms.Point
                                                              r
                                                              d)
                                                           (plth.or
@@ -8308,7 +8502,8 @@ thm lemma__parallelcollinear2 :
                                                                    d
                                                                    r))))
                                                        (logic.or__intror
-                                                          (plth.eq euclidean__axioms.Point
+                                                          (plth.eq
+                                                             euclidean__axioms.Point
                                                              r
                                                              d)
                                                           (plth.or
@@ -8350,15 +8545,18 @@ thm lemma__parallelcollinear2 :
                                                                    r)
                                                                 H25)))))))
                                              (logic.or__intror
-                                                (plth.eq euclidean__axioms.Point
+                                                (plth.eq
+                                                   euclidean__axioms.Point
                                                    q
                                                    p)
                                                 (plth.or
-                                                   (plth.eq euclidean__axioms.Point
+                                                   (plth.eq
+                                                      euclidean__axioms.Point
                                                       q
                                                       c)
                                                    (plth.or
-                                                      (plth.eq euclidean__axioms.Point
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
                                                          p
                                                          c)
                                                       (plth.or
@@ -8376,11 +8574,13 @@ thm lemma__parallelcollinear2 :
                                                                c
                                                                p)))))
                                                 (logic.or__intror
-                                                   (plth.eq euclidean__axioms.Point
+                                                   (plth.eq
+                                                      euclidean__axioms.Point
                                                       q
                                                       c)
                                                    (plth.or
-                                                      (plth.eq euclidean__axioms.Point
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
                                                          p
                                                          c)
                                                       (plth.or
@@ -8398,7 +8598,8 @@ thm lemma__parallelcollinear2 :
                                                                c
                                                                p))))
                                                    (logic.or__intror
-                                                      (plth.eq euclidean__axioms.Point
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
                                                          p
                                                          c)
                                                       (plth.or
@@ -8453,44 +8654,73 @@ thm lemma__parallelcollinear2 :
                                             H11))
                                         ((H23:(plth.Prf
                                                  (plth.and
-                                                    (euclidean__axioms.neq
+                                                    (plth.neq
+                                                       euclidean__axioms.Point
                                                        C
                                                        d)
                                                     (plth.and
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           C)
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           d)))) =>
                                           logic.and__ind
-                                            (euclidean__axioms.neq C d)
+                                            (plth.neq
+                                               euclidean__axioms.Point
+                                               C
+                                               d)
                                             (plth.and
-                                               (euclidean__axioms.neq c C)
-                                               (euclidean__axioms.neq c d))
-                                            (euclidean__axioms.neq C d)
+                                               (plth.neq
+                                                  euclidean__axioms.Point
+                                                  c
+                                                  C)
+                                               (plth.neq
+                                                  euclidean__axioms.Point
+                                                  c
+                                                  d))
+                                            (plth.neq
+                                               euclidean__axioms.Point
+                                               C
+                                               d)
                                             (H24:(plth.Prf
-                                                    (euclidean__axioms.neq
+                                                    (plth.neq
+                                                       euclidean__axioms.Point
                                                        C
                                                        d)) =>
                                              H25:(plth.Prf
                                                     (plth.and
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           C)
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           d))) =>
                                              logic.and__ind
-                                               (euclidean__axioms.neq c C)
-                                               (euclidean__axioms.neq c d)
-                                               (euclidean__axioms.neq C d)
+                                               (plth.neq
+                                                  euclidean__axioms.Point
+                                                  c
+                                                  C)
+                                               (plth.neq
+                                                  euclidean__axioms.Point
+                                                  c
+                                                  d)
+                                               (plth.neq
+                                                  euclidean__axioms.Point
+                                                  C
+                                                  d)
                                                (H26:(plth.Prf
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           C)) =>
                                                 H27:(plth.Prf
-                                                       (euclidean__axioms.neq
+                                                       (plth.neq
+                                                          euclidean__axioms.Point
                                                           c
                                                           d)) =>
                                                 H24)
@@ -8514,9 +8744,9 @@ thm lemma__parallelcollinear2 :
        H3)
       ((H3:(plth.Prf
               (plth.and
-                 (euclidean__axioms.neq A B)
+                 (plth.neq euclidean__axioms.Point A B)
                  (plth.and
-                    (euclidean__axioms.neq c d)
+                    (plth.neq euclidean__axioms.Point c d)
                     (plth.and
                        (plth.not (euclidean__defs.Meet A B c d))
                        (plth.ex
@@ -8541,9 +8771,9 @@ thm lemma__parallelcollinear2 :
                                                (euclidean__axioms.nCol A B d))))))))))))) =>
         (__TmpHyp:(plth.Prf
                      (plth.and
-                        (euclidean__axioms.neq A B)
+                        (plth.neq euclidean__axioms.Point A B)
                         (plth.and
-                           (euclidean__axioms.neq c d)
+                           (plth.neq euclidean__axioms.Point c d)
                            (plth.and
                               (plth.not (euclidean__defs.Meet A B c d))
                               (plth.ex
@@ -8579,9 +8809,9 @@ thm lemma__parallelcollinear2 :
                                                          B
                                                          d))))))))))))) =>
          logic.and__ind
-           (euclidean__axioms.neq A B)
+           (plth.neq euclidean__axioms.Point A B)
            (plth.and
-              (euclidean__axioms.neq c d)
+              (plth.neq euclidean__axioms.Point c d)
               (plth.and
                  (plth.not (euclidean__defs.Meet A B c d))
                  (plth.ex
@@ -8624,10 +8854,10 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d)))))))))
-           (H4:(plth.Prf (euclidean__axioms.neq A B)) =>
+           (H4:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
             H5:(plth.Prf
                   (plth.and
-                     (euclidean__axioms.neq c d)
+                     (plth.neq euclidean__axioms.Point c d)
                      (plth.and
                         (plth.not (euclidean__defs.Meet A B c d))
                         (plth.ex
@@ -8657,7 +8887,7 @@ thm lemma__parallelcollinear2 :
                                                    B
                                                    d)))))))))))) =>
             logic.and__ind
-              (euclidean__axioms.neq c d)
+              (plth.neq euclidean__axioms.Point c d)
               (plth.and
                  (plth.not (euclidean__defs.Meet A B c d))
                  (plth.ex
@@ -8700,7 +8930,7 @@ thm lemma__parallelcollinear2 :
                                    (plth.and
                                       (euclidean__axioms.nCol A B c)
                                       (euclidean__axioms.nCol A B d)))))))))
-              (H6:(plth.Prf (euclidean__axioms.neq c d)) =>
+              (H6:(plth.Prf (plth.neq euclidean__axioms.Point c d)) =>
                H7:(plth.Prf
                      (plth.and
                         (plth.not (euclidean__defs.Meet A B c d))
@@ -9512,54 +9742,54 @@ thm lemma__parallelcollinear2 :
          H2))
      ((H2:(plth.Prf
              (plth.and
-                (euclidean__axioms.neq A B)
+                (plth.neq euclidean__axioms.Point A B)
                 (plth.and
-                   (euclidean__axioms.neq c d)
+                   (plth.neq euclidean__axioms.Point c d)
                    (plth.and
                       (plth.not (euclidean__defs.Meet A B c d))
                       (euclidean__defs.OS c d A B))))) =>
        (__TmpHyp:(plth.Prf
                     (plth.and
-                       (euclidean__axioms.neq A B)
+                       (plth.neq euclidean__axioms.Point A B)
                        (plth.and
-                          (euclidean__axioms.neq c d)
+                          (plth.neq euclidean__axioms.Point c d)
                           (plth.and
                              (plth.not (euclidean__defs.Meet A B c d))
                              (euclidean__defs.OS c d A B))))) =>
         logic.and__ind
-          (euclidean__axioms.neq A B)
+          (plth.neq euclidean__axioms.Point A B)
           (plth.and
-             (euclidean__axioms.neq c d)
+             (plth.neq euclidean__axioms.Point c d)
              (plth.and
                 (plth.not (euclidean__defs.Meet A B c d))
                 (euclidean__defs.OS c d A B)))
           (plth.and
-             (euclidean__axioms.neq A B)
+             (plth.neq euclidean__axioms.Point A B)
              (plth.and
-                (euclidean__axioms.neq c d)
+                (plth.neq euclidean__axioms.Point c d)
                 (plth.and
                    (plth.not (euclidean__defs.Meet A B c d))
                    (euclidean__defs.OS c d A B))))
-          (H3:(plth.Prf (euclidean__axioms.neq A B)) =>
+          (H3:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
            H4:(plth.Prf
                  (plth.and
-                    (euclidean__axioms.neq c d)
+                    (plth.neq euclidean__axioms.Point c d)
                     (plth.and
                        (plth.not (euclidean__defs.Meet A B c d))
                        (euclidean__defs.OS c d A B)))) =>
            logic.and__ind
-             (euclidean__axioms.neq c d)
+             (plth.neq euclidean__axioms.Point c d)
              (plth.and
                 (plth.not (euclidean__defs.Meet A B c d))
                 (euclidean__defs.OS c d A B))
              (plth.and
-                (euclidean__axioms.neq A B)
+                (plth.neq euclidean__axioms.Point A B)
                 (plth.and
-                   (euclidean__axioms.neq c d)
+                   (plth.neq euclidean__axioms.Point c d)
                    (plth.and
                       (plth.not (euclidean__defs.Meet A B c d))
                       (euclidean__defs.OS c d A B))))
-             (H5:(plth.Prf (euclidean__axioms.neq c d)) =>
+             (H5:(plth.Prf (plth.neq euclidean__axioms.Point c d)) =>
               H6:(plth.Prf
                     (plth.and
                        (plth.not (euclidean__defs.Meet A B c d))
@@ -9568,24 +9798,24 @@ thm lemma__parallelcollinear2 :
                 (plth.not (euclidean__defs.Meet A B c d))
                 (euclidean__defs.OS c d A B)
                 (plth.and
-                   (euclidean__axioms.neq A B)
+                   (plth.neq euclidean__axioms.Point A B)
                    (plth.and
-                      (euclidean__axioms.neq c d)
+                      (plth.neq euclidean__axioms.Point c d)
                       (plth.and
                          (plth.not (euclidean__defs.Meet A B c d))
                          (euclidean__defs.OS c d A B))))
                 (H7:(plth.Prf (plth.not (euclidean__defs.Meet A B c d))) =>
                  H8:(plth.Prf (euclidean__defs.OS c d A B)) =>
                  logic.conj
-                   (euclidean__axioms.neq A B)
+                   (plth.neq euclidean__axioms.Point A B)
                    (plth.and
-                      (euclidean__axioms.neq c d)
+                      (plth.neq euclidean__axioms.Point c d)
                       (plth.and
                          (plth.not (euclidean__defs.Meet A B c d))
                          (euclidean__defs.OS c d A B)))
                    H3
                    (logic.conj
-                      (euclidean__axioms.neq c d)
+                      (plth.neq euclidean__axioms.Point c d)
                       (plth.and
                          (plth.not (euclidean__defs.Meet A B c d))
                          (euclidean__defs.OS c d A B))

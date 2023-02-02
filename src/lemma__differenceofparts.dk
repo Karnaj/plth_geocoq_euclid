@@ -39,18 +39,26 @@ thm lemma__differenceofparts :
   H1:(plth.Prf (euclidean__axioms.BetS A B C)) =>
   H2:(plth.Prf (euclidean__axioms.BetS a b c)) =>
   (H3:(plth.Prf (euclidean__axioms.Cong B C b c)) => H3)
-    ((H3:(plth.Prf (plth.or (plth.eq euclidean__axioms.Point B A) (euclidean__axioms.neq B A))) =>
-      (H4:(plth.Prf (plth.or (plth.eq euclidean__axioms.Point B A) (euclidean__axioms.neq B A))) =>
+    ((H3:(plth.Prf
+            (plth.or
+               (plth.eq euclidean__axioms.Point B A)
+               (plth.neq euclidean__axioms.Point B A))) =>
+      (H4:(plth.Prf
+             (plth.or
+                (plth.eq euclidean__axioms.Point B A)
+                (plth.neq euclidean__axioms.Point B A))) =>
        (__TmpHyp:(plth.Prf
-                    (plth.or (plth.eq euclidean__axioms.Point B A) (euclidean__axioms.neq B A))) =>
+                    (plth.or
+                       (plth.eq euclidean__axioms.Point B A)
+                       (plth.neq euclidean__axioms.Point B A))) =>
         logic.or__ind
           (plth.eq euclidean__axioms.Point B A)
-          (euclidean__axioms.neq B A)
+          (plth.neq euclidean__axioms.Point B A)
           (euclidean__axioms.Cong B C b c)
           (H5:(plth.Prf (plth.eq euclidean__axioms.Point B A)) =>
            (H6:(plth.Prf (euclidean__axioms.Cong A A a b)) =>
             (H7:(plth.Prf (euclidean__axioms.Cong a b A A)) =>
-             (H8:(plth.Prf (plth.not (euclidean__axioms.neq a b))) =>
+             (H8:(plth.Prf (plth.not (plth.neq euclidean__axioms.Point a b))) =>
               (H9:(plth.Prf (euclidean__axioms.Cong A C A C)) =>
                (H10:(plth.Prf (euclidean__axioms.Cong B C A C)) =>
                 (H11:(plth.Prf (euclidean__axioms.Cong B C a c)) =>
@@ -128,9 +136,10 @@ thm lemma__differenceofparts :
                     H
                     H1))
                 (euclidean__axioms.cn__congruencereflexive A C))
-               (H8:(plth.Prf (euclidean__axioms.neq a b)) =>
-                (H9:(plth.Prf (euclidean__axioms.neq A A)) =>
-                 (H10:(plth.Prf (plth.eq euclidean__axioms.Point A A)) => H9 H10)
+               (H8:(plth.Prf (plth.neq euclidean__axioms.Point a b)) =>
+                (H9:(plth.Prf (plth.neq euclidean__axioms.Point A A)) =>
+                 (H10:(plth.Prf (plth.eq euclidean__axioms.Point A A)) =>
+                  H9 H10)
                    ((H10:(plth.Prf plth.false) =>
                      (H11:(plth.Prf plth.false) =>
                       logic.eq__refl euclidean__axioms.Point A)
@@ -156,9 +165,9 @@ thm lemma__differenceofparts :
                 H5
                 H
                 H1))
-          (H5:(plth.Prf (euclidean__axioms.neq B A)) =>
+          (H5:(plth.Prf (plth.neq euclidean__axioms.Point B A)) =>
            (H6:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point C A))) =>
-            (H7:(plth.Prf (euclidean__axioms.neq A C)) =>
+            (H7:(plth.Prf (plth.neq euclidean__axioms.Point A C)) =>
              (H8:(plth.Prf
                     (plth.ex
                        euclidean__axioms.Point
@@ -184,9 +193,11 @@ thm lemma__differenceofparts :
                    (euclidean__axioms.Cong B C b c)
                    (H10:(plth.Prf (euclidean__axioms.BetS C A E)) =>
                     H11:(plth.Prf (euclidean__axioms.Cong A E A C)) =>
-                    (H12:(plth.Prf (euclidean__axioms.neq A C)) =>
-                     (H13:(plth.Prf (euclidean__axioms.neq a c)) =>
-                      (H14:(plth.Prf (euclidean__axioms.neq c a)) =>
+                    (H12:(plth.Prf (plth.neq euclidean__axioms.Point A C)) =>
+                     (H13:(plth.Prf
+                             (plth.neq euclidean__axioms.Point a c)) =>
+                      (H14:(plth.Prf
+                              (plth.neq euclidean__axioms.Point c a)) =>
                        (H15:(plth.Prf
                                (plth.ex
                                   euclidean__axioms.Point

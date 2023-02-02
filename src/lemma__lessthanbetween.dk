@@ -36,7 +36,7 @@ thm lemma__lessthanbetween :
         (euclidean__axioms.BetS A B C)
         (H3:(plth.Prf (euclidean__axioms.BetS A M C)) =>
          H4:(plth.Prf (euclidean__axioms.Cong A M A B)) =>
-         (H5:(plth.Prf (euclidean__axioms.neq A M)) =>
+         (H5:(plth.Prf (plth.neq euclidean__axioms.Point A M)) =>
           (H6:(plth.Prf (euclidean__defs.Out A M C)) =>
            (H7:(plth.Prf (euclidean__defs.Out A C M)) =>
             (H8:(plth.Prf (euclidean__defs.Out A C B)) =>
@@ -51,7 +51,7 @@ thm lemma__lessthanbetween :
                       (plth.imp
                          (euclidean__axioms.Cong A M0 A B)
                          (plth.imp
-                            (euclidean__axioms.neq A M0)
+                            (plth.neq euclidean__axioms.Point A M0)
                             (plth.imp
                                (euclidean__defs.Out A M0 C)
                                (plth.imp
@@ -59,7 +59,7 @@ thm lemma__lessthanbetween :
                                   (euclidean__axioms.BetS A B C))))))
                    (H10:(plth.Prf (euclidean__axioms.BetS A B C)) =>
                     H11:(plth.Prf (euclidean__axioms.Cong A B A B)) =>
-                    H12:(plth.Prf (euclidean__axioms.neq A B)) =>
+                    H12:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
                     H13:(plth.Prf (euclidean__defs.Out A B C)) =>
                     H14:(plth.Prf (euclidean__defs.Out A C B)) => H10)
                    M
@@ -78,7 +78,9 @@ thm lemma__lessthanbetween :
                C
                (logic.or__intror
                   (euclidean__axioms.BetS A C M)
-                  (plth.or (plth.eq euclidean__axioms.Point C M) (euclidean__axioms.BetS A M C))
+                  (plth.or
+                     (plth.eq euclidean__axioms.Point C M)
+                     (euclidean__axioms.BetS A M C))
                   (logic.or__intror
                      (plth.eq euclidean__axioms.Point C M)
                      (euclidean__axioms.BetS A M C)
@@ -86,21 +88,27 @@ thm lemma__lessthanbetween :
                H5))
            ((H5:(plth.Prf
                    (plth.and
-                      (euclidean__axioms.neq M C)
-                      (plth.and (euclidean__axioms.neq A M) (euclidean__axioms.neq A C)))) =>
+                      (plth.neq euclidean__axioms.Point M C)
+                      (plth.and
+                         (plth.neq euclidean__axioms.Point A M)
+                         (plth.neq euclidean__axioms.Point A C)))) =>
              logic.and__ind
-               (euclidean__axioms.neq M C)
-               (plth.and (euclidean__axioms.neq A M) (euclidean__axioms.neq A C))
-               (euclidean__axioms.neq A M)
-               (H6:(plth.Prf (euclidean__axioms.neq M C)) =>
+               (plth.neq euclidean__axioms.Point M C)
+               (plth.and
+                  (plth.neq euclidean__axioms.Point A M)
+                  (plth.neq euclidean__axioms.Point A C))
+               (plth.neq euclidean__axioms.Point A M)
+               (H6:(plth.Prf (plth.neq euclidean__axioms.Point M C)) =>
                 H7:(plth.Prf
-                      (plth.and (euclidean__axioms.neq A M) (euclidean__axioms.neq A C))) =>
+                      (plth.and
+                         (plth.neq euclidean__axioms.Point A M)
+                         (plth.neq euclidean__axioms.Point A C))) =>
                 logic.and__ind
-                  (euclidean__axioms.neq A M)
-                  (euclidean__axioms.neq A C)
-                  (euclidean__axioms.neq A M)
-                  (H8:(plth.Prf (euclidean__axioms.neq A M)) =>
-                   H9:(plth.Prf (euclidean__axioms.neq A C)) => H8)
+                  (plth.neq euclidean__axioms.Point A M)
+                  (plth.neq euclidean__axioms.Point A C)
+                  (plth.neq euclidean__axioms.Point A M)
+                  (H8:(plth.Prf (plth.neq euclidean__axioms.Point A M)) =>
+                   H9:(plth.Prf (plth.neq euclidean__axioms.Point A C)) => H8)
                   H7)
                H5)
               (lemma__betweennotequal.lemma__betweennotequal A M C H3)))

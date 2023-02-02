@@ -28,7 +28,11 @@ ex : A:Set -> (__:(El A) -> Prop) -> Prop.
 
 eq : A:Set -> x:(El A) -> __:(El A) -> Prop.
 
+neq : A:Set -> x:(El A) -> __:(El A) -> Prop.
+
 [b, a, A] Prf (eq A a b) --> P:((El A) -> Prop) -> Prf (imp (P a) (P b)).
+
+[b, a, A] Prf (neq A a b) --> Prf(not (eq A a b)).
 
 [p0, x]
   Prf (ex x p0) --> p:Prop -> (z:(El x) -> (Prf (p0 z)) -> Prf p) -> Prf p.

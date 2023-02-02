@@ -33,7 +33,9 @@ thm lemma__altitudebisectsbase :
                (euclidean__axioms.BetS A M C)
                (plth.and
                   (euclidean__axioms.Cong A M C M)
-                  (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P)))))) =>
+                  (plth.and
+                     (euclidean__axioms.Cong A P C P)
+                     (plth.neq euclidean__axioms.Point M P)))))) =>
    logic.ex__ind
      euclidean__axioms.Point
      (C:(plth.El euclidean__axioms.Point) =>
@@ -41,7 +43,7 @@ thm lemma__altitudebisectsbase :
         (euclidean__axioms.BetS A M C)
         (plth.and
            (euclidean__axioms.Cong A M C M)
-           (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P))))
+           (plth.and (euclidean__axioms.Cong A P C P) (plth.neq euclidean__axioms.Point M P))))
      (euclidean__defs.Midpoint A M B)
      (C:(plth.El euclidean__axioms.Point) =>
       H3:(plth.Prf
@@ -49,31 +51,37 @@ thm lemma__altitudebisectsbase :
                (euclidean__axioms.BetS A M C)
                (plth.and
                   (euclidean__axioms.Cong A M C M)
-                  (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P))))) =>
+                  (plth.and
+                     (euclidean__axioms.Cong A P C P)
+                     (plth.neq euclidean__axioms.Point M P))))) =>
       logic.and__ind
         (euclidean__axioms.BetS A M C)
         (plth.and
            (euclidean__axioms.Cong A M C M)
-           (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P)))
+           (plth.and (euclidean__axioms.Cong A P C P) (plth.neq euclidean__axioms.Point M P)))
         (euclidean__defs.Midpoint A M B)
         (H4:(plth.Prf (euclidean__axioms.BetS A M C)) =>
          H5:(plth.Prf
                (plth.and
                   (euclidean__axioms.Cong A M C M)
-                  (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P)))) =>
+                  (plth.and
+                     (euclidean__axioms.Cong A P C P)
+                     (plth.neq euclidean__axioms.Point M P)))) =>
          logic.and__ind
            (euclidean__axioms.Cong A M C M)
-           (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P))
+           (plth.and (euclidean__axioms.Cong A P C P) (plth.neq euclidean__axioms.Point M P))
            (euclidean__defs.Midpoint A M B)
            (H6:(plth.Prf (euclidean__axioms.Cong A M C M)) =>
             H7:(plth.Prf
-                  (plth.and (euclidean__axioms.Cong A P C P) (euclidean__axioms.neq M P))) =>
+                  (plth.and
+                     (euclidean__axioms.Cong A P C P)
+                     (plth.neq euclidean__axioms.Point M P))) =>
             logic.and__ind
               (euclidean__axioms.Cong A P C P)
-              (euclidean__axioms.neq M P)
+              (plth.neq euclidean__axioms.Point M P)
               (euclidean__defs.Midpoint A M B)
               (H8:(plth.Prf (euclidean__axioms.Cong A P C P)) =>
-               H9:(plth.Prf (euclidean__axioms.neq M P)) =>
+               H9:(plth.Prf (plth.neq euclidean__axioms.Point M P)) =>
                (H10:(plth.Prf (euclidean__axioms.BetS C M A)) =>
                 (H11:(plth.Prf (euclidean__axioms.Cong C M A M)) =>
                  (H12:(plth.Prf (euclidean__axioms.Cong C P A P)) =>
@@ -93,7 +101,10 @@ thm lemma__altitudebisectsbase :
                                            A
                                            Q
                                            A)
-                                        (euclidean__axioms.neq M A)))))) =>
+                                        (plth.neq
+                                           euclidean__axioms.Point
+                                           M
+                                           A)))))) =>
                      logic.ex__ind
                        euclidean__axioms.Point
                        (Q:(plth.El euclidean__axioms.Point) =>
@@ -103,7 +114,7 @@ thm lemma__altitudebisectsbase :
                              (euclidean__axioms.Cong P M Q M)
                              (plth.and
                                 (euclidean__axioms.Cong P A Q A)
-                                (euclidean__axioms.neq M A))))
+                                (plth.neq euclidean__axioms.Point M A))))
                        (euclidean__defs.Midpoint A M B)
                        (Q:(plth.El euclidean__axioms.Point) =>
                         H16:(plth.Prf
@@ -117,14 +128,17 @@ thm lemma__altitudebisectsbase :
                                            A
                                            Q
                                            A)
-                                        (euclidean__axioms.neq M A))))) =>
+                                        (plth.neq
+                                           euclidean__axioms.Point
+                                           M
+                                           A))))) =>
                         logic.and__ind
                           (euclidean__axioms.BetS P M Q)
                           (plth.and
                              (euclidean__axioms.Cong P M Q M)
                              (plth.and
                                 (euclidean__axioms.Cong P A Q A)
-                                (euclidean__axioms.neq M A)))
+                                (plth.neq euclidean__axioms.Point M A)))
                           (euclidean__defs.Midpoint A M B)
                           (H17:(plth.Prf (euclidean__axioms.BetS P M Q)) =>
                            H18:(plth.Prf
@@ -136,12 +150,15 @@ thm lemma__altitudebisectsbase :
                                            A
                                            Q
                                            A)
-                                        (euclidean__axioms.neq M A)))) =>
+                                        (plth.neq
+                                           euclidean__axioms.Point
+                                           M
+                                           A)))) =>
                            logic.and__ind
                              (euclidean__axioms.Cong P M Q M)
                              (plth.and
                                 (euclidean__axioms.Cong P A Q A)
-                                (euclidean__axioms.neq M A))
+                                (plth.neq euclidean__axioms.Point M A))
                              (euclidean__defs.Midpoint A M B)
                              (H19:(plth.Prf
                                      (euclidean__axioms.Cong P M Q M)) =>
@@ -152,10 +169,13 @@ thm lemma__altitudebisectsbase :
                                            A
                                            Q
                                            A)
-                                        (euclidean__axioms.neq M A))) =>
+                                        (plth.neq
+                                           euclidean__axioms.Point
+                                           M
+                                           A))) =>
                               logic.and__ind
                                 (euclidean__axioms.Cong P A Q A)
-                                (euclidean__axioms.neq M A)
+                                (plth.neq euclidean__axioms.Point M A)
                                 (euclidean__defs.Midpoint A M B)
                                 (H21:(plth.Prf
                                         (euclidean__axioms.Cong
@@ -164,7 +184,10 @@ thm lemma__altitudebisectsbase :
                                            Q
                                            A)) =>
                                  H22:(plth.Prf
-                                        (euclidean__axioms.neq M A)) =>
+                                        (plth.neq
+                                           euclidean__axioms.Point
+                                           M
+                                           A)) =>
                                  (H23:(plth.Prf
                                          (euclidean__axioms.Cong
                                             Q
@@ -208,7 +231,8 @@ thm lemma__altitudebisectsbase :
                                                             B
                                                             E
                                                             B)
-                                                         (euclidean__axioms.neq
+                                                         (plth.neq
+                                                            euclidean__axioms.Point
                                                             M
                                                             B)))))) =>
                                       logic.ex__ind
@@ -232,7 +256,8 @@ thm lemma__altitudebisectsbase :
                                                     B
                                                     E
                                                     B)
-                                                 (euclidean__axioms.neq
+                                                 (plth.neq
+                                                    euclidean__axioms.Point
                                                     M
                                                     B))))
                                         (euclidean__defs.Midpoint
@@ -259,7 +284,8 @@ thm lemma__altitudebisectsbase :
                                                             B
                                                             E
                                                             B)
-                                                         (euclidean__axioms.neq
+                                                         (plth.neq
+                                                            euclidean__axioms.Point
                                                             M
                                                             B))))) =>
                                          logic.and__ind
@@ -279,7 +305,8 @@ thm lemma__altitudebisectsbase :
                                                     B
                                                     E
                                                     B)
-                                                 (euclidean__axioms.neq
+                                                 (plth.neq
+                                                    euclidean__axioms.Point
                                                     M
                                                     B)))
                                            (euclidean__defs.Midpoint
@@ -304,7 +331,8 @@ thm lemma__altitudebisectsbase :
                                                             B
                                                             E
                                                             B)
-                                                         (euclidean__axioms.neq
+                                                         (plth.neq
+                                                            euclidean__axioms.Point
                                                             M
                                                             B)))) =>
                                             logic.and__ind
@@ -319,7 +347,8 @@ thm lemma__altitudebisectsbase :
                                                     B
                                                     E
                                                     B)
-                                                 (euclidean__axioms.neq
+                                                 (plth.neq
+                                                    euclidean__axioms.Point
                                                     M
                                                     B))
                                               (euclidean__defs.Midpoint
@@ -339,7 +368,8 @@ thm lemma__altitudebisectsbase :
                                                             B
                                                             E
                                                             B)
-                                                         (euclidean__axioms.neq
+                                                         (plth.neq
+                                                            euclidean__axioms.Point
                                                             M
                                                             B))) =>
                                                logic.and__ind
@@ -348,7 +378,8 @@ thm lemma__altitudebisectsbase :
                                                     B
                                                     E
                                                     B)
-                                                 (euclidean__axioms.neq
+                                                 (plth.neq
+                                                    euclidean__axioms.Point
                                                     M
                                                     B)
                                                  (euclidean__defs.Midpoint
@@ -362,7 +393,8 @@ thm lemma__altitudebisectsbase :
                                                             E
                                                             B)) =>
                                                   H34:(plth.Prf
-                                                         (euclidean__axioms.neq
+                                                         (plth.neq
+                                                            euclidean__axioms.Point
                                                             M
                                                             B)) =>
                                                   (H35:(plth.Prf
@@ -408,11 +440,13 @@ thm lemma__altitudebisectsbase :
                                                                    M
                                                                    E)) =>
                                                          (H42:(plth.Prf
-                                                                 (euclidean__axioms.neq
+                                                                 (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)) =>
                                                           (H43:(plth.Prf
-                                                                  (plth.eq euclidean__axioms.Point
+                                                                  (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     Q
                                                                     E)) =>
                                                            (H44:(plth.Prf
@@ -464,12 +498,14 @@ thm lemma__altitudebisectsbase :
                                                                     Q)) =>
                                                                   (H51:(
                                                                    plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)) =>
                                                                    (H52:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     B)) =>
                                                                     (H53:(
@@ -488,12 +524,14 @@ thm lemma__altitudebisectsbase :
                                                                     (H55:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P))) =>
                                                                     (H56:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     A)) =>
                                                                     (H57:(
@@ -505,7 +543,8 @@ thm lemma__altitudebisectsbase :
                                                                     (H58:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     B))) =>
                                                                     (H59:(
@@ -1218,7 +1257,8 @@ thm lemma__altitudebisectsbase :
                                                                     Q
                                                                     M)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     Q
                                                                     M)
                                                                     (euclidean__axioms.BetS
@@ -1226,7 +1266,8 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     Q))
                                                                     (logic.or__intror
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     Q
                                                                     M)
                                                                     (euclidean__axioms.BetS
@@ -1245,7 +1286,8 @@ thm lemma__altitudebisectsbase :
                                                                     B
                                                                     B)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     B)
                                                                     (euclidean__axioms.BetS
@@ -1253,7 +1295,8 @@ thm lemma__altitudebisectsbase :
                                                                     B
                                                                     B))
                                                                     (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     B)
                                                                     (euclidean__axioms.BetS
@@ -1264,7 +1307,8 @@ thm lemma__altitudebisectsbase :
                                                                     H58))
                                                                     (H58:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     B)) =>
                                                                     (H59:(
@@ -1277,7 +1321,8 @@ thm lemma__altitudebisectsbase :
                                                                     (H60:(
                                                                     plth.Prf
                                                                     (plth.not
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P))) =>
                                                                     H54
@@ -1295,17 +1340,20 @@ thm lemma__altitudebisectsbase :
                                                                     H55)))
                                                                     (H60:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P)) =>
                                                                     (H61:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     B)) =>
                                                                     (H62:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     B)) =>
                                                                     H54
@@ -1345,7 +1393,8 @@ thm lemma__altitudebisectsbase :
                                                                     C
                                                                     P0)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     P0)
                                                                     (plth.imp
@@ -1439,7 +1488,8 @@ thm lemma__altitudebisectsbase :
                                                                     P0
                                                                     M)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P0
                                                                     M)
                                                                     (plth.imp
@@ -1490,7 +1540,8 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     P0))
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P0
                                                                     A)
                                                                     (plth.imp
@@ -1505,7 +1556,8 @@ thm lemma__altitudebisectsbase :
                                                                     B
                                                                     B)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P0)
                                                                     (plth.eq
@@ -1534,7 +1586,8 @@ thm lemma__altitudebisectsbase :
                                                                     B)) =>
                                                                     H65:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     B)) =>
                                                                     H66:(
@@ -1645,7 +1698,8 @@ thm lemma__altitudebisectsbase :
                                                                     M)) =>
                                                                     H82:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     M)) =>
                                                                     H83:(
@@ -1705,7 +1759,8 @@ thm lemma__altitudebisectsbase :
                                                                     B))) =>
                                                                     H91:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)) =>
                                                                     H92:(
@@ -1723,7 +1778,8 @@ thm lemma__altitudebisectsbase :
                                                                     B)) =>
                                                                     H94:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     B)) =>
                                                                     logic.eq__ind__r
@@ -2013,7 +2069,8 @@ thm lemma__altitudebisectsbase :
                                                                     C
                                                                     P0)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     P0)
                                                                     (plth.imp
@@ -2107,7 +2164,8 @@ thm lemma__altitudebisectsbase :
                                                                     P0
                                                                     M)
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P0
                                                                     M)
                                                                     (plth.imp
@@ -2158,7 +2216,8 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     P0))
                                                                     (plth.imp
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P0
                                                                     A)
                                                                     (plth.imp
@@ -2193,7 +2252,8 @@ thm lemma__altitudebisectsbase :
                                                                     B)) =>
                                                                     H62:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     B)) =>
                                                                     H63:(
@@ -2304,7 +2364,8 @@ thm lemma__altitudebisectsbase :
                                                                     M)) =>
                                                                     H79:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     M)) =>
                                                                     H80:(
@@ -2364,7 +2425,8 @@ thm lemma__altitudebisectsbase :
                                                                     B))) =>
                                                                     H88:(
                                                                     plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     B
                                                                     A)) =>
                                                                     H89:(
@@ -2638,7 +2700,8 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     A)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)
                                                                     (euclidean__axioms.BetS
@@ -2646,7 +2709,8 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     A))
                                                                     (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     A)
                                                                     (euclidean__axioms.BetS
@@ -2661,7 +2725,8 @@ thm lemma__altitudebisectsbase :
                                                                     H55))
                                                                     (H55:(
                                                                     plth.Prf
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P)) =>
                                                                     (H56:(
@@ -2673,15 +2738,18 @@ thm lemma__altitudebisectsbase :
                                                                     H54
                                                                     H56)
                                                                     (logic.or__introl
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     P)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     A
                                                                     M)
                                                                     (plth.or
-                                                                    (plth.eq euclidean__axioms.Point
+                                                                    (plth.eq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
                                                                     (plth.or
@@ -3351,62 +3419,77 @@ thm lemma__altitudebisectsbase :
                                                            ((H42:(plth.Prf
                                                                     (
                                                                     plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     E)
                                                                     (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     E)))) =>
                                                              logic.and__ind
-                                                               (euclidean__axioms.neq
+                                                               (plth.neq
+                                                                  euclidean__axioms.Point
                                                                   M
                                                                   E)
                                                                (plth.and
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     E))
-                                                               (euclidean__axioms.neq
+                                                               (plth.neq
+                                                                  euclidean__axioms.Point
                                                                   P
                                                                   M)
                                                                (H43:(
                                                                 plth.Prf
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     M
                                                                     E)) =>
                                                                 H44:(
                                                                 plth.Prf
                                                                   (plth.and
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     E))) =>
                                                                 logic.and__ind
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     E)
-                                                                  (euclidean__axioms.neq
+                                                                  (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)
                                                                   (H45:(
                                                                    plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     M)) =>
                                                                    H46:(
                                                                    plth.Prf
-                                                                    (euclidean__axioms.neq
+                                                                    (plth.neq
+                                                                    euclidean__axioms.Point
                                                                     P
                                                                     E)) =>
                                                                    H45)
@@ -3800,7 +3883,7 @@ thm lemma__altitudebisectsbase :
                              (euclidean__axioms.Cong C M X M)
                              (plth.and
                                 (euclidean__axioms.Cong C P X P)
-                                (euclidean__axioms.neq M P))))
+                                (plth.neq euclidean__axioms.Point M P))))
                        A
                        (logic.conj
                           (euclidean__axioms.BetS C M A)
@@ -3808,17 +3891,17 @@ thm lemma__altitudebisectsbase :
                              (euclidean__axioms.Cong C M A M)
                              (plth.and
                                 (euclidean__axioms.Cong C P A P)
-                                (euclidean__axioms.neq M P)))
+                                (plth.neq euclidean__axioms.Point M P)))
                           H10
                           (logic.conj
                              (euclidean__axioms.Cong C M A M)
                              (plth.and
                                 (euclidean__axioms.Cong C P A P)
-                                (euclidean__axioms.neq M P))
+                                (plth.neq euclidean__axioms.Point M P))
                              H11
                              (logic.conj
                                 (euclidean__axioms.Cong C P A P)
-                                (euclidean__axioms.neq M P)
+                                (plth.neq euclidean__axioms.Point M P)
                                 H12
                                 H9)))))
                    (lemma__congruencesymmetric.lemma__congruencesymmetric C A P P H8))
