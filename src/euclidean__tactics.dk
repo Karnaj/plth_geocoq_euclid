@@ -1,6 +1,4 @@
-classic : P:plth.Prop -> plth.Prf (plth.or P (plth.not P)).
-
-thm NNPP :
+def NNPP :
   p:plth.Prop -> plth.Prf (plth.imp (plth.not (plth.not p)) p)
   :=
   p:plth.Prop =>
@@ -11,7 +9,7 @@ thm NNPP :
     p
     (H0:(plth.Prf p) => H0)
     (NP:(plth.Prf (plth.not p)) => logic.false__ind p (H NP))
-    (classic p).
+    (plth.classic p).
 
 thm Col__or__nCol :
   plth.Prf
@@ -29,7 +27,7 @@ thm Col__or__nCol :
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
-  NNPP
+  plth.nnpp
     (plth.or
        (plth.or
           (plth.eq euclidean__axioms.Point A B)
@@ -760,7 +758,7 @@ thm nCol__or__Col :
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
-  NNPP
+  plth.nnpp
     (plth.or
        (plth.and
           (plth.neq euclidean__axioms.Point A B)
@@ -1487,7 +1485,7 @@ thm eq__or__neq :
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
-  NNPP
+  plth.nnpp
     (plth.or (plth.eq euclidean__axioms.Point A B) (plth.not (plth.eq euclidean__axioms.Point A B)))
     (H:(plth.Prf
           (plth.not
@@ -1522,7 +1520,7 @@ thm neq__or__eq :
   :=
   A:(plth.El euclidean__axioms.Point) =>
   B:(plth.El euclidean__axioms.Point) =>
-  NNPP
+  plth.nnpp
     (plth.or (plth.not (plth.eq euclidean__axioms.Point A B)) (plth.eq euclidean__axioms.Point A B))
     (H:(plth.Prf
           (plth.not
@@ -2013,7 +2011,7 @@ thm not__nCol__Col :
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
   H:(plth.Prf (plth.not (euclidean__axioms.nCol A B C))) =>
-  NNPP
+  plth.nnpp
     (plth.or
        (plth.eq euclidean__axioms.Point A B)
        (plth.or
@@ -2549,7 +2547,7 @@ thm nCol__not__Col :
   B:(plth.El euclidean__axioms.Point) =>
   C:(plth.El euclidean__axioms.Point) =>
   H:(plth.Prf (euclidean__axioms.nCol A B C)) =>
-  NNPP
+  plth.nnpp
     (plth.not
        (plth.or
           (plth.eq euclidean__axioms.Point A B)
