@@ -1,16 +1,3 @@
-def NNPP :
-  p:plth.Prop -> plth.Prf (plth.imp (plth.not (plth.not p)) p)
-  :=
-  p:plth.Prop =>
-  H:(plth.Prf (plth.imp (plth.imp p plth.false) plth.false)) =>
-  logic.or__ind
-    p
-    (plth.not p)
-    p
-    (H0:(plth.Prf p) => H0)
-    (NP:(plth.Prf (plth.not p)) => logic.false__ind p (H NP))
-    (plth.classic p).
-
 thm Col__or__nCol :
   plth.Prf
     (plth.forall
