@@ -258,23 +258,7 @@ thm lemma__NCorder :
                           (plth.and
                              (euclidean__axioms.Col C B A)
                              (euclidean__axioms.Col B A C)))) =>
-                 logic.and__ind
-                   (euclidean__axioms.Col B C A)
-                   (plth.and (euclidean__axioms.Col C B A) (euclidean__axioms.Col B A C))
-                   (euclidean__axioms.Col A B C)
-                   (H8:(plth.Prf (euclidean__axioms.Col B C A)) =>
-                    H9:(plth.Prf
-                          (plth.and
-                             (euclidean__axioms.Col C B A)
-                             (euclidean__axioms.Col B A C))) =>
-                    logic.and__ind
-                      (euclidean__axioms.Col C B A)
-                      (euclidean__axioms.Col B A C)
-                      (euclidean__axioms.Col A B C)
-                      (H10:(plth.Prf (euclidean__axioms.Col C B A)) =>
-                       H11:(plth.Prf (euclidean__axioms.Col B A C)) => H6)
-                      H9)
-                   H7)
+                 H6)
                 H5)
              H3)
             (lemma__collinearorder.lemma__collinearorder C A B H2))))
@@ -336,13 +320,7 @@ thm lemma__NCorder :
                          (plth.and
                             (euclidean__axioms.Col B A C)
                             (euclidean__axioms.Col A C B))) =>
-                   logic.and__ind
-                     (euclidean__axioms.Col B A C)
-                     (euclidean__axioms.Col A C B)
-                     (euclidean__axioms.Col A B C)
-                     (H9:(plth.Prf (euclidean__axioms.Col B A C)) =>
-                      H10:(plth.Prf (euclidean__axioms.Col A C B)) => H7)
-                     H8)
+                   H7)
                   H6)
                H4)
             H2)
@@ -377,37 +355,7 @@ thm lemma__NCorder :
                         (plth.and
                            (euclidean__axioms.Col B C A)
                            (euclidean__axioms.Col C A B))))) =>
-            logic.and__ind
-              (euclidean__axioms.Col A C B)
-              (plth.and
-                 (euclidean__axioms.Col C B A)
-                 (plth.and (euclidean__axioms.Col B C A) (euclidean__axioms.Col C A B)))
-              (euclidean__axioms.Col A B C)
-              (H4:(plth.Prf (euclidean__axioms.Col A C B)) =>
-               H5:(plth.Prf
-                     (plth.and
-                        (euclidean__axioms.Col C B A)
-                        (plth.and
-                           (euclidean__axioms.Col B C A)
-                           (euclidean__axioms.Col C A B)))) =>
-               logic.and__ind
-                 (euclidean__axioms.Col C B A)
-                 (plth.and (euclidean__axioms.Col B C A) (euclidean__axioms.Col C A B))
-                 (euclidean__axioms.Col A B C)
-                 (H6:(plth.Prf (euclidean__axioms.Col C B A)) =>
-                  H7:(plth.Prf
-                        (plth.and
-                           (euclidean__axioms.Col B C A)
-                           (euclidean__axioms.Col C A B))) =>
-                  logic.and__ind
-                    (euclidean__axioms.Col B C A)
-                    (euclidean__axioms.Col C A B)
-                    (euclidean__axioms.Col A B C)
-                    (H8:(plth.Prf (euclidean__axioms.Col B C A)) =>
-                     H9:(plth.Prf (euclidean__axioms.Col C A B)) => H2)
-                    H7)
-                 H5)
-              H3)
+            H2)
            H1)
           (lemma__collinearorder.lemma__collinearorder B A C H0))).
 

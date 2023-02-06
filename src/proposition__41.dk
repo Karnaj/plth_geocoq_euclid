@@ -283,45 +283,7 @@ thm proposition__41 :
                                    (plth.and
                                       (euclidean__axioms.Col A E D)
                                       (euclidean__axioms.Col E D A))))) =>
-                      logic.and__ind
-                        (euclidean__axioms.Col D E A)
-                        (plth.and
-                           (euclidean__axioms.Col E A D)
-                           (plth.and
-                              (euclidean__axioms.Col A E D)
-                              (euclidean__axioms.Col E D A)))
-                        (euclidean__axioms.Col D A E)
-                        (H11:(plth.Prf (euclidean__axioms.Col D E A)) =>
-                         H12:(plth.Prf
-                                (plth.and
-                                   (euclidean__axioms.Col E A D)
-                                   (plth.and
-                                      (euclidean__axioms.Col A E D)
-                                      (euclidean__axioms.Col E D A)))) =>
-                         logic.and__ind
-                           (euclidean__axioms.Col E A D)
-                           (plth.and
-                              (euclidean__axioms.Col A E D)
-                              (euclidean__axioms.Col E D A))
-                           (euclidean__axioms.Col D A E)
-                           (H13:(plth.Prf
-                                   (euclidean__axioms.Col E A D)) =>
-                            H14:(plth.Prf
-                                   (plth.and
-                                      (euclidean__axioms.Col A E D)
-                                      (euclidean__axioms.Col E D A))) =>
-                            logic.and__ind
-                              (euclidean__axioms.Col A E D)
-                              (euclidean__axioms.Col E D A)
-                              (euclidean__axioms.Col D A E)
-                              (H15:(plth.Prf
-                                      (euclidean__axioms.Col A E D)) =>
-                               H16:(plth.Prf
-                                      (euclidean__axioms.Col E D A)) =>
-                               H9)
-                              H14)
-                           H12)
-                        H10)
+                      H9)
                      H8)
                     (lemma__collinearorder.lemma__collinearorder A D E H0)))
                 (logic.and__ind
@@ -357,23 +319,7 @@ thm proposition__41 :
                    (plth.and
                       (euclidean__axioms.nCol B C D)
                       (euclidean__axioms.nCol A B D)))) =>
-          logic.and__ind
-            (euclidean__axioms.nCol A C D)
-            (plth.and (euclidean__axioms.nCol B C D) (euclidean__axioms.nCol A B D))
-            (euclidean__axioms.nCol A B C)
-            (H5:(plth.Prf (euclidean__axioms.nCol A C D)) =>
-             H6:(plth.Prf
-                   (plth.and
-                      (euclidean__axioms.nCol B C D)
-                      (euclidean__axioms.nCol A B D))) =>
-             logic.and__ind
-               (euclidean__axioms.nCol B C D)
-               (euclidean__axioms.nCol A B D)
-               (euclidean__axioms.nCol A B C)
-               (H7:(plth.Prf (euclidean__axioms.nCol B C D)) =>
-                H8:(plth.Prf (euclidean__axioms.nCol A B D)) => H3)
-               H6)
-            H4)
+          H3)
          H2)
         (lemma__parallelNC.lemma__parallelNC A B C D H1)))
     (logic.and__ind

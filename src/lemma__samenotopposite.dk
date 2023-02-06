@@ -86,96 +86,52 @@ thm lemma__samenotopposite :
                         (plth.and
                            (euclidean__axioms.Col C D x)
                            (euclidean__axioms.nCol C D B))) =>
-                  logic.and__ind
-                    (euclidean__axioms.Col C D x)
-                    (euclidean__axioms.nCol C D B)
-                    (plth.ex
-                       euclidean__axioms.Point
-                       (M:(plth.El euclidean__axioms.Point) =>
-                        euclidean__axioms.BetS B M B))
-                    (H7:(plth.Prf (euclidean__axioms.Col C D x)) =>
-                     H8:(plth.Prf (euclidean__axioms.nCol C D B)) =>
-                     (H9:(plth.Prf
-                            (plth.ex
-                               euclidean__axioms.Point
-                               (X:(plth.El euclidean__axioms.Point) =>
-                                plth.and
-                                  (euclidean__axioms.BetS A X B)
-                                  (plth.and
-                                     (euclidean__axioms.Col C D X)
-                                     (euclidean__axioms.nCol C D A))))) =>
-                      (__TmpHyp0:(plth.Prf
-                                    (plth.ex
-                                       euclidean__axioms.Point
-                                       (X:(plth.El
-                                             euclidean__axioms.Point) =>
-                                        plth.and
-                                          (euclidean__axioms.BetS A X B)
-                                          (plth.and
-                                             (euclidean__axioms.Col
-                                                C
-                                                D
-                                                X)
-                                             (euclidean__axioms.nCol
-                                                C
-                                                D
-                                                A))))) =>
-                       logic.ex__ind
-                         euclidean__axioms.Point
-                         (X:(plth.El euclidean__axioms.Point) =>
-                          plth.and
-                            (euclidean__axioms.BetS A X B)
-                            (plth.and
-                               (euclidean__axioms.Col C D X)
-                               (euclidean__axioms.nCol C D A)))
+                  (H9:(plth.Prf
                          (plth.ex
                             euclidean__axioms.Point
-                            (M:(plth.El euclidean__axioms.Point) =>
-                             euclidean__axioms.BetS B M B))
-                         (x0:(plth.El euclidean__axioms.Point) =>
-                          H10:(plth.Prf
+                            (X:(plth.El euclidean__axioms.Point) =>
+                             plth.and
+                               (euclidean__axioms.BetS A X B)
+                               (plth.and
+                                  (euclidean__axioms.Col C D X)
+                                  (euclidean__axioms.nCol C D A))))) =>
+                   (__TmpHyp0:(plth.Prf
+                                 (plth.ex
+                                    euclidean__axioms.Point
+                                    (X:(plth.El euclidean__axioms.Point) =>
+                                     plth.and
+                                       (euclidean__axioms.BetS A X B)
+                                       (plth.and
+                                          (euclidean__axioms.Col C D X)
+                                          (euclidean__axioms.nCol C D A))))) =>
+                    logic.ex__ind
+                      euclidean__axioms.Point
+                      (X:(plth.El euclidean__axioms.Point) =>
+                       plth.and
+                         (euclidean__axioms.BetS A X B)
+                         (plth.and
+                            (euclidean__axioms.Col C D X)
+                            (euclidean__axioms.nCol C D A)))
+                      (plth.ex
+                         euclidean__axioms.Point
+                         (M:(plth.El euclidean__axioms.Point) =>
+                          euclidean__axioms.BetS B M B))
+                      (x0:(plth.El euclidean__axioms.Point) =>
+                       H10:(plth.Prf
+                              (plth.and
+                                 (euclidean__axioms.BetS A x0 B)
                                  (plth.and
-                                    (euclidean__axioms.BetS A x0 B)
-                                    (plth.and
-                                       (euclidean__axioms.Col C D x0)
-                                       (euclidean__axioms.nCol C D A)))) =>
-                          logic.and__ind
-                            (euclidean__axioms.BetS A x0 B)
-                            (plth.and
-                               (euclidean__axioms.Col C D x0)
-                               (euclidean__axioms.nCol C D A))
-                            (plth.ex
-                               euclidean__axioms.Point
-                               (M:(plth.El euclidean__axioms.Point) =>
-                                euclidean__axioms.BetS B M B))
-                            (H11:(plth.Prf (euclidean__axioms.BetS A x0 B)) =>
-                             H12:(plth.Prf
-                                    (plth.and
-                                       (euclidean__axioms.Col C D x0)
-                                       (euclidean__axioms.nCol C D A))) =>
-                             logic.and__ind
-                               (euclidean__axioms.Col C D x0)
-                               (euclidean__axioms.nCol C D A)
-                               (plth.ex
-                                  euclidean__axioms.Point
-                                  (M:(plth.El euclidean__axioms.Point) =>
-                                   euclidean__axioms.BetS B M B))
-                               (H13:(plth.Prf
-                                       (euclidean__axioms.Col C D x0)) =>
-                                H14:(plth.Prf
-                                       (euclidean__axioms.nCol C D A)) =>
-                                logic.ex__intro
-                                  euclidean__axioms.Point
-                                  (M:(plth.El euclidean__axioms.Point) =>
-                                   euclidean__axioms.BetS B M B)
-                                  x
-                                  H5)
-                               H12)
-                            H10)
-                         __TmpHyp0)
-                        H9)
-                       H1)
-                    H6)
+                                    (euclidean__axioms.Col C D x0)
+                                    (euclidean__axioms.nCol C D A)))) =>
+                       logic.ex__intro
+                         euclidean__axioms.Point
+                         (M:(plth.El euclidean__axioms.Point) =>
+                          euclidean__axioms.BetS B M B)
+                         x
+                         H5)
+                      __TmpHyp0)
+                     H9)
+                    H1)
                  H4)
               __TmpHyp)
              H3)
@@ -190,14 +146,7 @@ thm lemma__samenotopposite :
         (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C))
         (euclidean__defs.OS B A C D)
         (H1:(plth.Prf (euclidean__defs.OS B A C D)) =>
-         H2:(plth.Prf (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C))) =>
-         logic.and__ind
-           (euclidean__defs.OS A B D C)
-           (euclidean__defs.OS B A D C)
-           (euclidean__defs.OS B A C D)
-           (H3:(plth.Prf (euclidean__defs.OS A B D C)) =>
-            H4:(plth.Prf (euclidean__defs.OS B A D C)) => H1)
-           H2)
+         H2:(plth.Prf (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C))) => H1)
         H0)
        (lemma__samesidesymmetric.lemma__samesidesymmetric C D A B H)).
 
