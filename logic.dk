@@ -124,3 +124,13 @@ def eq__trans :
   R:(plth.Prf (plth.eq A y z)) =>
   P:(__:(plth.El A) -> plth.Prop) => PX:(plth.Prf (P x)) => R P (L P PX).
 
+def and__ind2 :
+  A:plth.Prop ->
+  B:plth.Prop ->
+  P:plth.Prop ->
+  f:(__0:(plth.Prf B) -> plth.Prf P) -> a:(plth.Prf (plth.and A B)) -> plth.Prf P
+  := 
+  A:plth.Prop =>
+  B:plth.Prop =>
+  P:plth.Prop =>
+  f:(__0:(plth.Prf B) -> plth.Prf P) => a:(plth.Prf (plth.and A B)) => a P (p1 => p2 => f p2).
