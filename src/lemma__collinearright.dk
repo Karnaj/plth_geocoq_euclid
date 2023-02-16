@@ -693,40 +693,13 @@ thm lemma__collinearright :
                               (plth.and
                                  (euclidean__axioms.Col D A A)
                                  (euclidean__axioms.Col A A D))))) =>
-                 logic.and__ind
+                 logic.and__elim_left
                    (euclidean__axioms.Col A A D)
                    (plth.and
                       (euclidean__axioms.Col A D A)
                       (plth.and
                          (euclidean__axioms.Col D A A)
                          (euclidean__axioms.Col A A D)))
-                   (euclidean__axioms.Col A A D)
-                   (H11:(plth.Prf (euclidean__axioms.Col A A D)) =>
-                    H12:(plth.Prf
-                           (plth.and
-                              (euclidean__axioms.Col A D A)
-                              (plth.and
-                                 (euclidean__axioms.Col D A A)
-                                 (euclidean__axioms.Col A A D)))) =>
-                    logic.and__ind
-                      (euclidean__axioms.Col A D A)
-                      (plth.and
-                         (euclidean__axioms.Col D A A)
-                         (euclidean__axioms.Col A A D))
-                      (euclidean__axioms.Col A A D)
-                      (H13:(plth.Prf (euclidean__axioms.Col A D A)) =>
-                       H14:(plth.Prf
-                              (plth.and
-                                 (euclidean__axioms.Col D A A)
-                                 (euclidean__axioms.Col A A D))) =>
-                       logic.and__ind
-                         (euclidean__axioms.Col D A A)
-                         (euclidean__axioms.Col A A D)
-                         (euclidean__axioms.Col A A D)
-                         (H15:(plth.Prf (euclidean__axioms.Col D A A)) =>
-                          H16:(plth.Prf (euclidean__axioms.Col A A D)) => H16)
-                         H14)
-                      H12)
                    H10)
                 H8)
                (lemma__collinearorder.lemma__collinearorder D A A H7)))

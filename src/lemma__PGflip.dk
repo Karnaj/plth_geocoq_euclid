@@ -49,12 +49,9 @@ thm lemma__PGflip :
             (H4:(plth.Prf (euclidean__defs.Par B A C D)) =>
              H5:(plth.Prf
                    (plth.and (euclidean__defs.Par A B D C) (euclidean__defs.Par B A D C))) =>
-             logic.and__ind
+             logic.and__elim_right
                (euclidean__defs.Par A B D C)
                (euclidean__defs.Par B A D C)
-               (euclidean__defs.Par B A D C)
-               (H6:(plth.Prf (euclidean__defs.Par A B D C)) =>
-                H7:(plth.Prf (euclidean__defs.Par B A D C)) => H7)
                H5)
             H3)
            (lemma__parallelflip.lemma__parallelflip A B C D H1))

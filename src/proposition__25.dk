@@ -157,18 +157,11 @@ thm proposition__25 :
                    __:(plth.Prf (euclidean__axioms.Cong A0 B0 a b)) =>
                    __0:(plth.Prf (euclidean__axioms.Cong A0 C0 a c)) =>
                    __1:(plth.Prf (euclidean__defs.CongA B0 A0 C0 b a c)) =>
-                   logic.and__ind
+                   logic.and__elim_left
                      (euclidean__axioms.Cong B0 C0 b c)
                      (plth.and
                         (euclidean__defs.CongA A0 B0 C0 a b c)
                         (euclidean__defs.CongA A0 C0 B0 a c b))
-                     (euclidean__axioms.Cong B0 C0 b c)
-                     (__2:(plth.Prf (euclidean__axioms.Cong B0 C0 b c)) =>
-                      __3:(plth.Prf
-                             (plth.and
-                                (euclidean__defs.CongA A0 B0 C0 a b c)
-                                (euclidean__defs.CongA A0 C0 B0 a c b))) =>
-                      __2)
                      (proposition__04.proposition__04
                         A0
                         B0
@@ -206,7 +199,7 @@ thm proposition__25 :
                                (plth.and
                                   (euclidean__axioms.Col E F D)
                                   (euclidean__axioms.Col F D E)))))) =>
-               logic.and__ind
+               logic.and__elim_left
                  (euclidean__axioms.Col D E F)
                  (plth.and
                     (euclidean__axioms.Col D F E)
@@ -215,17 +208,6 @@ thm proposition__25 :
                        (plth.and
                           (euclidean__axioms.Col E F D)
                           (euclidean__axioms.Col F D E))))
-                 (euclidean__axioms.Col D E F)
-                 (H12:(plth.Prf (euclidean__axioms.Col D E F)) =>
-                  H13:(plth.Prf
-                         (plth.and
-                            (euclidean__axioms.Col D F E)
-                            (plth.and
-                               (euclidean__axioms.Col F E D)
-                               (plth.and
-                                  (euclidean__axioms.Col E F D)
-                                  (euclidean__axioms.Col F D E))))) =>
-                  H12)
                  H11)
                 (lemma__collinearorder.lemma__collinearorder E D F H10))))
          H0)
@@ -242,7 +224,7 @@ thm proposition__25 :
                             (plth.and
                                (euclidean__axioms.Col B C A)
                                (euclidean__axioms.Col C A B)))))) =>
-             logic.and__ind
+             logic.and__elim_left
                (euclidean__axioms.Col A B C)
                (plth.and
                   (euclidean__axioms.Col A C B)
@@ -251,17 +233,6 @@ thm proposition__25 :
                      (plth.and
                         (euclidean__axioms.Col B C A)
                         (euclidean__axioms.Col C A B))))
-               (euclidean__axioms.Col A B C)
-               (H10:(plth.Prf (euclidean__axioms.Col A B C)) =>
-                H11:(plth.Prf
-                       (plth.and
-                          (euclidean__axioms.Col A C B)
-                          (plth.and
-                             (euclidean__axioms.Col C B A)
-                             (plth.and
-                                (euclidean__axioms.Col B C A)
-                                (euclidean__axioms.Col C A B))))) =>
-                H10)
                H9)
               (lemma__collinearorder.lemma__collinearorder B A C H8))))
        H)

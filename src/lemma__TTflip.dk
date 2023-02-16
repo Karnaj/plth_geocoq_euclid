@@ -99,12 +99,9 @@ thm lemma__TTflip :
                         (plth.and
                            (euclidean__defs.TG D C B A E J)
                            (euclidean__defs.TG C D B A J E))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (euclidean__defs.TG D C B A E J)
                     (euclidean__defs.TG C D B A J E)
-                    (euclidean__defs.TG D C B A E J)
-                    (H10:(plth.Prf (euclidean__defs.TG D C B A E J)) =>
-                     H11:(plth.Prf (euclidean__defs.TG C D B A J E)) => H10)
                     H9)
                    (lemma__TGflip.lemma__TGflip C B E D A J H8)))
                (lemma__TGsymmetric.lemma__TGsymmetric B C E A D J H7))
@@ -112,12 +109,9 @@ thm lemma__TTflip :
                       (plth.and
                          (euclidean__defs.TG B A C D E J)
                          (euclidean__defs.TG A B C D J E))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (euclidean__defs.TG B A C D E J)
                   (euclidean__defs.TG A B C D J E)
-                  (euclidean__defs.TG B A C D E J)
-                  (H8:(plth.Prf (euclidean__defs.TG B A C D E J)) =>
-                   H9:(plth.Prf (euclidean__defs.TG A B C D J E)) => H8)
                   H7)
                  (lemma__TGflip.lemma__TGflip A C E B D J H6)))
            H4)

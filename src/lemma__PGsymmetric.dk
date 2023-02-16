@@ -40,12 +40,9 @@ thm lemma__PGsymmetric :
                   (plth.and
                      (euclidean__defs.Par B C D A)
                      (euclidean__defs.Par C B D A))) =>
-            logic.and__ind
+            logic.and__elim_right
               (euclidean__defs.Par B C D A)
               (euclidean__defs.Par C B D A)
-              (euclidean__defs.Par C B D A)
-              (H8:(plth.Prf (euclidean__defs.Par B C D A)) =>
-               H9:(plth.Prf (euclidean__defs.Par C B D A)) => H9)
               H7)
            H5)
           (lemma__parallelflip.lemma__parallelflip B C A D H2)))

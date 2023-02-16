@@ -438,7 +438,7 @@ thm lemma__8__7 :
                                                                  E
                                                                  C
                                                                  B))) =>
-                                                    logic.and__ind
+                                                    logic.and__elim_left
                                                       (euclidean__axioms.Cong
                                                          E
                                                          C
@@ -449,24 +449,6 @@ thm lemma__8__7 :
                                                          E
                                                          C
                                                          B)
-                                                      (euclidean__axioms.Cong
-                                                         E
-                                                         C
-                                                         B
-                                                         C)
-                                                      (H36:(plth.Prf
-                                                              (euclidean__axioms.Cong
-                                                                 E
-                                                                 C
-                                                                 B
-                                                                 C)) =>
-                                                       H37:(plth.Prf
-                                                              (euclidean__axioms.Cong
-                                                                 C
-                                                                 E
-                                                                 C
-                                                                 B)) =>
-                                                       H36)
                                                       H35)
                                                    H33)
                                                   (lemma__congruenceflip.lemma__congruenceflip
@@ -481,10 +463,10 @@ thm lemma__8__7 :
                                                  (F0:(plth.El
                                                         euclidean__axioms.Point) =>
                                                   euclidean__axioms.Cong
-                                                                    F0
-                                                                    A
-                                                                    B
-                                                                    A)
+                                                    F0
+                                                    A
+                                                    B
+                                                    A)
                                                  H31
                                                  E
                                                  H29))
@@ -580,7 +562,7 @@ thm lemma__8__7 :
                                                           E
                                                           B
                                                           C))) =>
-                                             logic.and__ind
+                                             logic.and__elim_right
                                                (euclidean__axioms.Cong
                                                   E
                                                   C
@@ -591,24 +573,6 @@ thm lemma__8__7 :
                                                   E
                                                   B
                                                   C)
-                                               (euclidean__axioms.Cong
-                                                  C
-                                                  E
-                                                  B
-                                                  C)
-                                               (H29:(plth.Prf
-                                                       (euclidean__axioms.Cong
-                                                          E
-                                                          C
-                                                          C
-                                                          B)) =>
-                                                H30:(plth.Prf
-                                                       (euclidean__axioms.Cong
-                                                          C
-                                                          E
-                                                          B
-                                                          C)) =>
-                                                H30)
                                                H28)
                                             H26)
                                            (lemma__congruenceflip.lemma__congruenceflip
@@ -675,7 +639,7 @@ thm lemma__8__7 :
                                                          C
                                                          C
                                                          B))) =>
-                                            logic.and__ind
+                                            logic.and__elim_left
                                               (euclidean__axioms.Cong
                                                  C
                                                  F
@@ -686,24 +650,6 @@ thm lemma__8__7 :
                                                  C
                                                  C
                                                  B)
-                                              (euclidean__axioms.Cong
-                                                 C
-                                                 F
-                                                 B
-                                                 C)
-                                              (H28:(plth.Prf
-                                                      (euclidean__axioms.Cong
-                                                         C
-                                                         F
-                                                         B
-                                                         C)) =>
-                                               H29:(plth.Prf
-                                                      (euclidean__axioms.Cong
-                                                         F
-                                                         C
-                                                         C
-                                                         B)) =>
-                                               H28)
                                               H27)
                                            H25)
                                           (lemma__congruenceflip.lemma__congruenceflip
@@ -796,15 +742,9 @@ thm lemma__8__7 :
                                   (plth.and
                                      (euclidean__axioms.Col B E C)
                                      (euclidean__axioms.Col E C B))) =>
-                           logic.and__ind
+                           logic.and__elim_right
                              (euclidean__axioms.Col B E C)
                              (euclidean__axioms.Col E C B)
-                             (euclidean__axioms.Col E C B)
-                             (H16:(plth.Prf
-                                     (euclidean__axioms.Col B E C)) =>
-                              H17:(plth.Prf
-                                     (euclidean__axioms.Col E C B)) =>
-                              H17)
                              H15)
                           H13)
                        H11)
@@ -918,80 +858,9 @@ thm lemma__8__7 :
                         (plth.and
                            (euclidean__axioms.Cong A C x C)
                            (plth.neq euclidean__axioms.Point B C))) =>
-                  logic.and__ind
+                  logic.and__elim_right
                     (euclidean__axioms.Cong A C x C)
                     (plth.neq euclidean__axioms.Point B C)
-                    (plth.neq euclidean__axioms.Point B C)
-                    (H8:(plth.Prf (euclidean__axioms.Cong A C x C)) =>
-                     H9:(plth.Prf (plth.neq euclidean__axioms.Point B C)) =>
-                     (H10:(plth.Prf
-                             (plth.ex
-                                euclidean__axioms.Point
-                                (X:(plth.El euclidean__axioms.Point) =>
-                                 plth.and
-                                   (euclidean__axioms.BetS C B X)
-                                   (plth.and
-                                      (euclidean__axioms.Cong C B X B)
-                                      (plth.and
-                                         (euclidean__axioms.Cong C A X A)
-                                         (plth.neq
-                                            euclidean__axioms.Point
-                                            B
-                                            A)))))) =>
-                      (__TmpHyp0:(plth.Prf
-                                    (plth.ex
-                                       euclidean__axioms.Point
-                                       (X:(plth.El
-                                             euclidean__axioms.Point) =>
-                                        plth.and
-                                          (euclidean__axioms.BetS C B X)
-                                          (plth.and
-                                             (euclidean__axioms.Cong
-                                                C
-                                                B
-                                                X
-                                                B)
-                                             (plth.and
-                                                (euclidean__axioms.Cong
-                                                   C
-                                                   A
-                                                   X
-                                                   A)
-                                                (plth.neq
-                                                   euclidean__axioms.Point
-                                                   B
-                                                   A)))))) =>
-                       logic.ex__ind
-                         euclidean__axioms.Point
-                         (X:(plth.El euclidean__axioms.Point) =>
-                          plth.and
-                            (euclidean__axioms.BetS C B X)
-                            (plth.and
-                               (euclidean__axioms.Cong C B X B)
-                               (plth.and
-                                  (euclidean__axioms.Cong C A X A)
-                                  (plth.neq euclidean__axioms.Point B A))))
-                         (plth.neq euclidean__axioms.Point B C)
-                         (x0:(plth.El euclidean__axioms.Point) =>
-                          H11:(plth.Prf
-                                 (plth.and
-                                    (euclidean__axioms.BetS C B x0)
-                                    (plth.and
-                                       (euclidean__axioms.Cong C B x0 B)
-                                       (plth.and
-                                          (euclidean__axioms.Cong
-                                             C
-                                             A
-                                             x0
-                                             A)
-                                          (plth.neq
-                                             euclidean__axioms.Point
-                                             B
-                                             A))))) =>
-                          H9)
-                         __TmpHyp0)
-                        H10)
-                       H)
                     H7)
                  H5)
               H3)
@@ -1067,12 +936,9 @@ thm lemma__8__7 :
                       (plth.and
                          (euclidean__axioms.Cong C A x A)
                          (plth.neq euclidean__axioms.Point B A))) =>
-                logic.and__ind
+                logic.and__elim_right
                   (euclidean__axioms.Cong C A x A)
                   (plth.neq euclidean__axioms.Point B A)
-                  (plth.neq euclidean__axioms.Point B A)
-                  (H6:(plth.Prf (euclidean__axioms.Cong C A x A)) =>
-                   H7:(plth.Prf (plth.neq euclidean__axioms.Point B A)) => H7)
                   H5)
                H3)
             H1)

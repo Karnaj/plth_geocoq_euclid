@@ -830,7 +830,7 @@ thm lemma__twolines :
                                                  F
                                                  E
                                                  C))))) =>
-                              logic.and__ind
+                              logic.and__elim_left
                                 (euclidean__axioms.Col
                                    E
                                    F
@@ -849,31 +849,6 @@ thm lemma__twolines :
                                          F
                                          E
                                          C)))
-                                (euclidean__axioms.Col
-                                   E
-                                   F
-                                   C)
-                                (H38:(plth.Prf
-                                        (euclidean__axioms.Col
-                                           E
-                                           F
-                                           C)) =>
-                                 H39:(plth.Prf
-                                        (plth.and
-                                           (euclidean__axioms.Col
-                                              F
-                                              C
-                                              E)
-                                           (plth.and
-                                              (euclidean__axioms.Col
-                                                 C
-                                                 F
-                                                 E)
-                                              (euclidean__axioms.Col
-                                                 F
-                                                 E
-                                                 C)))) =>
-                                 H38)
                                 H37)
                              H35)
                             (lemma__collinearorder.lemma__collinearorder
@@ -951,7 +926,7 @@ thm lemma__twolines :
                                          euclidean__axioms.Point
                                          D
                                          C))) =>
-                            logic.and__ind
+                            logic.and__elim_right
                               (plth.neq
                                  euclidean__axioms.Point
                                  D
@@ -960,21 +935,6 @@ thm lemma__twolines :
                                  euclidean__axioms.Point
                                  D
                                  C)
-                              (plth.neq
-                                 euclidean__axioms.Point
-                                 D
-                                 C)
-                              (H36:(plth.Prf
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         D
-                                         E)) =>
-                               H37:(plth.Prf
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         D
-                                         C)) =>
-                               H37)
                               H35)
                            H33)
                           (lemma__betweennotequal.lemma__betweennotequal
@@ -1147,7 +1107,7 @@ thm lemma__twolines :
                                            F
                                            E
                                            D))))) =>
-                        logic.and__ind
+                        logic.and__elim_left
                           (euclidean__axioms.Col
                              E
                              F
@@ -1166,31 +1126,6 @@ thm lemma__twolines :
                                    F
                                    E
                                    D)))
-                          (euclidean__axioms.Col
-                             E
-                             F
-                             D)
-                          (H32:(plth.Prf
-                                  (euclidean__axioms.Col
-                                     E
-                                     F
-                                     D)) =>
-                           H33:(plth.Prf
-                                  (plth.and
-                                     (euclidean__axioms.Col
-                                        F
-                                        D
-                                        E)
-                                     (plth.and
-                                        (euclidean__axioms.Col
-                                           D
-                                           F
-                                           E)
-                                        (euclidean__axioms.Col
-                                           F
-                                           E
-                                           D)))) =>
-                           H32)
                           H31)
                        H29)
                       (lemma__collinearorder.lemma__collinearorder
@@ -1314,7 +1249,7 @@ thm lemma__twolines :
                                          euclidean__axioms.Point
                                          C
                                          D))) =>
-                            logic.and__ind
+                            logic.and__elim_right
                               (plth.neq
                                  euclidean__axioms.Point
                                  C
@@ -1323,21 +1258,6 @@ thm lemma__twolines :
                                  euclidean__axioms.Point
                                  C
                                  D)
-                              (plth.neq
-                                 euclidean__axioms.Point
-                                 C
-                                 D)
-                              (H30:(plth.Prf
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         C
-                                         F)) =>
-                               H31:(plth.Prf
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         C
-                                         D)) =>
-                               H31)
                               H29)
                            H27)
                           (lemma__betweennotequal.lemma__betweennotequal
@@ -1450,21 +1370,9 @@ thm lemma__twolines :
                                         D
                                         E
                                         C))) =>
-                           logic.and__ind
+                           logic.and__elim_left
                              (euclidean__axioms.Col C D E)
                              (euclidean__axioms.Col D E C)
-                             (euclidean__axioms.Col C D E)
-                             (H33:(plth.Prf
-                                     (euclidean__axioms.Col
-                                        C
-                                        D
-                                        E)) =>
-                              H34:(plth.Prf
-                                     (euclidean__axioms.Col
-                                        D
-                                        E
-                                        C)) =>
-                              H33)
                              H32)
                           H30)
                        H28)
@@ -1568,21 +1476,9 @@ thm lemma__twolines :
                                        D
                                        F
                                        C))) =>
-                          logic.and__ind
+                          logic.and__elim_left
                             (euclidean__axioms.Col C D F)
                             (euclidean__axioms.Col D F C)
-                            (euclidean__axioms.Col C D F)
-                            (H32:(plth.Prf
-                                    (euclidean__axioms.Col
-                                       C
-                                       D
-                                       F)) =>
-                             H33:(plth.Prf
-                                    (euclidean__axioms.Col
-                                       D
-                                       F
-                                       C)) =>
-                             H32)
                             H31)
                          H29)
                       H27)
@@ -1789,22 +1685,13 @@ thm lemma__twolines :
                               (plth.and
                                  (euclidean__axioms.Col B F E)
                                  (euclidean__axioms.Col F E B))))) =>
-                 logic.and__ind
+                 logic.and__elim_left
                    (euclidean__axioms.Col E F B)
                    (plth.and
                       (euclidean__axioms.Col F B E)
                       (plth.and
                          (euclidean__axioms.Col B F E)
                          (euclidean__axioms.Col F E B)))
-                   (euclidean__axioms.Col E F B)
-                   (H25:(plth.Prf (euclidean__axioms.Col E F B)) =>
-                    H26:(plth.Prf
-                           (plth.and
-                              (euclidean__axioms.Col F B E)
-                              (plth.and
-                                 (euclidean__axioms.Col B F E)
-                                 (euclidean__axioms.Col F E B)))) =>
-                    H25)
                    H24)
                 H22)
                (lemma__collinearorder.lemma__collinearorder B E F H9)))
@@ -1851,13 +1738,9 @@ thm lemma__twolines :
                          (plth.and
                             (plth.neq euclidean__axioms.Point A F)
                             (plth.neq euclidean__axioms.Point A B))) =>
-                  logic.and__ind
+                  logic.and__elim_right
                     (plth.neq euclidean__axioms.Point A F)
                     (plth.neq euclidean__axioms.Point A B)
-                    (plth.neq euclidean__axioms.Point A B)
-                    (H23:(plth.Prf (plth.neq euclidean__axioms.Point A F)) =>
-                     H24:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-                     H24)
                     H22)
                  H20)
                 (lemma__betweennotequal.lemma__betweennotequal A F B H8))
@@ -1917,12 +1800,9 @@ thm lemma__twolines :
                            (plth.and
                               (euclidean__axioms.Col A B F)
                               (euclidean__axioms.Col B F A))) =>
-                    logic.and__ind
+                    logic.and__elim_left
                       (euclidean__axioms.Col A B F)
                       (euclidean__axioms.Col B F A)
-                      (euclidean__axioms.Col A B F)
-                      (H26:(plth.Prf (euclidean__axioms.Col A B F)) =>
-                       H27:(plth.Prf (euclidean__axioms.Col B F A)) => H26)
                       H25)
                    H23)
                 H21)
@@ -2037,12 +1917,9 @@ thm lemma__twolines :
                          (plth.and
                             (euclidean__axioms.Col A B E)
                             (euclidean__axioms.Col B E A))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (euclidean__axioms.Col A B E)
                     (euclidean__axioms.Col B E A)
-                    (euclidean__axioms.Col A B E)
-                    (H24:(plth.Prf (euclidean__axioms.Col A B E)) =>
-                     H25:(plth.Prf (euclidean__axioms.Col B E A)) => H24)
                     H23)
                  H21)
               H19)

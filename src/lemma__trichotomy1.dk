@@ -300,18 +300,11 @@ thm lemma__trichotomy1 :
                         (plth.and
                            (plth.neq euclidean__axioms.Point B A)
                            (plth.neq euclidean__axioms.Point B P)))) =>
-               logic.and__ind
+               logic.and__elim_left
                  (plth.neq euclidean__axioms.Point A P)
                  (plth.and
                     (plth.neq euclidean__axioms.Point B A)
                     (plth.neq euclidean__axioms.Point B P))
-                 (plth.neq euclidean__axioms.Point A P)
-                 (H10:(plth.Prf (plth.neq euclidean__axioms.Point A P)) =>
-                  H11:(plth.Prf
-                         (plth.and
-                            (plth.neq euclidean__axioms.Point B A)
-                            (plth.neq euclidean__axioms.Point B P))) =>
-                  H10)
                  H9)
                 (lemma__betweennotequal.lemma__betweennotequal B A P H6)))
             (euclidean__axioms.axiom__betweennesssymmetry B A P H6))

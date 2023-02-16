@@ -141,12 +141,9 @@ thm lemma__samenotopposite :
             (plth.and
                (euclidean__defs.OS B A C D)
                (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C)))) =>
-      logic.and__ind
+      logic.and__elim_left
         (euclidean__defs.OS B A C D)
         (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C))
-        (euclidean__defs.OS B A C D)
-        (H1:(plth.Prf (euclidean__defs.OS B A C D)) =>
-         H2:(plth.Prf (plth.and (euclidean__defs.OS A B D C) (euclidean__defs.OS B A D C))) => H1)
         H0)
        (lemma__samesidesymmetric.lemma__samesidesymmetric C D A B H)).
 

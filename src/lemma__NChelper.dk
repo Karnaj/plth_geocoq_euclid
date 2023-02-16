@@ -96,22 +96,13 @@ thm lemma__NChelper :
                              (plth.and
                                 (euclidean__axioms.Col B Q P)
                                 (euclidean__axioms.Col Q P B))))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (euclidean__axioms.Col P Q B)
                   (plth.and
                      (euclidean__axioms.Col Q B P)
                      (plth.and
                         (euclidean__axioms.Col B Q P)
                         (euclidean__axioms.Col Q P B)))
-                  (euclidean__axioms.Col P Q B)
-                  (H13:(plth.Prf (euclidean__axioms.Col P Q B)) =>
-                   H14:(plth.Prf
-                          (plth.and
-                             (euclidean__axioms.Col Q B P)
-                             (plth.and
-                                (euclidean__axioms.Col B Q P)
-                                (euclidean__axioms.Col Q P B)))) =>
-                   H13)
                   H12)
                H10)
               (lemma__collinearorder.lemma__collinearorder B P Q H4)))
@@ -144,22 +135,13 @@ thm lemma__NChelper :
                             (plth.and
                                (euclidean__axioms.Col A Q P)
                                (euclidean__axioms.Col Q P A))))) =>
-               logic.and__ind
+               logic.and__elim_left
                  (euclidean__axioms.Col P Q A)
                  (plth.and
                     (euclidean__axioms.Col Q A P)
                     (plth.and
                        (euclidean__axioms.Col A Q P)
                        (euclidean__axioms.Col Q P A)))
-                 (euclidean__axioms.Col P Q A)
-                 (H12:(plth.Prf (euclidean__axioms.Col P Q A)) =>
-                  H13:(plth.Prf
-                         (plth.and
-                            (euclidean__axioms.Col Q A P)
-                            (plth.and
-                               (euclidean__axioms.Col A Q P)
-                               (euclidean__axioms.Col Q P A)))) =>
-                  H12)
                  H11)
               H9)
              (lemma__collinearorder.lemma__collinearorder A P Q H8)))
@@ -184,7 +166,7 @@ thm lemma__NChelper :
                          (plth.and
                             (euclidean__axioms.Col A Q B)
                             (euclidean__axioms.Col Q B A)))))) =>
-          logic.and__ind
+          logic.and__elim_left
             (euclidean__axioms.Col B A Q)
             (plth.and
                (euclidean__axioms.Col B Q A)
@@ -193,17 +175,6 @@ thm lemma__NChelper :
                   (plth.and
                      (euclidean__axioms.Col A Q B)
                      (euclidean__axioms.Col Q B A))))
-            (euclidean__axioms.Col B A Q)
-            (H8:(plth.Prf (euclidean__axioms.Col B A Q)) =>
-             H9:(plth.Prf
-                   (plth.and
-                      (euclidean__axioms.Col B Q A)
-                      (plth.and
-                         (euclidean__axioms.Col Q A B)
-                         (plth.and
-                            (euclidean__axioms.Col A Q B)
-                            (euclidean__axioms.Col Q B A))))) =>
-             H8)
             H7)
            (lemma__collinearorder.lemma__collinearorder A B Q H1)))
        ((H6:(plth.Prf
@@ -216,24 +187,13 @@ thm lemma__NChelper :
                         (plth.and
                            (euclidean__axioms.Col A P B)
                            (euclidean__axioms.Col P B A)))))) =>
-         logic.and__ind
+         logic.and__elim_left
            (euclidean__axioms.Col B A P)
            (plth.and
               (euclidean__axioms.Col B P A)
               (plth.and
                  (euclidean__axioms.Col P A B)
                  (plth.and (euclidean__axioms.Col A P B) (euclidean__axioms.Col P B A))))
-           (euclidean__axioms.Col B A P)
-           (H7:(plth.Prf (euclidean__axioms.Col B A P)) =>
-            H8:(plth.Prf
-                  (plth.and
-                     (euclidean__axioms.Col B P A)
-                     (plth.and
-                        (euclidean__axioms.Col P A B)
-                        (plth.and
-                           (euclidean__axioms.Col A P B)
-                           (euclidean__axioms.Col P B A))))) =>
-            H7)
            H6)
           (lemma__collinearorder.lemma__collinearorder A B P H0)))
       (lemma__inequalitysymmetric.lemma__inequalitysymmetric A B H3))

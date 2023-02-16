@@ -694,25 +694,11 @@ thm proposition__23C :
                                       euclidean__axioms.Point
                                       P
                                       Q)))) =>
-                      logic.and__ind
+                      logic.and__elim_left
                         (plth.neq euclidean__axioms.Point A Q)
                         (plth.and
                            (plth.neq euclidean__axioms.Point P A)
                            (plth.neq euclidean__axioms.Point P Q))
-                        (plth.neq euclidean__axioms.Point A Q)
-                        (H14:(plth.Prf
-                                (plth.neq euclidean__axioms.Point A Q)) =>
-                         H15:(plth.Prf
-                                (plth.and
-                                   (plth.neq
-                                      euclidean__axioms.Point
-                                      P
-                                      A)
-                                   (plth.neq
-                                      euclidean__axioms.Point
-                                      P
-                                      Q))) =>
-                         H14)
                         H13)
                        (lemma__betweennotequal.lemma__betweennotequal
                           P
@@ -775,15 +761,9 @@ thm proposition__23C :
                                      (plth.and
                                         (euclidean__axioms.Col P Q A)
                                         (euclidean__axioms.Col Q A P))) =>
-                              logic.and__ind
+                              logic.and__elim_right
                                 (euclidean__axioms.Col P Q A)
                                 (euclidean__axioms.Col Q A P)
-                                (euclidean__axioms.Col Q A P)
-                                (H19:(plth.Prf
-                                        (euclidean__axioms.Col P Q A)) =>
-                                 H20:(plth.Prf
-                                        (euclidean__axioms.Col Q A P)) =>
-                                 H20)
                                 H18)
                              H16)
                           H14)
@@ -833,18 +813,11 @@ thm proposition__23C :
                                     (plth.and
                                        (euclidean__axioms.Col A Q B)
                                        (euclidean__axioms.Col Q B A)))) =>
-                          logic.and__ind
+                          logic.and__elim_left
                             (euclidean__axioms.Col Q A B)
                             (plth.and
                                (euclidean__axioms.Col A Q B)
                                (euclidean__axioms.Col Q B A))
-                            (euclidean__axioms.Col Q A B)
-                            (H16:(plth.Prf (euclidean__axioms.Col Q A B)) =>
-                             H17:(plth.Prf
-                                    (plth.and
-                                       (euclidean__axioms.Col A Q B)
-                                       (euclidean__axioms.Col Q B A))) =>
-                             H16)
                             H15)
                          H13)
                       H11)

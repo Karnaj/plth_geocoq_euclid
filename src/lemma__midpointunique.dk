@@ -254,7 +254,7 @@ thm lemma__midpointunique :
                                             C
                                             D
                                             A))) =>
-                               logic.and__ind
+                               logic.and__elim_left
                                  (euclidean__axioms.Cong
                                     C
                                     D
@@ -265,24 +265,6 @@ thm lemma__midpointunique :
                                     C
                                     D
                                     A)
-                                 (euclidean__axioms.Cong
-                                    C
-                                    D
-                                    A
-                                    D)
-                                 (H28:(plth.Prf
-                                         (euclidean__axioms.Cong
-                                            C
-                                            D
-                                            A
-                                            D)) =>
-                                  H29:(plth.Prf
-                                         (euclidean__axioms.Cong
-                                            D
-                                            C
-                                            D
-                                            A)) =>
-                                  H28)
                                  H27)
                               H25)
                              (lemma__congruenceflip.lemma__congruenceflip
@@ -399,15 +381,9 @@ thm lemma__midpointunique :
                               (plth.and
                                  (euclidean__axioms.Cong B A B C)
                                  (euclidean__axioms.Cong A B C B))) =>
-                       logic.and__ind
+                       logic.and__elim_right
                          (euclidean__axioms.Cong B A B C)
                          (euclidean__axioms.Cong A B C B)
-                         (euclidean__axioms.Cong A B C B)
-                         (H17:(plth.Prf
-                                 (euclidean__axioms.Cong B A B C)) =>
-                          H18:(plth.Prf
-                                 (euclidean__axioms.Cong A B C B)) =>
-                          H18)
                          H16)
                       H14)
                      (lemma__congruenceflip.lemma__congruenceflip
@@ -642,13 +618,9 @@ thm lemma__midpointunique :
                             (plth.and
                                (euclidean__axioms.Cong D A D C)
                                (euclidean__axioms.Cong A D C D))) =>
-                     logic.and__ind
+                     logic.and__elim_right
                        (euclidean__axioms.Cong D A D C)
                        (euclidean__axioms.Cong A D C D)
-                       (euclidean__axioms.Cong A D C D)
-                       (H15:(plth.Prf (euclidean__axioms.Cong D A D C)) =>
-                        H16:(plth.Prf (euclidean__axioms.Cong A D C D)) =>
-                        H16)
                        H14)
                     H12)
                    (lemma__congruenceflip.lemma__congruenceflip A D D C H9))

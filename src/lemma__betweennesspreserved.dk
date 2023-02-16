@@ -181,18 +181,11 @@ thm lemma__betweennesspreserved :
                  (plth.and
                     (plth.neq euclidean__axioms.Point A B)
                     (plth.neq euclidean__axioms.Point A C)))) =>
-        logic.and__ind
+        logic.and__elim_left
           (plth.neq euclidean__axioms.Point B C)
           (plth.and
              (plth.neq euclidean__axioms.Point A B)
              (plth.neq euclidean__axioms.Point A C))
-          (plth.neq euclidean__axioms.Point B C)
-          (H6:(plth.Prf (plth.neq euclidean__axioms.Point B C)) =>
-           H7:(plth.Prf
-                 (plth.and
-                    (plth.neq euclidean__axioms.Point A B)
-                    (plth.neq euclidean__axioms.Point A C))) =>
-           H6)
           H5)
          (lemma__betweennotequal.lemma__betweennotequal A B C H2)))
      (euclidean__axioms.axiom__nocollapse A B a b H3 H))
@@ -211,12 +204,9 @@ thm lemma__betweennesspreserved :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C))) =>
-         logic.and__ind
+         logic.and__elim_left
            (plth.neq euclidean__axioms.Point A B)
            (plth.neq euclidean__axioms.Point A C)
-           (plth.neq euclidean__axioms.Point A B)
-           (H6:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-            H7:(plth.Prf (plth.neq euclidean__axioms.Point A C)) => H6)
            H5)
         H3)
        (lemma__betweennotequal.lemma__betweennotequal A B C H2)).

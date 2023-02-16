@@ -139,12 +139,9 @@ thm lemma__layoff :
                         (plth.and
                            (plth.neq euclidean__axioms.Point E A)
                            (plth.neq euclidean__axioms.Point E B))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (plth.neq euclidean__axioms.Point E A)
                     (plth.neq euclidean__axioms.Point E B)
-                    (plth.neq euclidean__axioms.Point E A)
-                    (H10:(plth.Prf (plth.neq euclidean__axioms.Point E A)) =>
-                     H11:(plth.Prf (plth.neq euclidean__axioms.Point E B)) => H10)
                     H9)
                  H7)
                 (lemma__betweennotequal.lemma__betweennotequal E A B H6)))

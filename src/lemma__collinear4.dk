@@ -293,7 +293,7 @@ thm lemma__collinear4 :
                                         (plth.and
                                            (euclidean__axioms.Col C D B)
                                            (euclidean__axioms.Col D B C)))))) =>
-                         logic.and__ind
+                         logic.and__elim_left
                            (euclidean__axioms.Col B C D)
                            (plth.and
                               (euclidean__axioms.Col B D C)
@@ -302,17 +302,6 @@ thm lemma__collinear4 :
                                  (plth.and
                                     (euclidean__axioms.Col C D B)
                                     (euclidean__axioms.Col D B C))))
-                           (euclidean__axioms.Col B C D)
-                           (H10:(plth.Prf (euclidean__axioms.Col B C D)) =>
-                            H11:(plth.Prf
-                                   (plth.and
-                                      (euclidean__axioms.Col B D C)
-                                      (plth.and
-                                         (euclidean__axioms.Col D C B)
-                                         (plth.and
-                                            (euclidean__axioms.Col C D B)
-                                            (euclidean__axioms.Col D B C))))) =>
-                            H10)
                            H9)
                           (lemma__collinearorder.lemma__collinearorder C B D H8)))
                       (logic.eq__ind__r
@@ -402,29 +391,13 @@ thm lemma__collinear4 :
                                                   C
                                                   B
                                                   D))))) =>
-                               logic.and__ind
+                               logic.and__elim_left
                                  (euclidean__axioms.Col B C D)
                                  (plth.and
                                     (euclidean__axioms.Col C D B)
                                     (plth.and
                                        (euclidean__axioms.Col D C B)
                                        (euclidean__axioms.Col C B D)))
-                                 (euclidean__axioms.Col B C D)
-                                 (H13:(plth.Prf
-                                         (euclidean__axioms.Col B C D)) =>
-                                  H14:(plth.Prf
-                                         (plth.and
-                                            (euclidean__axioms.Col C D B)
-                                            (plth.and
-                                               (euclidean__axioms.Col
-                                                  D
-                                                  C
-                                                  B)
-                                               (euclidean__axioms.Col
-                                                  C
-                                                  B
-                                                  D)))) =>
-                                  H13)
                                  H12)
                               H10)
                              (lemma__collinearorder.lemma__collinearorder D B C H9)))
@@ -824,7 +797,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B))) =>
-                                                               logic.and__ind
+                                                               logic.and__elim_left
                                                                  (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -833,25 +806,6 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B)
-                                                                 (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)
-                                                                 (H37:(
-                                                                  plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                                  H38:(
-                                                                  plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)) =>
-                                                                  H37)
                                                                  H36)
                                                               H34)
                                                            H32)
@@ -1062,7 +1016,7 @@ thm lemma__collinear4 :
                                                                     D
                                                                     C
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and__elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     D
@@ -1071,23 +1025,6 @@ thm lemma__collinear4 :
                                                                     D
                                                                     C
                                                                     B)
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    D
-                                                                    C)
-                                                                    (H40:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    D
-                                                                    C)) =>
-                                                                    H41:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    D
-                                                                    C
-                                                                    B)) =>
-                                                                    H40)
                                                                     H39)
                                                                    H37)
                                                                 H35)
@@ -1570,7 +1507,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B
                                                                     D))))) =>
-                                                        logic.and__ind
+                                                        logic.and__elim_left
                                                           (euclidean__axioms.Col
                                                              B
                                                              C
@@ -1589,31 +1526,6 @@ thm lemma__collinear4 :
                                                                    C
                                                                    B
                                                                    D)))
-                                                          (euclidean__axioms.Col
-                                                             B
-                                                             C
-                                                             D)
-                                                          (H32:(plth.Prf
-                                                                  (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                           H33:(plth.Prf
-                                                                  (plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)
-                                                                    (plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    D
-                                                                    C
-                                                                    B)
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    B
-                                                                    D)))) =>
-                                                           H32)
                                                           H31)
                                                        H29)
                                                       (lemma__collinearorder.lemma__collinearorder
@@ -1909,7 +1821,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B))) =>
-                                                              logic.and__ind
+                                                              logic.and__elim_left
                                                                 (euclidean__axioms.Col
                                                                    B
                                                                    C
@@ -1918,23 +1830,6 @@ thm lemma__collinear4 :
                                                                    C
                                                                    D
                                                                    B)
-                                                                (euclidean__axioms.Col
-                                                                   B
-                                                                   C
-                                                                   D)
-                                                                (H36:(
-                                                                 plth.Prf
-                                                                   (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                                 H37:(
-                                                                 plth.Prf
-                                                                   (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)) =>
-                                                                 H36)
                                                                 H35)
                                                              H33)
                                                           H31)
@@ -3464,7 +3359,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B
                                                                     D))))) =>
-                                                        logic.and__ind
+                                                        logic.and__elim_left
                                                           (euclidean__axioms.Col
                                                              B
                                                              C
@@ -3483,31 +3378,6 @@ thm lemma__collinear4 :
                                                                    C
                                                                    B
                                                                    D)))
-                                                          (euclidean__axioms.Col
-                                                             B
-                                                             C
-                                                             D)
-                                                          (H32:(plth.Prf
-                                                                  (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                           H33:(plth.Prf
-                                                                  (plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)
-                                                                    (plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    D
-                                                                    C
-                                                                    B)
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    B
-                                                                    D)))) =>
-                                                           H32)
                                                           H31)
                                                        H29)
                                                       (lemma__collinearorder.lemma__collinearorder
@@ -3959,7 +3829,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and__elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -3968,23 +3838,6 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B)
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)
-                                                                    (H38:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                                    H39:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)) =>
-                                                                    H38)
                                                                     H37)
                                                                     H35)
                                                                   H33)
@@ -4305,7 +4158,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B
                                                                     D))))) =>
-                                                          logic.and__ind
+                                                          logic.and__elim_left
                                                             (euclidean__axioms.Col
                                                                B
                                                                C
@@ -4324,33 +4177,6 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B
                                                                     D)))
-                                                            (euclidean__axioms.Col
-                                                               B
-                                                               C
-                                                               D)
-                                                            (H32:(plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                             H33:(plth.Prf
-                                                                    (
-                                                                    plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)
-                                                                    (plth.and
-                                                                    (euclidean__axioms.Col
-                                                                    D
-                                                                    C
-                                                                    B)
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    B
-                                                                    D)))) =>
-                                                             H32)
                                                             H31)
                                                          H29)
                                                         (lemma__collinearorder.lemma__collinearorder
@@ -6251,7 +6077,7 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B))) =>
-                                                                   logic.and__ind
+                                                                   logic.and__elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -6260,23 +6086,6 @@ thm lemma__collinear4 :
                                                                     C
                                                                     D
                                                                     B)
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)
-                                                                    (H37:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    B
-                                                                    C
-                                                                    D)) =>
-                                                                    H38:(
-                                                                    plth.Prf
-                                                                    (euclidean__axioms.Col
-                                                                    C
-                                                                    D
-                                                                    B)) =>
-                                                                    H37)
                                                                     H36)
                                                                   H34)
                                                                H32)

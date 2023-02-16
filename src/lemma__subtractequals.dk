@@ -70,28 +70,11 @@ thm lemma__subtractequals :
                                     euclidean__axioms.Point
                                     A
                                     E)))) =>
-                    logic.and__ind
+                    logic.and__elim_left
                       (plth.neq euclidean__axioms.Point C E)
                       (plth.and
                          (plth.neq euclidean__axioms.Point A C)
                          (plth.neq euclidean__axioms.Point A E))
-                      (plth.neq euclidean__axioms.Point C E)
-                      (H16:(plth.Prf
-                              (plth.neq
-                                 euclidean__axioms.Point
-                                 C
-                                 E)) =>
-                       H17:(plth.Prf
-                              (plth.and
-                                 (plth.neq
-                                    euclidean__axioms.Point
-                                    A
-                                    C)
-                                 (plth.neq
-                                    euclidean__axioms.Point
-                                    A
-                                    E))) =>
-                       H16)
                       H15)
                      (lemma__betweennotequal.lemma__betweennotequal
                         A
@@ -151,15 +134,9 @@ thm lemma__subtractequals :
                           (plth.and
                              (plth.neq euclidean__axioms.Point A B)
                              (plth.neq euclidean__axioms.Point A E))) =>
-                   logic.and__ind
+                   logic.and__elim_left
                      (plth.neq euclidean__axioms.Point A B)
                      (plth.neq euclidean__axioms.Point A E)
-                     (plth.neq euclidean__axioms.Point A B)
-                     (H14:(plth.Prf
-                             (plth.neq euclidean__axioms.Point A B)) =>
-                      H15:(plth.Prf
-                             (plth.neq euclidean__axioms.Point A E)) =>
-                      H14)
                      H13)
                   H11)
                  (lemma__betweennotequal.lemma__betweennotequal A B E H10)))

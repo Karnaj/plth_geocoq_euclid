@@ -388,21 +388,9 @@ thm proposition__13 :
                                         A
                                         B
                                         D))) =>
-                           logic.and__ind
+                           logic.and__elim_right
                              (euclidean__axioms.nCol D A B)
                              (euclidean__axioms.nCol A B D)
-                             (euclidean__axioms.nCol A B D)
-                             (H20:(plth.Prf
-                                     (euclidean__axioms.nCol
-                                        D
-                                        A
-                                        B)) =>
-                              H21:(plth.Prf
-                                     (euclidean__axioms.nCol
-                                        A
-                                        B
-                                        D)) =>
-                              H21)
                              H19)
                           H17)
                        H15)
@@ -456,21 +444,9 @@ thm proposition__13 :
                                 euclidean__axioms.Point
                                 D
                                 C))) =>
-                   logic.and__ind
+                   logic.and__elim_left
                      (plth.neq euclidean__axioms.Point D B)
                      (plth.neq euclidean__axioms.Point D C)
-                     (plth.neq euclidean__axioms.Point D B)
-                     (H14:(plth.Prf
-                             (plth.neq
-                                euclidean__axioms.Point
-                                D
-                                B)) =>
-                      H15:(plth.Prf
-                             (plth.neq
-                                euclidean__axioms.Point
-                                D
-                                C)) =>
-                      H14)
                      H13)
                   H11)
                  (lemma__betweennotequal.lemma__betweennotequal
@@ -562,13 +538,9 @@ thm proposition__13 :
                              (plth.and
                                 (euclidean__axioms.Col D C B)
                                 (euclidean__axioms.Col C B D))) =>
-                      logic.and__ind
+                      logic.and__elim_right
                         (euclidean__axioms.Col D C B)
                         (euclidean__axioms.Col C B D)
-                        (euclidean__axioms.Col C B D)
-                        (H15:(plth.Prf (euclidean__axioms.Col D C B)) =>
-                         H16:(plth.Prf (euclidean__axioms.Col C B D)) =>
-                         H16)
                         H14)
                      H12)
                   H10)
@@ -665,12 +637,9 @@ thm proposition__13 :
                            (plth.and
                               (euclidean__axioms.nCol A C B)
                               (euclidean__axioms.nCol C B A))) =>
-                    logic.and__ind
+                    logic.and__elim_right
                       (euclidean__axioms.nCol A C B)
                       (euclidean__axioms.nCol C B A)
-                      (euclidean__axioms.nCol C B A)
-                      (H13:(plth.Prf (euclidean__axioms.nCol A C B)) =>
-                       H14:(plth.Prf (euclidean__axioms.nCol C B A)) => H14)
                       H12)
                    H10)
                 H8)
@@ -759,18 +728,11 @@ thm proposition__13 :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C A)))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (plth.neq euclidean__axioms.Point B A)
                   (plth.and
                      (plth.neq euclidean__axioms.Point C B)
                      (plth.neq euclidean__axioms.Point C A))
-                  (plth.neq euclidean__axioms.Point B A)
-                  (H9:(plth.Prf (plth.neq euclidean__axioms.Point B A)) =>
-                   H10:(plth.Prf
-                          (plth.and
-                             (plth.neq euclidean__axioms.Point C B)
-                             (plth.neq euclidean__axioms.Point C A))) =>
-                   H9)
                   H8)
                H6)
             H4)

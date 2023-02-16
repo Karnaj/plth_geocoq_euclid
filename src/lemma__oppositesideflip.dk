@@ -83,7 +83,7 @@ thm lemma__oppositesideflip :
                                 (plth.and
                                    (euclidean__axioms.Col A r B)
                                    (euclidean__axioms.Col r B A)))))) =>
-                 logic.and__ind
+                 logic.and__elim_left
                    (euclidean__axioms.Col B A r)
                    (plth.and
                       (euclidean__axioms.Col B r A)
@@ -92,17 +92,6 @@ thm lemma__oppositesideflip :
                          (plth.and
                             (euclidean__axioms.Col A r B)
                             (euclidean__axioms.Col r B A))))
-                   (euclidean__axioms.Col B A r)
-                   (H8:(plth.Prf (euclidean__axioms.Col B A r)) =>
-                    H9:(plth.Prf
-                          (plth.and
-                             (euclidean__axioms.Col B r A)
-                             (plth.and
-                                (euclidean__axioms.Col r A B)
-                                (plth.and
-                                   (euclidean__axioms.Col A r B)
-                                   (euclidean__axioms.Col r B A))))) =>
-                    H8)
                    H7)
                   (lemma__collinearorder.lemma__collinearorder A B r H4)))
               ((H6:(plth.Prf
@@ -115,7 +104,7 @@ thm lemma__oppositesideflip :
                                (plth.and
                                   (euclidean__axioms.nCol A P B)
                                   (euclidean__axioms.nCol P B A)))))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (euclidean__axioms.nCol B A P)
                   (plth.and
                      (euclidean__axioms.nCol B P A)
@@ -124,17 +113,6 @@ thm lemma__oppositesideflip :
                         (plth.and
                            (euclidean__axioms.nCol A P B)
                            (euclidean__axioms.nCol P B A))))
-                  (euclidean__axioms.nCol B A P)
-                  (H7:(plth.Prf (euclidean__axioms.nCol B A P)) =>
-                   H8:(plth.Prf
-                         (plth.and
-                            (euclidean__axioms.nCol B P A)
-                            (plth.and
-                               (euclidean__axioms.nCol P A B)
-                               (plth.and
-                                  (euclidean__axioms.nCol A P B)
-                                  (euclidean__axioms.nCol P B A))))) =>
-                   H7)
                   H6)
                  (lemma__NCorder.lemma__NCorder A B P H5)))
            H3)

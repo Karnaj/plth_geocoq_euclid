@@ -240,7 +240,7 @@ thm lemma__TGsymmetric :
                                                H1
                                                B
                                                F))) =>
-                                  logic.and__ind
+                                  logic.and__elim_right
                                     (euclidean__axioms.Cong
                                        H1
                                        A
@@ -251,24 +251,6 @@ thm lemma__TGsymmetric :
                                        H1
                                        B
                                        F)
-                                    (euclidean__axioms.Cong
-                                       A
-                                       H1
-                                       B
-                                       F)
-                                    (H22:(plth.Prf
-                                            (euclidean__axioms.Cong
-                                               H1
-                                               A
-                                               F
-                                               B)) =>
-                                     H23:(plth.Prf
-                                            (euclidean__axioms.Cong
-                                               A
-                                               H1
-                                               B
-                                               F)) =>
-                                     H23)
                                     H21)
                                  H19)
                                 (lemma__congruenceflip.lemma__congruenceflip
@@ -335,23 +317,9 @@ thm lemma__TGsymmetric :
                                             H1
                                             b
                                             B))) =>
-                               logic.and__ind
+                               logic.and__elim_right
                                  (euclidean__axioms.Cong H1 a B b)
                                  (euclidean__axioms.Cong a H1 b B)
-                                 (euclidean__axioms.Cong a H1 b B)
-                                 (H19:(plth.Prf
-                                         (euclidean__axioms.Cong
-                                            H1
-                                            a
-                                            B
-                                            b)) =>
-                                  H20:(plth.Prf
-                                         (euclidean__axioms.Cong
-                                            a
-                                            H1
-                                            b
-                                            B)) =>
-                                  H20)
                                  H18)
                               H16)
                              (lemma__congruenceflip.lemma__congruenceflip
@@ -394,23 +362,9 @@ thm lemma__TGsymmetric :
                                            A
                                            b
                                            F))) =>
-                              logic.and__ind
+                              logic.and__elim_left
                                 (euclidean__axioms.Cong A a F b)
                                 (euclidean__axioms.Cong a A b F)
-                                (euclidean__axioms.Cong A a F b)
-                                (H18:(plth.Prf
-                                        (euclidean__axioms.Cong
-                                           A
-                                           a
-                                           F
-                                           b)) =>
-                                 H19:(plth.Prf
-                                        (euclidean__axioms.Cong
-                                           a
-                                           A
-                                           b
-                                           F)) =>
-                                 H18)
                                 H17)
                              H15)
                             (lemma__congruenceflip.lemma__congruenceflip
@@ -423,15 +377,9 @@ thm lemma__TGsymmetric :
                                  (plth.and
                                     (euclidean__axioms.Cong a A F b)
                                     (euclidean__axioms.Cong F b a A))) =>
-                          logic.and__ind
+                          logic.and__elim_left
                             (euclidean__axioms.Cong a A F b)
                             (euclidean__axioms.Cong F b a A)
-                            (euclidean__axioms.Cong a A F b)
-                            (H15:(plth.Prf
-                                    (euclidean__axioms.Cong a A F b)) =>
-                             H16:(plth.Prf
-                                    (euclidean__axioms.Cong F b a A)) =>
-                             H15)
                             H14)
                            (lemma__doublereverse.lemma__doublereverse
                               b
@@ -459,13 +407,9 @@ thm lemma__TGsymmetric :
                             (plth.and
                                (plth.neq euclidean__axioms.Point A a)
                                (plth.neq euclidean__axioms.Point A H1))) =>
-                     logic.and__ind
+                     logic.and__elim_left
                        (plth.neq euclidean__axioms.Point A a)
                        (plth.neq euclidean__axioms.Point A H1)
-                       (plth.neq euclidean__axioms.Point A a)
-                       (H12:(plth.Prf (plth.neq euclidean__axioms.Point A a)) =>
-                        H13:(plth.Prf (plth.neq euclidean__axioms.Point A H1)) =>
-                        H12)
                        H11)
                     H9)
                    (lemma__betweennotequal.lemma__betweennotequal A a H1 H3)))
@@ -476,18 +420,11 @@ thm lemma__TGsymmetric :
                          (plth.and
                             (plth.neq euclidean__axioms.Point A a)
                             (plth.neq euclidean__axioms.Point A H1)))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (plth.neq euclidean__axioms.Point a H1)
                   (plth.and
                      (plth.neq euclidean__axioms.Point A a)
                      (plth.neq euclidean__axioms.Point A H1))
-                  (plth.neq euclidean__axioms.Point a H1)
-                  (H8:(plth.Prf (plth.neq euclidean__axioms.Point a H1)) =>
-                   H9:(plth.Prf
-                         (plth.and
-                            (plth.neq euclidean__axioms.Point A a)
-                            (plth.neq euclidean__axioms.Point A H1))) =>
-                   H8)
                   H7)
                  (lemma__betweennotequal.lemma__betweennotequal A a H1 H3)))
            H4)

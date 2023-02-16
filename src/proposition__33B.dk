@@ -138,22 +138,13 @@ thm proposition__33B :
                                    (plth.and
                                       (euclidean__axioms.nCol A D B)
                                       (euclidean__axioms.nCol D B A))))) =>
-                      logic.and__ind
+                      logic.and__elim_left
                         (euclidean__axioms.nCol B D A)
                         (plth.and
                            (euclidean__axioms.nCol D A B)
                            (plth.and
                               (euclidean__axioms.nCol A D B)
                               (euclidean__axioms.nCol D B A)))
-                        (euclidean__axioms.nCol B D A)
-                        (H13:(plth.Prf (euclidean__axioms.nCol B D A)) =>
-                         H14:(plth.Prf
-                                (plth.and
-                                   (euclidean__axioms.nCol D A B)
-                                   (plth.and
-                                      (euclidean__axioms.nCol A D B)
-                                      (euclidean__axioms.nCol D B A)))) =>
-                         H13)
                         H12)
                      H10)
                     (lemma__NCorder.lemma__NCorder A B D H9)))
@@ -191,12 +182,9 @@ thm proposition__33B :
                                (plth.and
                                   (euclidean__axioms.nCol B C D)
                                   (euclidean__axioms.nCol A B D))) =>
-                        logic.and__ind
+                        logic.and__elim_right
                           (euclidean__axioms.nCol B C D)
                           (euclidean__axioms.nCol A B D)
-                          (euclidean__axioms.nCol A B D)
-                          (H14:(plth.Prf (euclidean__axioms.nCol B C D)) =>
-                           H15:(plth.Prf (euclidean__axioms.nCol A B D)) => H15)
                           H13)
                        H11)
                     H9)
@@ -256,12 +244,9 @@ thm proposition__33B :
                                  (plth.and
                                     (euclidean__axioms.Col B D M)
                                     (euclidean__axioms.Col D M B))) =>
-                          logic.and__ind
+                          logic.and__elim_left
                             (euclidean__axioms.Col B D M)
                             (euclidean__axioms.Col D M B)
-                            (euclidean__axioms.Col B D M)
-                            (H15:(plth.Prf (euclidean__axioms.Col B D M)) =>
-                             H16:(plth.Prf (euclidean__axioms.Col D M B)) => H15)
                             H14)
                          H12)
                       H10)

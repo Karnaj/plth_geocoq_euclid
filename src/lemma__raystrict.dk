@@ -40,18 +40,11 @@ thm lemma__raystrict :
                       (plth.and
                          (plth.neq euclidean__axioms.Point J A)
                          (plth.neq euclidean__axioms.Point J C)))) =>
-             logic.and__ind
+             logic.and__elim_left
                (plth.neq euclidean__axioms.Point A C)
                (plth.and
                   (plth.neq euclidean__axioms.Point J A)
                   (plth.neq euclidean__axioms.Point J C))
-               (plth.neq euclidean__axioms.Point A C)
-               (H5:(plth.Prf (plth.neq euclidean__axioms.Point A C)) =>
-                H6:(plth.Prf
-                      (plth.and
-                         (plth.neq euclidean__axioms.Point J A)
-                         (plth.neq euclidean__axioms.Point J C))) =>
-                H5)
                H4)
               (lemma__betweennotequal.lemma__betweennotequal J A C H2)))
         H1)

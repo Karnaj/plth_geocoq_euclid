@@ -37,16 +37,9 @@ thm lemma__PGrotate :
                      (plth.and
                         (euclidean__defs.Par A B D C)
                         (euclidean__defs.Par B A D C)))) =>
-            logic.and__ind
+            logic.and__elim_left
               (euclidean__defs.Par B A C D)
               (plth.and (euclidean__defs.Par A B D C) (euclidean__defs.Par B A D C))
-              (euclidean__defs.Par B A C D)
-              (H6:(plth.Prf (euclidean__defs.Par B A C D)) =>
-               H7:(plth.Prf
-                     (plth.and
-                        (euclidean__defs.Par A B D C)
-                        (euclidean__defs.Par B A D C))) =>
-               H6)
               H5)
              (lemma__parallelflip.lemma__parallelflip A B C D H3))
           H0))
@@ -61,12 +54,9 @@ thm lemma__PGrotate :
           (H5:(plth.Prf (euclidean__defs.Par C B A D)) =>
            H6:(plth.Prf
                  (plth.and (euclidean__defs.Par B C D A) (euclidean__defs.Par C B D A))) =>
-           logic.and__ind
+           logic.and__elim_left
              (euclidean__defs.Par B C D A)
              (euclidean__defs.Par C B D A)
-             (euclidean__defs.Par B C D A)
-             (H7:(plth.Prf (euclidean__defs.Par B C D A)) =>
-              H8:(plth.Prf (euclidean__defs.Par C B D A)) => H7)
              H6)
           H4)
          (lemma__parallelflip.lemma__parallelflip B C A D H1)))

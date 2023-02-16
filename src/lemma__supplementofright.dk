@@ -59,18 +59,11 @@ thm lemma__supplementofright :
                     (plth.and
                        (plth.neq euclidean__axioms.Point A B)
                        (plth.neq euclidean__axioms.Point A F)))) =>
-           logic.and__ind
+           logic.and__elim_left
              (plth.neq euclidean__axioms.Point B F)
              (plth.and
                 (plth.neq euclidean__axioms.Point A B)
                 (plth.neq euclidean__axioms.Point A F))
-             (plth.neq euclidean__axioms.Point B F)
-             (H6:(plth.Prf (plth.neq euclidean__axioms.Point B F)) =>
-              H7:(plth.Prf
-                    (plth.and
-                       (plth.neq euclidean__axioms.Point A B)
-                       (plth.neq euclidean__axioms.Point A F))) =>
-              H6)
              H5)
             (lemma__betweennotequal.lemma__betweennotequal A B F H4))
          H1))

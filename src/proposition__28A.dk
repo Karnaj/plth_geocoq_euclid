@@ -181,7 +181,7 @@ thm proposition__28A :
                                              B
                                              E
                                              G)))))) =>
-                       logic.and__ind
+                       logic.and__elim_left
                          (euclidean__axioms.Col E G B)
                          (plth.and
                             (euclidean__axioms.Col
@@ -202,33 +202,6 @@ thm proposition__28A :
                                      B
                                      E
                                      G))))
-                         (euclidean__axioms.Col E G B)
-                         (H21:(plth.Prf
-                                 (euclidean__axioms.Col
-                                    E
-                                    G
-                                    B)) =>
-                          H22:(plth.Prf
-                                 (plth.and
-                                    (euclidean__axioms.Col
-                                       E
-                                       B
-                                       G)
-                                    (plth.and
-                                       (euclidean__axioms.Col
-                                          B
-                                          G
-                                          E)
-                                       (plth.and
-                                          (euclidean__axioms.Col
-                                             G
-                                             B
-                                             E)
-                                          (euclidean__axioms.Col
-                                             B
-                                             E
-                                             G))))) =>
-                          H21)
                          H20)
                         (lemma__collinearorder.lemma__collinearorder
                            G
@@ -299,7 +272,7 @@ thm proposition__28A :
                                      euclidean__axioms.Point
                                      A
                                      B))) =>
-                        logic.and__ind
+                        logic.and__elim_left
                           (plth.neq
                              euclidean__axioms.Point
                              A
@@ -308,21 +281,6 @@ thm proposition__28A :
                              euclidean__axioms.Point
                              A
                              B)
-                          (plth.neq
-                             euclidean__axioms.Point
-                             A
-                             G)
-                          (H21:(plth.Prf
-                                  (plth.neq
-                                     euclidean__axioms.Point
-                                     A
-                                     G)) =>
-                           H22:(plth.Prf
-                                  (plth.neq
-                                     euclidean__axioms.Point
-                                     A
-                                     B)) =>
-                           H21)
                           H20)
                        H18)
                       (lemma__betweennotequal.lemma__betweennotequal
@@ -385,7 +343,7 @@ thm proposition__28A :
                                          E
                                          A
                                          G)))))) =>
-                   logic.and__ind
+                   logic.and__elim_left
                      (euclidean__axioms.Col A G E)
                      (plth.and
                         (euclidean__axioms.Col A E G)
@@ -394,27 +352,6 @@ thm proposition__28A :
                            (plth.and
                               (euclidean__axioms.Col G E A)
                               (euclidean__axioms.Col E A G))))
-                     (euclidean__axioms.Col A G E)
-                     (H17:(plth.Prf
-                             (euclidean__axioms.Col A G E)) =>
-                      H18:(plth.Prf
-                             (plth.and
-                                (euclidean__axioms.Col A E G)
-                                (plth.and
-                                   (euclidean__axioms.Col
-                                      E
-                                      G
-                                      A)
-                                   (plth.and
-                                      (euclidean__axioms.Col
-                                         G
-                                         E
-                                         A)
-                                      (euclidean__axioms.Col
-                                         E
-                                         A
-                                         G))))) =>
-                      H17)
                      H16)
                     (lemma__collinearorder.lemma__collinearorder
                        G
@@ -449,18 +386,11 @@ thm proposition__28A :
                           (plth.and
                              (plth.neq euclidean__axioms.Point E G)
                              (plth.neq euclidean__axioms.Point E H)))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (plth.neq euclidean__axioms.Point G H)
                   (plth.and
                      (plth.neq euclidean__axioms.Point E G)
                      (plth.neq euclidean__axioms.Point E H))
-                  (plth.neq euclidean__axioms.Point G H)
-                  (H14:(plth.Prf (plth.neq euclidean__axioms.Point G H)) =>
-                   H15:(plth.Prf
-                          (plth.and
-                             (plth.neq euclidean__axioms.Point E G)
-                             (plth.neq euclidean__axioms.Point E H))) =>
-                   H14)
                   H13)
                  (lemma__betweennotequal.lemma__betweennotequal E G H H2)))
              ((H12:(plth.Prf
@@ -518,13 +448,9 @@ thm proposition__28A :
                                (plth.and
                                   (euclidean__axioms.Col E H G)
                                   (euclidean__axioms.Col H G E))) =>
-                        logic.and__ind
+                        logic.and__elim_right
                           (euclidean__axioms.Col E H G)
                           (euclidean__axioms.Col H G E)
-                          (euclidean__axioms.Col H G E)
-                          (H19:(plth.Prf (euclidean__axioms.Col E H G)) =>
-                           H20:(plth.Prf (euclidean__axioms.Col H G E)) =>
-                           H20)
                           H18)
                        H16)
                     H14)
@@ -576,7 +502,7 @@ thm proposition__28A :
                              (plth.and
                                 (euclidean__axioms.Col G A H)
                                 (euclidean__axioms.Col A H G)))))) =>
-             logic.and__ind
+             logic.and__elim_left
                (euclidean__axioms.Col H G A)
                (plth.and
                   (euclidean__axioms.Col H A G)
@@ -585,17 +511,6 @@ thm proposition__28A :
                      (plth.and
                         (euclidean__axioms.Col G A H)
                         (euclidean__axioms.Col A H G))))
-               (euclidean__axioms.Col H G A)
-               (H11:(plth.Prf (euclidean__axioms.Col H G A)) =>
-                H12:(plth.Prf
-                       (plth.and
-                          (euclidean__axioms.Col H A G)
-                          (plth.and
-                             (euclidean__axioms.Col A G H)
-                             (plth.and
-                                (euclidean__axioms.Col G A H)
-                                (euclidean__axioms.Col A H G))))) =>
-                H11)
                H10)
               (lemma__collinearorder.lemma__collinearorder G H A H9))))
        (logic.or__intror
@@ -1035,19 +950,9 @@ thm proposition__28A :
                                                    x1
                                                    x2)
                                                 (euclidean__axioms.nCol E G B))) =>
-                                      logic.and__ind
+                                      logic.and__elim_right
                                         (euclidean__axioms.Cong x x0 x1 x2)
                                         (euclidean__axioms.nCol E G B)
-                                        (euclidean__axioms.nCol E G B)
-                                        (H23:(plth.Prf
-                                                (euclidean__axioms.Cong
-                                                   x
-                                                   x0
-                                                   x1
-                                                   x2)) =>
-                                         H24:(plth.Prf
-                                                (euclidean__axioms.nCol E G B)) =>
-                                         H24)
                                         H22)
                                      H20)
                                   H18)
@@ -1065,12 +970,9 @@ thm proposition__28A :
             (plth.and
                (euclidean__defs.OS D B G H)
                (plth.and (euclidean__defs.OS B D H G) (euclidean__defs.OS D B H G)))) =>
-      logic.and__ind
+      logic.and__elim_left
         (euclidean__defs.OS D B G H)
         (plth.and (euclidean__defs.OS B D H G) (euclidean__defs.OS D B H G))
-        (euclidean__defs.OS D B G H)
-        (H6:(plth.Prf (euclidean__defs.OS D B G H)) =>
-         H7:(plth.Prf (plth.and (euclidean__defs.OS B D H G) (euclidean__defs.OS D B H G))) => H6)
         H5)
        (lemma__samesidesymmetric.lemma__samesidesymmetric G H B D H4)).
 

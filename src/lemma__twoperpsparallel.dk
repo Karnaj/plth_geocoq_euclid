@@ -176,7 +176,7 @@ thm lemma__twoperpsparallel :
                                               C
                                               A
                                               B))) =>
-                                 logic.and__ind
+                                 logic.and__elim_left
                                    (euclidean__defs.Par
                                       C
                                       D
@@ -187,24 +187,6 @@ thm lemma__twoperpsparallel :
                                       C
                                       A
                                       B)
-                                   (euclidean__defs.Par
-                                      C
-                                      D
-                                      A
-                                      B)
-                                   (H26:(plth.Prf
-                                           (euclidean__defs.Par
-                                              C
-                                              D
-                                              A
-                                              B)) =>
-                                    H27:(plth.Prf
-                                           (euclidean__defs.Par
-                                              D
-                                              C
-                                              A
-                                              B)) =>
-                                    H26)
                                    H25)
                                 H23)
                                (lemma__parallelflip.lemma__parallelflip
@@ -568,7 +550,7 @@ thm lemma__twoperpsparallel :
                                                euclidean__axioms.Point
                                                D
                                                B)))))) =>
-                         logic.and__ind
+                         logic.and__elim_left
                            (plth.neq euclidean__axioms.Point C D)
                            (plth.and
                               (plth.neq
@@ -589,33 +571,6 @@ thm lemma__twoperpsparallel :
                                        euclidean__axioms.Point
                                        D
                                        B))))
-                           (plth.neq euclidean__axioms.Point C D)
-                           (H18:(plth.Prf
-                                   (plth.neq
-                                      euclidean__axioms.Point
-                                      C
-                                      D)) =>
-                            H19:(plth.Prf
-                                   (plth.and
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         B
-                                         D)
-                                      (plth.and
-                                         (plth.neq
-                                            euclidean__axioms.Point
-                                            C
-                                            B)
-                                         (plth.and
-                                            (plth.neq
-                                               euclidean__axioms.Point
-                                               D
-                                               C)
-                                            (plth.neq
-                                               euclidean__axioms.Point
-                                               D
-                                               B))))) =>
-                            H18)
                            H17)
                         H15)
                        (lemma__NCdistinct.lemma__NCdistinct
@@ -634,18 +589,11 @@ thm lemma__twoperpsparallel :
                          (plth.and
                             (plth.neq euclidean__axioms.Point B C)
                             (plth.neq euclidean__axioms.Point B E)))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (plth.neq euclidean__axioms.Point C E)
                   (plth.and
                      (plth.neq euclidean__axioms.Point B C)
                      (plth.neq euclidean__axioms.Point B E))
-                  (plth.neq euclidean__axioms.Point C E)
-                  (H10:(plth.Prf (plth.neq euclidean__axioms.Point C E)) =>
-                   H11:(plth.Prf
-                          (plth.and
-                             (plth.neq euclidean__axioms.Point B C)
-                             (plth.neq euclidean__axioms.Point B E))) =>
-                   H10)
                   H9)
                  (lemma__betweennotequal.lemma__betweennotequal B C E H6)))
              (logic.or__intror
@@ -722,7 +670,7 @@ thm lemma__twoperpsparallel :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C A)))))) =>
-          logic.and__ind
+          logic.and__elim_left
             (plth.neq euclidean__axioms.Point B C)
             (plth.and
                (plth.neq euclidean__axioms.Point A C)
@@ -731,17 +679,6 @@ thm lemma__twoperpsparallel :
                   (plth.and
                      (plth.neq euclidean__axioms.Point C B)
                      (plth.neq euclidean__axioms.Point C A))))
-            (plth.neq euclidean__axioms.Point B C)
-            (H6:(plth.Prf (plth.neq euclidean__axioms.Point B C)) =>
-             H7:(plth.Prf
-                   (plth.and
-                      (plth.neq euclidean__axioms.Point A C)
-                      (plth.and
-                         (plth.neq euclidean__axioms.Point B A)
-                         (plth.and
-                            (plth.neq euclidean__axioms.Point C B)
-                            (plth.neq euclidean__axioms.Point C A))))) =>
-             H6)
             H5)
          H3)
         (lemma__NCdistinct.lemma__NCdistinct A B C H2)))

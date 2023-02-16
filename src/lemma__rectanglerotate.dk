@@ -219,25 +219,12 @@ thm lemma__rectanglerotate :
                             plth.and
                               (euclidean__axioms.BetS A X C)
                               (euclidean__axioms.BetS B X D))))) =>
-               logic.and__ind
+               logic.and__elim_right
                  (euclidean__defs.Per C D A)
-                 (plth.ex
-                    euclidean__axioms.Point
-                    (X:(plth.El euclidean__axioms.Point) =>
-                     plth.and (euclidean__axioms.BetS A X C) (euclidean__axioms.BetS B X D)))
                  (plth.ex
                     euclidean__axioms.Point
                     (M:(plth.El euclidean__axioms.Point) =>
                      plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.BetS B M D)))
-                 (H7:(plth.Prf (euclidean__defs.Per C D A)) =>
-                  H8:(plth.Prf
-                        (plth.ex
-                           euclidean__axioms.Point
-                           (X:(plth.El euclidean__axioms.Point) =>
-                            plth.and
-                              (euclidean__axioms.BetS A X C)
-                              (euclidean__axioms.BetS B X D)))) =>
-                  H8)
                  H6)
               H4)
            H2)

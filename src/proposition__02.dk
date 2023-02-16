@@ -1123,7 +1123,7 @@ thm proposition__02 :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     A))) =>
-                                                                    logic.and__ind
+                                                                    logic.and__elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -1132,23 +1132,6 @@ thm proposition__02 :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     A)
-                                                                    (plth.neq
-                                                                    euclidean__axioms.Point
-                                                                    D
-                                                                    A)
-                                                                    (H45:(
-                                                                    plth.Prf
-                                                                    (plth.neq
-                                                                    euclidean__axioms.Point
-                                                                    D
-                                                                    B)) =>
-                                                                    H46:(
-                                                                    plth.Prf
-                                                                    (plth.neq
-                                                                    euclidean__axioms.Point
-                                                                    D
-                                                                    A)) =>
-                                                                    H46)
                                                                     H44)
                                                                    H42)
                                                                 H40)
@@ -1514,7 +1497,7 @@ thm proposition__02 :
                                                                     A
                                                                     D
                                                                     B))) =>
-                                                        logic.and__ind
+                                                        logic.and__elim_right
                                                           (euclidean__axioms.Cong
                                                              A
                                                              D
@@ -1525,24 +1508,6 @@ thm proposition__02 :
                                                              A
                                                              D
                                                              B)
-                                                          (euclidean__axioms.Cong
-                                                             D
-                                                             A
-                                                             D
-                                                             B)
-                                                          (H36:(plth.Prf
-                                                                  (euclidean__axioms.Cong
-                                                                    A
-                                                                    D
-                                                                    B
-                                                                    D)) =>
-                                                           H37:(plth.Prf
-                                                                  (euclidean__axioms.Cong
-                                                                    D
-                                                                    A
-                                                                    D
-                                                                    B)) =>
-                                                           H37)
                                                           H35)
                                                        H33)
                                                       (lemma__congruenceflip.lemma__congruenceflip
@@ -1627,7 +1592,7 @@ thm proposition__02 :
                                                             euclidean__axioms.Point
                                                             D
                                                             G))) =>
-                                               logic.and__ind
+                                               logic.and__elim_right
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     D
@@ -1636,21 +1601,6 @@ thm proposition__02 :
                                                     euclidean__axioms.Point
                                                     D
                                                     G)
-                                                 (plth.neq
-                                                    euclidean__axioms.Point
-                                                    D
-                                                    G)
-                                                 (H29:(plth.Prf
-                                                         (plth.neq
-                                                            euclidean__axioms.Point
-                                                            D
-                                                            B)) =>
-                                                  H30:(plth.Prf
-                                                         (plth.neq
-                                                            euclidean__axioms.Point
-                                                            D
-                                                            G)) =>
-                                                  H30)
                                                  H28)
                                               H26)
                                              (lemma__betweennotequal.lemma__betweennotequal
@@ -1881,7 +1831,7 @@ thm proposition__02 :
                                                  euclidean__axioms.Point
                                                  D
                                                  A))) =>
-                                    logic.and__ind
+                                    logic.and__elim_left
                                       (plth.neq
                                          euclidean__axioms.Point
                                          D
@@ -1890,21 +1840,6 @@ thm proposition__02 :
                                          euclidean__axioms.Point
                                          D
                                          A)
-                                      (plth.neq
-                                         euclidean__axioms.Point
-                                         D
-                                         B)
-                                      (H23:(plth.Prf
-                                              (plth.neq
-                                                 euclidean__axioms.Point
-                                                 D
-                                                 B)) =>
-                                       H24:(plth.Prf
-                                              (plth.neq
-                                                 euclidean__axioms.Point
-                                                 D
-                                                 A)) =>
-                                       H23)
                                       H22)
                                    H20)
                                 H18)
@@ -2135,12 +2070,9 @@ thm proposition__02 :
                  (euclidean__axioms.postulate__Euclid3 B C H0))
                 (logic.eq__refl euclidean__axioms.Point B))
                H4)
-              (logic.and__ind
+              (logic.and__elim_right
                  (euclidean__axioms.Cong A B B D)
                  (euclidean__axioms.Cong B D D A)
-                 (euclidean__axioms.Cong B D D A)
-                 (H8:(plth.Prf (euclidean__axioms.Cong A B B D)) =>
-                  H9:(plth.Prf (euclidean__axioms.Cong B D D A)) => H9)
                  H3))
              ((H7:(plth.Prf
                      (plth.and
@@ -2159,22 +2091,16 @@ thm proposition__02 :
                         (plth.and
                            (euclidean__axioms.Cong D B A B)
                            (euclidean__axioms.Cong B D B A))) =>
-                  logic.and__ind
+                  logic.and__elim_right
                     (euclidean__axioms.Cong D B A B)
                     (euclidean__axioms.Cong B D B A)
-                    (euclidean__axioms.Cong B D B A)
-                    (H10:(plth.Prf (euclidean__axioms.Cong D B A B)) =>
-                     H11:(plth.Prf (euclidean__axioms.Cong B D B A)) => H11)
                     H9)
                  H7)
                 (lemma__congruenceflip.lemma__congruenceflip B D A B H6)))
             (lemma__congruencesymmetric.lemma__congruencesymmetric B A B D H5))
-           (logic.and__ind
+           (logic.and__elim_left
               (euclidean__axioms.Cong A B B D)
               (euclidean__axioms.Cong B D D A)
-              (euclidean__axioms.Cong A B B D)
-              (H5:(plth.Prf (euclidean__axioms.Cong A B B D)) =>
-               H6:(plth.Prf (euclidean__axioms.Cong B D D A)) => H5)
               H3))
         H2)
      H1)

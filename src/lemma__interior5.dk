@@ -253,7 +253,7 @@ thm lemma__interior5 :
                                                                B
                                                                b
                                                                d)))) =>
-                                               logic.and__ind
+                                               logic.and__elim_left
                                                  (euclidean__axioms.Cong
                                                     B
                                                     D
@@ -270,30 +270,6 @@ thm lemma__interior5 :
                                                        B
                                                        b
                                                        d))
-                                                 (euclidean__axioms.Cong
-                                                    B
-                                                    D
-                                                    b
-                                                    d)
-                                                 (H41:(plth.Prf
-                                                         (euclidean__axioms.Cong
-                                                            B
-                                                            D
-                                                            b
-                                                            d)) =>
-                                                  H42:(plth.Prf
-                                                         (plth.and
-                                                            (euclidean__axioms.Cong
-                                                               B
-                                                               D
-                                                               d
-                                                               b)
-                                                            (euclidean__axioms.Cong
-                                                               D
-                                                               B
-                                                               b
-                                                               d))) =>
-                                                  H41)
                                                  H40)
                                                 (lemma__congruenceflip.lemma__congruenceflip
                                                    D
@@ -334,7 +310,7 @@ thm lemma__interior5 :
                                                              M
                                                              m
                                                              d)))) =>
-                                             logic.and__ind
+                                             logic.and__elim_left
                                                (euclidean__axioms.Cong
                                                   M
                                                   D
@@ -351,30 +327,6 @@ thm lemma__interior5 :
                                                      M
                                                      m
                                                      d))
-                                               (euclidean__axioms.Cong
-                                                  M
-                                                  D
-                                                  m
-                                                  d)
-                                               (H39:(plth.Prf
-                                                       (euclidean__axioms.Cong
-                                                          M
-                                                          D
-                                                          m
-                                                          d)) =>
-                                                H40:(plth.Prf
-                                                       (plth.and
-                                                          (euclidean__axioms.Cong
-                                                             M
-                                                             D
-                                                             d
-                                                             m)
-                                                          (euclidean__axioms.Cong
-                                                             D
-                                                             M
-                                                             m
-                                                             d))) =>
-                                                H39)
                                                H38)
                                               (lemma__congruenceflip.lemma__congruenceflip
                                                  D
@@ -425,7 +377,7 @@ thm lemma__interior5 :
                                                          A
                                                          a
                                                          m)))) =>
-                                         logic.and__ind
+                                         logic.and__elim_left
                                            (euclidean__axioms.Cong
                                               A
                                               M
@@ -442,30 +394,6 @@ thm lemma__interior5 :
                                                  A
                                                  a
                                                  m))
-                                           (euclidean__axioms.Cong
-                                              A
-                                              M
-                                              a
-                                              m)
-                                           (H35:(plth.Prf
-                                                   (euclidean__axioms.Cong
-                                                      A
-                                                      M
-                                                      a
-                                                      m)) =>
-                                            H36:(plth.Prf
-                                                   (plth.and
-                                                      (euclidean__axioms.Cong
-                                                         A
-                                                         M
-                                                         m
-                                                         a)
-                                                      (euclidean__axioms.Cong
-                                                         M
-                                                         A
-                                                         a
-                                                         m))) =>
-                                            H35)
                                            H34)
                                           (lemma__congruenceflip.lemma__congruenceflip
                                              M
@@ -515,7 +443,7 @@ thm lemma__interior5 :
                                                 A
                                                 c
                                                 a))) =>
-                                   logic.and__ind
+                                   logic.and__elim_left
                                      (euclidean__axioms.Cong
                                         c
                                         a
@@ -526,24 +454,6 @@ thm lemma__interior5 :
                                         A
                                         c
                                         a)
-                                     (euclidean__axioms.Cong
-                                        c
-                                        a
-                                        C
-                                        A)
-                                     (H29:(plth.Prf
-                                             (euclidean__axioms.Cong
-                                                c
-                                                a
-                                                C
-                                                A)) =>
-                                      H30:(plth.Prf
-                                             (euclidean__axioms.Cong
-                                                C
-                                                A
-                                                c
-                                                a)) =>
-                                      H29)
                                      H28)
                                     (lemma__doublereverse.lemma__doublereverse
                                        A
@@ -646,21 +556,9 @@ thm lemma__interior5 :
                                     euclidean__axioms.Point
                                     a
                                     c))) =>
-                       logic.and__ind
+                       logic.and__elim_right
                          (plth.neq euclidean__axioms.Point a b)
                          (plth.neq euclidean__axioms.Point a c)
-                         (plth.neq euclidean__axioms.Point a c)
-                         (H19:(plth.Prf
-                                 (plth.neq
-                                    euclidean__axioms.Point
-                                    a
-                                    b)) =>
-                          H20:(plth.Prf
-                                 (plth.neq
-                                    euclidean__axioms.Point
-                                    a
-                                    c)) =>
-                          H20)
                          H18)
                       H16)
                      (lemma__betweennotequal.lemma__betweennotequal
@@ -703,12 +601,9 @@ thm lemma__interior5 :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A C))) =>
-          logic.and__ind
+          logic.and__elim_right
             (plth.neq euclidean__axioms.Point A B)
             (plth.neq euclidean__axioms.Point A C)
-            (plth.neq euclidean__axioms.Point A C)
-            (H9:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-             H10:(plth.Prf (plth.neq euclidean__axioms.Point A C)) => H10)
             H8)
          H6)
         (lemma__betweennotequal.lemma__betweennotequal A B C H)))
@@ -718,16 +613,9 @@ thm lemma__interior5 :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C)))) =>
-      logic.and__ind
+      logic.and__elim_left
         (plth.neq euclidean__axioms.Point B C)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point A C))
-        (plth.neq euclidean__axioms.Point B C)
-        (H6:(plth.Prf (plth.neq euclidean__axioms.Point B C)) =>
-         H7:(plth.Prf
-               (plth.and
-                  (plth.neq euclidean__axioms.Point A B)
-                  (plth.neq euclidean__axioms.Point A C))) =>
-         H6)
         H5)
        (lemma__betweennotequal.lemma__betweennotequal A B C H)).
 

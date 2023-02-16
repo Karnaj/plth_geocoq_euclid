@@ -404,7 +404,7 @@ thm lemma__TTflip2 :
                                                       L
                                                       E
                                                       F)))) =>
-                                      logic.and__ind
+                                      logic.and__elim_left
                                         (euclidean__axioms.Cong
                                            L
                                            G
@@ -421,30 +421,6 @@ thm lemma__TTflip2 :
                                               L
                                               E
                                               F))
-                                        (euclidean__axioms.Cong
-                                           L
-                                           G
-                                           E
-                                           F)
-                                        (H23:(plth.Prf
-                                                (euclidean__axioms.Cong
-                                                   L
-                                                   G
-                                                   E
-                                                   F)) =>
-                                         H24:(plth.Prf
-                                                (plth.and
-                                                   (euclidean__axioms.Cong
-                                                      L
-                                                      G
-                                                      F
-                                                      E)
-                                                   (euclidean__axioms.Cong
-                                                      G
-                                                      L
-                                                      E
-                                                      F))) =>
-                                         H23)
                                         H22)
                                        (lemma__congruenceflip.lemma__congruenceflip
                                           G
@@ -501,21 +477,9 @@ thm lemma__TTflip2 :
                                              euclidean__axioms.Point
                                              E
                                              J))) =>
-                                logic.and__ind
+                                logic.and__elim_left
                                   (plth.neq euclidean__axioms.Point E F)
                                   (plth.neq euclidean__axioms.Point E J)
-                                  (plth.neq euclidean__axioms.Point E F)
-                                  (H19:(plth.Prf
-                                          (plth.neq
-                                             euclidean__axioms.Point
-                                             E
-                                             F)) =>
-                                   H20:(plth.Prf
-                                          (plth.neq
-                                             euclidean__axioms.Point
-                                             E
-                                             J)) =>
-                                   H19)
                                   H18)
                                H16)
                               (lemma__betweennotequal.lemma__betweennotequal
@@ -534,18 +498,11 @@ thm lemma__TTflip2 :
                                     (plth.and
                                        (plth.neq euclidean__axioms.Point E F)
                                        (plth.neq euclidean__axioms.Point E J)))) =>
-                          logic.and__ind
+                          logic.and__elim_left
                             (plth.neq euclidean__axioms.Point F J)
                             (plth.and
                                (plth.neq euclidean__axioms.Point E F)
                                (plth.neq euclidean__axioms.Point E J))
-                            (plth.neq euclidean__axioms.Point F J)
-                            (H14:(plth.Prf (plth.neq euclidean__axioms.Point F J)) =>
-                             H15:(plth.Prf
-                                    (plth.and
-                                       (plth.neq euclidean__axioms.Point E F)
-                                       (plth.neq euclidean__axioms.Point E J))) =>
-                             H14)
                             H13)
                            (lemma__betweennotequal.lemma__betweennotequal E F J H3)))
                      H10)

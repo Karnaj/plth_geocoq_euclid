@@ -1070,12 +1070,9 @@ thm lemma__ondiameter :
                (plth.and
                   (plth.neq euclidean__axioms.Point D F)
                   (plth.neq euclidean__axioms.Point D M))) =>
-         logic.and__ind
+         logic.and__elim_left
            (plth.neq euclidean__axioms.Point D F)
            (plth.neq euclidean__axioms.Point D M)
-           (plth.neq euclidean__axioms.Point D F)
-           (H7:(plth.Prf (plth.neq euclidean__axioms.Point D F)) =>
-            H8:(plth.Prf (plth.neq euclidean__axioms.Point D M)) => H7)
            H6)
         H4)
        (lemma__betweennotequal.lemma__betweennotequal D F M H2)).

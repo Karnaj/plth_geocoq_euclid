@@ -552,18 +552,11 @@ thm lemma__squareflip :
                          (plth.and
                             (euclidean__axioms.Cong B A B C)
                             (euclidean__axioms.Cong A B C B)))) =>
-               logic.and__ind
+               logic.and__elim_left
                  (euclidean__axioms.Cong B A C B)
                  (plth.and
                     (euclidean__axioms.Cong B A B C)
                     (euclidean__axioms.Cong A B C B))
-                 (euclidean__axioms.Cong B A C B)
-                 (H16:(plth.Prf (euclidean__axioms.Cong B A C B)) =>
-                  H17:(plth.Prf
-                         (plth.and
-                            (euclidean__axioms.Cong B A B C)
-                            (euclidean__axioms.Cong A B C B))) =>
-                  H16)
                  H15)
                 (lemma__congruenceflip.lemma__congruenceflip A B B C H5))
              H4)
@@ -637,18 +630,11 @@ thm lemma__squareflip :
                            (plth.and
                               (euclidean__axioms.Cong B A D A)
                               (euclidean__axioms.Cong A B A D)))) =>
-                 logic.and__ind
+                 logic.and__elim_left
                    (euclidean__axioms.Cong B A A D)
                    (plth.and
                       (euclidean__axioms.Cong B A D A)
                       (euclidean__axioms.Cong A B A D))
-                   (euclidean__axioms.Cong B A A D)
-                   (H15:(plth.Prf (euclidean__axioms.Cong B A A D)) =>
-                    H16:(plth.Prf
-                           (plth.and
-                              (euclidean__axioms.Cong B A D A)
-                              (euclidean__axioms.Cong A B A D))) =>
-                    H15)
                    H14)
                   (lemma__congruenceflip.lemma__congruenceflip A B D A H6))
                H5)
@@ -685,16 +671,9 @@ thm lemma__squareflip :
                     (plth.and
                        (euclidean__axioms.Cong B A C D)
                        (euclidean__axioms.Cong A B D C)))) =>
-          logic.and__ind
+          logic.and__elim_left
             (euclidean__axioms.Cong B A D C)
             (plth.and (euclidean__axioms.Cong B A C D) (euclidean__axioms.Cong A B D C))
-            (euclidean__axioms.Cong B A D C)
-            (H14:(plth.Prf (euclidean__axioms.Cong B A D C)) =>
-             H15:(plth.Prf
-                    (plth.and
-                       (euclidean__axioms.Cong B A C D)
-                       (euclidean__axioms.Cong A B D C))) =>
-             H14)
             H13)
            (lemma__congruenceflip.lemma__congruenceflip A B C D H1))
         H0))

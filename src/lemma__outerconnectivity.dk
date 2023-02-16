@@ -495,12 +495,9 @@ thm lemma__outerconnectivity :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A D))) =>
-          logic.and__ind
+          logic.and__elim_right
             (plth.neq euclidean__axioms.Point A B)
             (plth.neq euclidean__axioms.Point A D)
-            (plth.neq euclidean__axioms.Point A D)
-            (H7:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-             H8:(plth.Prf (plth.neq euclidean__axioms.Point A D)) => H8)
             H6)
          H4)
         (lemma__betweennotequal.lemma__betweennotequal A B D H0)))

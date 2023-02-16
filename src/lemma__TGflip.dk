@@ -325,18 +325,11 @@ thm lemma__TGflip :
                            (plth.and
                               (plth.neq euclidean__axioms.Point A a)
                               (plth.neq euclidean__axioms.Point A H1)))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (plth.neq euclidean__axioms.Point a H1)
                     (plth.and
                        (plth.neq euclidean__axioms.Point A a)
                        (plth.neq euclidean__axioms.Point A H1))
-                    (plth.neq euclidean__axioms.Point a H1)
-                    (H10:(plth.Prf (plth.neq euclidean__axioms.Point a H1)) =>
-                     H11:(plth.Prf
-                            (plth.and
-                               (plth.neq euclidean__axioms.Point A a)
-                               (plth.neq euclidean__axioms.Point A H1))) =>
-                     H10)
                     H9)
                    (lemma__betweennotequal.lemma__betweennotequal A a H1 H3)))
                (lemma__inequalitysymmetric.lemma__inequalitysymmetric A a H7))
@@ -357,12 +350,9 @@ thm lemma__TGflip :
                          (plth.and
                             (plth.neq euclidean__axioms.Point A a)
                             (plth.neq euclidean__axioms.Point A H1))) =>
-                   logic.and__ind
+                   logic.and__elim_left
                      (plth.neq euclidean__axioms.Point A a)
                      (plth.neq euclidean__axioms.Point A H1)
-                     (plth.neq euclidean__axioms.Point A a)
-                     (H10:(plth.Prf (plth.neq euclidean__axioms.Point A a)) =>
-                      H11:(plth.Prf (plth.neq euclidean__axioms.Point A H1)) => H10)
                      H9)
                   H7)
                  (lemma__betweennotequal.lemma__betweennotequal A a H1 H3)))

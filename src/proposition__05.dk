@@ -99,32 +99,17 @@ thm proposition__05 :
                            (plth.and
                               (euclidean__axioms.Col C B A)
                               (euclidean__axioms.Col B A C))))) =>
-               logic.and__ind
+               logic.and__elim_left
                  (euclidean__axioms.Col A B C)
                  (plth.and
                     (euclidean__axioms.Col B C A)
                     (plth.and
                        (euclidean__axioms.Col C B A)
                        (euclidean__axioms.Col B A C)))
-                 (euclidean__axioms.Col A B C)
-                 (H9:(plth.Prf (euclidean__axioms.Col A B C)) =>
-                  H10:(plth.Prf
-                         (plth.and
-                            (euclidean__axioms.Col B C A)
-                            (plth.and
-                               (euclidean__axioms.Col C B A)
-                               (euclidean__axioms.Col B A C)))) =>
-                  H9)
                  H8)
               H6)
              (lemma__collinearorder.lemma__collinearorder C A B H3))))
-      (logic.and__ind
-         (euclidean__axioms.nCol A B C)
-         (euclidean__axioms.Cong A B A C)
-         (euclidean__axioms.nCol A B C)
-         (H2:(plth.Prf (euclidean__axioms.nCol A B C)) =>
-          H3:(plth.Prf (euclidean__axioms.Cong A B A C)) => H2)
-         H0))
+      (logic.and__elim_left (euclidean__axioms.nCol A B C) (euclidean__axioms.Cong A B A C) H0))
      (logic.and__ind
         (euclidean__axioms.Triangle A B C)
         (euclidean__axioms.Cong A B A C)

@@ -609,15 +609,9 @@ thm lemma__ABCequalsCBA :
                                (plth.and
                                   (euclidean__axioms.Cong B A F C)
                                   (euclidean__axioms.Cong F C B A))) =>
-                        logic.and__ind
+                        logic.and__elim_left
                           (euclidean__axioms.Cong B A F C)
                           (euclidean__axioms.Cong F C B A)
-                          (euclidean__axioms.Cong B A F C)
-                          (H13:(plth.Prf
-                                  (euclidean__axioms.Cong B A F C)) =>
-                           H14:(plth.Prf
-                                  (euclidean__axioms.Cong F C B A)) =>
-                           H13)
                           H12)
                          (lemma__doublereverse.lemma__doublereverse
                             C
@@ -716,12 +710,9 @@ thm lemma__ABCequalsCBA :
                           (plth.and
                              (euclidean__axioms.Col C A B)
                              (euclidean__axioms.Col A B C))) =>
-                    logic.and__ind
+                    logic.and__elim_right
                       (euclidean__axioms.Col C A B)
                       (euclidean__axioms.Col A B C)
-                      (euclidean__axioms.Col A B C)
-                      (H10:(plth.Prf (euclidean__axioms.Col C A B)) =>
-                       H11:(plth.Prf (euclidean__axioms.Col A B C)) => H11)
                       H9)
                    H7)
                 H5)

@@ -134,12 +134,9 @@ thm lemma__rightreverse :
                                (plth.and
                                   (euclidean__axioms.Cong D B E B)
                                   (euclidean__axioms.Cong B D B E))) =>
-                        logic.and__ind
+                        logic.and__elim_right
                           (euclidean__axioms.Cong D B E B)
                           (euclidean__axioms.Cong B D B E)
-                          (euclidean__axioms.Cong B D B E)
-                          (H15:(plth.Prf (euclidean__axioms.Cong D B E B)) =>
-                           H16:(plth.Prf (euclidean__axioms.Cong B D B E)) => H16)
                           H14)
                        H12)
                       (lemma__congruenceflip.lemma__congruenceflip B D E B H11)))

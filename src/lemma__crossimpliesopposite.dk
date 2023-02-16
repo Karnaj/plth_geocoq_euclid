@@ -126,7 +126,7 @@ thm lemma__crossimpliesopposite :
                                   (plth.and
                                      (euclidean__axioms.Col C M D)
                                      (euclidean__axioms.Col M D C)))))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (euclidean__axioms.Col D C M)
                     (plth.and
                        (euclidean__axioms.Col D M C)
@@ -135,17 +135,6 @@ thm lemma__crossimpliesopposite :
                           (plth.and
                              (euclidean__axioms.Col C M D)
                              (euclidean__axioms.Col M D C))))
-                    (euclidean__axioms.Col D C M)
-                    (H11:(plth.Prf (euclidean__axioms.Col D C M)) =>
-                     H12:(plth.Prf
-                            (plth.and
-                               (euclidean__axioms.Col D M C)
-                               (plth.and
-                                  (euclidean__axioms.Col M C D)
-                                  (plth.and
-                                     (euclidean__axioms.Col C M D)
-                                     (euclidean__axioms.Col M D C))))) =>
-                     H11)
                     H10)
                    (lemma__collinearorder.lemma__collinearorder C D M H6)))
                (logic.ex__intro
@@ -178,7 +167,7 @@ thm lemma__crossimpliesopposite :
                                (plth.and
                                   (euclidean__axioms.nCol C A D)
                                   (euclidean__axioms.nCol A D C)))))) =>
-                logic.and__ind
+                logic.and__elim_left
                   (euclidean__axioms.nCol D C A)
                   (plth.and
                      (euclidean__axioms.nCol D A C)
@@ -187,17 +176,6 @@ thm lemma__crossimpliesopposite :
                         (plth.and
                            (euclidean__axioms.nCol C A D)
                            (euclidean__axioms.nCol A D C))))
-                  (euclidean__axioms.nCol D C A)
-                  (H9:(plth.Prf (euclidean__axioms.nCol D C A)) =>
-                   H10:(plth.Prf
-                          (plth.and
-                             (euclidean__axioms.nCol D A C)
-                             (plth.and
-                                (euclidean__axioms.nCol A C D)
-                                (plth.and
-                                   (euclidean__axioms.nCol C A D)
-                                   (euclidean__axioms.nCol A D C))))) =>
-                   H9)
                   H8)
                  (lemma__NCorder.lemma__NCorder C D A H7)))
              ((H7:(plth.Prf
@@ -229,22 +207,13 @@ thm lemma__crossimpliesopposite :
                               (plth.and
                                  (euclidean__axioms.nCol A D C)
                                  (euclidean__axioms.nCol D C A))))) =>
-                  logic.and__ind
+                  logic.and__elim_left
                     (euclidean__axioms.nCol C D A)
                     (plth.and
                        (euclidean__axioms.nCol D A C)
                        (plth.and
                           (euclidean__axioms.nCol A D C)
                           (euclidean__axioms.nCol D C A)))
-                    (euclidean__axioms.nCol C D A)
-                    (H10:(plth.Prf (euclidean__axioms.nCol C D A)) =>
-                     H11:(plth.Prf
-                            (plth.and
-                               (euclidean__axioms.nCol D A C)
-                               (plth.and
-                                  (euclidean__axioms.nCol A D C)
-                                  (euclidean__axioms.nCol D C A)))) =>
-                     H10)
                     H9)
                  H7)
                 (lemma__NCorder.lemma__NCorder A C D H0)))
@@ -303,12 +272,9 @@ thm lemma__crossimpliesopposite :
                               (plth.and
                                  (euclidean__axioms.Col C D M)
                                  (euclidean__axioms.Col D M C))) =>
-                       logic.and__ind
+                       logic.and__elim_left
                          (euclidean__axioms.Col C D M)
                          (euclidean__axioms.Col D M C)
-                         (euclidean__axioms.Col C D M)
-                         (H13:(plth.Prf (euclidean__axioms.Col C D M)) =>
-                          H14:(plth.Prf (euclidean__axioms.Col D M C)) => H13)
                          H12)
                       H10)
                    H8)
