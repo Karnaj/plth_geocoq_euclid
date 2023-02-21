@@ -93,7 +93,7 @@ thm lemma__parallelcollinear :
              plth.nnpp
                (euclidean__defs.TP A B C d)
                (H7:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
-                logic.and__ind
+                logic.and__ind2
                   (plth.not (plth.eq euclidean__axioms.Point A B))
                   (plth.and
                      (plth.not (plth.eq euclidean__axioms.Point c d))
@@ -101,8 +101,7 @@ thm lemma__parallelcollinear :
                         (plth.not (euclidean__defs.Meet A B c d))
                         (euclidean__defs.OS c d A B)))
                   plth.false
-                  (H8:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A B))) =>
-                   H9:(plth.Prf
+                  (H9:(plth.Prf
                          (plth.and
                             (plth.not (plth.eq euclidean__axioms.Point c d))
                             (plth.and
@@ -128,7 +127,7 @@ thm lemma__parallelcollinear :
                      H9)
                   H2))
               (H6:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
-               logic.and__ind
+               logic.and__ind2
                  (plth.neq euclidean__axioms.Point A B)
                  (plth.and
                     (plth.neq euclidean__axioms.Point c d)
@@ -136,8 +135,7 @@ thm lemma__parallelcollinear :
                        (plth.not (euclidean__defs.Meet A B c d))
                        (euclidean__defs.OS c d A B)))
                  plth.false
-                 (H7:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-                  H8:(plth.Prf
+                 (H8:(plth.Prf
                         (plth.and
                            (plth.neq euclidean__axioms.Point c d)
                            (plth.and
@@ -179,7 +177,7 @@ thm lemma__parallelcollinear :
               (euclidean__defs.TP A B C d)
               (H6:(plth.Prf (plth.eq euclidean__axioms.Point c C)) =>
                (H7:(plth.Prf (euclidean__defs.TP A B C d)) => H7)
-                 (logic.and__ind
+                 (logic.and__ind2
                     (plth.neq euclidean__axioms.Point A B)
                     (plth.and
                        (plth.neq euclidean__axioms.Point c d)
@@ -187,8 +185,7 @@ thm lemma__parallelcollinear :
                           (plth.not (euclidean__defs.Meet A B c d))
                           (euclidean__defs.OS c d A B)))
                     (euclidean__defs.TP A B C d)
-                    (H7:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-                     H8:(plth.Prf
+                    (H8:(plth.Prf
                            (plth.and
                               (plth.neq euclidean__axioms.Point c d)
                               (plth.and
@@ -338,7 +335,7 @@ thm lemma__parallelcollinear :
                                                  A
                                                  C
                                                  d)))) =>
-                                 logic.and__ind
+                                 logic.and__ind2
                                    (euclidean__defs.TP B A d C)
                                    (plth.and
                                       (euclidean__defs.TP
@@ -352,13 +349,7 @@ thm lemma__parallelcollinear :
                                          C
                                          d))
                                    (euclidean__defs.TP A B C d)
-                                   (H22:(plth.Prf
-                                           (euclidean__defs.TP
-                                              B
-                                              A
-                                              d
-                                              C)) =>
-                                    H23:(plth.Prf
+                                   (H23:(plth.Prf
                                            (plth.and
                                               (euclidean__defs.TP
                                                  A
@@ -415,19 +406,13 @@ thm lemma__parallelcollinear :
                                                A
                                                c
                                                C)))) =>
-                               logic.and__ind
+                               logic.and__ind2
                                  (euclidean__defs.TP B A C c)
                                  (plth.and
                                     (euclidean__defs.TP A B c C)
                                     (euclidean__defs.TP B A c C))
                                  (euclidean__defs.TP A B c C)
-                                 (H20:(plth.Prf
-                                         (euclidean__defs.TP
-                                            B
-                                            A
-                                            C
-                                            c)) =>
-                                  H21:(plth.Prf
+                                 (H21:(plth.Prf
                                          (plth.and
                                             (euclidean__defs.TP
                                                A
@@ -464,15 +449,13 @@ thm lemma__parallelcollinear :
                                        (plth.and
                                           (euclidean__defs.TP A B d c)
                                           (euclidean__defs.TP B A d c)))) =>
-                             logic.and__ind
+                             logic.and__ind2
                                (euclidean__defs.TP B A c d)
                                (plth.and
                                   (euclidean__defs.TP A B d c)
                                   (euclidean__defs.TP B A d c))
                                (euclidean__defs.TP A B d c)
-                               (H18:(plth.Prf
-                                       (euclidean__defs.TP B A c d)) =>
-                                H19:(plth.Prf
+                               (H19:(plth.Prf
                                        (plth.and
                                           (euclidean__defs.TP A B d c)
                                           (euclidean__defs.TP B A d c))) =>

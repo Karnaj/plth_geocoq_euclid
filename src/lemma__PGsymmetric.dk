@@ -31,12 +31,11 @@ thm lemma__PGsymmetric :
                   (plth.and
                      (euclidean__defs.Par B C D A)
                      (euclidean__defs.Par C B D A)))) =>
-         logic.and__ind
+         logic.and__ind2
            (euclidean__defs.Par C B A D)
            (plth.and (euclidean__defs.Par B C D A) (euclidean__defs.Par C B D A))
            (euclidean__defs.Par C B D A)
-           (H6:(plth.Prf (euclidean__defs.Par C B A D)) =>
-            H7:(plth.Prf
+           (H7:(plth.Prf
                   (plth.and
                      (euclidean__defs.Par B C D A)
                      (euclidean__defs.Par C B D A))) =>
@@ -46,12 +45,11 @@ thm lemma__PGsymmetric :
               H7)
            H5)
           (lemma__parallelflip.lemma__parallelflip B C A D H2)))
-      (logic.and__ind
+      (logic.and__ind2
          (euclidean__defs.Par A B C D)
          (euclidean__defs.Par A D B C)
          (euclidean__defs.Par B C A D)
-         (H2:(plth.Prf (euclidean__defs.Par A B C D)) =>
-          H3:(plth.Prf (euclidean__defs.Par A D B C)) =>
+         (H3:(plth.Prf (euclidean__defs.Par A D B C)) =>
           lemma__parallelsymmetric.lemma__parallelsymmetric A D B C H3)
          H0))
      (logic.and__ind
