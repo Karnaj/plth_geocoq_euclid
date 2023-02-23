@@ -505,74 +505,7 @@ thm lemma__parallelcollinear :
                          (plth.and
                             (plth.not (euclidean__defs.Meet A B c d))
                             (euclidean__defs.OS c d A B))))) =>
-       logic.and__ind
-         (plth.neq euclidean__axioms.Point A B)
-         (plth.and
-            (plth.neq euclidean__axioms.Point c d)
-            (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B)))
-         (plth.and
-            (plth.neq euclidean__axioms.Point A B)
-            (plth.and
-               (plth.neq euclidean__axioms.Point c d)
-               (plth.and
-                  (plth.not (euclidean__defs.Meet A B c d))
-                  (euclidean__defs.OS c d A B))))
-         (H3:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
-          H4:(plth.Prf
-                (plth.and
-                   (plth.neq euclidean__axioms.Point c d)
-                   (plth.and
-                      (plth.not (euclidean__defs.Meet A B c d))
-                      (euclidean__defs.OS c d A B)))) =>
-          logic.and__ind
-            (plth.neq euclidean__axioms.Point c d)
-            (plth.and (plth.not (euclidean__defs.Meet A B c d)) (euclidean__defs.OS c d A B))
-            (plth.and
-               (plth.neq euclidean__axioms.Point A B)
-               (plth.and
-                  (plth.neq euclidean__axioms.Point c d)
-                  (plth.and
-                     (plth.not (euclidean__defs.Meet A B c d))
-                     (euclidean__defs.OS c d A B))))
-            (H5:(plth.Prf (plth.neq euclidean__axioms.Point c d)) =>
-             H6:(plth.Prf
-                   (plth.and
-                      (plth.not (euclidean__defs.Meet A B c d))
-                      (euclidean__defs.OS c d A B))) =>
-             logic.and__ind
-               (plth.not (euclidean__defs.Meet A B c d))
-               (euclidean__defs.OS c d A B)
-               (plth.and
-                  (plth.neq euclidean__axioms.Point A B)
-                  (plth.and
-                     (plth.neq euclidean__axioms.Point c d)
-                     (plth.and
-                        (plth.not (euclidean__defs.Meet A B c d))
-                        (euclidean__defs.OS c d A B))))
-               (H7:(plth.Prf (plth.not (euclidean__defs.Meet A B c d))) =>
-                H8:(plth.Prf (euclidean__defs.OS c d A B)) =>
-                logic.conj
-                  (plth.neq euclidean__axioms.Point A B)
-                  (plth.and
-                     (plth.neq euclidean__axioms.Point c d)
-                     (plth.and
-                        (plth.not (euclidean__defs.Meet A B c d))
-                        (euclidean__defs.OS c d A B)))
-                  H3
-                  (logic.conj
-                     (plth.neq euclidean__axioms.Point c d)
-                     (plth.and
-                        (plth.not (euclidean__defs.Meet A B c d))
-                        (euclidean__defs.OS c d A B))
-                     H5
-                     (logic.conj
-                        (plth.not (euclidean__defs.Meet A B c d))
-                        (euclidean__defs.OS c d A B)
-                        H7
-                        H8)))
-               H6)
-            H4)
-         __TmpHyp)
+       __TmpHyp)
         H2)
        H).
 
