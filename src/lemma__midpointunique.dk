@@ -37,13 +37,15 @@ thm lemma__midpointunique :
              (euclidean__axioms.BetS A B C)
              (euclidean__axioms.Cong A B B C)
              (euclidean__axioms.BetS C B A)
-             ((__: plth.Prf (euclidean__axioms.BetS A B C) => euclidean__axioms.axiom__betweennesssymmetry A B C __))
+             (__:(plth.Prf (euclidean__axioms.BetS A B C)) =>
+              euclidean__axioms.axiom__betweennesssymmetry A B C __)
              H1))
          (logic.and__ind3
             (euclidean__axioms.BetS A D C)
             (euclidean__axioms.Cong A D D C)
             (euclidean__axioms.BetS C D A)
-            ((__:plth.Prf (euclidean__axioms.BetS A D C) => euclidean__axioms.axiom__betweennesssymmetry A D C __) )
+            (__:(plth.Prf (euclidean__axioms.BetS A D C)) =>
+             euclidean__axioms.axiom__betweennesssymmetry A D C __)
             H2))
         (H5:(plth.Prf (euclidean__axioms.BetS C B D)) =>
          (H6:(plth.Prf (euclidean__axioms.BetS D B C)) =>
@@ -392,8 +394,8 @@ thm lemma__midpointunique :
                (euclidean__axioms.BetS A D C)
                (euclidean__axioms.Cong A D D C)
                (euclidean__axioms.BetS A D B)
-               (
-                (__: plth.Prf (euclidean__axioms.BetS A D C) => euclidean__axioms.axiom__innertransitivity A D B C __ H6))
+               (__:(plth.Prf (euclidean__axioms.BetS A D C)) =>
+                euclidean__axioms.axiom__innertransitivity A D B C __ H6)
                H2))
            (euclidean__axioms.axiom__betweennesssymmetry C B D H5)))
        (H4:(plth.Prf (euclidean__axioms.BetS C D B)) =>
@@ -615,7 +617,8 @@ thm lemma__midpointunique :
               (euclidean__axioms.BetS A B C)
               (euclidean__axioms.Cong A B B C)
               (euclidean__axioms.BetS A B D)
-              ((__:plth.Prf (euclidean__axioms.BetS A B C) => euclidean__axioms.axiom__innertransitivity A B D C __ H5))
+              (__:(plth.Prf (euclidean__axioms.BetS A B C)) =>
+               euclidean__axioms.axiom__innertransitivity A B D C __ H5)
               H1))
           (euclidean__axioms.axiom__betweennesssymmetry C D B H4)))
       (euclidean__axioms.cn__congruencereflexive A B))

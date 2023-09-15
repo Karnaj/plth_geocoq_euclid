@@ -14179,7 +14179,6 @@ thm proposition__42 :
                                                                     P
                                                                     Q)
                                                                     H73)))
-                                                                    
                                                                     H163)
                                                                     H161)
                                                                     H160)
@@ -22147,7 +22146,6 @@ thm proposition__42 :
                                                                     E
                                                                     f)
                                                                     H92)))
-                                                                    
                                                                     H109)
                                                                     H107)
                                                                     H105)
@@ -28324,30 +28322,19 @@ thm proposition__42 :
                (euclidean__axioms.Cong B E E C)
                (plth.neq euclidean__axioms.Point E C)
                (H10:(plth.Prf (euclidean__axioms.BetS B E C)) =>
-                 (H12:(plth.Prf
-                         (plth.and
-                            (plth.neq euclidean__axioms.Point E C)
-                            (plth.and
-                               (plth.neq
-                                  euclidean__axioms.Point
-                                  B
-                                  E)
-                               (plth.neq
-                                  euclidean__axioms.Point
-                                  B
-                                  C)))) =>
-                  logic.and__elim_left
-                    (plth.neq euclidean__axioms.Point E C)
-                    (plth.and
-                       (plth.neq euclidean__axioms.Point B E)
-                       (plth.neq euclidean__axioms.Point B C))
-                    H12)
-                   (lemma__betweennotequal.lemma__betweennotequal
-                      B
-                      E
-                      C
-                      H10))
-                  
+                (H12:(plth.Prf
+                        (plth.and
+                           (plth.neq euclidean__axioms.Point E C)
+                           (plth.and
+                              (plth.neq euclidean__axioms.Point B E)
+                              (plth.neq euclidean__axioms.Point B C)))) =>
+                 logic.and__elim_left
+                   (plth.neq euclidean__axioms.Point E C)
+                   (plth.and
+                      (plth.neq euclidean__axioms.Point B E)
+                      (plth.neq euclidean__axioms.Point B C))
+                   H12)
+                  (lemma__betweennotequal.lemma__betweennotequal B E C H10))
                H2))
            (logic.or__intror
               (plth.eq euclidean__axioms.Point B C)
@@ -28491,43 +28478,42 @@ thm proposition__42 :
                          (euclidean__axioms.BetS B E C)
                          (euclidean__axioms.BetS B C E))))))
           (H5:(plth.Prf (euclidean__axioms.BetS B E C)) =>
-            logic.or__intror
-              (plth.eq euclidean__axioms.Point B E)
-              (plth.or
-                 (plth.eq euclidean__axioms.Point B C)
-                 (plth.or
-                    (plth.eq euclidean__axioms.Point E C)
-                    (plth.or
-                       (euclidean__axioms.BetS E B C)
-                       (plth.or
-                          (euclidean__axioms.BetS B E C)
-                          (euclidean__axioms.BetS B C E)))))
-              (logic.or__intror
-                 (plth.eq euclidean__axioms.Point B C)
-                 (plth.or
-                    (plth.eq euclidean__axioms.Point E C)
-                    (plth.or
-                       (euclidean__axioms.BetS E B C)
-                       (plth.or
-                          (euclidean__axioms.BetS B E C)
-                          (euclidean__axioms.BetS B C E))))
-                 (logic.or__intror
-                    (plth.eq euclidean__axioms.Point E C)
-                    (plth.or
-                       (euclidean__axioms.BetS E B C)
-                       (plth.or
-                          (euclidean__axioms.BetS B E C)
-                          (euclidean__axioms.BetS B C E)))
-                    (logic.or__intror
-                       (euclidean__axioms.BetS E B C)
-                       (plth.or
-                          (euclidean__axioms.BetS B E C)
-                          (euclidean__axioms.BetS B C E))
-                       (logic.or__introl
-                          (euclidean__axioms.BetS B E C)
-                          (euclidean__axioms.BetS B C E)
-                          H5)))))
-             
+           logic.or__intror
+             (plth.eq euclidean__axioms.Point B E)
+             (plth.or
+                (plth.eq euclidean__axioms.Point B C)
+                (plth.or
+                   (plth.eq euclidean__axioms.Point E C)
+                   (plth.or
+                      (euclidean__axioms.BetS E B C)
+                      (plth.or
+                         (euclidean__axioms.BetS B E C)
+                         (euclidean__axioms.BetS B C E)))))
+             (logic.or__intror
+                (plth.eq euclidean__axioms.Point B C)
+                (plth.or
+                   (plth.eq euclidean__axioms.Point E C)
+                   (plth.or
+                      (euclidean__axioms.BetS E B C)
+                      (plth.or
+                         (euclidean__axioms.BetS B E C)
+                         (euclidean__axioms.BetS B C E))))
+                (logic.or__intror
+                   (plth.eq euclidean__axioms.Point E C)
+                   (plth.or
+                      (euclidean__axioms.BetS E B C)
+                      (plth.or
+                         (euclidean__axioms.BetS B E C)
+                         (euclidean__axioms.BetS B C E)))
+                   (logic.or__intror
+                      (euclidean__axioms.BetS E B C)
+                      (plth.or
+                         (euclidean__axioms.BetS B E C)
+                         (euclidean__axioms.BetS B C E))
+                      (logic.or__introl
+                         (euclidean__axioms.BetS B E C)
+                         (euclidean__axioms.BetS B C E)
+                         H5)))))
           H2))
       H)
      (logic.and__ind2
