@@ -4822,13 +4822,11 @@ thm lemma__rectangleparallelogram :
                        (plth.and
                           (euclidean__defs.Per C D A)
                           (euclidean__defs.CR A C B D))) =>
-                 logic.and__ind
+                 logic.and__ind3
                    (euclidean__defs.Per C D A)
                    (euclidean__defs.CR A C B D)
                    (euclidean__axioms.nCol C D A)
-                   (H9:(plth.Prf (euclidean__defs.Per C D A)) =>
-                    H10:(plth.Prf (euclidean__defs.CR A C B D)) =>
-                    lemma__rightangleNC.lemma__rightangleNC C D A H9)
+                   (H9:(plth.Prf (euclidean__defs.Per C D A)) => lemma__rightangleNC.lemma__rightangleNC C D A H9)
                    H8)
                 H6)
              H4)
@@ -4847,21 +4845,16 @@ thm lemma__rectangleparallelogram :
                    (plth.and
                       (euclidean__defs.Per B C D)
                       (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))))) =>
-          logic.and__ind
+          logic.and__ind3
             (euclidean__defs.Per A B C)
             (plth.and
                (euclidean__defs.Per B C D)
                (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D)))
             (euclidean__axioms.nCol A B C)
-            (H4:(plth.Prf (euclidean__defs.Per A B C)) =>
-             H5:(plth.Prf
-                   (plth.and
-                      (euclidean__defs.Per B C D)
-                      (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D)))) =>
-             lemma__rightangleNC.lemma__rightangleNC A B C H4)
+            (H4:(plth.Prf (euclidean__defs.Per A B C)) => lemma__rightangleNC.lemma__rightangleNC A B C H4)
             H3)
          H0))
-     (logic.and__ind
+     (logic.and__ind3
         (euclidean__defs.Per D A B)
         (plth.and
            (euclidean__defs.Per A B C)
@@ -4869,14 +4862,7 @@ thm lemma__rectangleparallelogram :
               (euclidean__defs.Per B C D)
               (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))))
         (euclidean__axioms.nCol D A B)
-        (H1:(plth.Prf (euclidean__defs.Per D A B)) =>
-         H2:(plth.Prf
-               (plth.and
-                  (euclidean__defs.Per A B C)
-                  (plth.and
-                     (euclidean__defs.Per B C D)
-                     (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))))) =>
-         lemma__rightangleNC.lemma__rightangleNC D A B H1)
+        (H1:(plth.Prf (euclidean__defs.Per D A B)) => lemma__rightangleNC.lemma__rightangleNC D A B H1)
         H0))
     ((H0:(plth.Prf
             (plth.and

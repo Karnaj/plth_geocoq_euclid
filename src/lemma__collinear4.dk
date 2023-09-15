@@ -6324,7 +6324,7 @@ thm lemma__collinear4 :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     D)))) =>
-                                                                   logic.and__ind
+                                                                   logic.and__ind3
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -6339,25 +6339,16 @@ thm lemma__collinear4 :
                                                                     A
                                                                     D))
                                                                     plth.false
-                                                                    (H33:(
+                                                                    (
+                                                                    (__:(
                                                                     plth.Prf
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     D)) =>
-                                                                    H34:(
-                                                                    plth.Prf
-                                                                    (plth.and
-                                                                    (plth.neq
-                                                                    euclidean__axioms.Point
-                                                                    A
-                                                                    C)
-                                                                    (plth.neq
-                                                                    euclidean__axioms.Point
-                                                                    A
-                                                                    D))) =>
-                                                                    H33
+                                                                    __
                                                                     H24)
+                                                                    )
                                                                     H30)
                                                                   H26)
                                                                H8)
@@ -7709,7 +7700,7 @@ thm lemma__collinear4 :
                                                           euclidean__axioms.Point
                                                           A
                                                           D)))) =>
-                                          logic.and__ind
+                                          logic.and__ind3
                                             (plth.not
                                                (plth.eq
                                                   euclidean__axioms.Point
@@ -7721,98 +7712,109 @@ thm lemma__collinear4 :
                                                   A
                                                   D))
                                             plth.false
-                                            (H17:(plth.Prf
+                                            (
+                                             (__:plth.Prf
                                                     (plth.not
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           A
-                                                          C))) =>
-                                             H18:(plth.Prf
-                                                    (plth.not
-                                                       (plth.eq
-                                                          euclidean__axioms.Point
-                                                          A
-                                                          D))) =>
-                                             logic.or__ind
-                                               (plth.eq
-                                                  euclidean__axioms.Point
-                                                  A
-                                                  B)
-                                               (plth.or
-                                                  (plth.eq
-                                                     euclidean__axioms.Point
-                                                     A
-                                                     C)
-                                                  (plth.or
-                                                     (plth.eq
-                                                        euclidean__axioms.Point
-                                                        B
-                                                        C)
-                                                     (plth.or
-                                                        (euclidean__axioms.BetS
-                                                           B
-                                                           A
-                                                           C)
-                                                        (plth.or
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              B
-                                                              C)
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              C
-                                                              B)))))
-                                               plth.false
-                                               (H19:(plth.Prf
-                                                       (plth.eq
-                                                          euclidean__axioms.Point
-                                                          A
-                                                          B)) =>
-                                                (H20:(plth.Prf
-                                                        plth.false) =>
-                                                 (H21:(plth.Prf
-                                                         (plth.imp
+                                                          C)) =>
+                                              logic.or__ind
+                                                (plth.eq
+                                                   euclidean__axioms.Point
+                                                   A
+                                                   B)
+                                                (plth.or
+                                                   (plth.eq
+                                                      euclidean__axioms.Point
+                                                      A
+                                                      C)
+                                                   (plth.or
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
+                                                         B
+                                                         C)
+                                                      (plth.or
+                                                         (euclidean__axioms.BetS
+                                                            B
+                                                            A
+                                                            C)
+                                                         (plth.or
                                                             (euclidean__axioms.BetS
-                                                               B
                                                                A
+                                                               B
                                                                C)
-                                                            plth.false)) =>
-                                                  (H22:(plth.Prf
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               C
+                                                               B)))))
+                                                plth.false
+                                                (H19:(plth.Prf
+                                                        (plth.eq
+                                                           euclidean__axioms.Point
+                                                           A
+                                                           B)) =>
+                                                 (H20:(plth.Prf
+                                                         plth.false) =>
+                                                  (H21:(plth.Prf
                                                           (plth.imp
-                                                             (plth.or
-                                                                (euclidean__axioms.BetS
-                                                                   A
-                                                                   B
-                                                                   C)
-                                                                (euclidean__axioms.BetS
-                                                                   A
-                                                                   C
-                                                                   B))
+                                                             (euclidean__axioms.BetS
+                                                                B
+                                                                A
+                                                                C)
                                                              plth.false)) =>
-                                                   (H23:(plth.Prf
+                                                   (H22:(plth.Prf
                                                            (plth.imp
-                                                              (euclidean__axioms.BetS
-                                                                 A
-                                                                 B
-                                                                 C)
+                                                              (plth.or
+                                                                 (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                 (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))
                                                               plth.false)) =>
-                                                    (H24:(plth.Prf
+                                                    (H23:(plth.Prf
                                                             (plth.imp
                                                                (euclidean__axioms.BetS
                                                                   A
-                                                                  C
-                                                                  B)
+                                                                  B
+                                                                  C)
                                                                plth.false)) =>
-                                                     logic.false__ind
-                                                       plth.false
-                                                       H20)
-                                                      (H24:(plth.Prf
+                                                     (H24:(plth.Prf
+                                                             (plth.imp
+                                                                (euclidean__axioms.BetS
+                                                                   A
+                                                                   C
+                                                                   B)
+                                                                plth.false)) =>
+                                                      logic.false__ind
+                                                        plth.false
+                                                        H20)
+                                                       (H24:(plth.Prf
+                                                               (euclidean__axioms.BetS
+                                                                  A
+                                                                  C
+                                                                  B)) =>
+                                                        H22
+                                                          (logic.or__intror
+                                                             (euclidean__axioms.BetS
+                                                                A
+                                                                B
+                                                                C)
+                                                             (euclidean__axioms.BetS
+                                                                A
+                                                                C
+                                                                B)
+                                                             H24)))
+                                                      (H23:(plth.Prf
                                                               (euclidean__axioms.BetS
                                                                  A
-                                                                 C
-                                                                 B)) =>
+                                                                 B
+                                                                 C)) =>
                                                        H22
-                                                         (logic.or__intror
+                                                         (logic.or__introl
                                                             (euclidean__axioms.BetS
                                                                A
                                                                B
@@ -7821,35 +7823,40 @@ thm lemma__collinear4 :
                                                                A
                                                                C
                                                                B)
-                                                            H24)))
-                                                     (H23:(plth.Prf
-                                                             (euclidean__axioms.BetS
-                                                                A
-                                                                B
-                                                                C)) =>
-                                                      H22
-                                                        (logic.or__introl
+                                                            H23)))
+                                                     (H22:(plth.Prf
+                                                             (plth.or
+                                                                (euclidean__axioms.BetS
+                                                                   A
+                                                                   B
+                                                                   C)
+                                                                (euclidean__axioms.BetS
+                                                                   A
+                                                                   C
+                                                                   B))) =>
+                                                      H10
+                                                        (logic.or__intror
                                                            (euclidean__axioms.BetS
-                                                              A
                                                               B
-                                                              C)
-                                                           (euclidean__axioms.BetS
                                                               A
-                                                              C
-                                                              B)
-                                                           H23)))
-                                                    (H22:(plth.Prf
-                                                            (plth.or
-                                                               (euclidean__axioms.BetS
-                                                                  A
-                                                                  B
-                                                                  C)
-                                                               (euclidean__axioms.BetS
-                                                                  A
-                                                                  C
-                                                                  B))) =>
+                                                              C)
+                                                           (plth.or
+                                                              (euclidean__axioms.BetS
+                                                                 A
+                                                                 B
+                                                                 C)
+                                                              (euclidean__axioms.BetS
+                                                                 A
+                                                                 C
+                                                                 B))
+                                                           H22)))
+                                                    (H21:(plth.Prf
+                                                            (euclidean__axioms.BetS
+                                                               B
+                                                               A
+                                                               C)) =>
                                                      H10
-                                                       (logic.or__intror
+                                                       (logic.or__introl
                                                           (euclidean__axioms.BetS
                                                              B
                                                              A
@@ -7863,14 +7870,46 @@ thm lemma__collinear4 :
                                                                 A
                                                                 C
                                                                 B))
-                                                          H22)))
-                                                   (H21:(plth.Prf
-                                                           (euclidean__axioms.BetS
-                                                              B
+                                                          H21)))
+                                                   (H1 H19))
+                                                (H19:(plth.Prf
+                                                        (plth.or
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
                                                               A
-                                                              C)) =>
-                                                    H10
-                                                      (logic.or__introl
+                                                              C)
+                                                           (plth.or
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
+                                                                 B
+                                                                 C)
+                                                              (plth.or
+                                                                 (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                 (plth.or
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)))))) =>
+                                                 logic.or__ind
+                                                   (plth.eq
+                                                      euclidean__axioms.Point
+                                                      A
+                                                      C)
+                                                   (plth.or
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
+                                                         B
+                                                         C)
+                                                      (plth.or
                                                          (euclidean__axioms.BetS
                                                             B
                                                             A
@@ -7883,109 +7922,76 @@ thm lemma__collinear4 :
                                                             (euclidean__axioms.BetS
                                                                A
                                                                C
-                                                               B))
-                                                         H21)))
-                                                  (H1 H19))
-                                               (H19:(plth.Prf
-                                                       (plth.or
-                                                          (plth.eq
-                                                             euclidean__axioms.Point
-                                                             A
-                                                             C)
-                                                          (plth.or
-                                                             (plth.eq
-                                                                euclidean__axioms.Point
-                                                                B
-                                                                C)
-                                                             (plth.or
+                                                               B))))
+                                                   plth.false
+                                                   (H20:(plth.Prf
+                                                           (plth.eq
+                                                              euclidean__axioms.Point
+                                                              A
+                                                              C)) =>
+                                                    (H21:(plth.Prf
+                                                            plth.false) =>
+                                                     (H22:(plth.Prf
+                                                             (plth.imp
                                                                 (euclidean__axioms.BetS
                                                                    B
                                                                    A
                                                                    C)
-                                                                (plth.or
-                                                                   (euclidean__axioms.BetS
+                                                                plth.false)) =>
+                                                      (H23:(plth.Prf
+                                                              (plth.imp
+                                                                 (plth.or
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)))))) =>
-                                                logic.or__ind
-                                                  (plth.eq
-                                                     euclidean__axioms.Point
-                                                     A
-                                                     C)
-                                                  (plth.or
-                                                     (plth.eq
-                                                        euclidean__axioms.Point
-                                                        B
-                                                        C)
-                                                     (plth.or
-                                                        (euclidean__axioms.BetS
-                                                           B
-                                                           A
-                                                           C)
-                                                        (plth.or
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              B
-                                                              C)
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              C
-                                                              B))))
-                                                  plth.false
-                                                  (H20:(plth.Prf
-                                                          (plth.eq
-                                                             euclidean__axioms.Point
-                                                             A
-                                                             C)) =>
-                                                   (H21:(plth.Prf
-                                                           plth.false) =>
-                                                    (H22:(plth.Prf
-                                                            (plth.imp
-                                                               (euclidean__axioms.BetS
-                                                                  B
-                                                                  A
-                                                                  C)
-                                                               plth.false)) =>
-                                                     (H23:(plth.Prf
-                                                             (plth.imp
-                                                                (plth.or
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                   (euclidean__axioms.BetS
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B))
-                                                                plth.false)) =>
-                                                      (H24:(plth.Prf
-                                                              (plth.imp
-                                                                 (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
                                                                  plth.false)) =>
-                                                       (H25:(plth.Prf
+                                                       (H24:(plth.Prf
                                                                (plth.imp
                                                                   (euclidean__axioms.BetS
                                                                     A
+                                                                    B
+                                                                    C)
+                                                                  plth.false)) =>
+                                                        (H25:(plth.Prf
+                                                                (plth.imp
+                                                                   (euclidean__axioms.BetS
+                                                                    A
                                                                     C
                                                                     B)
-                                                                  plth.false)) =>
-                                                        logic.false__ind
-                                                          plth.false
-                                                          H21)
-                                                         (H25:(plth.Prf
-                                                                 (euclidean__axioms.BetS
+                                                                   plth.false)) =>
+                                                         logic.false__ind
+                                                           plth.false
+                                                           H21)
+                                                          (H25:(plth.Prf
+                                                                  (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)) =>
+                                                           H23
+                                                             (logic.or__intror
+                                                                (euclidean__axioms.BetS
+                                                                   A
+                                                                   B
+                                                                   C)
+                                                                (euclidean__axioms.BetS
+                                                                   A
+                                                                   C
+                                                                   B)
+                                                                H25)))
+                                                         (H24:(plth.Prf
+                                                                 (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)) =>
                                                           H23
-                                                            (logic.or__intror
+                                                            (logic.or__introl
                                                                (euclidean__axioms.BetS
                                                                   A
                                                                   B
@@ -7994,35 +8000,40 @@ thm lemma__collinear4 :
                                                                   A
                                                                   C
                                                                   B)
-                                                               H25)))
-                                                        (H24:(plth.Prf
-                                                                (euclidean__axioms.BetS
-                                                                   A
-                                                                   B
-                                                                   C)) =>
-                                                         H23
-                                                           (logic.or__introl
-                                                              (euclidean__axioms.BetS
-                                                                 A
-                                                                 B
-                                                                 C)
-                                                              (euclidean__axioms.BetS
-                                                                 A
-                                                                 C
-                                                                 B)
-                                                              H24)))
-                                                       (H23:(plth.Prf
-                                                               (plth.or
-                                                                  (euclidean__axioms.BetS
+                                                               H24)))
+                                                        (H23:(plth.Prf
+                                                                (plth.or
+                                                                   (euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)
-                                                                  (euclidean__axioms.BetS
+                                                                   (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B))) =>
+                                                         H10
+                                                           (logic.or__intror
+                                                              (euclidean__axioms.BetS
+                                                                 B
+                                                                 A
+                                                                 C)
+                                                              (plth.or
+                                                                 (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                 (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))
+                                                              H23)))
+                                                       (H22:(plth.Prf
+                                                               (euclidean__axioms.BetS
+                                                                  B
+                                                                  A
+                                                                  C)) =>
                                                         H10
-                                                          (logic.or__intror
+                                                          (logic.or__introl
                                                              (euclidean__axioms.BetS
                                                                 B
                                                                 A
@@ -8036,307 +8047,66 @@ thm lemma__collinear4 :
                                                                    A
                                                                    C
                                                                    B))
-                                                             H23)))
-                                                      (H22:(plth.Prf
-                                                              (euclidean__axioms.BetS
+                                                             H22)))
+                                                      (__ H20))
+                                                   (H20:(plth.Prf
+                                                           (plth.or
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
                                                                  B
-                                                                 A
-                                                                 C)) =>
-                                                       H10
-                                                         (logic.or__introl
-                                                            (euclidean__axioms.BetS
-                                                               B
-                                                               A
-                                                               C)
-                                                            (plth.or
-                                                               (euclidean__axioms.BetS
-                                                                  A
-                                                                  B
-                                                                  C)
-                                                               (euclidean__axioms.BetS
-                                                                  A
-                                                                  C
-                                                                  B))
-                                                            H22)))
-                                                     (H17 H20))
-                                                  (H20:(plth.Prf
-                                                          (plth.or
-                                                             (plth.eq
-                                                                euclidean__axioms.Point
-                                                                B
-                                                                C)
-                                                             (plth.or
-                                                                (euclidean__axioms.BetS
-                                                                   B
-                                                                   A
-                                                                   C)
-                                                                (plth.or
-                                                                   (euclidean__axioms.BetS
+                                                                 C)
+                                                              (plth.or
+                                                                 (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                 (plth.or
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)
-                                                                   (euclidean__axioms.BetS
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B))))) =>
-                                                   logic.or__ind
-                                                     (plth.eq
-                                                        euclidean__axioms.Point
-                                                        B
-                                                        C)
-                                                     (plth.or
-                                                        (euclidean__axioms.BetS
-                                                           B
-                                                           A
-                                                           C)
-                                                        (plth.or
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              B
-                                                              C)
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              C
-                                                              B)))
-                                                     plth.false
-                                                     (H21:(plth.Prf
-                                                             (plth.eq
-                                                                euclidean__axioms.Point
-                                                                B
-                                                                C)) =>
-                                                      (H22:(plth.Prf
-                                                              plth.false) =>
-                                                       (H23:(plth.Prf
-                                                               (plth.imp
-                                                                  (euclidean__axioms.BetS
-                                                                    B
-                                                                    A
-                                                                    C)
-                                                                  plth.false)) =>
-                                                        (H24:(plth.Prf
+                                                    logic.or__ind
+                                                      (plth.eq
+                                                         euclidean__axioms.Point
+                                                         B
+                                                         C)
+                                                      (plth.or
+                                                         (euclidean__axioms.BetS
+                                                            B
+                                                            A
+                                                            C)
+                                                         (plth.or
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               B
+                                                               C)
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               C
+                                                               B)))
+                                                      plth.false
+                                                      (H21:(plth.Prf
+                                                              (plth.eq
+                                                                 euclidean__axioms.Point
+                                                                 B
+                                                                 C)) =>
+                                                       (H22:(plth.Prf
+                                                               plth.false) =>
+                                                        (H23:(plth.Prf
                                                                 (plth.imp
-                                                                   (plth.or
-                                                                    (euclidean__axioms.BetS
-                                                                    A
+                                                                   (euclidean__axioms.BetS
                                                                     B
-                                                                    C)
-                                                                    (euclidean__axioms.BetS
                                                                     A
-                                                                    C
-                                                                    B))
+                                                                    C)
                                                                    plth.false)) =>
-                                                         (H25:(plth.Prf
+                                                         (H24:(plth.Prf
                                                                  (plth.imp
-                                                                    (
-                                                                    euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    plth.false)) =>
-                                                          (H26:(plth.Prf
-                                                                  (plth.imp
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                    plth.false)) =>
-                                                           logic.false__ind
-                                                             plth.false
-                                                             H22)
-                                                            (H26:(plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)) =>
-                                                             H24
-                                                               (logic.or__intror
-                                                                  (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                  (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                  H26)))
-                                                           (H25:(plth.Prf
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)) =>
-                                                            H24
-                                                              (logic.or__introl
-                                                                 (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                 (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                 H25)))
-                                                          (H24:(plth.Prf
-                                                                  (plth.or
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B))) =>
-                                                           H10
-                                                             (logic.or__intror
-                                                                (euclidean__axioms.BetS
-                                                                   B
-                                                                   A
-                                                                   C)
-                                                                (plth.or
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B))
-                                                                H24)))
-                                                         (H23:(plth.Prf
-                                                                 (euclidean__axioms.BetS
-                                                                    B
-                                                                    A
-                                                                    C)) =>
-                                                          H10
-                                                            (logic.or__introl
-                                                               (euclidean__axioms.BetS
-                                                                  B
-                                                                  A
-                                                                  C)
-                                                               (plth.or
-                                                                  (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                  (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B))
-                                                               H23)))
-                                                        (H11 H21))
-                                                     (H21:(plth.Prf
-                                                             (plth.or
-                                                                (euclidean__axioms.BetS
-                                                                   B
-                                                                   A
-                                                                   C)
-                                                                (plth.or
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                   (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)))) =>
-                                                      logic.or__ind
-                                                        (euclidean__axioms.BetS
-                                                           B
-                                                           A
-                                                           C)
-                                                        (plth.or
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              B
-                                                              C)
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              C
-                                                              B))
-                                                        plth.false
-                                                        (H22:(plth.Prf
-                                                                (euclidean__axioms.BetS
-                                                                   B
-                                                                   A
-                                                                   C)) =>
-                                                         (H23:(plth.Prf
-                                                                 (plth.imp
-                                                                    (
-                                                                    euclidean__axioms.BetS
-                                                                    B
-                                                                    A
-                                                                    C)
-                                                                    plth.false)) =>
-                                                          (H24:(plth.Prf
-                                                                  (plth.imp
-                                                                    (plth.or
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B))
-                                                                    plth.false)) =>
-                                                           (H25:(plth.Prf
-                                                                   plth.false) =>
-                                                            (H26:(plth.Prf
-                                                                    (
-                                                                    plth.imp
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    plth.false)) =>
-                                                             (H27:(plth.Prf
-                                                                    (plth.imp
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                    plth.false)) =>
-                                                              logic.false__ind
-                                                                plth.false
-                                                                H25)
-                                                               (H27:(
-                                                                plth.Prf
-                                                                  (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)) =>
-                                                                H24
-                                                                  (logic.or__intror
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                    H27)))
-                                                              (H26:(plth.Prf
-                                                                    (euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)) =>
-                                                               H24
-                                                                 (logic.or__introl
-                                                                    (
-                                                                    euclidean__axioms.BetS
-                                                                    A
-                                                                    B
-                                                                    C)
-                                                                    (
-                                                                    euclidean__axioms.BetS
-                                                                    A
-                                                                    C
-                                                                    B)
-                                                                    H26)))
-                                                             (H23
-                                                                H22))
-                                                            (H24:(plth.Prf
                                                                     (
                                                                     plth.or
                                                                     (euclidean__axioms.BetS
@@ -8346,14 +8116,60 @@ thm lemma__collinear4 :
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     C
-                                                                    B))) =>
-                                                             H10
-                                                               (logic.or__intror
-                                                                  (euclidean__axioms.BetS
-                                                                    B
+                                                                    B))
+                                                                    plth.false)) =>
+                                                          (H25:(plth.Prf
+                                                                  (plth.imp
+                                                                    (euclidean__axioms.BetS
                                                                     A
+                                                                    B
                                                                     C)
-                                                                  (plth.or
+                                                                    plth.false)) =>
+                                                           (H26:(plth.Prf
+                                                                   (plth.imp
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                    plth.false)) =>
+                                                            logic.false__ind
+                                                              plth.false
+                                                              H22)
+                                                             (H26:(plth.Prf
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)) =>
+                                                              H24
+                                                                (logic.or__intror
+                                                                   (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                   (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                   H26)))
+                                                            (H25:(plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)) =>
+                                                             H24
+                                                               (logic.or__introl
+                                                                  (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                  (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                  H25)))
+                                                           (H24:(plth.Prf
+                                                                   (plth.or
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8361,15 +8177,9 @@ thm lemma__collinear4 :
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     C
-                                                                    B))
-                                                                  H24)))
-                                                           (H23:(plth.Prf
-                                                                   (euclidean__axioms.BetS
-                                                                    B
-                                                                    A
-                                                                    C)) =>
+                                                                    B))) =>
                                                             H10
-                                                              (logic.or__introl
+                                                              (logic.or__intror
                                                                  (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -8385,8 +8195,18 @@ thm lemma__collinear4 :
                                                                     A
                                                                     C
                                                                     B))
-                                                                 H23)))
-                                                        (H22:(plth.Prf
+                                                                 H24)))
+                                                          (H23:(plth.Prf
+                                                                  (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)) =>
+                                                           H10
+                                                             (logic.or__introl
+                                                                (euclidean__axioms.BetS
+                                                                   B
+                                                                   A
+                                                                   C)
                                                                 (plth.or
                                                                    (euclidean__axioms.BetS
                                                                     A
@@ -8395,31 +8215,204 @@ thm lemma__collinear4 :
                                                                    (euclidean__axioms.BetS
                                                                     A
                                                                     C
-                                                                    B))) =>
-                                                         logic.or__ind
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              B
-                                                              C)
-                                                           (euclidean__axioms.BetS
-                                                              A
-                                                              C
-                                                              B)
-                                                           plth.false
-                                                           (H23:(plth.Prf
-                                                                   (euclidean__axioms.BetS
+                                                                    B))
+                                                                H23)))
+                                                         (H11 H21))
+                                                      (H21:(plth.Prf
+                                                              (plth.or
+                                                                 (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                 (plth.or
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     B
-                                                                    C)) =>
-                                                            (H24:(plth.Prf
+                                                                    C)
                                                                     (
-                                                                    plth.imp
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)))) =>
+                                                       logic.or__ind
+                                                         (euclidean__axioms.BetS
+                                                            B
+                                                            A
+                                                            C)
+                                                         (plth.or
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               B
+                                                               C)
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               C
+                                                               B))
+                                                         plth.false
+                                                         (H22:(plth.Prf
+                                                                 (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)) =>
+                                                          (H23:(plth.Prf
+                                                                  (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)
                                                                     plth.false)) =>
-                                                             (H25:(plth.Prf
+                                                           (H24:(plth.Prf
+                                                                   (plth.imp
+                                                                    (plth.or
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))
+                                                                    plth.false)) =>
+                                                            (H25:(plth.Prf
+                                                                    plth.false) =>
+                                                             (H26:(plth.Prf
+                                                                    (plth.imp
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    plth.false)) =>
+                                                              (H27:(plth.Prf
+                                                                    (plth.imp
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                    plth.false)) =>
+                                                               logic.false__ind
+                                                                 plth.false
+                                                                 H25)
+                                                                (H27:(
+                                                                 plth.Prf
+                                                                   (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)) =>
+                                                                 H24
+                                                                   (logic.or__intror
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                    H27)))
+                                                               (H26:(
+                                                                plth.Prf
+                                                                  (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)) =>
+                                                                H24
+                                                                  (logic.or__introl
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B)
+                                                                    H26)))
+                                                              (H23
+                                                                 H22))
+                                                             (H24:(plth.Prf
+                                                                    (plth.or
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))) =>
+                                                              H10
+                                                                (logic.or__intror
+                                                                   (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                   (plth.or
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))
+                                                                   H24)))
+                                                            (H23:(plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)) =>
+                                                             H10
+                                                               (logic.or__introl
+                                                                  (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                  (plth.or
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))
+                                                                  H23)))
+                                                         (H22:(plth.Prf
+                                                                 (plth.or
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    C
+                                                                    B))) =>
+                                                          logic.or__ind
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               B
+                                                               C)
+                                                            (euclidean__axioms.BetS
+                                                               A
+                                                               C
+                                                               B)
+                                                            plth.false
+                                                            (H23:(plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
+                                                                    A
+                                                                    B
+                                                                    C)) =>
+                                                             (H24:(plth.Prf
+                                                                    (plth.imp
+                                                                    (euclidean__axioms.BetS
+                                                                    B
+                                                                    A
+                                                                    C)
+                                                                    plth.false)) =>
+                                                              (H25:(plth.Prf
                                                                     (plth.imp
                                                                     (plth.or
                                                                     (euclidean__axioms.BetS
@@ -8431,39 +8424,38 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     plth.false)) =>
-                                                              (H26:(plth.Prf
-                                                                    (plth.imp
+                                                               (H26:(
+                                                                plth.Prf
+                                                                  (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)
                                                                     plth.false)) =>
-                                                               (H27:(
-                                                                plth.Prf
-                                                                  (plth.imp
+                                                                (H27:(
+                                                                 plth.Prf
+                                                                   (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)
                                                                     plth.false)) =>
-                                                                (H28:(
-                                                                 plth.Prf
-                                                                   plth.false) =>
-                                                                 logic.false__ind
-                                                                   plth.false
-                                                                   H28)
-                                                                  (H26
-                                                                    H23))
-                                                                 (H27:(
+                                                                 (H28:(
                                                                   plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.BetS
+                                                                    plth.false) =>
+                                                                  logic.false__ind
+                                                                    plth.false
+                                                                    H28)
+                                                                   (H26
+                                                                    H23))
+                                                                  (H27:(
+                                                                   plth.Prf
+                                                                    (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)) =>
-                                                                  H25
-                                                                    (
-                                                                    logic.or__intror
+                                                                   H25
+                                                                    (logic.or__intror
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8473,14 +8465,16 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B)
                                                                     H27)))
-                                                                (H26:(
-                                                                 plth.Prf
-                                                                   (euclidean__axioms.BetS
+                                                                 (H26:(
+                                                                  plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)) =>
-                                                                 H25
-                                                                   (logic.or__introl
+                                                                  H25
+                                                                    (
+                                                                    logic.or__introl
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8490,9 +8484,9 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B)
                                                                     H26)))
-                                                               (H25:(
-                                                                plth.Prf
-                                                                  (plth.or
+                                                                (H25:(
+                                                                 plth.Prf
+                                                                   (plth.or
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8501,8 +8495,8 @@ thm lemma__collinear4 :
                                                                     A
                                                                     C
                                                                     B))) =>
-                                                                H10
-                                                                  (logic.or__intror
+                                                                 H10
+                                                                   (logic.or__intror
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -8517,20 +8511,19 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     H25)))
-                                                              (H24:(plth.Prf
-                                                                    (euclidean__axioms.BetS
+                                                               (H24:(
+                                                                plth.Prf
+                                                                  (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)) =>
-                                                               H10
-                                                                 (logic.or__introl
-                                                                    (
-                                                                    euclidean__axioms.BetS
+                                                                H10
+                                                                  (logic.or__introl
+                                                                    (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)
-                                                                    (
-                                                                    plth.or
+                                                                    (plth.or
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8540,20 +8533,20 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     H24)))
-                                                           (H23:(plth.Prf
-                                                                   (euclidean__axioms.BetS
+                                                            (H23:(plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)) =>
-                                                            (H24:(plth.Prf
-                                                                    (
-                                                                    plth.imp
+                                                             (H24:(plth.Prf
+                                                                    (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)
                                                                     plth.false)) =>
-                                                             (H25:(plth.Prf
+                                                              (H25:(plth.Prf
                                                                     (plth.imp
                                                                     (plth.or
                                                                     (euclidean__axioms.BetS
@@ -8565,39 +8558,38 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     plth.false)) =>
-                                                              (H26:(plth.Prf
-                                                                    (plth.imp
+                                                               (H26:(
+                                                                plth.Prf
+                                                                  (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)
                                                                     plth.false)) =>
-                                                               (H27:(
-                                                                plth.Prf
-                                                                  (plth.imp
+                                                                (H27:(
+                                                                 plth.Prf
+                                                                   (plth.imp
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)
                                                                     plth.false)) =>
-                                                                (H28:(
-                                                                 plth.Prf
-                                                                   plth.false) =>
-                                                                 logic.false__ind
-                                                                   plth.false
-                                                                   H28)
-                                                                  (H27
-                                                                    H23))
-                                                                 (H27:(
+                                                                 (H28:(
                                                                   plth.Prf
-                                                                    (
-                                                                    euclidean__axioms.BetS
+                                                                    plth.false) =>
+                                                                  logic.false__ind
+                                                                    plth.false
+                                                                    H28)
+                                                                   (H27
+                                                                    H23))
+                                                                  (H27:(
+                                                                   plth.Prf
+                                                                    (euclidean__axioms.BetS
                                                                     A
                                                                     C
                                                                     B)) =>
-                                                                  H25
-                                                                    (
-                                                                    logic.or__intror
+                                                                   H25
+                                                                    (logic.or__intror
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8607,14 +8599,16 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B)
                                                                     H27)))
-                                                                (H26:(
-                                                                 plth.Prf
-                                                                   (euclidean__axioms.BetS
+                                                                 (H26:(
+                                                                  plth.Prf
+                                                                    (
+                                                                    euclidean__axioms.BetS
                                                                     A
                                                                     B
                                                                     C)) =>
-                                                                 H25
-                                                                   (logic.or__introl
+                                                                  H25
+                                                                    (
+                                                                    logic.or__introl
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8624,9 +8618,9 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B)
                                                                     H26)))
-                                                               (H25:(
-                                                                plth.Prf
-                                                                  (plth.or
+                                                                (H25:(
+                                                                 plth.Prf
+                                                                   (plth.or
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8635,8 +8629,8 @@ thm lemma__collinear4 :
                                                                     A
                                                                     C
                                                                     B))) =>
-                                                                H10
-                                                                  (logic.or__intror
+                                                                 H10
+                                                                   (logic.or__intror
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -8651,20 +8645,19 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     H25)))
-                                                              (H24:(plth.Prf
-                                                                    (euclidean__axioms.BetS
+                                                               (H24:(
+                                                                plth.Prf
+                                                                  (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)) =>
-                                                               H10
-                                                                 (logic.or__introl
-                                                                    (
-                                                                    euclidean__axioms.BetS
+                                                                H10
+                                                                  (logic.or__introl
+                                                                    (euclidean__axioms.BetS
                                                                     B
                                                                     A
                                                                     C)
-                                                                    (
-                                                                    plth.or
+                                                                    (plth.or
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8674,11 +8667,12 @@ thm lemma__collinear4 :
                                                                     C
                                                                     B))
                                                                     H24)))
-                                                           H22)
-                                                        H21)
-                                                     H20)
-                                                  H19)
-                                               H9)
+                                                            H22)
+                                                         H21)
+                                                      H20)
+                                                   H19)
+                                                H9)
+                                               )
                                             H16)
                                          H14)
                                       H12)

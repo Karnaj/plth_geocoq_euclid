@@ -107,23 +107,18 @@ thm lemma__parallelcollinear :
                             (plth.and
                                (plth.not (euclidean__defs.Meet A B c d))
                                (euclidean__defs.OS c d A B)))) =>
-                   logic.and__ind
+                   logic.and__ind3
                      (plth.not (plth.eq euclidean__axioms.Point c d))
                      (plth.and
                         (plth.not (euclidean__defs.Meet A B c d))
                         (euclidean__defs.OS c d A B))
                      plth.false
-                     (H10:(plth.Prf
-                             (plth.not (plth.eq euclidean__axioms.Point c d))) =>
-                      H11:(plth.Prf
-                             (plth.and
-                                (plth.not (euclidean__defs.Meet A B c d))
-                                (euclidean__defs.OS c d A B))) =>
-                      (H14:(plth.Prf plth.false) =>
-                       (H15:(plth.Prf plth.false) =>
-                        logic.false__ind plth.false H15)
-                         (H6 H7))
-                        (H10 H5))
+                     (__ =>
+                       (H14:(plth.Prf plth.false) =>
+                        (H15:(plth.Prf plth.false) =>
+                         logic.false__ind plth.false H15)
+                          (H6 H7))
+                         (__ H5))
                      H9)
                   H2))
               (H6:(plth.Prf (plth.not (euclidean__defs.TP A B C d))) =>
@@ -141,18 +136,13 @@ thm lemma__parallelcollinear :
                            (plth.and
                               (plth.not (euclidean__defs.Meet A B c d))
                               (euclidean__defs.OS c d A B)))) =>
-                  logic.and__ind
+                  logic.and__ind3
                     (plth.neq euclidean__axioms.Point c d)
                     (plth.and
                        (plth.not (euclidean__defs.Meet A B c d))
                        (euclidean__defs.OS c d A B))
                     plth.false
-                    (H9:(plth.Prf (plth.neq euclidean__axioms.Point c d)) =>
-                     H10:(plth.Prf
-                            (plth.and
-                               (plth.not (euclidean__defs.Meet A B c d))
-                               (euclidean__defs.OS c d A B))) =>
-                     H9 H5)
+                    (__ => __ H5)
                     H8)
                  H2))
            (H5:(plth.Prf

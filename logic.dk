@@ -149,3 +149,15 @@ def and__elim_right:
   H:plth.Prf (plth.and A B) ->
   plth.Prf B := 
   A:plth.Prop => B:plth.Prop => H: plth.Prf (plth.and A B) => H B (p1 => p2 => p2).
+
+
+def and__ind3 :
+  A:plth.Prop ->
+  B:plth.Prop ->
+  P:plth.Prop ->
+  f:(__0:(plth.Prf A) -> plth.Prf P) -> a:(plth.Prf (plth.and A B)) -> plth.Prf P
+  := 
+  A:plth.Prop =>
+  B:plth.Prop =>
+  P:plth.Prop =>
+  f:(__0:(plth.Prf A) -> plth.Prf P) => a:(plth.Prf (plth.and A B)) => a P (p1 => p2 => f p1).

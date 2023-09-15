@@ -131,156 +131,98 @@ thm proposition__26A :
                                   E
                                   F
                                   D))) =>
-                     logic.and__ind
+                     logic.and__ind3
                        (euclidean__defs.CongA B A C E D F)
                        (euclidean__defs.CongA B C A E F D)
                        plth.false
-                       (H24:(plth.Prf
-                               (euclidean__defs.CongA
-                                  B
-                                  A
-                                  C
-                                  E
-                                  D
-                                  F)) =>
-                        H25:(plth.Prf
-                               (euclidean__defs.CongA
-                                  B
-                                  C
-                                  A
-                                  E
-                                  F
-                                  D)) =>
-                        (H32:(plth.Prf
-                                (plth.imp
-                                   (euclidean__axioms.Cong
-                                      A
-                                      B
-                                      D
-                                      E)
-                                   (plth.imp
-                                      (plth.and
-                                         (euclidean__axioms.Cong
-                                            A
-                                            C
-                                            D
-                                            F)
-                                         (euclidean__defs.CongA
-                                            B
-                                            A
-                                            C
-                                            E
-                                            D
-                                            F))
-                                      plth.false))) =>
-                         (H33:(plth.Prf
+                       (__ =>
+                         (H32:(plth.Prf
                                  (plth.imp
-                                    (plth.and
-                                       (euclidean__axioms.Cong
-                                          A
-                                          C
-                                          D
-                                          F)
-                                       (euclidean__defs.CongA
-                                          B
-                                          A
-                                          C
-                                          E
-                                          D
-                                          F))
-                                    plth.false)) =>
-                          (H34:(plth.Prf
+                                    (euclidean__axioms.Cong
+                                       A
+                                       B
+                                       D
+                                       E)
+                                    (plth.imp
+                                       (plth.and
+                                          (euclidean__axioms.Cong
+                                             A
+                                             C
+                                             D
+                                             F)
+                                          (euclidean__defs.CongA
+                                             B
+                                             A
+                                             C
+                                             E
+                                             D
+                                             F))
+                                       plth.false))) =>
+                          (H33:(plth.Prf
                                   (plth.imp
-                                     (euclidean__axioms.Cong
-                                        A
-                                        C
-                                        D
-                                        F)
-                                     (plth.imp
+                                     (plth.and
+                                        (euclidean__axioms.Cong
+                                           A
+                                           C
+                                           D
+                                           F)
                                         (euclidean__defs.CongA
                                            B
                                            A
                                            C
                                            E
                                            D
-                                           F)
-                                        plth.false))) =>
-                           (H35:(plth.Prf
+                                           F))
+                                     plth.false)) =>
+                           (H34:(plth.Prf
                                    (plth.imp
-                                      (euclidean__defs.CongA
-                                         B
+                                      (euclidean__axioms.Cong
                                          A
                                          C
-                                         E
                                          D
                                          F)
-                                      plth.false)) =>
-                            (H36:(plth.Prf
-                                    plth.false) =>
-                             logic.false__ind
-                               plth.false
-                               H36)
-                              (H35 H24))
-                             (H34 H20))
-                            (H34:(plth.Prf
-                                    (euclidean__axioms.Cong
-                                       A
-                                       C
-                                       D
-                                       F)) =>
-                             H35:(plth.Prf
-                                    (euclidean__defs.CongA
-                                       B
-                                       A
-                                       C
-                                       E
-                                       D
-                                       F)) =>
-                             H33
-                               (logic.conj
-                                  (euclidean__axioms.Cong
-                                     A
-                                     C
-                                     D
-                                     F)
-                                  (euclidean__defs.CongA
-                                     B
-                                     A
-                                     C
-                                     E
-                                     D
-                                     F)
-                                  H34
-                                  H35)))
-                           (H32 H14))
-                          (H32:(plth.Prf
-                                  (euclidean__axioms.Cong
-                                     A
-                                     B
-                                     D
-                                     E)) =>
-                           H33:(plth.Prf
-                                  (plth.and
+                                      (plth.imp
+                                         (euclidean__defs.CongA
+                                            B
+                                            A
+                                            C
+                                            E
+                                            D
+                                            F)
+                                         plth.false))) =>
+                            (H35:(plth.Prf
+                                    (plth.imp
+                                       (euclidean__defs.CongA
+                                          B
+                                          A
+                                          C
+                                          E
+                                          D
+                                          F)
+                                       plth.false)) =>
+                             (H36:(plth.Prf
+                                     plth.false) =>
+                              logic.false__ind
+                                plth.false
+                                H36)
+                               (H35 __))
+                              (H34 H20))
+                             (H34:(plth.Prf
                                      (euclidean__axioms.Cong
                                         A
                                         C
                                         D
-                                        F)
+                                        F)) =>
+                              H35:(plth.Prf
                                      (euclidean__defs.CongA
                                         B
                                         A
                                         C
                                         E
                                         D
-                                        F))) =>
-                           H17
-                             (logic.conj
-                                (euclidean__axioms.Cong
-                                   A
-                                   B
-                                   D
-                                   E)
-                                (plth.and
+                                        F)) =>
+                              H33
+                                (logic.conj
                                    (euclidean__axioms.Cong
                                       A
                                       C
@@ -292,9 +234,52 @@ thm proposition__26A :
                                       C
                                       E
                                       D
-                                      F))
-                                H32
-                                H33)))
+                                      F)
+                                   H34
+                                   H35)))
+                            (H32 H14))
+                           (H32:(plth.Prf
+                                   (euclidean__axioms.Cong
+                                      A
+                                      B
+                                      D
+                                      E)) =>
+                            H33:(plth.Prf
+                                   (plth.and
+                                      (euclidean__axioms.Cong
+                                         A
+                                         C
+                                         D
+                                         F)
+                                      (euclidean__defs.CongA
+                                         B
+                                         A
+                                         C
+                                         E
+                                         D
+                                         F))) =>
+                            H17
+                              (logic.conj
+                                 (euclidean__axioms.Cong
+                                    A
+                                    B
+                                    D
+                                    E)
+                                 (plth.and
+                                    (euclidean__axioms.Cong
+                                       A
+                                       C
+                                       D
+                                       F)
+                                    (euclidean__defs.CongA
+                                       B
+                                       A
+                                       C
+                                       E
+                                       D
+                                       F))
+                                 H32
+                                 H33)))
                        H21)
                     H16))
                 (proposition__04.proposition__04

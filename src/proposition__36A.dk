@@ -1754,7 +1754,7 @@ thm proposition__36A :
                       E
                       H
                       H21))
-                  (logic.and__ind
+                  (logic.and__ind3
                      (euclidean__defs.Par B E C H)
                      (euclidean__axioms.Cong B E C H)
                      (euclidean__defs.Par E B C H)
@@ -1764,50 +1764,49 @@ thm proposition__36A :
                                 E
                                 C
                                 H)) =>
-                      H24:(plth.Prf
-                             (euclidean__axioms.Cong
+                       (H29:(plth.Prf
+                               (plth.and
+                                  (euclidean__defs.Par
+                                     E
+                                     B
+                                     C
+                                     H)
+                                  (plth.and
+                                     (euclidean__defs.Par
+                                        B
+                                        E
+                                        H
+                                        C)
+                                     (euclidean__defs.Par
+                                        E
+                                        B
+                                        H
+                                        C)))) =>
+                        logic.and__elim_left
+                          (euclidean__defs.Par
+                             E
+                             B
+                             C
+                             H)
+                          (plth.and
+                             (euclidean__defs.Par
                                 B
                                 E
-                                C
-                                H)) =>
-                      (H29:(plth.Prf
-                              (plth.and
-                                 (euclidean__defs.Par
-                                    E
-                                    B
-                                    C
-                                    H)
-                                 (plth.and
-                                    (euclidean__defs.Par
-                                       B
-                                       E
-                                       H
-                                       C)
-                                    (euclidean__defs.Par
-                                       E
-                                       B
-                                       H
-                                       C)))) =>
-                       logic.and__elim_left
-                         (euclidean__defs.Par E B C H)
-                         (plth.and
-                            (euclidean__defs.Par
-                               B
-                               E
-                               H
-                               C)
-                            (euclidean__defs.Par
-                               E
-                               B
-                               H
-                               C))
-                         H29)
-                        (lemma__parallelflip.lemma__parallelflip
-                           B
-                           E
-                           C
-                           H
-                           H23))
+                                H
+                                C)
+                             (euclidean__defs.Par
+                                E
+                                B
+                                H
+                                C))
+                          H29)
+                         (lemma__parallelflip.lemma__parallelflip
+                            B
+                            E
+                            C
+                            H
+                            H23))
+                        
                      H22))
                  (proposition__33.proposition__33
                     B
@@ -2082,38 +2081,42 @@ thm proposition__36A :
               H18)
            H16)
           (lemma__NCdistinct.lemma__NCdistinct A C D H11)))
-      (logic.and__ind
+      (logic.and__ind3
          (euclidean__defs.Par A B C D)
          (euclidean__defs.Par A D B C)
          (euclidean__axioms.nCol A C D)
          (H13:(plth.Prf (euclidean__defs.Par A B C D)) =>
-          H14:(plth.Prf (euclidean__defs.Par A D B C)) =>
-          (H15:(plth.Prf
-                  (plth.and
-                     (euclidean__axioms.nCol A B C)
-                     (plth.and
-                        (euclidean__axioms.nCol A C D)
-                        (plth.and
-                           (euclidean__axioms.nCol B C D)
-                           (euclidean__axioms.nCol A B D))))) =>
-           logic.and__ind2
-             (euclidean__axioms.nCol A B C)
-             (plth.and
-                (euclidean__axioms.nCol A C D)
-                (plth.and (euclidean__axioms.nCol B C D) (euclidean__axioms.nCol A B D)))
-             (euclidean__axioms.nCol A C D)
-             (H17:(plth.Prf
-                     (plth.and
-                        (euclidean__axioms.nCol A C D)
-                        (plth.and
-                           (euclidean__axioms.nCol B C D)
-                           (euclidean__axioms.nCol A B D)))) =>
-              logic.and__elim_left
-                (euclidean__axioms.nCol A C D)
-                (plth.and (euclidean__axioms.nCol B C D) (euclidean__axioms.nCol A B D))
-                H17)
-             H15)
-            (lemma__parallelNC.lemma__parallelNC A B C D H13))
+           (H15:(plth.Prf
+                   (plth.and
+                      (euclidean__axioms.nCol A B C)
+                      (plth.and
+                         (euclidean__axioms.nCol A C D)
+                         (plth.and
+                            (euclidean__axioms.nCol B C D)
+                            (euclidean__axioms.nCol A B D))))) =>
+            logic.and__ind2
+              (euclidean__axioms.nCol A B C)
+              (plth.and
+                 (euclidean__axioms.nCol A C D)
+                 (plth.and
+                    (euclidean__axioms.nCol B C D)
+                    (euclidean__axioms.nCol A B D)))
+              (euclidean__axioms.nCol A C D)
+              (H17:(plth.Prf
+                      (plth.and
+                         (euclidean__axioms.nCol A C D)
+                         (plth.and
+                            (euclidean__axioms.nCol B C D)
+                            (euclidean__axioms.nCol A B D)))) =>
+               logic.and__elim_left
+                 (euclidean__axioms.nCol A C D)
+                 (plth.and
+                    (euclidean__axioms.nCol B C D)
+                    (euclidean__axioms.nCol A B D))
+                 H17)
+              H15)
+             (lemma__parallelNC.lemma__parallelNC A B C D H13))
+            
          H9))
      ((H10:(plth.Prf (plth.and (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C))) =>
        (__TmpHyp:(plth.Prf
