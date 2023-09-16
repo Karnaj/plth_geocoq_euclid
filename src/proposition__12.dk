@@ -29,7 +29,7 @@ thm proposition__12 :
                 plth.and
                   (euclidean__axioms.BetS C B E)
                   (euclidean__axioms.Cong B E C B)))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (E:(plth.El euclidean__axioms.Point) =>
          plth.and (euclidean__axioms.BetS C B E) (euclidean__axioms.Cong B E C B))
@@ -41,7 +41,7 @@ thm proposition__12 :
                (plth.and
                   (euclidean__axioms.BetS C B E)
                   (euclidean__axioms.Cong B E C B))) =>
-         logic.and__ind3
+         logic.and_ind_left
            (euclidean__axioms.BetS C B E)
            (euclidean__axioms.Cong B E C B)
            (plth.ex
@@ -58,7 +58,7 @@ thm proposition__12 :
                          plth.and
                            (euclidean__axioms.BetS E C F)
                            (euclidean__axioms.Cong C F E C)))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (F:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -73,7 +73,7 @@ thm proposition__12 :
                          (plth.and
                             (euclidean__axioms.BetS E C F)
                             (euclidean__axioms.Cong C F E C))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS E C F)
                     (euclidean__axioms.Cong C F E C)
                     (plth.ex
@@ -104,7 +104,7 @@ thm proposition__12 :
                                         C
                                         C
                                         E))) =>
-                           logic.ex__ind
+                           logic.ex_elim
                              euclidean__axioms.Circle
                              (K:(plth.El
                                    euclidean__axioms.Circle) =>
@@ -174,7 +174,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q)))))))) =>
-                                  logic.ex__ind
+                                  logic.ex_elim
                                     euclidean__axioms.Point
                                     (P:(plth.El
                                           euclidean__axioms.Point) =>
@@ -243,7 +243,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q))))))) =>
-                                     logic.ex__ind
+                                     logic.ex_elim
                                        euclidean__axioms.Point
                                        (Q:(plth.El
                                              euclidean__axioms.Point) =>
@@ -304,7 +304,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q)))))) =>
-                                        logic.and__ind
+                                        logic.and_ind
                                           (euclidean__axioms.Col
                                              A
                                              B
@@ -359,7 +359,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q))))) =>
-                                           logic.and__ind
+                                           logic.and_ind
                                              (euclidean__axioms.BetS
                                                 A
                                                 B
@@ -404,7 +404,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q)))) =>
-                                              logic.and__ind
+                                              logic.and_ind
                                                 (euclidean__axioms.OnCirc
                                                    P
                                                    K)
@@ -439,7 +439,7 @@ thm proposition__12 :
                                                               P
                                                               B
                                                               Q))) =>
-                                                 logic.and__ind
+                                                 logic.and_ind
                                                    (euclidean__axioms.OnCirc
                                                       Q
                                                       K)
@@ -522,7 +522,7 @@ thm proposition__12 :
                                                                     P
                                                                     M
                                                                     Q)))) =>
-                                                            logic.ex__ind
+                                                            logic.ex_elim
                                                               euclidean__axioms.Point
                                                               (M:(plth.El
                                                                     euclidean__axioms.Point) =>
@@ -560,7 +560,7 @@ thm proposition__12 :
                                                                     P
                                                                     M
                                                                     Q))) =>
-                                                               logic.and__ind
+                                                               logic.and_ind
                                                                  (euclidean__axioms.BetS
                                                                     P
                                                                     M
@@ -697,7 +697,7 @@ thm proposition__12 :
                                                                     A
                                                                     B
                                                                     M)) =>
-                                                                    logic.ex__intro
+                                                                    logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -710,7 +710,7 @@ thm proposition__12 :
                                                                     X)
                                                                     M
                                                                     H60)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -735,7 +735,7 @@ thm proposition__12 :
                                                                     M
                                                                     C))))
                                                                     P
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     M
@@ -755,7 +755,7 @@ thm proposition__12 :
                                                                     M
                                                                     C)))
                                                                     H59
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -770,7 +770,7 @@ thm proposition__12 :
                                                                     M
                                                                     C))
                                                                     H55
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -781,7 +781,7 @@ thm proposition__12 :
                                                                     C)
                                                                     H26
                                                                     H57)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -810,7 +810,7 @@ thm proposition__12 :
                                                                     C
                                                                     M
                                                                     M)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -834,7 +834,7 @@ thm proposition__12 :
                                                                     C
                                                                     M
                                                                     M))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     M
@@ -857,7 +857,7 @@ thm proposition__12 :
                                                                     (logic.eq__refl
                                                                     euclidean__axioms.Point
                                                                     M))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -884,7 +884,7 @@ thm proposition__12 :
                                                                     M
                                                                     C))))
                                                                     Q
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     M
@@ -906,7 +906,7 @@ thm proposition__12 :
                                                                     M
                                                                     C)))
                                                                     H43
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     M
@@ -923,7 +923,7 @@ thm proposition__12 :
                                                                     M
                                                                     C))
                                                                     H45
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     C
@@ -1092,7 +1092,7 @@ thm proposition__12 :
                                                                     A
                                                                     M
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     B
@@ -1141,7 +1141,7 @@ thm proposition__12 :
                                                                     A
                                                                     M
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     A
@@ -1180,7 +1180,7 @@ thm proposition__12 :
                                                                     A
                                                                     M
                                                                     B)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1245,7 +1245,7 @@ thm proposition__12 :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     Q)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -1291,7 +1291,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -1340,7 +1340,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     Q
@@ -1379,7 +1379,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     A
@@ -1408,7 +1408,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     A))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     Q
@@ -1475,7 +1475,7 @@ thm proposition__12 :
                                                                     Q
                                                                     M
                                                                     P)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     P
@@ -1524,7 +1524,7 @@ thm proposition__12 :
                                                                     Q
                                                                     M
                                                                     P))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     Q
@@ -1563,7 +1563,7 @@ thm proposition__12 :
                                                                     Q
                                                                     M
                                                                     P)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     P
@@ -1592,7 +1592,7 @@ thm proposition__12 :
                                                                     Q
                                                                     M
                                                                     P))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     P
                                                                     Q
@@ -1636,7 +1636,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     P)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     P
@@ -1685,7 +1685,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     P))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     Q
@@ -1724,7 +1724,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     P)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     P
@@ -1753,7 +1753,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B
                                                                     P))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     P
                                                                     Q
@@ -1771,7 +1771,7 @@ thm proposition__12 :
                                                                     B
                                                                     Q
                                                                     H47)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1800,7 +1800,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     B)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1824,7 +1824,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     B))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -1843,7 +1843,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     P
@@ -1857,7 +1857,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     B
@@ -1867,7 +1867,7 @@ thm proposition__12 :
                                                                     Q
                                                                     B)
                                                                     H33))))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1896,7 +1896,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     M)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1920,7 +1920,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     M))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     M
@@ -1939,7 +1939,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     M)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     M
                                                                     P
@@ -1953,7 +1953,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     M))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     M
@@ -1983,7 +1983,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     M)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     M
@@ -2028,7 +2028,7 @@ thm proposition__12 :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     Q)))) =>
-                                                              logic.and__ind2
+                                                              logic.and_ind_right
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    B
@@ -2057,7 +2057,7 @@ thm proposition__12 :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     Q))) =>
-                                                                 logic.and__elim_right
+                                                                 logic.and_elim_right
                                                                    (plth.neq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -2092,7 +2092,7 @@ thm proposition__12 :
                                                                     P
                                                                     Q
                                                                     C)))) =>
-                                                             logic.and__elim_left
+                                                             logic.and_elim_left
                                                                (euclidean__axioms.Cong
                                                                   P
                                                                   C
@@ -2147,7 +2147,7 @@ thm proposition__12 :
                                                           P
                                                           H19
                                                           H30))
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (plth.eq
                                                             euclidean__axioms.Point
                                                             A
@@ -2176,7 +2176,7 @@ thm proposition__12 :
                                                                     A
                                                                     Q
                                                                     B)))))
-                                                         (logic.or__intror
+                                                         (logic.or_intro_right
                                                             (plth.eq
                                                                euclidean__axioms.Point
                                                                A
@@ -2200,7 +2200,7 @@ thm proposition__12 :
                                                                     A
                                                                     Q
                                                                     B))))
-                                                            (logic.or__intror
+                                                            (logic.or_intro_right
                                                                (plth.eq
                                                                   euclidean__axioms.Point
                                                                   B
@@ -2219,7 +2219,7 @@ thm proposition__12 :
                                                                     A
                                                                     Q
                                                                     B)))
-                                                               (logic.or__intror
+                                                               (logic.or_intro_right
                                                                   (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -2233,7 +2233,7 @@ thm proposition__12 :
                                                                     A
                                                                     Q
                                                                     B))
-                                                                  (logic.or__introl
+                                                                  (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -2259,7 +2259,7 @@ thm proposition__12 :
                                       H19
                                       H22
                                       H2))
-                                  (logic.ex__intro
+                                  (logic.ex_intro
                                      euclidean__axioms.Point
                                      (X:(plth.El
                                            euclidean__axioms.Point) =>
@@ -2307,7 +2307,7 @@ thm proposition__12 :
                                                                 U
                                                                 Y)))))))))
                                      E
-                                     (logic.ex__intro
+                                     (logic.ex_intro
                                         euclidean__axioms.Point
                                         (Y:(plth.El
                                               euclidean__axioms.Point) =>
@@ -2351,7 +2351,7 @@ thm proposition__12 :
                                                                 U
                                                                 Y))))))))
                                         B
-                                        (logic.ex__intro
+                                        (logic.ex_intro
                                            euclidean__axioms.Point
                                            (U:(plth.El
                                                  euclidean__axioms.Point) =>
@@ -2391,7 +2391,7 @@ thm proposition__12 :
                                                                 U
                                                                 B)))))))
                                            C
-                                           (logic.ex__intro
+                                           (logic.ex_intro
                                               euclidean__axioms.Point
                                               (V:(plth.El
                                                     euclidean__axioms.Point) =>
@@ -2427,7 +2427,7 @@ thm proposition__12 :
                                                                 C
                                                                 B))))))
                                               C
-                                              (logic.ex__intro
+                                              (logic.ex_intro
                                                  euclidean__axioms.Point
                                                  (W:(plth.El
                                                        euclidean__axioms.Point) =>
@@ -2459,7 +2459,7 @@ thm proposition__12 :
                                                                 C
                                                                 B)))))
                                                  E
-                                                 (logic.conj
+                                                 (logic.and_intro
                                                     (euclidean__axioms.CI
                                                        K
                                                        C
@@ -2487,7 +2487,7 @@ thm proposition__12 :
                                                                 C
                                                                 B))))
                                                     H19
-                                                    (logic.or__intror
+                                                    (logic.or_intro_right
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           B
@@ -2508,7 +2508,7 @@ thm proposition__12 :
                                                                 B
                                                                 C
                                                                 B)))
-                                                       (logic.conj
+                                                       (logic.and_intro
                                                           (euclidean__axioms.BetS
                                                              C
                                                              B
@@ -2525,7 +2525,7 @@ thm proposition__12 :
                                                                 C
                                                                 B))
                                                           H5
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (euclidean__axioms.Cong
                                                                 C
                                                                 E
@@ -2580,7 +2580,7 @@ thm proposition__12 :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C E)))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (plth.neq euclidean__axioms.Point B E)
                   (plth.and
                      (plth.neq euclidean__axioms.Point C B)
@@ -2590,7 +2590,7 @@ thm proposition__12 :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C E))) =>
-                   logic.and__elim_right
+                   logic.and_elim_right
                      (plth.neq euclidean__axioms.Point C B)
                      (plth.neq euclidean__axioms.Point C E)
                      H9)
@@ -2602,7 +2602,7 @@ thm proposition__12 :
       (H2:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
        (H3:(plth.Prf (euclidean__axioms.Col A B C)) =>
         euclidean__tactics.Col__nCol__False A B C H H3)
-         (logic.or__introl
+         (logic.or_intro_left
             (plth.eq euclidean__axioms.Point A B)
             (plth.or
                (plth.eq euclidean__axioms.Point A C)
@@ -2618,7 +2618,7 @@ thm proposition__12 :
     (H0:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
      (H1:(plth.Prf (euclidean__axioms.Col A B C)) =>
       euclidean__tactics.Col__nCol__False A B C H H1)
-       (logic.or__intror
+       (logic.or_intro_right
           (plth.eq euclidean__axioms.Point A B)
           (plth.or
              (plth.eq euclidean__axioms.Point A C)
@@ -2627,14 +2627,14 @@ thm proposition__12 :
                 (plth.or
                    (euclidean__axioms.BetS B A C)
                    (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B)))))
-          (logic.or__intror
+          (logic.or_intro_right
              (plth.eq euclidean__axioms.Point A C)
              (plth.or
                 (plth.eq euclidean__axioms.Point B C)
                 (plth.or
                    (euclidean__axioms.BetS B A C)
                    (plth.or (euclidean__axioms.BetS A B C) (euclidean__axioms.BetS A C B))))
-             (logic.or__introl
+             (logic.or_intro_left
                 (plth.eq euclidean__axioms.Point B C)
                 (plth.or
                    (euclidean__axioms.BetS B A C)

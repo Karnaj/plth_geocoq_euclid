@@ -38,7 +38,7 @@ thm lemma__rightreverse :
                   (plth.and
                      (euclidean__axioms.Cong A C E C)
                      (plth.neq euclidean__axioms.Point B C)))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (E:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -56,7 +56,7 @@ thm lemma__rightreverse :
                   (plth.and
                      (euclidean__axioms.Cong A C E C)
                      (plth.neq euclidean__axioms.Point B C))))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A B E)
         (plth.and
            (euclidean__axioms.Cong A B E B)
@@ -69,7 +69,7 @@ thm lemma__rightreverse :
                   (plth.and
                      (euclidean__axioms.Cong A C E C)
                      (plth.neq euclidean__axioms.Point B C)))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong A B E B)
            (plth.and (euclidean__axioms.Cong A C E C) (plth.neq euclidean__axioms.Point B C))
            (euclidean__axioms.Cong A C D C)
@@ -78,7 +78,7 @@ thm lemma__rightreverse :
                   (plth.and
                      (euclidean__axioms.Cong A C E C)
                      (plth.neq euclidean__axioms.Point B C))) =>
-            logic.and__ind3
+            logic.and_ind_left
               (euclidean__axioms.Cong A C E C)
               (plth.neq euclidean__axioms.Point B C)
               (euclidean__axioms.Cong A C D C)
@@ -122,7 +122,7 @@ thm lemma__rightreverse :
                                (plth.and
                                   (euclidean__axioms.Cong D B E B)
                                   (euclidean__axioms.Cong B D B E)))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (euclidean__axioms.Cong D B B E)
                        (plth.and
                           (euclidean__axioms.Cong D B E B)
@@ -132,7 +132,7 @@ thm lemma__rightreverse :
                                (plth.and
                                   (euclidean__axioms.Cong D B E B)
                                   (euclidean__axioms.Cong B D B E))) =>
-                        logic.and__elim_right
+                        logic.and_elim_right
                           (euclidean__axioms.Cong D B E B)
                           (euclidean__axioms.Cong B D B E)
                           H14)

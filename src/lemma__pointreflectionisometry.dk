@@ -42,7 +42,7 @@ thm lemma__pointreflectionisometry :
                       (plth.or
                          (euclidean__axioms.Col A B P)
                          (euclidean__axioms.nCol A B P))) =>
-          logic.or__ind
+          logic.or_elim
             (euclidean__axioms.Col A B P)
             (euclidean__axioms.nCol A B P)
             (euclidean__axioms.Cong A P C Q)
@@ -102,7 +102,7 @@ thm lemma__pointreflectionisometry :
                                                   A
                                                   P
                                                   B))))))) =>
-                   logic.or__ind
+                   logic.or_elim
                      (plth.eq euclidean__axioms.Point A B)
                      (plth.or
                         (plth.eq euclidean__axioms.Point A P)
@@ -134,7 +134,7 @@ thm lemma__pointreflectionisometry :
                                        C
                                        Q))) =>
                           (H16:(plth.Prf plth.false) =>
-                           logic.false__ind plth.false H16)
+                           logic.false_elim plth.false H16)
                             (H10 H11)))
                         (H10:(plth.Prf
                                 (plth.not
@@ -162,7 +162,7 @@ thm lemma__pointreflectionisometry :
                                               euclidean__axioms.Point
                                               A
                                               C)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (plth.neq
                                    euclidean__axioms.Point
                                    B
@@ -190,7 +190,7 @@ thm lemma__pointreflectionisometry :
                                               euclidean__axioms.Point
                                               A
                                               C))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (plth.neq
                                       euclidean__axioms.Point
                                       A
@@ -206,7 +206,7 @@ thm lemma__pointreflectionisometry :
                                   B
                                   C
                                   H11)))
-                           (logic.and__elim_left
+                           (logic.and_elim_left
                               (euclidean__axioms.BetS A B C)
                               (euclidean__axioms.Cong A B B C)
                               H2)))
@@ -229,7 +229,7 @@ thm lemma__pointreflectionisometry :
                                            A
                                            P
                                            B)))))) =>
-                      logic.or__ind
+                      logic.or_elim
                         (plth.eq euclidean__axioms.Point A P)
                         (plth.or
                            (plth.eq euclidean__axioms.Point B P)
@@ -260,7 +260,7 @@ thm lemma__pointreflectionisometry :
                                           Q))) =>
                              (H17:(plth.Prf plth.false) =>
                               (H18:(plth.Prf plth.false) =>
-                               logic.false__ind plth.false H18)
+                               logic.false_elim plth.false H18)
                                 (H11 H12))
                                (H1 H10)))
                            (H11:(plth.Prf
@@ -288,7 +288,7 @@ thm lemma__pointreflectionisometry :
                                             A
                                             P
                                             B))))) =>
-                         logic.or__ind
+                         logic.or_elim
                            (plth.eq euclidean__axioms.Point B P)
                            (plth.or
                               (euclidean__axioms.BetS B A P)
@@ -319,7 +319,7 @@ thm lemma__pointreflectionisometry :
                                              C
                                              Q))) =>
                                 (H18:(plth.Prf plth.false) =>
-                                 logic.false__ind plth.false H18)
+                                 logic.false_elim plth.false H18)
                                   (H12 H13)))
                               (H12:(plth.Prf
                                       (plth.not
@@ -339,7 +339,7 @@ thm lemma__pointreflectionisometry :
                                            B
                                            P)) =>
                                  H14 H11)
-                                  (logic.and__ind
+                                  (logic.and_ind
                                      (euclidean__axioms.BetS P B Q)
                                      (euclidean__axioms.Cong
                                         P
@@ -361,7 +361,7 @@ thm lemma__pointreflectionisometry :
                                                 B
                                                 B
                                                 Q)) =>
-                                      logic.and__ind
+                                      logic.and_ind
                                         (euclidean__axioms.BetS
                                            A
                                            B
@@ -492,7 +492,7 @@ thm lemma__pointreflectionisometry :
                                            H13)
                                         H2)
                                      H3))
-                                 (logic.and__ind3
+                                 (logic.and_ind_left
                                     (euclidean__axioms.BetS P B Q)
                                     (euclidean__axioms.Cong P B B Q)
                                     (plth.neq
@@ -519,7 +519,7 @@ thm lemma__pointreflectionisometry :
                                                       euclidean__axioms.Point
                                                       P
                                                       Q)))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (plth.neq
                                            euclidean__axioms.Point
                                            B
@@ -547,7 +547,7 @@ thm lemma__pointreflectionisometry :
                                                       euclidean__axioms.Point
                                                       P
                                                       Q))) =>
-                                         logic.and__elim_left
+                                         logic.and_elim_left
                                            (plth.neq
                                               euclidean__axioms.Point
                                               P
@@ -576,7 +576,7 @@ thm lemma__pointreflectionisometry :
                                             A
                                             P
                                             B)))) =>
-                            logic.or__ind
+                            logic.or_elim
                               (euclidean__axioms.BetS B A P)
                               (plth.or
                                  (euclidean__axioms.BetS A B P)
@@ -670,7 +670,7 @@ thm lemma__pointreflectionisometry :
                                                             H25
                                                             B
                                                             C)))) =>
-                                            logic.ex__ind
+                                            logic.ex_elim
                                               euclidean__axioms.Point
                                               (H26:(plth.El
                                                       euclidean__axioms.Point) =>
@@ -702,7 +702,7 @@ thm lemma__pointreflectionisometry :
                                                             H26
                                                             B
                                                             C))) =>
-                                               logic.and__ind
+                                               logic.and_ind
                                                  (euclidean__axioms.BetS
                                                     B
                                                     H26
@@ -728,7 +728,7 @@ thm lemma__pointreflectionisometry :
                                                             H26
                                                             B
                                                             C)) =>
-                                                  logic.and__ind3
+                                                  logic.and_ind_left
                                                     (euclidean__axioms.BetS
                                                        P
                                                        B
@@ -748,7 +748,7 @@ thm lemma__pointreflectionisometry :
                                                               P
                                                               B
                                                               Q)) =>
-                                                     logic.and__ind
+                                                     logic.and_ind
                                                        (euclidean__axioms.BetS
                                                           A
                                                           B
@@ -1316,7 +1316,7 @@ thm lemma__pointreflectionisometry :
                                                                  C
                                                                  Q
                                                                  H37))
-                                                             (logic.ex__intro
+                                                             (logic.ex_intro
                                                                 euclidean__axioms.Point
                                                                 (X:(plth.El
                                                                     euclidean__axioms.Point) =>
@@ -1330,7 +1330,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     C))
                                                                 P
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.BetS
                                                                     P
                                                                     B
@@ -1357,7 +1357,7 @@ thm lemma__pointreflectionisometry :
                                                              B
                                                              Q
                                                              H26
-                                                             (logic.or__introl
+                                                             (logic.or_intro_left
                                                                 (euclidean__axioms.BetS
                                                                    B
                                                                    H26
@@ -1378,7 +1378,7 @@ thm lemma__pointreflectionisometry :
                                                  H27)
                                               H25)
                                              H22)
-                                            (logic.and__ind3
+                                            (logic.and_ind_left
                                                (euclidean__axioms.BetS
                                                   P
                                                   B
@@ -1412,7 +1412,7 @@ thm lemma__pointreflectionisometry :
                                                                  euclidean__axioms.Point
                                                                  P
                                                                  Q)))) =>
-                                                 logic.and__elim_left
+                                                 logic.and_elim_left
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       B
@@ -1463,7 +1463,7 @@ thm lemma__pointreflectionisometry :
                                           Q
                                           P
                                           H16))
-                                      (logic.ex__intro
+                                      (logic.ex_intro
                                          euclidean__axioms.Point
                                          (X:(plth.El
                                                euclidean__axioms.Point) =>
@@ -1478,7 +1478,7 @@ thm lemma__pointreflectionisometry :
                                                C
                                                B))
                                          A
-                                         (logic.conj
+                                         (logic.and_intro
                                             (euclidean__axioms.BetS
                                                B
                                                A
@@ -1502,7 +1502,7 @@ thm lemma__pointreflectionisometry :
                                                     B
                                                     B
                                                     A))) =>
-                                       logic.and__elim_left
+                                       logic.and_elim_left
                                          (euclidean__axioms.Cong
                                             B
                                             A
@@ -1538,7 +1538,7 @@ thm lemma__pointreflectionisometry :
                                                       B
                                                       P
                                                       B)))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.Cong
                                            B
                                            Q
@@ -1572,7 +1572,7 @@ thm lemma__pointreflectionisometry :
                                                       B
                                                       P
                                                       B))) =>
-                                         logic.and__elim_left
+                                         logic.and_elim_left
                                            (euclidean__axioms.Cong
                                               B
                                               Q
@@ -1591,7 +1591,7 @@ thm lemma__pointreflectionisometry :
                                           B
                                           P
                                           H15)))
-                                   (logic.and__ind2
+                                   (logic.and_ind_right
                                       (euclidean__axioms.BetS
                                          P
                                          B
@@ -1624,7 +1624,7 @@ thm lemma__pointreflectionisometry :
                                                      P
                                                      Q
                                                      B))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (euclidean__axioms.Cong
                                              Q
                                              B
@@ -1661,7 +1661,7 @@ thm lemma__pointreflectionisometry :
                                                     C
                                                     B
                                                     A)))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (euclidean__axioms.Cong
                                          C
                                          B
@@ -1695,7 +1695,7 @@ thm lemma__pointreflectionisometry :
                                                     C
                                                     B
                                                     A))) =>
-                                       logic.and__elim_right
+                                       logic.and_elim_right
                                          (euclidean__axioms.Cong
                                             C
                                             B
@@ -1714,7 +1714,7 @@ thm lemma__pointreflectionisometry :
                                         A
                                         B
                                         H13)))
-                                 (logic.and__ind2
+                                 (logic.and_ind_right
                                     (euclidean__axioms.BetS A B C)
                                     (euclidean__axioms.Cong A B B C)
                                     (euclidean__axioms.Cong B C A B)
@@ -1741,7 +1741,7 @@ thm lemma__pointreflectionisometry :
                                             A
                                             P
                                             B))) =>
-                               logic.or__ind
+                               logic.or_elim
                                  (euclidean__axioms.BetS A B P)
                                  (euclidean__axioms.BetS A P B)
                                  (euclidean__axioms.Cong A P C Q)
@@ -1773,7 +1773,7 @@ thm lemma__pointreflectionisometry :
                                                    Q))) =>
                                       (H20:(plth.Prf
                                               plth.false) =>
-                                       logic.false__ind
+                                       logic.false_elim
                                          plth.false
                                          H20)
                                         (H14 H15)))
@@ -1866,7 +1866,7 @@ thm lemma__pointreflectionisometry :
                                                              Q)) =>
                                                    H14
                                                      H28)
-                                                    (logic.and__ind
+                                                    (logic.and_ind
                                                        (euclidean__axioms.BetS
                                                           P
                                                           B
@@ -2179,7 +2179,7 @@ thm lemma__pointreflectionisometry :
                                                           H23
                                                           H24)
                                                        H3))
-                                                   (logic.and__ind
+                                                   (logic.and_ind
                                                       (euclidean__axioms.BetS
                                                          P
                                                          B
@@ -2495,7 +2495,7 @@ thm lemma__pointreflectionisometry :
                                                   (euclidean__axioms.cn__equalityreverse
                                                      A
                                                      C))
-                                                 (logic.and__ind3
+                                                 (logic.and_ind_left
                                                     (euclidean__axioms.BetS
                                                        P
                                                        B
@@ -2541,7 +2541,7 @@ thm lemma__pointreflectionisometry :
                                                                   Q
                                                                   B
                                                                   A)))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Cong
                                                        Q
                                                        B
@@ -2575,7 +2575,7 @@ thm lemma__pointreflectionisometry :
                                                                   Q
                                                                   B
                                                                   A))) =>
-                                                     logic.and__elim_right
+                                                     logic.and_elim_right
                                                        (euclidean__axioms.Cong
                                                           Q
                                                           B
@@ -2600,7 +2600,7 @@ thm lemma__pointreflectionisometry :
                                                   B
                                                   Q
                                                   H20))
-                                              (logic.and__ind
+                                              (logic.and_ind
                                                  (euclidean__axioms.BetS
                                                     P
                                                     B
@@ -2773,7 +2773,7 @@ thm lemma__pointreflectionisometry :
                                                     H18
                                                     H19)
                                                  H3))
-                                             (logic.and__ind3
+                                             (logic.and_ind_left
                                                 (euclidean__axioms.BetS
                                                    A
                                                    B
@@ -2807,7 +2807,7 @@ thm lemma__pointreflectionisometry :
                                                Q
                                                H18
                                                H19))
-                                           (logic.and__ind2
+                                           (logic.and_ind_right
                                               (euclidean__axioms.BetS
                                                  P
                                                  B
@@ -2846,7 +2846,7 @@ thm lemma__pointreflectionisometry :
                                                                 B
                                                                 Q
                                                                 B)))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (euclidean__axioms.Cong
                                                      B
                                                      P
@@ -2880,7 +2880,7 @@ thm lemma__pointreflectionisometry :
                                                                 B
                                                                 Q
                                                                 B))) =>
-                                                   logic.and__elim_left
+                                                   logic.and_elim_left
                                                      (euclidean__axioms.Cong
                                                         B
                                                         P
@@ -2900,7 +2900,7 @@ thm lemma__pointreflectionisometry :
                                                     Q
                                                     H20))
                                               H3))
-                                          (logic.and__ind
+                                          (logic.and_ind
                                              (euclidean__axioms.BetS
                                                 P
                                                 B
@@ -2926,7 +2926,7 @@ thm lemma__pointreflectionisometry :
                                                         B
                                                         B
                                                         Q)) =>
-                                              logic.and__ind2
+                                              logic.and_ind_right
                                                 (euclidean__axioms.BetS
                                                    A
                                                    B
@@ -3071,7 +3071,7 @@ thm lemma__pointreflectionisometry :
                                                    H16)
                                                 H2)
                                              H3))
-                                         (logic.and__ind3
+                                         (logic.and_ind_left
                                             (euclidean__axioms.BetS
                                                A
                                                B
@@ -3156,7 +3156,7 @@ thm lemma__pointreflectionisometry :
                                                     H22
                                                     H17
                                                     H20))
-                                                (logic.and__ind2
+                                                (logic.and_ind_right
                                                    (euclidean__axioms.BetS
                                                       P
                                                       B
@@ -3195,7 +3195,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     Q
                                                                     B)))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (euclidean__axioms.Cong
                                                           B
                                                           P
@@ -3229,7 +3229,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     Q
                                                                     B))) =>
-                                                        logic.and__elim_left
+                                                        logic.and_elim_left
                                                           (euclidean__axioms.Cong
                                                              B
                                                              P
@@ -3249,7 +3249,7 @@ thm lemma__pointreflectionisometry :
                                                          Q
                                                          H23))
                                                    H3))
-                                               (logic.and__ind2
+                                               (logic.and_ind_right
                                                   (euclidean__axioms.BetS
                                                      A
                                                      B
@@ -3288,7 +3288,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     C
                                                                     B)))) =>
-                                                    logic.and__ind2
+                                                    logic.and_ind_right
                                                       (euclidean__axioms.Cong
                                                          B
                                                          A
@@ -3322,7 +3322,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     C
                                                                     B))) =>
-                                                       logic.and__elim_right
+                                                       logic.and_elim_right
                                                          (euclidean__axioms.Cong
                                                             B
                                                             A
@@ -3354,7 +3354,7 @@ thm lemma__pointreflectionisometry :
                                                 P
                                                 H18
                                                 H16))
-                                            (logic.and__ind3
+                                            (logic.and_ind_left
                                                (euclidean__axioms.BetS
                                                   P
                                                   B
@@ -3425,7 +3425,7 @@ thm lemma__pointreflectionisometry :
                                                  H19
                                                  H13
                                                  H17))
-                                             (logic.and__ind2
+                                             (logic.and_ind_right
                                                 (euclidean__axioms.BetS
                                                    P
                                                    B
@@ -3464,7 +3464,7 @@ thm lemma__pointreflectionisometry :
                                                                   B
                                                                   Q
                                                                   B)))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Cong
                                                        B
                                                        P
@@ -3498,7 +3498,7 @@ thm lemma__pointreflectionisometry :
                                                                   B
                                                                   Q
                                                                   B))) =>
-                                                     logic.and__elim_left
+                                                     logic.and_elim_left
                                                        (euclidean__axioms.Cong
                                                           B
                                                           P
@@ -3518,7 +3518,7 @@ thm lemma__pointreflectionisometry :
                                                       Q
                                                       H20))
                                                 H3))
-                                            (logic.and__ind2
+                                            (logic.and_ind_right
                                                (euclidean__axioms.BetS
                                                   A
                                                   B
@@ -3557,7 +3557,7 @@ thm lemma__pointreflectionisometry :
                                                                  B
                                                                  C
                                                                  B)))) =>
-                                                 logic.and__ind2
+                                                 logic.and_ind_right
                                                    (euclidean__axioms.Cong
                                                       B
                                                       A
@@ -3591,7 +3591,7 @@ thm lemma__pointreflectionisometry :
                                                                  B
                                                                  C
                                                                  B))) =>
-                                                    logic.and__elim_right
+                                                    logic.and_elim_right
                                                       (euclidean__axioms.Cong
                                                          B
                                                          A
@@ -3611,7 +3611,7 @@ thm lemma__pointreflectionisometry :
                                                      C
                                                      H21))
                                                H2))
-                                           (logic.and__ind3
+                                           (logic.and_ind_left
                                               (euclidean__axioms.BetS
                                                  P
                                                  B
@@ -3739,7 +3739,7 @@ thm lemma__pointreflectionisometry :
                                                                 H27
                                                                 B
                                                                 Q)))) =>
-                                                logic.ex__ind
+                                                logic.ex_elim
                                                   euclidean__axioms.Point
                                                   (H28:(plth.El
                                                           euclidean__axioms.Point) =>
@@ -3771,7 +3771,7 @@ thm lemma__pointreflectionisometry :
                                                                 H28
                                                                 B
                                                                 Q))) =>
-                                                   logic.and__ind
+                                                   logic.and_ind
                                                      (euclidean__axioms.BetS
                                                         B
                                                         H28
@@ -3797,7 +3797,7 @@ thm lemma__pointreflectionisometry :
                                                                 H28
                                                                 B
                                                                 Q)) =>
-                                                      logic.and__ind
+                                                      logic.and_ind
                                                         (euclidean__axioms.BetS
                                                            P
                                                            B
@@ -3823,7 +3823,7 @@ thm lemma__pointreflectionisometry :
                                                                    B
                                                                    B
                                                                    Q)) =>
-                                                         logic.and__ind3
+                                                         logic.and_ind_left
                                                            (euclidean__axioms.BetS
                                                               A
                                                               B
@@ -3926,7 +3926,7 @@ thm lemma__pointreflectionisometry :
                                                                     A
                                                                     C
                                                                     Q)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     P
@@ -4376,7 +4376,7 @@ thm lemma__pointreflectionisometry :
                                                                    B
                                                                    C
                                                                    H28
-                                                                   (logic.or__introl
+                                                                   (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     H28
@@ -4392,7 +4392,7 @@ thm lemma__pointreflectionisometry :
                                                                     H28))
                                                                     H30)
                                                                    H26))
-                                                               (logic.ex__intro
+                                                               (logic.ex_intro
                                                                   euclidean__axioms.Point
                                                                   (X:(
                                                                    plth.El
@@ -4407,7 +4407,7 @@ thm lemma__pointreflectionisometry :
                                                                     B
                                                                     C))
                                                                   P
-                                                                  (logic.conj
+                                                                  (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     B
@@ -4430,7 +4430,7 @@ thm lemma__pointreflectionisometry :
                                                      H29)
                                                   H27)
                                                  H24)
-                                                (logic.and__ind3
+                                                (logic.and_ind_left
                                                    (euclidean__axioms.BetS
                                                       A
                                                       B
@@ -4464,7 +4464,7 @@ thm lemma__pointreflectionisometry :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))) =>
-                                                     logic.and__elim_left
+                                                     logic.and_elim_left
                                                        (plth.neq
                                                           euclidean__axioms.Point
                                                           B
@@ -4515,7 +4515,7 @@ thm lemma__pointreflectionisometry :
                                               C
                                               A
                                               H17))
-                                          (logic.ex__intro
+                                          (logic.ex_intro
                                              euclidean__axioms.Point
                                              (X:(plth.El
                                                    euclidean__axioms.Point) =>
@@ -4530,7 +4530,7 @@ thm lemma__pointreflectionisometry :
                                                    Q
                                                    B))
                                              P
-                                             (logic.conj
+                                             (logic.and_intro
                                                 (euclidean__axioms.BetS
                                                    B
                                                    P
@@ -4554,7 +4554,7 @@ thm lemma__pointreflectionisometry :
                                                         B
                                                         B
                                                         P))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (euclidean__axioms.Cong
                                                 B
                                                 P
@@ -4595,7 +4595,7 @@ thm lemma__pointreflectionisometry :
                                                          B
                                                          A
                                                          B)))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Cong
                                               B
                                               C
@@ -4629,7 +4629,7 @@ thm lemma__pointreflectionisometry :
                                                          B
                                                          A
                                                          B))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (euclidean__axioms.Cong
                                                  B
                                                  C
@@ -4648,7 +4648,7 @@ thm lemma__pointreflectionisometry :
                                              B
                                              A
                                              H16)))
-                                      (logic.and__ind2
+                                      (logic.and_ind_right
                                          (euclidean__axioms.BetS
                                             A
                                             B
@@ -4681,7 +4681,7 @@ thm lemma__pointreflectionisometry :
                                                         A
                                                         C
                                                         B))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (euclidean__axioms.Cong
                                                 C
                                                 B
@@ -4718,7 +4718,7 @@ thm lemma__pointreflectionisometry :
                                                        Q
                                                        B
                                                        P)))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (euclidean__axioms.Cong
                                             Q
                                             B
@@ -4752,7 +4752,7 @@ thm lemma__pointreflectionisometry :
                                                        Q
                                                        B
                                                        P))) =>
-                                          logic.and__elim_right
+                                          logic.and_elim_right
                                             (euclidean__axioms.Cong
                                                Q
                                                B
@@ -4771,7 +4771,7 @@ thm lemma__pointreflectionisometry :
                                            P
                                            B
                                            H14)))
-                                    (logic.and__ind2
+                                    (logic.and_ind_right
                                        (euclidean__axioms.BetS P B Q)
                                        (euclidean__axioms.Cong
                                           P
@@ -4892,7 +4892,7 @@ thm lemma__pointreflectionisometry :
                                    b
                                    a
                                    c)) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (euclidean__axioms.Cong B0 C0 b c)
                            (plth.and
                               (euclidean__defs.CongA
@@ -4919,7 +4919,7 @@ thm lemma__pointreflectionisometry :
                               __
                               __0
                               __1))))
-                    (logic.and__ind2
+                    (logic.and_ind_right
                        (euclidean__axioms.BetS P B Q)
                        (euclidean__axioms.Cong P B B Q)
                        (euclidean__axioms.Cong B P B Q)
@@ -4943,7 +4943,7 @@ thm lemma__pointreflectionisometry :
                                          B
                                          Q
                                          B)))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Cong B P Q B)
                            (plth.and
                               (euclidean__axioms.Cong B P B Q)
@@ -4961,7 +4961,7 @@ thm lemma__pointreflectionisometry :
                                          B
                                          Q
                                          B))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (euclidean__axioms.Cong B P B Q)
                               (euclidean__axioms.Cong P B Q B)
                               H18)
@@ -4973,7 +4973,7 @@ thm lemma__pointreflectionisometry :
                              Q
                              H13))
                        H3))
-                   (logic.and__ind2
+                   (logic.and_ind_right
                       (euclidean__axioms.BetS A B C)
                       (euclidean__axioms.Cong A B B C)
                       (euclidean__axioms.Cong B A B C)
@@ -4997,7 +4997,7 @@ thm lemma__pointreflectionisometry :
                                         B
                                         C
                                         B)))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__axioms.Cong B A C B)
                           (plth.and
                              (euclidean__axioms.Cong B A B C)
@@ -5015,7 +5015,7 @@ thm lemma__pointreflectionisometry :
                                         B
                                         C
                                         B))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (euclidean__axioms.Cong B A B C)
                              (euclidean__axioms.Cong A B C B)
                              H17)
@@ -5049,12 +5049,12 @@ thm lemma__pointreflectionisometry :
                       B
                       C
                       (lemma__equalanglesNC.lemma__equalanglesNC A B P Q B C H7))))
-               (logic.and__ind3
+               (logic.and_ind_left
                   (euclidean__axioms.BetS P B Q)
                   (euclidean__axioms.Cong P B B Q)
                   (euclidean__defs.CongA A B P Q B C)
                   (H7:(plth.Prf (euclidean__axioms.BetS P B Q)) =>
-                   logic.and__ind3
+                   logic.and_ind_left
                      (euclidean__axioms.BetS A B C)
                      (euclidean__axioms.Cong A B B C)
                      (euclidean__defs.CongA A B P Q B C)

@@ -26,7 +26,7 @@ thm lemma__oppositesideflip :
              plth.and
                (euclidean__axioms.BetS P r Q)
                (plth.and (euclidean__axioms.Col A B r) (euclidean__axioms.nCol A B P))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (r:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -38,13 +38,13 @@ thm lemma__oppositesideflip :
             (plth.and
                (euclidean__axioms.BetS P r Q)
                (plth.and (euclidean__axioms.Col A B r) (euclidean__axioms.nCol A B P)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS P r Q)
         (plth.and (euclidean__axioms.Col A B r) (euclidean__axioms.nCol A B P))
         (euclidean__axioms.TS P B A Q)
         (H2:(plth.Prf (euclidean__axioms.BetS P r Q)) =>
          H3:(plth.Prf (plth.and (euclidean__axioms.Col A B r) (euclidean__axioms.nCol A B P))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Col A B r)
            (euclidean__axioms.nCol A B P)
            (euclidean__axioms.TS P B A Q)
@@ -53,7 +53,7 @@ thm lemma__oppositesideflip :
             (H6:(plth.Prf (euclidean__axioms.nCol B A P)) =>
              (H7:(plth.Prf (euclidean__axioms.Col B A r)) =>
               (H8:(plth.Prf (euclidean__axioms.TS P B A Q)) => H8)
-                (logic.ex__intro
+                (logic.ex_intro
                    euclidean__axioms.Point
                    (X:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -62,13 +62,13 @@ thm lemma__oppositesideflip :
                          (euclidean__axioms.Col B A X)
                          (euclidean__axioms.nCol B A P)))
                    r
-                   (logic.conj
+                   (logic.and_intro
                       (euclidean__axioms.BetS P r Q)
                       (plth.and
                          (euclidean__axioms.Col B A r)
                          (euclidean__axioms.nCol B A P))
                       H2
-                      (logic.conj
+                      (logic.and_intro
                          (euclidean__axioms.Col B A r)
                          (euclidean__axioms.nCol B A P)
                          H7
@@ -83,7 +83,7 @@ thm lemma__oppositesideflip :
                                 (plth.and
                                    (euclidean__axioms.Col A r B)
                                    (euclidean__axioms.Col r B A)))))) =>
-                 logic.and__elim_left
+                 logic.and_elim_left
                    (euclidean__axioms.Col B A r)
                    (plth.and
                       (euclidean__axioms.Col B r A)
@@ -104,7 +104,7 @@ thm lemma__oppositesideflip :
                                (plth.and
                                   (euclidean__axioms.nCol A P B)
                                   (euclidean__axioms.nCol P B A)))))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (euclidean__axioms.nCol B A P)
                   (plth.and
                      (euclidean__axioms.nCol B P A)

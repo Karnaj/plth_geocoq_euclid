@@ -28,14 +28,14 @@ thm lemma__lessthannotequal :
             euclidean__axioms.Point
             (E:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS C E D) (euclidean__axioms.Cong C E A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (E:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS C E D) (euclidean__axioms.Cong C E A B))
      (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point C D))
      (E:(plth.El euclidean__axioms.Point) =>
       H1:(plth.Prf (plth.and (euclidean__axioms.BetS C E D) (euclidean__axioms.Cong C E A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS C E D)
         (euclidean__axioms.Cong C E A B)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point C D))
@@ -44,7 +44,7 @@ thm lemma__lessthannotequal :
          (H4:(plth.Prf (plth.neq euclidean__axioms.Point C E)) =>
           (H5:(plth.Prf (plth.neq euclidean__axioms.Point A B)) =>
            (H6:(plth.Prf (plth.neq euclidean__axioms.Point C D)) =>
-            logic.conj
+            logic.and_intro
               (plth.neq euclidean__axioms.Point A B)
               (plth.neq euclidean__axioms.Point C D)
               H5
@@ -55,7 +55,7 @@ thm lemma__lessthannotequal :
                         (plth.and
                            (plth.neq euclidean__axioms.Point C E)
                            (plth.neq euclidean__axioms.Point C D)))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (plth.neq euclidean__axioms.Point E D)
                  (plth.and
                     (plth.neq euclidean__axioms.Point C E)
@@ -65,7 +65,7 @@ thm lemma__lessthannotequal :
                         (plth.and
                            (plth.neq euclidean__axioms.Point C E)
                            (plth.neq euclidean__axioms.Point C D))) =>
-                  logic.and__elim_right
+                  logic.and_elim_right
                     (plth.neq euclidean__axioms.Point C E)
                     (plth.neq euclidean__axioms.Point C D)
                     H8)
@@ -78,7 +78,7 @@ thm lemma__lessthannotequal :
                       (plth.and
                          (plth.neq euclidean__axioms.Point C E)
                          (plth.neq euclidean__axioms.Point C D)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point E D)
                (plth.and
                   (plth.neq euclidean__axioms.Point C E)
@@ -88,7 +88,7 @@ thm lemma__lessthannotequal :
                       (plth.and
                          (plth.neq euclidean__axioms.Point C E)
                          (plth.neq euclidean__axioms.Point C D))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point C E)
                   (plth.neq euclidean__axioms.Point C D)
                   H6)

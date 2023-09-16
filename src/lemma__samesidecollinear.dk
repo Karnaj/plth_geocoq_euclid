@@ -52,7 +52,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (p:(plth.El euclidean__axioms.Point) =>
       plth.ex
@@ -92,7 +92,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))))))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (q:(plth.El euclidean__axioms.Point) =>
          plth.ex
@@ -126,7 +126,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (r:(plth.El euclidean__axioms.Point) =>
             plth.and
@@ -154,7 +154,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Col A B p)
               (plth.and
                  (euclidean__axioms.Col A B q)
@@ -177,7 +177,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))) =>
-               logic.and__ind
+               logic.and_ind
                  (euclidean__axioms.Col A B q)
                  (plth.and
                     (euclidean__axioms.BetS P p r)
@@ -196,7 +196,7 @@ thm lemma__samesidecollinear :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS P p r)
                     (plth.and
                        (euclidean__axioms.BetS Q q r)
@@ -211,7 +211,7 @@ thm lemma__samesidecollinear :
                                (plth.and
                                   (euclidean__axioms.nCol A B P)
                                   (euclidean__axioms.nCol A B Q)))) =>
-                     logic.and__ind
+                     logic.and_ind
                        (euclidean__axioms.BetS Q q r)
                        (plth.and
                           (euclidean__axioms.nCol A B P)
@@ -222,7 +222,7 @@ thm lemma__samesidecollinear :
                                (plth.and
                                   (euclidean__axioms.nCol A B P)
                                   (euclidean__axioms.nCol A B Q))) =>
-                        logic.and__ind
+                        logic.and_ind
                           (euclidean__axioms.nCol A B P)
                           (euclidean__axioms.nCol A B Q)
                           (euclidean__defs.OS P Q A C)
@@ -268,7 +268,7 @@ thm lemma__samesidecollinear :
                                                  A
                                                  C)) =>
                                        H27)
-                                        (logic.ex__intro
+                                        (logic.ex_intro
                                            euclidean__axioms.Point
                                            (X:(plth.El
                                                  euclidean__axioms.Point) =>
@@ -310,7 +310,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q))))))))
                                            r
-                                           (logic.ex__intro
+                                           (logic.ex_intro
                                               euclidean__axioms.Point
                                               (U:(plth.El
                                                     euclidean__axioms.Point) =>
@@ -348,7 +348,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q)))))))
                                               p
-                                              (logic.ex__intro
+                                              (logic.ex_intro
                                                  euclidean__axioms.Point
                                                  (V:(plth.El
                                                        euclidean__axioms.Point) =>
@@ -382,7 +382,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q))))))
                                                  q
-                                                 (logic.conj
+                                                 (logic.and_intro
                                                     (euclidean__axioms.Col
                                                        A
                                                        C
@@ -412,7 +412,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q)))))
                                                     H24
-                                                    (logic.conj
+                                                    (logic.and_intro
                                                        (euclidean__axioms.Col
                                                           A
                                                           C
@@ -437,7 +437,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q))))
                                                        H26
-                                                       (logic.conj
+                                                       (logic.and_intro
                                                           (euclidean__axioms.BetS
                                                              P
                                                              p
@@ -457,7 +457,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q)))
                                                           H10
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (euclidean__axioms.BetS
                                                                 Q
                                                                 q
@@ -472,7 +472,7 @@ thm lemma__samesidecollinear :
                                                                    C
                                                                    Q))
                                                              H12
-                                                             (logic.conj
+                                                             (logic.and_intro
                                                                 (euclidean__axioms.nCol
                                                                    A
                                                                    C
@@ -530,7 +530,7 @@ thm lemma__samesidecollinear :
                                                               q
                                                               B
                                                               A)))))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (euclidean__axioms.Col
                                              B
                                              A
@@ -611,7 +611,7 @@ thm lemma__samesidecollinear :
                                                            C
                                                            B
                                                            A)))))) =>
-                                     logic.and__elim_left
+                                     logic.and_elim_left
                                        (euclidean__axioms.Col B A C)
                                        (plth.and
                                           (euclidean__axioms.Col
@@ -663,7 +663,7 @@ thm lemma__samesidecollinear :
                                                           p
                                                           B
                                                           A)))))) =>
-                                    logic.and__elim_left
+                                    logic.and_elim_left
                                       (euclidean__axioms.Col B A p)
                                       (plth.and
                                          (euclidean__axioms.Col B p A)
@@ -723,7 +723,7 @@ thm lemma__samesidecollinear :
                                          H18
                                          H0
                                          H1))))
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (plth.eq euclidean__axioms.Point A B)
                                   (plth.or
                                      (plth.eq euclidean__axioms.Point A A)
@@ -734,7 +734,7 @@ thm lemma__samesidecollinear :
                                            (plth.or
                                               (euclidean__axioms.BetS A B A)
                                               (euclidean__axioms.BetS A A B)))))
-                                  (logic.or__introl
+                                  (logic.or_intro_left
                                      (plth.eq euclidean__axioms.Point A A)
                                      (plth.or
                                         (plth.eq euclidean__axioms.Point B A)
@@ -769,7 +769,7 @@ thm lemma__samesidecollinear :
                                                         euclidean__axioms.Point
                                                         Q
                                                         A))))))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (plth.neq euclidean__axioms.Point A B)
                                  (plth.and
                                     (plth.neq euclidean__axioms.Point B Q)
@@ -832,7 +832,7 @@ thm lemma__samesidecollinear :
                                         (plth.and
                                            (euclidean__axioms.nCol A B P)
                                            (euclidean__axioms.nCol A B Q)))))))))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (X:(plth.El euclidean__axioms.Point) =>
           plth.ex
@@ -891,7 +891,7 @@ thm lemma__samesidecollinear :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (U:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -944,7 +944,7 @@ thm lemma__samesidecollinear :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q)))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (V:(plth.El euclidean__axioms.Point) =>
                 plth.and
@@ -991,7 +991,7 @@ thm lemma__samesidecollinear :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__axioms.Col A B x0)
                   (plth.and
                      (euclidean__axioms.Col A B x1)
@@ -1033,7 +1033,7 @@ thm lemma__samesidecollinear :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q)))))) =>
-                   logic.and__ind
+                   logic.and_ind
                      (euclidean__axioms.Col A B x1)
                      (plth.and
                         (euclidean__axioms.BetS P x0 x)
@@ -1071,7 +1071,7 @@ thm lemma__samesidecollinear :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (euclidean__axioms.BetS P x0 x)
                         (plth.and
                            (euclidean__axioms.BetS Q x1 x)
@@ -1105,7 +1105,7 @@ thm lemma__samesidecollinear :
                                    (plth.and
                                       (euclidean__axioms.nCol A B P)
                                       (euclidean__axioms.nCol A B Q)))) =>
-                         logic.and__ind
+                         logic.and_ind
                            (euclidean__axioms.BetS Q x1 x)
                            (plth.and
                               (euclidean__axioms.nCol A B P)
@@ -1135,7 +1135,7 @@ thm lemma__samesidecollinear :
                                    (plth.and
                                       (euclidean__axioms.nCol A B P)
                                       (euclidean__axioms.nCol A B Q))) =>
-                            logic.and__ind
+                            logic.and_ind
                               (euclidean__axioms.nCol A B P)
                               (euclidean__axioms.nCol A B Q)
                               (plth.ex
@@ -1166,7 +1166,7 @@ thm lemma__samesidecollinear :
                                                          Q)))))))))
                               (H14:(plth.Prf (euclidean__axioms.nCol A B P)) =>
                                H15:(plth.Prf (euclidean__axioms.nCol A B Q)) =>
-                               logic.ex__intro
+                               logic.ex_intro
                                  euclidean__axioms.Point
                                  (p:(plth.El euclidean__axioms.Point) =>
                                   plth.ex
@@ -1193,7 +1193,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q))))))))
                                  x0
-                                 (logic.ex__intro
+                                 (logic.ex_intro
                                     euclidean__axioms.Point
                                     (q:(plth.El euclidean__axioms.Point) =>
                                      plth.ex
@@ -1217,7 +1217,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q)))))))
                                     x1
-                                    (logic.ex__intro
+                                    (logic.ex_intro
                                        euclidean__axioms.Point
                                        (r:(plth.El euclidean__axioms.Point) =>
                                         plth.and
@@ -1241,7 +1241,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q))))))
                                        x
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__axioms.Col A B x0)
                                           (plth.and
                                              (euclidean__axioms.Col A B x1)
@@ -1262,7 +1262,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q)))))
                                           H6
-                                          (logic.conj
+                                          (logic.and_intro
                                              (euclidean__axioms.Col A B x1)
                                              (plth.and
                                                 (euclidean__axioms.BetS P x0 x)
@@ -1281,7 +1281,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q))))
                                              H8
-                                             (logic.conj
+                                             (logic.and_intro
                                                 (euclidean__axioms.BetS P x0 x)
                                                 (plth.and
                                                    (euclidean__axioms.BetS
@@ -1298,7 +1298,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q)))
                                                 H10
-                                                (logic.conj
+                                                (logic.and_intro
                                                    (euclidean__axioms.BetS
                                                       Q
                                                       x1
@@ -1313,7 +1313,7 @@ thm lemma__samesidecollinear :
                                                          B
                                                          Q))
                                                    H12
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.nCol
                                                          A
                                                          B

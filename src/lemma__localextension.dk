@@ -28,7 +28,7 @@ thm lemma__localextension :
           (plth.ex
              euclidean__axioms.Circle
              (J:(plth.El euclidean__axioms.Circle) => euclidean__axioms.CI J B B Q))) =>
-    logic.ex__ind
+    logic.ex_elim
       euclidean__axioms.Circle
       (J:(plth.El euclidean__axioms.Circle) => euclidean__axioms.CI J B B Q)
       (plth.ex
@@ -54,7 +54,7 @@ thm lemma__localextension :
                               (plth.and
                                  (euclidean__axioms.OnCirc E J)
                                  (euclidean__axioms.BetS C B E)))))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (C:(plth.El euclidean__axioms.Point) =>
             plth.ex
@@ -87,7 +87,7 @@ thm lemma__localextension :
                               (plth.and
                                  (euclidean__axioms.OnCirc E J)
                                  (euclidean__axioms.BetS C B E))))))) =>
-            logic.ex__ind
+            logic.ex_elim
               euclidean__axioms.Point
               (E:(plth.El euclidean__axioms.Point) =>
                plth.and
@@ -116,7 +116,7 @@ thm lemma__localextension :
                               (plth.and
                                  (euclidean__axioms.OnCirc E J)
                                  (euclidean__axioms.BetS C B E)))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col A B C)
                  (plth.and
                     (euclidean__axioms.BetS A B E)
@@ -139,7 +139,7 @@ thm lemma__localextension :
                               (plth.and
                                  (euclidean__axioms.OnCirc E J)
                                  (euclidean__axioms.BetS C B E))))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS A B E)
                     (plth.and
                        (euclidean__axioms.OnCirc C J)
@@ -159,7 +159,7 @@ thm lemma__localextension :
                                (plth.and
                                   (euclidean__axioms.OnCirc E J)
                                   (euclidean__axioms.BetS C B E)))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (euclidean__axioms.OnCirc C J)
                        (plth.and
                           (euclidean__axioms.OnCirc E J)
@@ -174,7 +174,7 @@ thm lemma__localextension :
                                (plth.and
                                   (euclidean__axioms.OnCirc E J)
                                   (euclidean__axioms.BetS C B E))) =>
-                        logic.and__ind3
+                        logic.and_ind_left
                           (euclidean__axioms.OnCirc E J)
                           (euclidean__axioms.BetS C B E)
                           (plth.ex
@@ -185,14 +185,14 @@ thm lemma__localextension :
                                 (euclidean__axioms.Cong B X B Q)))
                           (H14:(plth.Prf (euclidean__axioms.OnCirc E J)) =>
                            (H16:(plth.Prf (euclidean__axioms.Cong B E B Q)) =>
-                            logic.ex__intro
+                            logic.ex_intro
                               euclidean__axioms.Point
                               (X:(plth.El euclidean__axioms.Point) =>
                                plth.and
                                  (euclidean__axioms.BetS A B X)
                                  (euclidean__axioms.Cong B X B Q))
                               E
-                              (logic.conj
+                              (logic.and_intro
                                  (euclidean__axioms.BetS A B E)
                                  (euclidean__axioms.Cong B E B Q)
                                  H10
@@ -212,7 +212,7 @@ thm lemma__localextension :
               H6)
            H5)
           (euclidean__axioms.postulate__line__circle A B B J B Q H3 H4 H))
-         (logic.ex__intro
+         (logic.ex_intro
             euclidean__axioms.Point
             (X:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -237,7 +237,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong U X V W)
                                     (euclidean__axioms.Cong U B U Y)))))))))
             A
-            (logic.ex__intro
+            (logic.ex_intro
                euclidean__axioms.Point
                (Y:(plth.El euclidean__axioms.Point) =>
                 plth.ex
@@ -259,7 +259,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong U A V W)
                                     (euclidean__axioms.Cong U B U Y))))))))
                A
-               (logic.ex__intro
+               (logic.ex_intro
                   euclidean__axioms.Point
                   (U:(plth.El euclidean__axioms.Point) =>
                    plth.ex
@@ -278,7 +278,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong U A V W)
                                     (euclidean__axioms.Cong U B U A)))))))
                   B
-                  (logic.ex__intro
+                  (logic.ex_intro
                      euclidean__axioms.Point
                      (V:(plth.El euclidean__axioms.Point) =>
                       plth.ex
@@ -294,7 +294,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong B A V W)
                                     (euclidean__axioms.Cong B B B A))))))
                      B
-                     (logic.ex__intro
+                     (logic.ex_intro
                         euclidean__axioms.Point
                         (W:(plth.El euclidean__axioms.Point) =>
                          plth.and
@@ -307,7 +307,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong B A B W)
                                     (euclidean__axioms.Cong B B B A)))))
                         Q
-                        (logic.conj
+                        (logic.and_intro
                            (euclidean__axioms.CI J B B Q)
                            (plth.or
                               (plth.eq euclidean__axioms.Point B B)
@@ -317,7 +317,7 @@ thm lemma__localextension :
                                     (euclidean__axioms.Cong B A B Q)
                                     (euclidean__axioms.Cong B B B A))))
                            H3
-                           (logic.or__introl
+                           (logic.or_intro_left
                               (plth.eq euclidean__axioms.Point B B)
                               (plth.and
                                  (euclidean__axioms.BetS B A A)

@@ -31,7 +31,7 @@ thm lemma__droppedperpendicularunique :
    plth.nnpp
      (plth.eq euclidean__axioms.Point M J)
      (H3:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point M J))) =>
-      (H4:(plth.Prf plth.false) => logic.false__ind plth.false H4) (H2 H3)))
+      (H4:(plth.Prf plth.false) => logic.false_elim plth.false H4) (H2 H3)))
     (H2:(plth.Prf (plth.neq euclidean__axioms.Point M J)) =>
      (H3:(plth.Prf (plth.neq euclidean__axioms.Point J M)) =>
       (H4:(plth.Prf
@@ -39,7 +39,7 @@ thm lemma__droppedperpendicularunique :
                 euclidean__axioms.Point
                 (E:(plth.El euclidean__axioms.Point) =>
                  plth.and (euclidean__axioms.BetS M J E) (euclidean__axioms.Cong J E M J)))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (E:(plth.El euclidean__axioms.Point) =>
           plth.and (euclidean__axioms.BetS M J E) (euclidean__axioms.Cong J E M J))
@@ -47,7 +47,7 @@ thm lemma__droppedperpendicularunique :
          (E:(plth.El euclidean__axioms.Point) =>
           H5:(plth.Prf
                 (plth.and (euclidean__axioms.BetS M J E) (euclidean__axioms.Cong J E M J))) =>
-          logic.and__ind3
+          logic.and_ind_left
             (euclidean__axioms.BetS M J E)
             (euclidean__axioms.Cong J E M J)
             plth.false
@@ -60,7 +60,7 @@ thm lemma__droppedperpendicularunique :
                          plth.and
                            (euclidean__axioms.BetS J M F)
                            (euclidean__axioms.Cong M F M E)))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (F:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -72,7 +72,7 @@ thm lemma__droppedperpendicularunique :
                          (plth.and
                             (euclidean__axioms.BetS J M F)
                             (euclidean__axioms.Cong M F M E))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS J M F)
                     (euclidean__axioms.Cong M F M E)
                     plth.false
@@ -224,7 +224,7 @@ thm lemma__droppedperpendicularunique :
                                                        M
                                                        H38
                                                        H41))
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.BetS
                                                          F
                                                          M
@@ -302,7 +302,7 @@ thm lemma__droppedperpendicularunique :
                                                               F
                                                               E
                                                               M)))) =>
-                                              logic.and__ind2
+                                              logic.and_ind_right
                                                 (euclidean__axioms.Cong
                                                    F
                                                    M
@@ -336,7 +336,7 @@ thm lemma__droppedperpendicularunique :
                                                               F
                                                               E
                                                               M))) =>
-                                                 logic.and__elim_left
+                                                 logic.and_elim_left
                                                    (euclidean__axioms.Cong
                                                       F
                                                       M
@@ -382,7 +382,7 @@ thm lemma__droppedperpendicularunique :
                                                            euclidean__axioms.Point
                                                            E
                                                            F)))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 M
@@ -427,7 +427,7 @@ thm lemma__droppedperpendicularunique :
                                                                 A
                                                                 F
                                                                 M)))))) =>
-                                          logic.and__ind2
+                                          logic.and_ind_right
                                             (euclidean__axioms.Col
                                                F
                                                M
@@ -475,7 +475,7 @@ thm lemma__droppedperpendicularunique :
                                                                 A
                                                                 F
                                                                 M))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (euclidean__axioms.Col
                                                   F
                                                   A
@@ -513,7 +513,7 @@ thm lemma__droppedperpendicularunique :
                                                                 A
                                                                 F
                                                                 M)))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (euclidean__axioms.Col
                                                      A
                                                      M
@@ -582,7 +582,7 @@ thm lemma__droppedperpendicularunique :
                                                               A
                                                               J
                                                               M)))))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (euclidean__axioms.Col
                                              J
                                              M
@@ -646,7 +646,7 @@ thm lemma__droppedperpendicularunique :
                                                            A
                                                            F
                                                            J)))))) =>
-                                     logic.and__ind2
+                                     logic.and_ind_right
                                        (euclidean__axioms.Col
                                           F
                                           J
@@ -694,7 +694,7 @@ thm lemma__droppedperpendicularunique :
                                                            A
                                                            F
                                                            J))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (euclidean__axioms.Col
                                              F
                                              A
@@ -732,7 +732,7 @@ thm lemma__droppedperpendicularunique :
                                                            A
                                                            F
                                                            J)))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (euclidean__axioms.Col
                                                 A
                                                 J
@@ -823,7 +823,7 @@ thm lemma__droppedperpendicularunique :
                                                        J
                                                        M
                                                        A)))))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__axioms.Col
                                       M
                                       A
@@ -871,7 +871,7 @@ thm lemma__droppedperpendicularunique :
                                                        J
                                                        M
                                                        A))))) =>
-                                    logic.and__elim_left
+                                    logic.and_elim_left
                                       (euclidean__axioms.Col
                                          M
                                          J
@@ -922,7 +922,7 @@ thm lemma__droppedperpendicularunique :
                                                       F
                                                       M
                                                       J)))))) =>
-                                logic.and__elim_left
+                                logic.and_elim_left
                                   (euclidean__axioms.Col
                                      M
                                      J
@@ -952,7 +952,7 @@ thm lemma__droppedperpendicularunique :
                                     M
                                     F
                                     H19)))
-                             (logic.or__intror
+                             (logic.or_intro_right
                                 (plth.eq
                                    euclidean__axioms.Point
                                    J
@@ -981,7 +981,7 @@ thm lemma__droppedperpendicularunique :
                                                J
                                                F
                                                M)))))
-                                (logic.or__intror
+                                (logic.or_intro_right
                                    (plth.eq
                                       euclidean__axioms.Point
                                       J
@@ -1005,7 +1005,7 @@ thm lemma__droppedperpendicularunique :
                                                J
                                                F
                                                M))))
-                                   (logic.or__intror
+                                   (logic.or_intro_right
                                       (plth.eq
                                          euclidean__axioms.Point
                                          M
@@ -1024,7 +1024,7 @@ thm lemma__droppedperpendicularunique :
                                                J
                                                F
                                                M)))
-                                      (logic.or__intror
+                                      (logic.or_intro_right
                                          (euclidean__axioms.BetS
                                             M
                                             J
@@ -1038,7 +1038,7 @@ thm lemma__droppedperpendicularunique :
                                                J
                                                F
                                                M))
-                                         (logic.or__introl
+                                         (logic.or_intro_left
                                             (euclidean__axioms.BetS
                                                J
                                                M
@@ -1067,7 +1067,7 @@ thm lemma__droppedperpendicularunique :
                                              euclidean__axioms.Point
                                              E
                                              F)))) =>
-                             logic.and__elim_left
+                             logic.and_elim_left
                                (plth.neq euclidean__axioms.Point J F)
                                (plth.and
                                   (plth.neq
@@ -1101,7 +1101,7 @@ thm lemma__droppedperpendicularunique :
                           (plth.and
                              (plth.neq euclidean__axioms.Point M J)
                              (plth.neq euclidean__axioms.Point M E)))) =>
-                 logic.and__ind2
+                 logic.and_ind_right
                    (plth.neq euclidean__axioms.Point J E)
                    (plth.and
                       (plth.neq euclidean__axioms.Point M J)
@@ -1111,7 +1111,7 @@ thm lemma__droppedperpendicularunique :
                            (plth.and
                               (plth.neq euclidean__axioms.Point M J)
                               (plth.neq euclidean__axioms.Point M E))) =>
-                    logic.and__elim_right
+                    logic.and_elim_right
                       (plth.neq euclidean__axioms.Point M J)
                       (plth.neq euclidean__axioms.Point M E)
                       H10)

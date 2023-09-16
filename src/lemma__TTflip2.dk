@@ -44,7 +44,7 @@ thm lemma__TTflip2 :
              plth.and
                (euclidean__axioms.BetS E F J)
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (J:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -56,14 +56,14 @@ thm lemma__TTflip2 :
             (plth.and
                (euclidean__axioms.BetS E F J)
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS E F J)
         (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))
         (euclidean__defs.TT A B C D H G F E)
         (H3:(plth.Prf (euclidean__axioms.BetS E F J)) =>
          H4:(plth.Prf
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong F J G H)
            (euclidean__defs.TG A B C D E J)
            (euclidean__defs.TT A B C D H G F E)
@@ -78,7 +78,7 @@ thm lemma__TTflip2 :
                          (plth.and
                             (euclidean__axioms.Cong B K C D)
                             (euclidean__defs.Lt E J A K))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (K:(plth.El euclidean__axioms.Point) =>
                 plth.and
@@ -92,7 +92,7 @@ thm lemma__TTflip2 :
                          (plth.and
                             (euclidean__axioms.Cong B K C D)
                             (euclidean__defs.Lt E J A K)))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__axioms.BetS A B K)
                   (plth.and (euclidean__axioms.Cong B K C D) (euclidean__defs.Lt E J A K))
                   (euclidean__defs.TT A B C D H G F E)
@@ -101,7 +101,7 @@ thm lemma__TTflip2 :
                           (plth.and
                              (euclidean__axioms.Cong B K C D)
                              (euclidean__defs.Lt E J A K))) =>
-                   logic.and__ind
+                   logic.and_ind
                      (euclidean__axioms.Cong B K C D)
                      (euclidean__defs.Lt E J A K)
                      (euclidean__defs.TT A B C D H G F E)
@@ -129,7 +129,7 @@ thm lemma__TTflip2 :
                                             L
                                             F
                                             E)))) =>
-                            logic.ex__ind
+                            logic.ex_elim
                               euclidean__axioms.Point
                               (L:(plth.El euclidean__axioms.Point) =>
                                plth.and
@@ -148,7 +148,7 @@ thm lemma__TTflip2 :
                                             L
                                             F
                                             E))) =>
-                               logic.and__ind
+                               logic.and_ind
                                  (euclidean__axioms.BetS H G L)
                                  (euclidean__axioms.Cong G L F E)
                                  (euclidean__defs.TT A B C D H G F E)
@@ -229,7 +229,7 @@ thm lemma__TTflip2 :
                                                       F
                                                       E)) =>
                                             H31)
-                                             (logic.ex__intro
+                                             (logic.ex_intro
                                                 euclidean__axioms.Point
                                                 (X:(plth.El
                                                       euclidean__axioms.Point) =>
@@ -252,7 +252,7 @@ thm lemma__TTflip2 :
                                                          H
                                                          X)))
                                                 L
-                                                (logic.conj
+                                                (logic.and_intro
                                                    (euclidean__axioms.BetS
                                                       H
                                                       G
@@ -271,7 +271,7 @@ thm lemma__TTflip2 :
                                                          H
                                                          L))
                                                    H20
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.Cong
                                                          G
                                                          L
@@ -286,7 +286,7 @@ thm lemma__TTflip2 :
                                                          L)
                                                       H21
                                                       H30))))
-                                            (logic.ex__intro
+                                            (logic.ex_intro
                                                euclidean__axioms.Point
                                                (X:(plth.El
                                                      euclidean__axioms.Point) =>
@@ -307,7 +307,7 @@ thm lemma__TTflip2 :
                                                         A
                                                         X)))
                                                K
-                                               (logic.conj
+                                               (logic.and_intro
                                                   (euclidean__axioms.BetS
                                                      A
                                                      B
@@ -324,7 +324,7 @@ thm lemma__TTflip2 :
                                                         A
                                                         K))
                                                   H9
-                                                  (logic.conj
+                                                  (logic.and_intro
                                                      (euclidean__axioms.Cong
                                                         B
                                                         K
@@ -404,7 +404,7 @@ thm lemma__TTflip2 :
                                                       L
                                                       E
                                                       F)))) =>
-                                      logic.and__elim_left
+                                      logic.and_elim_left
                                         (euclidean__axioms.Cong
                                            L
                                            G
@@ -456,7 +456,7 @@ thm lemma__TTflip2 :
                                              euclidean__axioms.Point
                                              E
                                              J)))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (plth.neq euclidean__axioms.Point F J)
                                (plth.and
                                   (plth.neq euclidean__axioms.Point E F)
@@ -472,7 +472,7 @@ thm lemma__TTflip2 :
                                              euclidean__axioms.Point
                                              E
                                              J))) =>
-                                logic.and__elim_left
+                                logic.and_elim_left
                                   (plth.neq euclidean__axioms.Point E F)
                                   (plth.neq euclidean__axioms.Point E J)
                                   H18)
@@ -493,7 +493,7 @@ thm lemma__TTflip2 :
                                     (plth.and
                                        (plth.neq euclidean__axioms.Point E F)
                                        (plth.neq euclidean__axioms.Point E J)))) =>
-                          logic.and__elim_left
+                          logic.and_elim_left
                             (plth.neq euclidean__axioms.Point F J)
                             (plth.and
                                (plth.neq euclidean__axioms.Point E F)

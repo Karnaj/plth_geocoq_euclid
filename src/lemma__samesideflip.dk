@@ -40,7 +40,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (p:(plth.El euclidean__axioms.Point) =>
       plth.ex
@@ -80,7 +80,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))))))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (q:(plth.El euclidean__axioms.Point) =>
          plth.ex
@@ -114,7 +114,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (r:(plth.El euclidean__axioms.Point) =>
             plth.and
@@ -142,7 +142,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Col A B p)
               (plth.and
                  (euclidean__axioms.Col A B q)
@@ -165,7 +165,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))))) =>
-               logic.and__ind
+               logic.and_ind
                  (euclidean__axioms.Col A B q)
                  (plth.and
                     (euclidean__axioms.BetS P p r)
@@ -184,7 +184,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q))))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS P p r)
                     (plth.and
                        (euclidean__axioms.BetS Q q r)
@@ -199,7 +199,7 @@ thm lemma__samesideflip :
                               (plth.and
                                  (euclidean__axioms.nCol A B P)
                                  (euclidean__axioms.nCol A B Q)))) =>
-                     logic.and__ind
+                     logic.and_ind
                        (euclidean__axioms.BetS Q q r)
                        (plth.and
                           (euclidean__axioms.nCol A B P)
@@ -210,7 +210,7 @@ thm lemma__samesideflip :
                                (plth.and
                                   (euclidean__axioms.nCol A B P)
                                   (euclidean__axioms.nCol A B Q))) =>
-                        logic.and__ind
+                        logic.and_ind
                           (euclidean__axioms.nCol A B P)
                           (euclidean__axioms.nCol A B Q)
                           (euclidean__defs.OS P Q B A)
@@ -223,7 +223,7 @@ thm lemma__samesideflip :
                                (H18:(plth.Prf
                                        (euclidean__defs.OS P Q B A)) =>
                                 H18)
-                                 (logic.ex__intro
+                                 (logic.ex_intro
                                     euclidean__axioms.Point
                                     (X:(plth.El euclidean__axioms.Point) =>
                                      plth.ex
@@ -261,7 +261,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q))))))))
                                     r
-                                    (logic.ex__intro
+                                    (logic.ex_intro
                                        euclidean__axioms.Point
                                        (U:(plth.El
                                              euclidean__axioms.Point) =>
@@ -296,7 +296,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q)))))))
                                        p
-                                       (logic.ex__intro
+                                       (logic.ex_intro
                                           euclidean__axioms.Point
                                           (V:(plth.El
                                                 euclidean__axioms.Point) =>
@@ -327,7 +327,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q))))))
                                           q
-                                          (logic.conj
+                                          (logic.and_intro
                                              (euclidean__axioms.Col B A p)
                                              (plth.and
                                                 (euclidean__axioms.Col
@@ -354,7 +354,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q)))))
                                              H14
-                                             (logic.conj
+                                             (logic.and_intro
                                                 (euclidean__axioms.Col
                                                    B
                                                    A
@@ -379,7 +379,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q))))
                                                 H15
-                                                (logic.conj
+                                                (logic.and_intro
                                                    (euclidean__axioms.BetS
                                                       P
                                                       p
@@ -399,7 +399,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q)))
                                                    H8
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.BetS
                                                          Q
                                                          q
@@ -414,7 +414,7 @@ thm lemma__samesideflip :
                                                             A
                                                             Q))
                                                       H10
-                                                      (logic.conj
+                                                      (logic.and_intro
                                                          (euclidean__axioms.nCol
                                                             B
                                                             A
@@ -447,7 +447,7 @@ thm lemma__samesideflip :
                                                         Q
                                                         B
                                                         A)))))) =>
-                                  logic.and__elim_left
+                                  logic.and_elim_left
                                     (euclidean__axioms.nCol B A Q)
                                     (plth.and
                                        (euclidean__axioms.nCol B Q A)
@@ -477,7 +477,7 @@ thm lemma__samesideflip :
                                                        P
                                                        B
                                                        A)))))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (euclidean__axioms.nCol B A P)
                                    (plth.and
                                       (euclidean__axioms.nCol B P A)
@@ -504,7 +504,7 @@ thm lemma__samesideflip :
                                                       q
                                                       B
                                                       A)))))) =>
-                                logic.and__elim_left
+                                logic.and_elim_left
                                   (euclidean__axioms.Col B A q)
                                   (plth.and
                                      (euclidean__axioms.Col B q A)
@@ -525,7 +525,7 @@ thm lemma__samesideflip :
                                                (plth.and
                                                   (euclidean__axioms.Col A p B)
                                                   (euclidean__axioms.Col p B A)))))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col B A p)
                                  (plth.and
                                     (euclidean__axioms.Col B p A)
@@ -586,7 +586,7 @@ thm lemma__samesideflip :
                                         (plth.and
                                            (euclidean__axioms.nCol A B P)
                                            (euclidean__axioms.nCol A B Q)))))))))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (X:(plth.El euclidean__axioms.Point) =>
           plth.ex
@@ -645,7 +645,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (U:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -698,7 +698,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q)))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (V:(plth.El euclidean__axioms.Point) =>
                 plth.and
@@ -745,7 +745,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__axioms.Col A B x0)
                   (plth.and
                      (euclidean__axioms.Col A B x1)
@@ -787,7 +787,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q)))))) =>
-                   logic.and__ind
+                   logic.and_ind
                      (euclidean__axioms.Col A B x1)
                      (plth.and
                         (euclidean__axioms.BetS P x0 x)
@@ -825,7 +825,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q))))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (euclidean__axioms.BetS P x0 x)
                         (plth.and
                            (euclidean__axioms.BetS Q x1 x)
@@ -859,7 +859,7 @@ thm lemma__samesideflip :
                                   (plth.and
                                      (euclidean__axioms.nCol A B P)
                                      (euclidean__axioms.nCol A B Q)))) =>
-                         logic.and__ind
+                         logic.and_ind
                            (euclidean__axioms.BetS Q x1 x)
                            (plth.and
                               (euclidean__axioms.nCol A B P)
@@ -889,7 +889,7 @@ thm lemma__samesideflip :
                                    (plth.and
                                       (euclidean__axioms.nCol A B P)
                                       (euclidean__axioms.nCol A B Q))) =>
-                            logic.and__ind
+                            logic.and_ind
                               (euclidean__axioms.nCol A B P)
                               (euclidean__axioms.nCol A B Q)
                               (plth.ex
@@ -920,7 +920,7 @@ thm lemma__samesideflip :
                                                          Q)))))))))
                               (H12:(plth.Prf (euclidean__axioms.nCol A B P)) =>
                                H13:(plth.Prf (euclidean__axioms.nCol A B Q)) =>
-                               logic.ex__intro
+                               logic.ex_intro
                                  euclidean__axioms.Point
                                  (p:(plth.El euclidean__axioms.Point) =>
                                   plth.ex
@@ -947,7 +947,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q))))))))
                                  x0
-                                 (logic.ex__intro
+                                 (logic.ex_intro
                                     euclidean__axioms.Point
                                     (q:(plth.El euclidean__axioms.Point) =>
                                      plth.ex
@@ -971,7 +971,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q)))))))
                                     x1
-                                    (logic.ex__intro
+                                    (logic.ex_intro
                                        euclidean__axioms.Point
                                        (r:(plth.El euclidean__axioms.Point) =>
                                         plth.and
@@ -995,7 +995,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q))))))
                                        x
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__axioms.Col A B x0)
                                           (plth.and
                                              (euclidean__axioms.Col A B x1)
@@ -1016,7 +1016,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q)))))
                                           H4
-                                          (logic.conj
+                                          (logic.and_intro
                                              (euclidean__axioms.Col A B x1)
                                              (plth.and
                                                 (euclidean__axioms.BetS P x0 x)
@@ -1035,7 +1035,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q))))
                                              H6
-                                             (logic.conj
+                                             (logic.and_intro
                                                 (euclidean__axioms.BetS P x0 x)
                                                 (plth.and
                                                    (euclidean__axioms.BetS
@@ -1052,7 +1052,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q)))
                                                 H8
-                                                (logic.conj
+                                                (logic.and_intro
                                                    (euclidean__axioms.BetS
                                                       Q
                                                       x1
@@ -1067,7 +1067,7 @@ thm lemma__samesideflip :
                                                          B
                                                          Q))
                                                    H10
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.nCol
                                                          A
                                                          B

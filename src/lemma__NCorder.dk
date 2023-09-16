@@ -30,7 +30,7 @@ thm lemma__NCorder :
     (H2:(plth.Prf (plth.not (euclidean__axioms.Col C A B))) =>
      (H3:(plth.Prf (plth.not (euclidean__axioms.Col A C B))) =>
       (H4:(plth.Prf (plth.not (euclidean__axioms.Col C B A))) =>
-       logic.conj
+       logic.and_intro
          (euclidean__axioms.nCol B A C)
          (plth.and
             (euclidean__axioms.nCol B C A)
@@ -40,7 +40,7 @@ thm lemma__NCorder :
                   (euclidean__axioms.nCol A C B)
                   (euclidean__axioms.nCol C B A))))
          (euclidean__tactics.nCol__notCol B A C H0)
-         (logic.conj
+         (logic.and_intro
             (euclidean__axioms.nCol B C A)
             (plth.and
                (euclidean__axioms.nCol C A B)
@@ -48,13 +48,13 @@ thm lemma__NCorder :
                   (euclidean__axioms.nCol A C B)
                   (euclidean__axioms.nCol C B A)))
             (euclidean__tactics.nCol__notCol B C A H1)
-            (logic.conj
+            (logic.and_intro
                (euclidean__axioms.nCol C A B)
                (plth.and
                   (euclidean__axioms.nCol A C B)
                   (euclidean__axioms.nCol C B A))
                (euclidean__tactics.nCol__notCol C A B H2)
-               (logic.conj
+               (logic.and_intro
                   (euclidean__axioms.nCol A C B)
                   (euclidean__axioms.nCol C B A)
                   (euclidean__tactics.nCol__notCol A C B H3)
@@ -78,7 +78,7 @@ thm lemma__NCorder :
                             (plth.and
                                (euclidean__axioms.Col C A B)
                                (euclidean__axioms.Col A B C)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col B C A)
                (plth.and
                   (euclidean__axioms.Col B A C)
@@ -96,7 +96,7 @@ thm lemma__NCorder :
                             (plth.and
                                (euclidean__axioms.Col C A B)
                                (euclidean__axioms.Col A B C))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col B A C)
                   (plth.and
                      (euclidean__axioms.Col A C B)
@@ -110,7 +110,7 @@ thm lemma__NCorder :
                             (plth.and
                                (euclidean__axioms.Col C A B)
                                (euclidean__axioms.Col A B C)))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col A C B)
                      (plth.and
                         (euclidean__axioms.Col C A B)
@@ -120,7 +120,7 @@ thm lemma__NCorder :
                              (plth.and
                                 (euclidean__axioms.Col C A B)
                                 (euclidean__axioms.Col A B C))) =>
-                      logic.and__elim_right
+                      logic.and_elim_right
                         (euclidean__axioms.Col C A B)
                         (euclidean__axioms.Col A B C)
                         H11)
@@ -147,7 +147,7 @@ thm lemma__NCorder :
                            (plth.and
                               (euclidean__axioms.Col A B C)
                               (euclidean__axioms.Col B C A)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.Col C A B)
               (plth.and
                  (euclidean__axioms.Col C B A)
@@ -165,7 +165,7 @@ thm lemma__NCorder :
                            (plth.and
                               (euclidean__axioms.Col A B C)
                               (euclidean__axioms.Col B C A))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col C B A)
                  (plth.and
                     (euclidean__axioms.Col B A C)
@@ -179,7 +179,7 @@ thm lemma__NCorder :
                            (plth.and
                               (euclidean__axioms.Col A B C)
                               (euclidean__axioms.Col B C A)))) =>
-                  logic.and__ind2
+                  logic.and_ind_right
                     (euclidean__axioms.Col B A C)
                     (plth.and
                        (euclidean__axioms.Col A B C)
@@ -189,7 +189,7 @@ thm lemma__NCorder :
                             (plth.and
                                (euclidean__axioms.Col A B C)
                                (euclidean__axioms.Col B C A))) =>
-                     logic.and__elim_left
+                     logic.and_elim_left
                        (euclidean__axioms.Col A B C)
                        (euclidean__axioms.Col B C A)
                        H10)
@@ -216,7 +216,7 @@ thm lemma__NCorder :
                           (plth.and
                              (euclidean__axioms.Col C B A)
                              (euclidean__axioms.Col B A C)))))) =>
-           logic.and__ind2
+           logic.and_ind_right
              (euclidean__axioms.Col A C B)
              (plth.and
                 (euclidean__axioms.Col A B C)
@@ -232,7 +232,7 @@ thm lemma__NCorder :
                           (plth.and
                              (euclidean__axioms.Col C B A)
                              (euclidean__axioms.Col B A C))))) =>
-              logic.and__elim_left
+              logic.and_elim_left
                 (euclidean__axioms.Col A B C)
                 (plth.and
                    (euclidean__axioms.Col B C A)
@@ -259,7 +259,7 @@ thm lemma__NCorder :
                          (plth.and
                             (euclidean__axioms.Col B A C)
                             (euclidean__axioms.Col A C B)))))) =>
-          logic.and__ind2
+          logic.and_ind_right
             (euclidean__axioms.Col C B A)
             (plth.and
                (euclidean__axioms.Col C A B)
@@ -275,7 +275,7 @@ thm lemma__NCorder :
                          (plth.and
                             (euclidean__axioms.Col B A C)
                             (euclidean__axioms.Col A C B))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col C A B)
                (plth.and
                   (euclidean__axioms.Col A B C)
@@ -287,7 +287,7 @@ thm lemma__NCorder :
                          (plth.and
                             (euclidean__axioms.Col B A C)
                             (euclidean__axioms.Col A C B)))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (euclidean__axioms.Col A B C)
                   (plth.and (euclidean__axioms.Col B A C) (euclidean__axioms.Col A C B))
                   H6)
@@ -307,7 +307,7 @@ thm lemma__NCorder :
                         (plth.and
                            (euclidean__axioms.Col B C A)
                            (euclidean__axioms.Col C A B)))))) =>
-         logic.and__elim_left
+         logic.and_elim_left
            (euclidean__axioms.Col A B C)
            (plth.and
               (euclidean__axioms.Col A C B)

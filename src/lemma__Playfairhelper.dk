@@ -39,14 +39,14 @@ thm lemma__Playfairhelper :
             euclidean__axioms.Point
             (M:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS A M D) (euclidean__axioms.BetS B M C)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (M:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS A M D) (euclidean__axioms.BetS B M C))
      (euclidean__axioms.Col C D E)
      (M:(plth.El euclidean__axioms.Point) =>
       H4:(plth.Prf (plth.and (euclidean__axioms.BetS A M D) (euclidean__axioms.BetS B M C))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A M D)
         (euclidean__axioms.BetS B M C)
         (euclidean__axioms.Col C D E)
@@ -59,7 +59,7 @@ thm lemma__Playfairhelper :
                     plth.and
                       (euclidean__axioms.BetS A m E)
                       (euclidean__axioms.BetS B m C)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (m:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS A m E) (euclidean__axioms.BetS B m C))
@@ -69,7 +69,7 @@ thm lemma__Playfairhelper :
                    (plth.and
                       (euclidean__axioms.BetS A m E)
                       (euclidean__axioms.BetS B m C))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS A m E)
                (euclidean__axioms.BetS B m C)
                (euclidean__axioms.Col C D E)
@@ -189,7 +189,7 @@ thm lemma__Playfairhelper :
                                                         e
                                                         C
                                                         D)))) =>
-                                        logic.ex__ind
+                                        logic.ex_elim
                                           euclidean__axioms.Point
                                           (e:(plth.El
                                                 euclidean__axioms.Point) =>
@@ -220,7 +220,7 @@ thm lemma__Playfairhelper :
                                                         e
                                                         C
                                                         D))) =>
-                                           logic.and__ind
+                                           logic.and_ind
                                              (euclidean__defs.Out
                                                 C
                                                 E
@@ -486,7 +486,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     E
                                                                     C)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     C
@@ -535,7 +535,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     E
                                                                     C))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     D
@@ -574,7 +574,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     E
                                                                     C)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     D
                                                                     C
@@ -603,7 +603,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     E
                                                                     C))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     D
@@ -896,7 +896,7 @@ thm lemma__Playfairhelper :
                                                                     e
                                                                     D
                                                                     C)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     e
                                                                     C
@@ -948,7 +948,7 @@ thm lemma__Playfairhelper :
                                                                     E
                                                                     e
                                                                     H36))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -1004,7 +1004,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     C
                                                                     e)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     e
@@ -1053,7 +1053,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     C
                                                                     e))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -1079,7 +1079,7 @@ thm lemma__Playfairhelper :
                                                                     C
                                                                     B
                                                                     H54)))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -1124,7 +1124,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D))))))))
                                                                     A
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -1164,7 +1164,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D)))))))
                                                                     m
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -1199,7 +1199,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D))))))
                                                                     M
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     B
@@ -1229,7 +1229,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D)))))
                                                                     H17
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     B
@@ -1254,7 +1254,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D))))
                                                                     H16
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     E
                                                                     m
@@ -1274,7 +1274,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D)))
                                                                     H12
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     M
@@ -1289,7 +1289,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     D))
                                                                     H13
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -1326,7 +1326,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     C
                                                                     B)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -1410,7 +1410,7 @@ thm lemma__Playfairhelper :
                                                                     E
                                                                     C
                                                                     B)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -1577,7 +1577,7 @@ thm lemma__Playfairhelper :
                                                                     b
                                                                     a
                                                                     c)) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     B0
                                                                     C0
@@ -1635,7 +1635,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     B
                                                                     C)))))) =>
-                                                                   logic.and__ind2
+                                                                   logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     C
@@ -1684,7 +1684,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     B
                                                                     C))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     D
@@ -1723,7 +1723,7 @@ thm lemma__Playfairhelper :
                                                                     D
                                                                     B
                                                                     C)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     D
                                                                     C
@@ -1773,7 +1773,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     e
                                                                     C)))))) =>
-                                                                 logic.and__elim_left
+                                                                 logic.and_elim_left
                                                                    (euclidean__axioms.nCol
                                                                     e
                                                                     C
@@ -1852,7 +1852,7 @@ thm lemma__Playfairhelper :
                                                                     B
                                                                     C
                                                                     E)))))) =>
-                                                              logic.and__elim_left
+                                                              logic.and_elim_left
                                                                 (euclidean__axioms.nCol
                                                                    C
                                                                    E
@@ -1882,7 +1882,7 @@ thm lemma__Playfairhelper :
                                                                   C
                                                                   B
                                                                   H42)))
-                                                           (logic.or__intror
+                                                           (logic.or_intro_right
                                                               (plth.eq
                                                                  euclidean__axioms.Point
                                                                  C
@@ -1913,7 +1913,7 @@ thm lemma__Playfairhelper :
                                                                     C
                                                                     C
                                                                     E)))))
-                                                              (logic.or__introl
+                                                              (logic.or_intro_left
                                                                  (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2010,7 +2010,7 @@ thm lemma__Playfairhelper :
                                                                     E
                                                                     B
                                                                     C)))))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (euclidean__axioms.nCol
                                                            B
                                                            C
@@ -2058,7 +2058,7 @@ thm lemma__Playfairhelper :
                                                                     E
                                                                     B
                                                                     C))))) =>
-                                                         logic.and__ind2
+                                                         logic.and_ind_right
                                                            (euclidean__axioms.nCol
                                                               B
                                                               E
@@ -2096,7 +2096,7 @@ thm lemma__Playfairhelper :
                                                                     E
                                                                     B
                                                                     C)))) =>
-                                                            logic.and__elim_left
+                                                            logic.and_elim_left
                                                               (euclidean__axioms.nCol
                                                                  E
                                                                  C
@@ -2125,7 +2125,7 @@ thm lemma__Playfairhelper :
                                                      C
                                                      B
                                                      B
-                                                     (logic.or__intror
+                                                     (logic.or_intro_right
                                                         (euclidean__axioms.BetS
                                                            C
                                                            B
@@ -2139,7 +2139,7 @@ thm lemma__Playfairhelper :
                                                               C
                                                               B
                                                               B))
-                                                        (logic.or__introl
+                                                        (logic.or_intro_left
                                                            (plth.eq
                                                               euclidean__axioms.Point
                                                               B
@@ -2196,7 +2196,7 @@ thm lemma__Playfairhelper :
                                                                    euclidean__axioms.Point
                                                                    D
                                                                    C))))))) =>
-                                          logic.and__ind2
+                                          logic.and_ind_right
                                             (plth.neq
                                                euclidean__axioms.Point
                                                C
@@ -2254,7 +2254,7 @@ thm lemma__Playfairhelper :
                                                                    euclidean__axioms.Point
                                                                    D
                                                                    C)))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   B
@@ -2302,7 +2302,7 @@ thm lemma__Playfairhelper :
                                                                    euclidean__axioms.Point
                                                                    D
                                                                    C))))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (plth.neq
                                                      euclidean__axioms.Point
                                                      C
@@ -2359,7 +2359,7 @@ thm lemma__Playfairhelper :
                                                                   euclidean__axioms.Point
                                                                   E
                                                                   C))))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (plth.neq
                                               euclidean__axioms.Point
                                               C
@@ -2417,7 +2417,7 @@ thm lemma__Playfairhelper :
                                                                   euclidean__axioms.Point
                                                                   E
                                                                   C)))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  B
@@ -2465,7 +2465,7 @@ thm lemma__Playfairhelper :
                                                                   euclidean__axioms.Point
                                                                   E
                                                                   C))))) =>
-                                               logic.and__elim_left
+                                               logic.and_elim_left
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     C
@@ -2544,7 +2544,7 @@ thm lemma__Playfairhelper :
                                                     C
                                                     B
                                                     A)))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (euclidean__defs.Par
                                          D
                                          C
@@ -2578,7 +2578,7 @@ thm lemma__Playfairhelper :
                                                     C
                                                     B
                                                     A))) =>
-                                       logic.and__elim_right
+                                       logic.and_elim_right
                                          (euclidean__defs.Par
                                             C
                                             D
@@ -2615,7 +2615,7 @@ thm lemma__Playfairhelper :
                                                    C
                                                    B
                                                    A)))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (euclidean__defs.Par
                                         E
                                         C
@@ -2649,7 +2649,7 @@ thm lemma__Playfairhelper :
                                                    C
                                                    B
                                                    A))) =>
-                                      logic.and__elim_right
+                                      logic.and_elim_right
                                         (euclidean__defs.Par
                                            C
                                            E
@@ -2680,7 +2680,7 @@ thm lemma__Playfairhelper :
                                   C
                                   D
                                   H))
-                              (logic.ex__intro
+                              (logic.ex_intro
                                  euclidean__axioms.Point
                                  (X:(plth.El
                                        euclidean__axioms.Point) =>
@@ -2699,7 +2699,7 @@ thm lemma__Playfairhelper :
                                           B
                                           D)))
                                  M
-                                 (logic.conj
+                                 (logic.and_intro
                                     (euclidean__axioms.BetS
                                        D
                                        M
@@ -2714,7 +2714,7 @@ thm lemma__Playfairhelper :
                                           B
                                           D))
                                     H13
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__axioms.Col
                                           C
                                           B
@@ -2725,7 +2725,7 @@ thm lemma__Playfairhelper :
                                           D)
                                        H16
                                        H21))))
-                             (logic.ex__intro
+                             (logic.ex_intro
                                 euclidean__axioms.Point
                                 (X:(plth.El
                                       euclidean__axioms.Point) =>
@@ -2744,7 +2744,7 @@ thm lemma__Playfairhelper :
                                          B
                                          E)))
                                 m
-                                (logic.conj
+                                (logic.and_intro
                                    (euclidean__axioms.BetS
                                       E
                                       m
@@ -2759,7 +2759,7 @@ thm lemma__Playfairhelper :
                                          B
                                          E))
                                    H12
-                                   (logic.conj
+                                   (logic.and_intro
                                       (euclidean__axioms.Col
                                          C
                                          B
@@ -2795,7 +2795,7 @@ thm lemma__Playfairhelper :
                                                     D
                                                     C
                                                     B)))))) =>
-                              logic.and__elim_left
+                              logic.and_elim_left
                                 (euclidean__axioms.nCol
                                    C
                                    B
@@ -2845,7 +2845,7 @@ thm lemma__Playfairhelper :
                                                 A
                                                 B
                                                 D))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (euclidean__axioms.nCol A B C)
                                (plth.and
                                   (euclidean__axioms.nCol
@@ -2877,7 +2877,7 @@ thm lemma__Playfairhelper :
                                                 A
                                                 B
                                                 D)))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (euclidean__axioms.nCol
                                      A
                                      C
@@ -2905,7 +2905,7 @@ thm lemma__Playfairhelper :
                                                 A
                                                 B
                                                 D))) =>
-                                   logic.and__elim_left
+                                   logic.and_elim_left
                                      (euclidean__axioms.nCol
                                         B
                                         C
@@ -2948,7 +2948,7 @@ thm lemma__Playfairhelper :
                                                   E
                                                   C
                                                   B)))))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (euclidean__axioms.nCol C B E)
                               (plth.and
                                  (euclidean__axioms.nCol C E B)
@@ -2992,7 +2992,7 @@ thm lemma__Playfairhelper :
                                               A
                                               B
                                               E))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.nCol A B C)
                              (plth.and
                                 (euclidean__axioms.nCol A C E)
@@ -3015,7 +3015,7 @@ thm lemma__Playfairhelper :
                                               A
                                               B
                                               E)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.nCol A C E)
                                 (plth.and
                                    (euclidean__axioms.nCol B C E)
@@ -3031,7 +3031,7 @@ thm lemma__Playfairhelper :
                                               A
                                               B
                                               E))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (euclidean__axioms.nCol B C E)
                                    (euclidean__axioms.nCol A B E)
                                    H22)
@@ -3065,7 +3065,7 @@ thm lemma__Playfairhelper :
                                                 C
                                                 m
                                                 B)))))) =>
-                          logic.and__ind2
+                          logic.and_ind_right
                             (euclidean__axioms.Col m B C)
                             (plth.and
                                (euclidean__axioms.Col m C B)
@@ -3095,7 +3095,7 @@ thm lemma__Playfairhelper :
                                                 C
                                                 m
                                                 B))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (euclidean__axioms.Col m C B)
                                (plth.and
                                   (euclidean__axioms.Col C B m)
@@ -3118,7 +3118,7 @@ thm lemma__Playfairhelper :
                                                 C
                                                 m
                                                 B)))) =>
-                                logic.and__elim_left
+                                logic.and_elim_left
                                   (euclidean__axioms.Col C B m)
                                   (plth.and
                                      (euclidean__axioms.Col B C m)
@@ -3150,7 +3150,7 @@ thm lemma__Playfairhelper :
                                                C
                                                M
                                                B)))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col M B C)
                            (plth.and
                               (euclidean__axioms.Col M C B)
@@ -3177,7 +3177,7 @@ thm lemma__Playfairhelper :
                                                C
                                                M
                                                B))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col M C B)
                               (plth.and
                                  (euclidean__axioms.Col C B M)
@@ -3200,7 +3200,7 @@ thm lemma__Playfairhelper :
                                                C
                                                M
                                                B)))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col C B M)
                                  (plth.and
                                     (euclidean__axioms.Col B C M)
@@ -3213,7 +3213,7 @@ thm lemma__Playfairhelper :
                              M
                              C
                              H14)))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point B m)
                          (plth.or
                             (plth.eq euclidean__axioms.Point B C)
@@ -3224,7 +3224,7 @@ thm lemma__Playfairhelper :
                                   (plth.or
                                      (euclidean__axioms.BetS B m C)
                                      (euclidean__axioms.BetS B C m)))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point B C)
                             (plth.or
                                (plth.eq euclidean__axioms.Point m C)
@@ -3233,23 +3233,23 @@ thm lemma__Playfairhelper :
                                   (plth.or
                                      (euclidean__axioms.BetS B m C)
                                      (euclidean__axioms.BetS B C m))))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (plth.eq euclidean__axioms.Point m C)
                                (plth.or
                                   (euclidean__axioms.BetS m B C)
                                   (plth.or
                                      (euclidean__axioms.BetS B m C)
                                      (euclidean__axioms.BetS B C m)))
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (euclidean__axioms.BetS m B C)
                                   (plth.or
                                      (euclidean__axioms.BetS B m C)
                                      (euclidean__axioms.BetS B C m))
-                                  (logic.or__introl
+                                  (logic.or_intro_left
                                      (euclidean__axioms.BetS B m C)
                                      (euclidean__axioms.BetS B C m)
                                      H10))))))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (plth.eq euclidean__axioms.Point B M)
                         (plth.or
                            (plth.eq euclidean__axioms.Point B C)
@@ -3260,7 +3260,7 @@ thm lemma__Playfairhelper :
                                  (plth.or
                                     (euclidean__axioms.BetS B M C)
                                     (euclidean__axioms.BetS B C M)))))
-                        (logic.or__intror
+                        (logic.or_intro_right
                            (plth.eq euclidean__axioms.Point B C)
                            (plth.or
                               (plth.eq euclidean__axioms.Point M C)
@@ -3269,19 +3269,19 @@ thm lemma__Playfairhelper :
                                  (plth.or
                                     (euclidean__axioms.BetS B M C)
                                     (euclidean__axioms.BetS B C M))))
-                           (logic.or__intror
+                           (logic.or_intro_right
                               (plth.eq euclidean__axioms.Point M C)
                               (plth.or
                                  (euclidean__axioms.BetS M B C)
                                  (plth.or
                                     (euclidean__axioms.BetS B M C)
                                     (euclidean__axioms.BetS B C M)))
-                              (logic.or__intror
+                              (logic.or_intro_right
                                  (euclidean__axioms.BetS M B C)
                                  (plth.or
                                     (euclidean__axioms.BetS B M C)
                                     (euclidean__axioms.BetS B C M))
-                                 (logic.or__introl
+                                 (logic.or_intro_left
                                     (euclidean__axioms.BetS B M C)
                                     (euclidean__axioms.BetS B C M)
                                     H6))))))
@@ -3293,7 +3293,7 @@ thm lemma__Playfairhelper :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point B m)
                                  (plth.neq euclidean__axioms.Point B C)))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (plth.neq euclidean__axioms.Point m C)
                       (plth.and
                          (plth.neq euclidean__axioms.Point B m)
@@ -3303,7 +3303,7 @@ thm lemma__Playfairhelper :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point B m)
                                  (plth.neq euclidean__axioms.Point B C))) =>
-                       logic.and__elim_right
+                       logic.and_elim_right
                          (plth.neq euclidean__axioms.Point B m)
                          (plth.neq euclidean__axioms.Point B C)
                          H13)

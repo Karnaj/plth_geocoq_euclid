@@ -29,7 +29,7 @@ thm lemma__legsmallerhypotenuse :
                    (plth.and
                       (euclidean__axioms.Cong C A D A)
                       (plth.neq euclidean__axioms.Point B A)))))) =>
-    logic.ex__ind
+    logic.ex_elim
       euclidean__axioms.Point
       (D:(plth.El euclidean__axioms.Point) =>
        plth.and
@@ -47,7 +47,7 @@ thm lemma__legsmallerhypotenuse :
                    (plth.and
                       (euclidean__axioms.Cong C A D A)
                       (plth.neq euclidean__axioms.Point B A))))) =>
-       logic.and__ind
+       logic.and_ind
          (euclidean__axioms.BetS C B D)
          (plth.and
             (euclidean__axioms.Cong C B D B)
@@ -60,7 +60,7 @@ thm lemma__legsmallerhypotenuse :
                    (plth.and
                       (euclidean__axioms.Cong C A D A)
                       (plth.neq euclidean__axioms.Point B A)))) =>
-          logic.and__ind
+          logic.and_ind
             (euclidean__axioms.Cong C B D B)
             (plth.and (euclidean__axioms.Cong C A D A) (plth.neq euclidean__axioms.Point B A))
             (plth.and (euclidean__defs.Lt A B A C) (euclidean__defs.Lt B C A C))
@@ -69,7 +69,7 @@ thm lemma__legsmallerhypotenuse :
                    (plth.and
                       (euclidean__axioms.Cong C A D A)
                       (plth.neq euclidean__axioms.Point B A))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.Cong C A D A)
                (plth.neq euclidean__axioms.Point B A)
                (plth.and (euclidean__defs.Lt A B A C) (euclidean__defs.Lt B C A C))
@@ -259,7 +259,7 @@ thm lemma__legsmallerhypotenuse :
                                                             C
                                                             A
                                                             C)) =>
-                                                  logic.conj
+                                                  logic.and_intro
                                                     (euclidean__defs.Lt
                                                        A
                                                        B
@@ -375,7 +375,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     A
                                                                     B
                                                                     C)))))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (euclidean__axioms.Col
                                                      B
                                                      C
@@ -423,7 +423,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     A
                                                                     B
                                                                     C))))) =>
-                                                   logic.and__ind2
+                                                   logic.and_ind_right
                                                      (euclidean__axioms.Col
                                                         B
                                                         A
@@ -461,7 +461,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     A
                                                                     B
                                                                     C)))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (euclidean__axioms.Col
                                                            A
                                                            C
@@ -489,7 +489,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     A
                                                                     B
                                                                     C))) =>
-                                                         logic.and__elim_right
+                                                         logic.and_elim_right
                                                            (euclidean__axioms.Col
                                                               C
                                                               A
@@ -579,7 +579,7 @@ thm lemma__legsmallerhypotenuse :
                                                                    C
                                                                    A
                                                                    B)))))) =>
-                                             logic.and__elim_left
+                                             logic.and_elim_left
                                                (euclidean__axioms.Col
                                                   A
                                                   B
@@ -609,7 +609,7 @@ thm lemma__legsmallerhypotenuse :
                                                  A
                                                  C
                                                  H31))))
-                                       (logic.and__ind3
+                                       (logic.and_ind_left
                                           (euclidean__defs.LtA
                                              C
                                              A
@@ -651,7 +651,7 @@ thm lemma__legsmallerhypotenuse :
                                          C
                                          H10
                                          H28))
-                                     (logic.and__ind2
+                                     (logic.and_ind_right
                                         (euclidean__defs.LtA
                                            C
                                            A
@@ -702,7 +702,7 @@ thm lemma__legsmallerhypotenuse :
                                        B
                                        C
                                        H26))
-                                   (logic.ex__intro
+                                   (logic.ex_intro
                                       euclidean__axioms.Point
                                       (U:(plth.El
                                             euclidean__axioms.Point) =>
@@ -763,7 +763,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D)))))))))))
                                       A
-                                      (logic.ex__intro
+                                      (logic.ex_intro
                                          euclidean__axioms.Point
                                          (V:(plth.El
                                                euclidean__axioms.Point) =>
@@ -820,7 +820,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D))))))))))
                                          D
-                                         (logic.ex__intro
+                                         (logic.ex_intro
                                             euclidean__axioms.Point
                                             (u:(plth.El
                                                   euclidean__axioms.Point) =>
@@ -873,7 +873,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D)))))))))
                                             A
-                                            (logic.ex__intro
+                                            (logic.ex_intro
                                                euclidean__axioms.Point
                                                (v:(plth.El
                                                      euclidean__axioms.Point) =>
@@ -922,7 +922,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D))))))))
                                                C
-                                               (logic.conj
+                                               (logic.and_intro
                                                   (euclidean__defs.Out
                                                      B
                                                      A
@@ -967,7 +967,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D)))))))
                                                   H19
-                                                  (logic.conj
+                                                  (logic.and_intro
                                                      (euclidean__defs.Out
                                                         B
                                                         D
@@ -1007,7 +1007,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D))))))
                                                      H21
-                                                     (logic.conj
+                                                     (logic.and_intro
                                                         (euclidean__defs.Out
                                                            B
                                                            A
@@ -1042,7 +1042,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D)))))
                                                         H19
-                                                        (logic.conj
+                                                        (logic.and_intro
                                                            (euclidean__defs.Out
                                                               B
                                                               C
@@ -1072,7 +1072,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D))))
                                                            H20
-                                                           (logic.conj
+                                                           (logic.and_intro
                                                               (euclidean__axioms.Cong
                                                                  B
                                                                  A
@@ -1097,7 +1097,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D)))
                                                               H22
-                                                              (logic.conj
+                                                              (logic.and_intro
                                                                  (euclidean__axioms.Cong
                                                                     B
                                                                     D
@@ -1116,7 +1116,7 @@ thm lemma__legsmallerhypotenuse :
                                                                     B
                                                                     D))
                                                                  H23
-                                                                 (logic.conj
+                                                                 (logic.and_intro
                                                                     (
                                                                     euclidean__axioms.Cong
                                                                     A
@@ -1216,7 +1216,7 @@ thm lemma__legsmallerhypotenuse :
                                                                    A
                                                                    C
                                                                    B)))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (euclidean__axioms.Col
                                                   C
                                                   B
@@ -1264,7 +1264,7 @@ thm lemma__legsmallerhypotenuse :
                                                                    A
                                                                    C
                                                                    B))))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (euclidean__axioms.Col
                                                      C
                                                      A
@@ -1302,7 +1302,7 @@ thm lemma__legsmallerhypotenuse :
                                                                    A
                                                                    C
                                                                    B)))) =>
-                                                   logic.and__elim_left
+                                                   logic.and_elim_left
                                                      (euclidean__axioms.Col
                                                         A
                                                         B
@@ -1396,7 +1396,7 @@ thm lemma__legsmallerhypotenuse :
                                                                D
                                                                B
                                                                A)))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Col
                                               B
                                               A
@@ -1444,7 +1444,7 @@ thm lemma__legsmallerhypotenuse :
                                                                D
                                                                B
                                                                A))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (euclidean__axioms.Col
                                                  B
                                                  D
@@ -1482,7 +1482,7 @@ thm lemma__legsmallerhypotenuse :
                                                                D
                                                                B
                                                                A)))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Col
                                                     D
                                                     A
@@ -1510,7 +1510,7 @@ thm lemma__legsmallerhypotenuse :
                                                                D
                                                                B
                                                                A))) =>
-                                                  logic.and__elim_right
+                                                  logic.and_elim_right
                                                     (euclidean__axioms.Col
                                                        A
                                                        D
@@ -1553,7 +1553,7 @@ thm lemma__legsmallerhypotenuse :
                                                               D
                                                               B
                                                               C)))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (euclidean__axioms.Col
                                              B
                                              C
@@ -1601,7 +1601,7 @@ thm lemma__legsmallerhypotenuse :
                                                               D
                                                               B
                                                               C))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (euclidean__axioms.Col
                                                 B
                                                 D
@@ -1639,7 +1639,7 @@ thm lemma__legsmallerhypotenuse :
                                                               D
                                                               B
                                                               C)))) =>
-                                              logic.and__ind2
+                                              logic.and_ind_right
                                                 (euclidean__axioms.Col
                                                    D
                                                    C
@@ -1667,7 +1667,7 @@ thm lemma__legsmallerhypotenuse :
                                                               D
                                                               B
                                                               C))) =>
-                                                 logic.and__elim_right
+                                                 logic.and_elim_right
                                                    (euclidean__axioms.Col
                                                       C
                                                       D
@@ -1685,7 +1685,7 @@ thm lemma__legsmallerhypotenuse :
                                             B
                                             D
                                             H26)))
-                                     (logic.or__intror
+                                     (logic.or_intro_right
                                         (plth.eq
                                            euclidean__axioms.Point
                                            C
@@ -1714,7 +1714,7 @@ thm lemma__legsmallerhypotenuse :
                                                        C
                                                        D
                                                        B)))))
-                                        (logic.or__intror
+                                        (logic.or_intro_right
                                            (plth.eq
                                               euclidean__axioms.Point
                                               C
@@ -1738,7 +1738,7 @@ thm lemma__legsmallerhypotenuse :
                                                        C
                                                        D
                                                        B))))
-                                           (logic.or__intror
+                                           (logic.or_intro_right
                                               (plth.eq
                                                  euclidean__axioms.Point
                                                  B
@@ -1757,7 +1757,7 @@ thm lemma__legsmallerhypotenuse :
                                                        C
                                                        D
                                                        B)))
-                                              (logic.or__intror
+                                              (logic.or_intro_right
                                                  (euclidean__axioms.BetS
                                                     B
                                                     C
@@ -1771,7 +1771,7 @@ thm lemma__legsmallerhypotenuse :
                                                        C
                                                        D
                                                        B))
-                                                 (logic.or__introl
+                                                 (logic.or_intro_left
                                                     (euclidean__axioms.BetS
                                                        C
                                                        B
@@ -1793,7 +1793,7 @@ thm lemma__legsmallerhypotenuse :
                                                 C
                                                 A
                                                 D))) =>
-                                   logic.and__elim_left
+                                   logic.and_elim_left
                                      (euclidean__axioms.Cong
                                         A
                                         D
@@ -1823,7 +1823,7 @@ thm lemma__legsmallerhypotenuse :
                                                C
                                                B
                                                D))) =>
-                                  logic.and__elim_left
+                                  logic.and_elim_left
                                     (euclidean__axioms.Cong
                                        B
                                        D
@@ -1848,7 +1848,7 @@ thm lemma__legsmallerhypotenuse :
                                  B
                                  D
                                  D
-                                 (logic.or__intror
+                                 (logic.or_intro_right
                                     (euclidean__axioms.BetS
                                        B
                                        D
@@ -1862,7 +1862,7 @@ thm lemma__legsmallerhypotenuse :
                                           B
                                           D
                                           D))
-                                    (logic.or__introl
+                                    (logic.or_intro_left
                                        (plth.eq
                                           euclidean__axioms.Point
                                           D
@@ -1877,7 +1877,7 @@ thm lemma__legsmallerhypotenuse :
                                 B
                                 C
                                 C
-                                (logic.or__intror
+                                (logic.or_intro_right
                                    (euclidean__axioms.BetS
                                       B
                                       C
@@ -1891,7 +1891,7 @@ thm lemma__legsmallerhypotenuse :
                                          B
                                          C
                                          C))
-                                   (logic.or__introl
+                                   (logic.or_intro_left
                                       (plth.eq
                                          euclidean__axioms.Point
                                          C
@@ -1906,7 +1906,7 @@ thm lemma__legsmallerhypotenuse :
                                B
                                A
                                A
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (euclidean__axioms.BetS
                                      B
                                      A
@@ -1920,7 +1920,7 @@ thm lemma__legsmallerhypotenuse :
                                         B
                                         A
                                         A))
-                                  (logic.or__introl
+                                  (logic.or_intro_left
                                      (plth.eq
                                         euclidean__axioms.Point
                                         A
@@ -1946,7 +1946,7 @@ thm lemma__legsmallerhypotenuse :
                                              euclidean__axioms.Point
                                              C
                                              D)))) =>
-                             logic.and__elim_left
+                             logic.and_elim_left
                                (plth.neq
                                   euclidean__axioms.Point
                                   B
@@ -1992,7 +1992,7 @@ thm lemma__legsmallerhypotenuse :
                                     C
                                     H10
                                     H18)))
-                             (logic.or__intror
+                             (logic.or_intro_right
                                 (plth.eq
                                    euclidean__axioms.Point
                                    A
@@ -2021,7 +2021,7 @@ thm lemma__legsmallerhypotenuse :
                                                A
                                                C
                                                B)))))
-                                (logic.or__intror
+                                (logic.or_intro_right
                                    (plth.eq
                                       euclidean__axioms.Point
                                       A
@@ -2045,7 +2045,7 @@ thm lemma__legsmallerhypotenuse :
                                                A
                                                C
                                                B))))
-                                   (logic.or__introl
+                                   (logic.or_intro_left
                                       (plth.eq
                                          euclidean__axioms.Point
                                          B
@@ -2083,7 +2083,7 @@ thm lemma__legsmallerhypotenuse :
                                          (plth.and
                                             (euclidean__axioms.Col A B C)
                                             (euclidean__axioms.Col B C A)))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col C A B)
                            (plth.and
                               (euclidean__axioms.Col C B A)
@@ -2101,7 +2101,7 @@ thm lemma__legsmallerhypotenuse :
                                          (plth.and
                                             (euclidean__axioms.Col A B C)
                                             (euclidean__axioms.Col B C A))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col C B A)
                               (plth.and
                                  (euclidean__axioms.Col B A C)
@@ -2115,7 +2115,7 @@ thm lemma__legsmallerhypotenuse :
                                          (plth.and
                                             (euclidean__axioms.Col A B C)
                                             (euclidean__axioms.Col B C A)))) =>
-                               logic.and__ind2
+                               logic.and_ind_right
                                  (euclidean__axioms.Col B A C)
                                  (plth.and
                                     (euclidean__axioms.Col A B C)
@@ -2125,7 +2125,7 @@ thm lemma__legsmallerhypotenuse :
                                          (plth.and
                                             (euclidean__axioms.Col A B C)
                                             (euclidean__axioms.Col B C A))) =>
-                                  logic.and__elim_left
+                                  logic.and_elim_left
                                     (euclidean__axioms.Col A B C)
                                     (euclidean__axioms.Col B C A)
                                     H18)

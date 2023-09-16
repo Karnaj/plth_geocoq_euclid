@@ -61,7 +61,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H1)))))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (G:(plth.El euclidean__axioms.Point) =>
       plth.ex
@@ -91,7 +91,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H2))))))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (H3:(plth.El euclidean__axioms.Point) =>
          plth.ex
@@ -115,7 +115,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H3)))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (J:(plth.El euclidean__axioms.Point) =>
             plth.and
@@ -133,7 +133,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H3))))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.BetS G H3 J)
               (plth.and
                  (euclidean__defs.Out E D G)
@@ -146,7 +146,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H3)))) =>
-               logic.and__ind
+               logic.and_ind
                  (euclidean__defs.Out E D G)
                  (plth.and (euclidean__defs.Out E F J) (euclidean__defs.CongA A B C D E H3))
                  (euclidean__defs.LtA A B C P Q R)
@@ -155,7 +155,7 @@ thm lemma__angleorderrespectscongruence :
                         (plth.and
                            (euclidean__defs.Out E F J)
                            (euclidean__defs.CongA A B C D E H3))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__defs.Out E F J)
                     (euclidean__defs.CongA A B C D E H3)
                     (euclidean__defs.LtA A B C P Q R)
@@ -204,7 +204,7 @@ thm lemma__angleorderrespectscongruence :
                                      plth.and
                                        (euclidean__defs.Out Q P U)
                                        (euclidean__axioms.Cong Q U E G)))) =>
-                          logic.ex__ind
+                          logic.ex_elim
                             euclidean__axioms.Point
                             (U:(plth.El euclidean__axioms.Point) =>
                              plth.and
@@ -216,14 +216,14 @@ thm lemma__angleorderrespectscongruence :
                                     (plth.and
                                        (euclidean__defs.Out Q P U)
                                        (euclidean__axioms.Cong Q U E G))) =>
-                             logic.and__ind
+                             logic.and_ind
                                (euclidean__defs.Out Q P U)
                                (euclidean__axioms.Cong Q U E G)
                                (euclidean__defs.LtA A B C P Q R)
                                (H18:(plth.Prf (euclidean__defs.Out Q P U)) =>
                                 H19:(plth.Prf
                                        (euclidean__axioms.Cong Q U E G)) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (plth.neq euclidean__axioms.Point A B)
                                   (plth.and
                                      (plth.neq euclidean__axioms.Point B C)
@@ -272,7 +272,7 @@ thm lemma__angleorderrespectscongruence :
                                                          euclidean__axioms.Point
                                                          D
                                                          H3)))))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (plth.neq euclidean__axioms.Point B C)
                                      (plth.and
                                         (plth.neq
@@ -314,7 +314,7 @@ thm lemma__angleorderrespectscongruence :
                                                          euclidean__axioms.Point
                                                          D
                                                          H3))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (plth.neq
                                            euclidean__axioms.Point
                                            A
@@ -349,7 +349,7 @@ thm lemma__angleorderrespectscongruence :
                                                          euclidean__axioms.Point
                                                          D
                                                          H3)))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (plth.neq
                                               euclidean__axioms.Point
                                               D
@@ -380,7 +380,7 @@ thm lemma__angleorderrespectscongruence :
                                                          euclidean__axioms.Point
                                                          D
                                                          H3))) =>
-                                            logic.and__ind3
+                                            logic.and_ind_left
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  E
@@ -401,7 +401,7 @@ thm lemma__angleorderrespectscongruence :
                                                         euclidean__axioms.Point
                                                         E
                                                         H3)) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     P
@@ -462,7 +462,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     F)))))) =>
-                                                  logic.and__ind3
+                                                  logic.and_ind_left
                                                     (plth.neq
                                                        euclidean__axioms.Point
                                                        Q
@@ -521,7 +521,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     V
                                                                     E
                                                                     J)))) =>
-                                                       logic.ex__ind
+                                                       logic.ex_elim
                                                          euclidean__axioms.Point
                                                          (V:(plth.El
                                                                euclidean__axioms.Point) =>
@@ -557,7 +557,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     V
                                                                     E
                                                                     J))) =>
-                                                          logic.and__ind
+                                                          logic.and_ind
                                                             (euclidean__defs.Out
                                                                Q
                                                                R
@@ -712,7 +712,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     G
                                                                     H3)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (W:(
                                                                     plth.El
@@ -749,7 +749,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     G
                                                                     H3))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     U
                                                                     W
@@ -779,7 +779,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     G
                                                                     H3)) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     G
                                                                     J
@@ -824,7 +824,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     V
                                                                     U))) =>
-                                                                    logic.and__ind3
+                                                                    logic.and_ind_left
                                                                     (euclidean__defs.CongA
                                                                     E
                                                                     G
@@ -1145,7 +1145,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     R)) =>
                                                                     H102)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U0:(
                                                                     plth.El
@@ -1183,7 +1183,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     X))))))
                                                                     U
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -1216,7 +1216,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     X)))))
                                                                     W
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V0:(
                                                                     plth.El
@@ -1244,7 +1244,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W))))
                                                                     V
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     U
                                                                     W
@@ -1267,7 +1267,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W)))
                                                                     H59
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     Q
                                                                     P
@@ -1285,7 +1285,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W))
                                                                     H18
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     Q
                                                                     R
@@ -1320,7 +1320,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W
                                                                     W
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     Q
                                                                     W
@@ -1334,7 +1334,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W
                                                                     W))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     W
@@ -1391,7 +1391,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     U
                                                                     Q
@@ -1440,7 +1440,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     U
                                                                     W
@@ -1479,7 +1479,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     W
                                                                     Q
@@ -1508,7 +1508,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     W
@@ -1526,7 +1526,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     U
                                                                     W
                                                                     H99)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     Q
@@ -1555,7 +1555,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     W
                                                                     U)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     Q
@@ -1583,7 +1583,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     (logic.eq__refl
                                                                     euclidean__axioms.Point
                                                                     W))
-                                                                    (logic.and__ind2
+                                                                    (logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     H3
                                                                     E
@@ -1628,7 +1628,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     U
                                                                     Q
                                                                     W))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__defs.CongA
                                                                     G
                                                                     H3
@@ -1737,7 +1737,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     U
                                                                     Q)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     G
                                                                     E
@@ -1826,7 +1826,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     Q
                                                                     U
                                                                     W)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     U
                                                                     W
@@ -1882,7 +1882,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     E
                                                                     H3
                                                                     G)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     H3
                                                                     G
@@ -1938,7 +1938,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     U
                                                                     Q
@@ -1987,7 +1987,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     W
                                                                     U
                                                                     Q))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     U
                                                                     W
@@ -2053,7 +2053,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     J
                                                                     H3
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     G
                                                                     H3
@@ -2093,7 +2093,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     E
                                                                     E
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     G
                                                                     E
@@ -2107,7 +2107,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     E
                                                                     E))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -2151,7 +2151,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     E
                                                                     H69
                                                                     H78)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -2180,7 +2180,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     E
                                                                     H3)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -2209,7 +2209,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     U
                                                                     Q
                                                                     Q
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     U
                                                                     Q
@@ -2223,7 +2223,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     U
                                                                     Q
                                                                     Q))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     Q
@@ -2265,7 +2265,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     V
                                                                     U))))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     U
@@ -2326,7 +2326,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     U
                                                                     V
                                                                     W
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     U
                                                                     W
@@ -2358,7 +2358,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     U
                                                                     V)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     W
@@ -2387,7 +2387,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     U
                                                                     V))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     U
@@ -2429,7 +2429,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     H3
                                                                     E
                                                                     G)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     G
@@ -2478,7 +2478,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     H3
                                                                     E
                                                                     G))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     H3
@@ -2517,7 +2517,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     H3
                                                                     E
                                                                     G)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     H3
                                                                     G
@@ -2546,7 +2546,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     H3
                                                                     E
                                                                     G))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     G
                                                                     H3
@@ -2596,7 +2596,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     E
                                                                     H3
                                                                     H3
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     E
                                                                     H3
@@ -2610,7 +2610,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     E
                                                                     H3
                                                                     H3))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     H3
@@ -2653,7 +2653,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     G
                                                                     J)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     H3
@@ -2682,7 +2682,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     G
                                                                     J))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -2698,7 +2698,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     H3
                                                                     J
                                                                     H6)))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.Cong
                                                                     G
                                                                     J
@@ -2809,7 +2809,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     E
                                                                     F
                                                                     H0))
-                                                                (logic.ex__intro
+                                                                (logic.ex_intro
                                                                    euclidean__axioms.Point
                                                                    (X:(
                                                                     plth.El
@@ -2825,7 +2825,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     G
                                                                     H3))
                                                                    H3
-                                                                   (logic.conj
+                                                                   (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     G
                                                                     H3
@@ -2865,7 +2865,7 @@ thm lemma__angleorderrespectscongruence :
                             H16)
                            (lemma__layoff.lemma__layoff Q P E G H13 H15))
                           (lemma__raystrict.lemma__raystrict E D G H8))
-                         (logic.and__ind2
+                         (logic.and_ind_right
                             (plth.neq euclidean__axioms.Point P Q)
                             (plth.and
                                (plth.neq euclidean__axioms.Point Q R)
@@ -2912,7 +2912,7 @@ thm lemma__angleorderrespectscongruence :
                                                    euclidean__axioms.Point
                                                    D
                                                    F)))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (plth.neq euclidean__axioms.Point Q R)
                                (plth.and
                                   (plth.neq euclidean__axioms.Point P R)
@@ -2955,7 +2955,7 @@ thm lemma__angleorderrespectscongruence :
                                                    euclidean__axioms.Point
                                                    D
                                                    F))))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (plth.neq euclidean__axioms.Point P R)
                                   (plth.and
                                      (plth.neq euclidean__axioms.Point D E)
@@ -2997,7 +2997,7 @@ thm lemma__angleorderrespectscongruence :
                                                    euclidean__axioms.Point
                                                    D
                                                    F)))) =>
-                                   logic.and__ind3
+                                   logic.and_ind_left
                                      (plth.neq euclidean__axioms.Point D E)
                                      (plth.and
                                         (plth.neq euclidean__axioms.Point E F)
@@ -3030,7 +3030,7 @@ thm lemma__angleorderrespectscongruence :
                                                 euclidean__axioms.Point
                                                 D
                                                 E)) =>
-                                      logic.conj
+                                      logic.and_intro
                                         (plth.neq euclidean__axioms.Point A B)
                                         (plth.and
                                            (plth.neq euclidean__axioms.Point B C)
@@ -3083,7 +3083,7 @@ thm lemma__angleorderrespectscongruence :
                                                                    euclidean__axioms.Point
                                                                    D
                                                                    H3))))))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (plth.neq
                                                euclidean__axioms.Point
                                                A
@@ -3121,7 +3121,7 @@ thm lemma__angleorderrespectscongruence :
                                               E
                                               H3
                                               H11))
-                                        (logic.conj
+                                        (logic.and_intro
                                            (plth.neq euclidean__axioms.Point B C)
                                            (plth.and
                                               (plth.neq
@@ -3172,7 +3172,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   A
@@ -3230,7 +3230,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (plth.neq
                                                      euclidean__axioms.Point
                                                      B
@@ -3264,7 +3264,7 @@ thm lemma__angleorderrespectscongruence :
                                                  E
                                                  H3
                                                  H11))
-                                           (logic.conj
+                                           (logic.and_intro
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  A
@@ -3313,7 +3313,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (plth.neq
                                                      euclidean__axioms.Point
                                                      A
@@ -3371,7 +3371,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))))) =>
-                                                   logic.and__ind2
+                                                   logic.and_ind_right
                                                      (plth.neq
                                                         euclidean__axioms.Point
                                                         B
@@ -3419,7 +3419,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))) =>
-                                                      logic.and__elim_left
+                                                      logic.and_elim_left
                                                         (plth.neq
                                                            euclidean__axioms.Point
                                                            A
@@ -3449,7 +3449,7 @@ thm lemma__angleorderrespectscongruence :
                                                     E
                                                     H3
                                                     H11))
-                                              (logic.conj
+                                              (logic.and_intro
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     D
@@ -3502,7 +3502,7 @@ thm lemma__angleorderrespectscongruence :
                                                        E
                                                        H3
                                                        H11))
-                                                 (logic.conj
+                                                 (logic.and_intro
                                                     (plth.neq
                                                        euclidean__axioms.Point
                                                        E
@@ -3541,7 +3541,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (plth.neq
                                                            euclidean__axioms.Point
                                                            A
@@ -3601,7 +3601,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))))) =>
-                                                         logic.and__ind2
+                                                         logic.and_ind_right
                                                            (plth.neq
                                                               euclidean__axioms.Point
                                                               B
@@ -3651,7 +3651,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))) =>
-                                                            logic.and__ind2
+                                                            logic.and_ind_right
                                                               (plth.neq
                                                                  euclidean__axioms.Point
                                                                  A
@@ -3691,7 +3691,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))) =>
-                                                               logic.and__ind2
+                                                               logic.and_ind_right
                                                                  (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -3723,7 +3723,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))) =>
-                                                                  logic.and__elim_left
+                                                                  logic.and_elim_left
                                                                     (
                                                                     plth.neq
                                                                     euclidean__axioms.Point
@@ -3777,7 +3777,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (plth.neq
                                                            euclidean__axioms.Point
                                                            A
@@ -3837,7 +3837,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))))) =>
-                                                         logic.and__ind2
+                                                         logic.and_ind_right
                                                            (plth.neq
                                                               euclidean__axioms.Point
                                                               B
@@ -3887,7 +3887,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))))) =>
-                                                            logic.and__ind2
+                                                            logic.and_ind_right
                                                               (plth.neq
                                                                  euclidean__axioms.Point
                                                                  A
@@ -3927,7 +3927,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3)))) =>
-                                                               logic.and__ind2
+                                                               logic.and_ind_right
                                                                  (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -3959,7 +3959,7 @@ thm lemma__angleorderrespectscongruence :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     H3))) =>
-                                                                  logic.and__elim_right
+                                                                  logic.and_elim_right
                                                                     (
                                                                     plth.neq
                                                                     euclidean__axioms.Point
@@ -3987,7 +3987,7 @@ thm lemma__angleorderrespectscongruence :
                                   H17)
                                H15)
                             H12))
-                        (logic.and__ind3
+                        (logic.and_ind_left
                            (plth.neq euclidean__axioms.Point P Q)
                            (plth.and
                               (plth.neq euclidean__axioms.Point Q R)
@@ -4005,7 +4005,7 @@ thm lemma__angleorderrespectscongruence :
                               Q
                               H13)
                            H12))
-                       (logic.conj
+                       (logic.and_intro
                           (plth.neq euclidean__axioms.Point P Q)
                           (plth.and
                              (plth.neq euclidean__axioms.Point Q R)
@@ -4037,7 +4037,7 @@ thm lemma__angleorderrespectscongruence :
                                                      euclidean__axioms.Point
                                                      D
                                                      F))))))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (plth.neq euclidean__axioms.Point P Q)
                               (plth.and
                                  (plth.neq euclidean__axioms.Point Q R)
@@ -4050,7 +4050,7 @@ thm lemma__angleorderrespectscongruence :
                                           (plth.neq euclidean__axioms.Point D F)))))
                               H12)
                              (lemma__angledistinct.lemma__angledistinct P Q R D E F H0))
-                          (logic.conj
+                          (logic.and_intro
                              (plth.neq euclidean__axioms.Point Q R)
                              (plth.and
                                 (plth.neq euclidean__axioms.Point P R)
@@ -4083,7 +4083,7 @@ thm lemma__angleorderrespectscongruence :
                                                         euclidean__axioms.Point
                                                         D
                                                         F))))))) =>
-                               logic.and__ind2
+                               logic.and_ind_right
                                  (plth.neq euclidean__axioms.Point P Q)
                                  (plth.and
                                     (plth.neq euclidean__axioms.Point Q R)
@@ -4117,7 +4117,7 @@ thm lemma__angleorderrespectscongruence :
                                                         euclidean__axioms.Point
                                                         D
                                                         F)))))) =>
-                                  logic.and__elim_left
+                                  logic.and_elim_left
                                     (plth.neq euclidean__axioms.Point Q R)
                                     (plth.and
                                        (plth.neq euclidean__axioms.Point P R)
@@ -4129,7 +4129,7 @@ thm lemma__angleorderrespectscongruence :
                                     H14)
                                  H12)
                                 (lemma__angledistinct.lemma__angledistinct P Q R D E F H0))
-                             (logic.conj
+                             (logic.and_intro
                                 (plth.neq euclidean__axioms.Point P R)
                                 (plth.and
                                    (plth.neq euclidean__axioms.Point D E)
@@ -4163,7 +4163,7 @@ thm lemma__angleorderrespectscongruence :
                                                            euclidean__axioms.Point
                                                            D
                                                            F))))))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (plth.neq euclidean__axioms.Point P Q)
                                     (plth.and
                                        (plth.neq euclidean__axioms.Point Q R)
@@ -4206,7 +4206,7 @@ thm lemma__angleorderrespectscongruence :
                                                            euclidean__axioms.Point
                                                            D
                                                            F)))))) =>
-                                     logic.and__ind2
+                                     logic.and_ind_right
                                        (plth.neq euclidean__axioms.Point Q R)
                                        (plth.and
                                           (plth.neq euclidean__axioms.Point P R)
@@ -4242,7 +4242,7 @@ thm lemma__angleorderrespectscongruence :
                                                            euclidean__axioms.Point
                                                            D
                                                            F))))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (plth.neq euclidean__axioms.Point P R)
                                           (plth.and
                                              (plth.neq euclidean__axioms.Point D E)
@@ -4266,7 +4266,7 @@ thm lemma__angleorderrespectscongruence :
                                       E
                                       F
                                       H0))
-                                (logic.conj
+                                (logic.and_intro
                                    (plth.neq euclidean__axioms.Point D E)
                                    (plth.and
                                       (plth.neq euclidean__axioms.Point E F)
@@ -4301,7 +4301,7 @@ thm lemma__angleorderrespectscongruence :
                                                               euclidean__axioms.Point
                                                               D
                                                               H3))))))) =>
-                                     logic.and__ind2
+                                     logic.and_ind_right
                                        (plth.neq euclidean__axioms.Point A B)
                                        (plth.and
                                           (plth.neq euclidean__axioms.Point B C)
@@ -4347,7 +4347,7 @@ thm lemma__angleorderrespectscongruence :
                                                               euclidean__axioms.Point
                                                               D
                                                               H3)))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq euclidean__axioms.Point B C)
                                           (plth.and
                                              (plth.neq euclidean__axioms.Point A C)
@@ -4386,7 +4386,7 @@ thm lemma__angleorderrespectscongruence :
                                                               euclidean__axioms.Point
                                                               D
                                                               H3))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (plth.neq euclidean__axioms.Point A C)
                                              (plth.and
                                                 (plth.neq
@@ -4418,7 +4418,7 @@ thm lemma__angleorderrespectscongruence :
                                                               euclidean__axioms.Point
                                                               D
                                                               H3)))) =>
-                                              logic.and__elim_left
+                                              logic.and_elim_left
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    D
@@ -4444,7 +4444,7 @@ thm lemma__angleorderrespectscongruence :
                                          E
                                          H3
                                          H11))
-                                   (logic.conj
+                                   (logic.and_intro
                                       (plth.neq euclidean__axioms.Point E F)
                                       (plth.neq euclidean__axioms.Point D F)
                                       ((H12:(plth.Prf
@@ -4477,7 +4477,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq euclidean__axioms.Point P Q)
                                           (plth.and
                                              (plth.neq euclidean__axioms.Point Q R)
@@ -4526,7 +4526,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F)))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (plth.neq euclidean__axioms.Point Q R)
                                              (plth.and
                                                 (plth.neq
@@ -4568,7 +4568,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))))) =>
-                                              logic.and__ind2
+                                              logic.and_ind_right
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    P
@@ -4606,7 +4606,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F)))) =>
-                                                 logic.and__ind2
+                                                 logic.and_ind_right
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       D
@@ -4634,7 +4634,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))) =>
-                                                    logic.and__elim_left
+                                                    logic.and_elim_left
                                                       (plth.neq
                                                          euclidean__axioms.Point
                                                          E
@@ -4686,7 +4686,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq euclidean__axioms.Point P Q)
                                           (plth.and
                                              (plth.neq euclidean__axioms.Point Q R)
@@ -4735,7 +4735,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F)))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (plth.neq euclidean__axioms.Point Q R)
                                              (plth.and
                                                 (plth.neq
@@ -4777,7 +4777,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))))) =>
-                                              logic.and__ind2
+                                              logic.and_ind_right
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    P
@@ -4815,7 +4815,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F)))) =>
-                                                 logic.and__ind2
+                                                 logic.and_ind_right
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       D
@@ -4843,7 +4843,7 @@ thm lemma__angleorderrespectscongruence :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  F))) =>
-                                                    logic.and__elim_right
+                                                    logic.and_elim_right
                                                       (plth.neq
                                                          euclidean__axioms.Point
                                                          E

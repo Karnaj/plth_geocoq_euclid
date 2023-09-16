@@ -43,14 +43,14 @@ thm lemma__lessthanadditive :
             euclidean__axioms.Point
             (b:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS C b D) (euclidean__axioms.Cong C b A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (b:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS C b D) (euclidean__axioms.Cong C b A B))
      (euclidean__defs.Lt A E C F)
      (b:(plth.El euclidean__axioms.Point) =>
       H4:(plth.Prf (plth.and (euclidean__axioms.BetS C b D) (euclidean__axioms.Cong C b A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS C b D)
         (euclidean__axioms.Cong C b A B)
         (euclidean__defs.Lt A E C F)
@@ -67,7 +67,7 @@ thm lemma__lessthanadditive :
                          plth.and
                            (euclidean__axioms.BetS C b e)
                            (euclidean__axioms.Cong b e B E)))) =>
-              logic.ex__ind
+              logic.ex_elim
                 euclidean__axioms.Point
                 (e:(plth.El euclidean__axioms.Point) =>
                  plth.and
@@ -79,7 +79,7 @@ thm lemma__lessthanadditive :
                         (plth.and
                            (euclidean__axioms.BetS C b e)
                            (euclidean__axioms.Cong b e B E))) =>
-                 logic.and__ind
+                 logic.and_ind
                    (euclidean__axioms.BetS C b e)
                    (euclidean__axioms.Cong b e B E)
                    (euclidean__defs.Lt A E C F)
@@ -141,7 +141,7 @@ thm lemma__lessthanadditive :
                                              b
                                              e
                                              F)) =>
-                                   logic.ex__intro
+                                   logic.ex_intro
                                      euclidean__axioms.Point
                                      (X:(plth.El
                                            euclidean__axioms.Point) =>
@@ -156,7 +156,7 @@ thm lemma__lessthanadditive :
                                            A
                                            E))
                                      e
-                                     (logic.conj
+                                     (logic.and_intro
                                         (euclidean__axioms.BetS
                                            C
                                            e
@@ -583,7 +583,7 @@ thm lemma__lessthanadditive :
                                                          F
                                                          E
                                                          B)))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Cong
                                               F
                                               D
@@ -617,7 +617,7 @@ thm lemma__lessthanadditive :
                                                          F
                                                          E
                                                          B))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (euclidean__axioms.Cong
                                                  F
                                                  D
@@ -654,7 +654,7 @@ thm lemma__lessthanadditive :
                                     (euclidean__axioms.cn__equalityreverse
                                        F
                                        b))
-                                   (logic.ex__intro
+                                   (logic.ex_intro
                                       euclidean__axioms.Point
                                       (X:(plth.El
                                             euclidean__axioms.Point) =>
@@ -669,7 +669,7 @@ thm lemma__lessthanadditive :
                                             F
                                             D))
                                       D
-                                      (logic.conj
+                                      (logic.and_intro
                                          (euclidean__axioms.BetS
                                             F
                                             D
@@ -946,7 +946,7 @@ thm lemma__lessthanadditive :
                                                           q
                                                           b
                                                           e)))) =>
-                                          logic.ex__ind
+                                          logic.ex_elim
                                             euclidean__axioms.Point
                                             (q:(plth.El
                                                   euclidean__axioms.Point) =>
@@ -974,7 +974,7 @@ thm lemma__lessthanadditive :
                                                           q
                                                           b
                                                           e))) =>
-                                             logic.and__ind
+                                             logic.and_ind
                                                (euclidean__axioms.BetS
                                                   b
                                                   q
@@ -1119,7 +1119,7 @@ thm lemma__lessthanadditive :
                                                         b
                                                         F
                                                         e
-                                                        (logic.or__intror
+                                                        (logic.or_intro_right
                                                            (euclidean__axioms.BetS
                                                               b
                                                               e
@@ -1133,7 +1133,7 @@ thm lemma__lessthanadditive :
                                                                  b
                                                                  F
                                                                  e))
-                                                           (logic.or__intror
+                                                           (logic.or_intro_right
                                                               (plth.eq
                                                                  euclidean__axioms.Point
                                                                  e
@@ -1148,7 +1148,7 @@ thm lemma__lessthanadditive :
                                                        b
                                                        F
                                                        q
-                                                       (logic.or__introl
+                                                       (logic.or_intro_left
                                                           (euclidean__axioms.BetS
                                                              b
                                                              q
@@ -1179,7 +1179,7 @@ thm lemma__lessthanadditive :
                                                                     euclidean__axioms.Point
                                                                     b
                                                                     F)))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (plth.neq
                                                           euclidean__axioms.Point
                                                           q
@@ -1207,7 +1207,7 @@ thm lemma__lessthanadditive :
                                                                     euclidean__axioms.Point
                                                                     b
                                                                     F))) =>
-                                                        logic.and__elim_right
+                                                        logic.and_elim_right
                                                           (plth.neq
                                                              euclidean__axioms.Point
                                                              b
@@ -1238,7 +1238,7 @@ thm lemma__lessthanadditive :
                                                                     euclidean__axioms.Point
                                                                     b
                                                                     F)))) =>
-                                                    logic.and__ind2
+                                                    logic.and_ind_right
                                                       (plth.neq
                                                          euclidean__axioms.Point
                                                          q
@@ -1266,7 +1266,7 @@ thm lemma__lessthanadditive :
                                                                     euclidean__axioms.Point
                                                                     b
                                                                     F))) =>
-                                                       logic.and__elim_left
+                                                       logic.and_elim_left
                                                          (plth.neq
                                                             euclidean__axioms.Point
                                                             b
@@ -1333,7 +1333,7 @@ thm lemma__lessthanadditive :
                                     (euclidean__axioms.cn__equalityreverse
                                        F
                                        b))
-                                   (logic.ex__intro
+                                   (logic.ex_intro
                                       euclidean__axioms.Point
                                       (X:(plth.El
                                             euclidean__axioms.Point) =>
@@ -1348,7 +1348,7 @@ thm lemma__lessthanadditive :
                                             F
                                             D))
                                       D
-                                      (logic.conj
+                                      (logic.and_intro
                                          (euclidean__axioms.BetS
                                             F
                                             D
@@ -1375,7 +1375,7 @@ thm lemma__lessthanadditive :
                                 (euclidean__axioms.cn__congruencereflexive
                                    F
                                    D))
-                               (logic.ex__intro
+                               (logic.ex_intro
                                   euclidean__axioms.Point
                                   (X:(plth.El
                                         euclidean__axioms.Point) =>
@@ -1390,7 +1390,7 @@ thm lemma__lessthanadditive :
                                         b
                                         F))
                                   F
-                                  (logic.conj
+                                  (logic.and_intro
                                      (euclidean__axioms.BetS
                                         b
                                         F
@@ -1438,7 +1438,7 @@ thm lemma__lessthanadditive :
                           (plth.and
                              (plth.neq euclidean__axioms.Point A B)
                              (plth.neq euclidean__axioms.Point A E)))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point B E)
                   (plth.and
                      (plth.neq euclidean__axioms.Point A B)
@@ -1452,7 +1452,7 @@ thm lemma__lessthanadditive :
                        (plth.and
                           (plth.neq euclidean__axioms.Point C b)
                           (plth.neq euclidean__axioms.Point C D)))) =>
-              logic.and__ind2
+              logic.and_ind_right
                 (plth.neq euclidean__axioms.Point b D)
                 (plth.and
                    (plth.neq euclidean__axioms.Point C b)
@@ -1462,7 +1462,7 @@ thm lemma__lessthanadditive :
                         (plth.and
                            (plth.neq euclidean__axioms.Point C b)
                            (plth.neq euclidean__axioms.Point C D))) =>
-                 logic.and__elim_left
+                 logic.and_elim_left
                    (plth.neq euclidean__axioms.Point C b)
                    (plth.neq euclidean__axioms.Point C D)
                    H10)

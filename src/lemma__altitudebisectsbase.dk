@@ -36,7 +36,7 @@ thm lemma__altitudebisectsbase :
                   (plth.and
                      (euclidean__axioms.Cong A P C P)
                      (plth.neq euclidean__axioms.Point M P)))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (C:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -54,7 +54,7 @@ thm lemma__altitudebisectsbase :
                   (plth.and
                      (euclidean__axioms.Cong A P C P)
                      (plth.neq euclidean__axioms.Point M P))))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A M C)
         (plth.and
            (euclidean__axioms.Cong A M C M)
@@ -67,7 +67,7 @@ thm lemma__altitudebisectsbase :
                   (plth.and
                      (euclidean__axioms.Cong A P C P)
                      (plth.neq euclidean__axioms.Point M P)))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong A M C M)
            (plth.and (euclidean__axioms.Cong A P C P) (plth.neq euclidean__axioms.Point M P))
            (euclidean__defs.Midpoint A M B)
@@ -76,7 +76,7 @@ thm lemma__altitudebisectsbase :
                   (plth.and
                      (euclidean__axioms.Cong A P C P)
                      (plth.neq euclidean__axioms.Point M P))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A P C P)
               (plth.neq euclidean__axioms.Point M P)
               (euclidean__defs.Midpoint A M B)
@@ -105,7 +105,7 @@ thm lemma__altitudebisectsbase :
                                            euclidean__axioms.Point
                                            M
                                            A)))))) =>
-                     logic.ex__ind
+                     logic.ex_elim
                        euclidean__axioms.Point
                        (Q:(plth.El euclidean__axioms.Point) =>
                         plth.and
@@ -132,7 +132,7 @@ thm lemma__altitudebisectsbase :
                                            euclidean__axioms.Point
                                            M
                                            A))))) =>
-                        logic.and__ind
+                        logic.and_ind
                           (euclidean__axioms.BetS P M Q)
                           (plth.and
                              (euclidean__axioms.Cong P M Q M)
@@ -154,7 +154,7 @@ thm lemma__altitudebisectsbase :
                                            euclidean__axioms.Point
                                            M
                                            A)))) =>
-                           logic.and__ind
+                           logic.and_ind
                              (euclidean__axioms.Cong P M Q M)
                              (plth.and
                                 (euclidean__axioms.Cong P A Q A)
@@ -173,7 +173,7 @@ thm lemma__altitudebisectsbase :
                                            euclidean__axioms.Point
                                            M
                                            A))) =>
-                              logic.and__ind3
+                              logic.and_ind_left
                                 (euclidean__axioms.Cong P A Q A)
                                 (plth.neq euclidean__axioms.Point M A)
                                 (euclidean__defs.Midpoint A M B)
@@ -230,7 +230,7 @@ thm lemma__altitudebisectsbase :
                                                             euclidean__axioms.Point
                                                             M
                                                             B)))))) =>
-                                      logic.ex__ind
+                                      logic.ex_elim
                                         euclidean__axioms.Point
                                         (E:(plth.El
                                               euclidean__axioms.Point) =>
@@ -283,7 +283,7 @@ thm lemma__altitudebisectsbase :
                                                             euclidean__axioms.Point
                                                             M
                                                             B))))) =>
-                                         logic.and__ind
+                                         logic.and_ind
                                            (euclidean__axioms.BetS
                                               P
                                               M
@@ -330,7 +330,7 @@ thm lemma__altitudebisectsbase :
                                                             euclidean__axioms.Point
                                                             M
                                                             B)))) =>
-                                            logic.and__ind
+                                            logic.and_ind
                                               (euclidean__axioms.Cong
                                                  P
                                                  M
@@ -367,7 +367,7 @@ thm lemma__altitudebisectsbase :
                                                             euclidean__axioms.Point
                                                             M
                                                             B))) =>
-                                               logic.and__ind3
+                                               logic.and_ind_left
                                                  (euclidean__axioms.Cong
                                                     P
                                                     B
@@ -602,7 +602,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     B)) =>
                                                                     H65)
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -614,7 +614,7 @@ thm lemma__altitudebisectsbase :
                                                                     B)
                                                                     H
                                                                     H64))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     M
@@ -666,7 +666,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     M
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     M
                                                                     A
@@ -701,7 +701,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     M
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Cong
                                                                     M
                                                                     A
@@ -734,7 +734,7 @@ thm lemma__altitudebisectsbase :
                                                                     (euclidean__axioms.cn__congruencereflexive
                                                                     P
                                                                     M))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -797,7 +797,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M)))))))))))
                                                                     A
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -855,7 +855,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M))))))))))
                                                                     Q
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (u:(
                                                                     plth.El
@@ -908,7 +908,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M)))))))))
                                                                     B
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (v:(
                                                                     plth.El
@@ -956,7 +956,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M))))))))
                                                                     Q
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     P
                                                                     A
@@ -999,7 +999,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M)))))))
                                                                     H57
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     P
                                                                     M
@@ -1037,7 +1037,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M))))))
                                                                     H60
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     P
                                                                     B
@@ -1070,7 +1070,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M)))))
                                                                     H59
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     P
                                                                     M
@@ -1098,7 +1098,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M))))
                                                                     H60
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     A
@@ -1121,7 +1121,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M)))
                                                                     H35
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     Q
@@ -1138,7 +1138,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M))
                                                                     H50
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     Q
@@ -1158,7 +1158,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M
                                                                     Q
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     Q
@@ -1172,7 +1172,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     M
                                                                     Q))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     Q
@@ -1187,7 +1187,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     B
                                                                     B
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     B
@@ -1201,7 +1201,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     B
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -2601,7 +2601,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     A
                                                                     A
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     A
@@ -2615,7 +2615,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     A
                                                                     A))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -2644,7 +2644,7 @@ thm lemma__altitudebisectsbase :
                                                                     M)) =>
                                                                     H54
                                                                     H56)
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -2718,7 +2718,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     P
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     P
                                                                     A
@@ -2767,7 +2767,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     P
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     P
                                                                     M
@@ -2806,7 +2806,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     P
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     A
@@ -2835,7 +2835,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     P
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     M
@@ -2887,7 +2887,7 @@ thm lemma__altitudebisectsbase :
                                                                     Q
                                                                     B
                                                                     Q)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     A
@@ -2922,7 +2922,7 @@ thm lemma__altitudebisectsbase :
                                                                     Q
                                                                     B
                                                                     Q))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     A
@@ -2964,7 +2964,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     A
                                                                     Q))) =>
-                                                                  logic.and__elim_left
+                                                                  logic.and_elim_left
                                                                     (
                                                                     euclidean__axioms.Cong
                                                                     A
@@ -3012,7 +3012,7 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     B
                                                                     P)))) =>
-                                                                logic.and__ind2
+                                                                logic.and_ind_right
                                                                   (euclidean__axioms.Cong
                                                                     A
                                                                     P
@@ -3047,7 +3047,7 @@ thm lemma__altitudebisectsbase :
                                                                     A
                                                                     B
                                                                     P))) =>
-                                                                   logic.and__elim_left
+                                                                   logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     P
@@ -3228,7 +3228,7 @@ thm lemma__altitudebisectsbase :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     E)))) =>
-                                                             logic.and__ind2
+                                                             logic.and_ind_right
                                                                (plth.neq
                                                                   euclidean__axioms.Point
                                                                   M
@@ -3257,7 +3257,7 @@ thm lemma__altitudebisectsbase :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     E))) =>
-                                                                logic.and__elim_left
+                                                                logic.and_elim_left
                                                                   (plth.neq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -3297,7 +3297,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     Q
                                                                     M)))) =>
-                                                           logic.and__ind2
+                                                           logic.and_ind_right
                                                              (euclidean__axioms.Cong
                                                                 M
                                                                 E
@@ -3331,7 +3331,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     Q
                                                                     M))) =>
-                                                              logic.and__elim_left
+                                                              logic.and_elim_left
                                                                 (euclidean__axioms.Cong
                                                                    M
                                                                    E
@@ -3391,7 +3391,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     M
                                                                     P)))) =>
-                                                       logic.and__ind2
+                                                       logic.and_ind_right
                                                          (euclidean__axioms.Cong
                                                             M
                                                             Q
@@ -3427,7 +3427,7 @@ thm lemma__altitudebisectsbase :
                                                                     M
                                                                     M
                                                                     P))) =>
-                                                          logic.and__elim_left
+                                                          logic.and_elim_left
                                                             (euclidean__axioms.Cong
                                                                M
                                                                Q
@@ -3464,7 +3464,7 @@ thm lemma__altitudebisectsbase :
                                                                     P
                                                                     P
                                                                     B)))) =>
-                                                      logic.and__elim_left
+                                                      logic.and_elim_left
                                                         (euclidean__axioms.Cong
                                                            P
                                                            A
@@ -3500,7 +3500,7 @@ thm lemma__altitudebisectsbase :
                                          B
                                          H24
                                          H25))
-                                     (logic.ex__intro
+                                     (logic.ex_intro
                                         euclidean__axioms.Point
                                         (X:(plth.El
                                               euclidean__axioms.Point) =>
@@ -3514,7 +3514,7 @@ thm lemma__altitudebisectsbase :
                                               M
                                               C))
                                         A
-                                        (logic.conj
+                                        (logic.and_intro
                                            (euclidean__axioms.BetS
                                               A
                                               M
@@ -3542,7 +3542,7 @@ thm lemma__altitudebisectsbase :
                        H15)
                       H14)
                      (lemma__8__2.lemma__8__2 A M P H1))
-                    (logic.ex__intro
+                    (logic.ex_intro
                        euclidean__axioms.Point
                        (X:(plth.El euclidean__axioms.Point) =>
                         plth.and
@@ -3553,7 +3553,7 @@ thm lemma__altitudebisectsbase :
                                 (euclidean__axioms.Cong C P X P)
                                 (plth.neq euclidean__axioms.Point M P))))
                        A
-                       (logic.conj
+                       (logic.and_intro
                           (euclidean__axioms.BetS C M A)
                           (plth.and
                              (euclidean__axioms.Cong C M A M)
@@ -3561,13 +3561,13 @@ thm lemma__altitudebisectsbase :
                                 (euclidean__axioms.Cong C P A P)
                                 (plth.neq euclidean__axioms.Point M P)))
                           H10
-                          (logic.conj
+                          (logic.and_intro
                              (euclidean__axioms.Cong C M A M)
                              (plth.and
                                 (euclidean__axioms.Cong C P A P)
                                 (plth.neq euclidean__axioms.Point M P))
                              H11
-                             (logic.conj
+                             (logic.and_intro
                                 (euclidean__axioms.Cong C P A P)
                                 (plth.neq euclidean__axioms.Point M P)
                                 H12

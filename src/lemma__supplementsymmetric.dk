@@ -27,14 +27,14 @@ thm lemma__supplementsymmetric :
    (H1:(plth.Prf (euclidean__axioms.BetS D B A)) =>
     (H2:(plth.Prf (euclidean__defs.Out B E C)) =>
      (H3:(plth.Prf (euclidean__defs.Supp D B E C A)) => H3)
-       (logic.conj (euclidean__defs.Out B E C) (euclidean__axioms.BetS D B A) H2 H1))
-      (logic.and__ind3
+       (logic.and_intro (euclidean__defs.Out B E C) (euclidean__axioms.BetS D B A) H2 H1))
+      (logic.and_ind_left
          (euclidean__defs.Out B C E)
          (euclidean__axioms.BetS A B D)
          (euclidean__defs.Out B E C)
          (__ => lemma__ray5.lemma__ray5 B C E __)
          H0))
-     (logic.and__ind2
+     (logic.and_ind_right
         (euclidean__defs.Out B C E)
         (euclidean__axioms.BetS A B D)
         (euclidean__axioms.BetS D B A)

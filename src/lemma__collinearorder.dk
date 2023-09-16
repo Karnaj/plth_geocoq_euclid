@@ -28,7 +28,7 @@ thm lemma__collinearorder :
     (H2:(plth.Prf (euclidean__axioms.Col B A C)) =>
      (H3:(plth.Prf (euclidean__axioms.Col A C B)) =>
       (H4:(plth.Prf (euclidean__axioms.Col C B A)) =>
-       logic.conj
+       logic.and_intro
          (euclidean__axioms.Col B A C)
          (plth.and
             (euclidean__axioms.Col B C A)
@@ -36,17 +36,17 @@ thm lemma__collinearorder :
                (euclidean__axioms.Col C A B)
                (plth.and (euclidean__axioms.Col A C B) (euclidean__axioms.Col C B A))))
          H2
-         (logic.conj
+         (logic.and_intro
             (euclidean__axioms.Col B C A)
             (plth.and
                (euclidean__axioms.Col C A B)
                (plth.and (euclidean__axioms.Col A C B) (euclidean__axioms.Col C B A)))
             H0
-            (logic.conj
+            (logic.and_intro
                (euclidean__axioms.Col C A B)
                (plth.and (euclidean__axioms.Col A C B) (euclidean__axioms.Col C B A))
                H1
-               (logic.conj
+               (logic.and_intro
                   (euclidean__axioms.Col A C B)
                   (euclidean__axioms.Col C B A)
                   H3

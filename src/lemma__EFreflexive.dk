@@ -59,20 +59,20 @@ thm lemma__EFreflexive :
                   H9
                   H8
                   H0
-                  (logic.or__introl
+                  (logic.or_intro_left
                      (euclidean__axioms.BetS a p c)
                      (plth.or
                         (plth.eq euclidean__axioms.Point a p)
                         (plth.eq euclidean__axioms.Point p c))
                      H)
                   H0
-                  (logic.or__introl
+                  (logic.or_intro_left
                      (euclidean__axioms.BetS a p c)
                      (plth.or
                         (plth.eq euclidean__axioms.Point a p)
                         (plth.eq euclidean__axioms.Point p c))
                      H)))
-              (logic.ex__intro
+              (logic.ex_intro
                  euclidean__axioms.Point
                  (X:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -81,13 +81,13 @@ thm lemma__EFreflexive :
                        (euclidean__axioms.Col a c X)
                        (euclidean__axioms.nCol a c b)))
                  p
-                 (logic.conj
+                 (logic.and_intro
                     (euclidean__axioms.BetS b p d)
                     (plth.and
                        (euclidean__axioms.Col a c p)
                        (euclidean__axioms.nCol a c b))
                     H0
-                    (logic.conj
+                    (logic.and_intro
                        (euclidean__axioms.Col a c p)
                        (euclidean__axioms.nCol a c b)
                        H10
@@ -104,7 +104,7 @@ thm lemma__EFreflexive :
                                   (euclidean__axioms.nCol b c a)))))) =>
                H2)
                 (lemma__NCorder.lemma__NCorder a c b H5)))
-            (logic.or__intror
+            (logic.or_intro_right
                (plth.eq euclidean__axioms.Point a c)
                (plth.or
                   (plth.eq euclidean__axioms.Point a p)
@@ -115,7 +115,7 @@ thm lemma__EFreflexive :
                         (plth.or
                            (euclidean__axioms.BetS a c p)
                            (euclidean__axioms.BetS a p c)))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point a p)
                   (plth.or
                      (plth.eq euclidean__axioms.Point c p)
@@ -124,19 +124,19 @@ thm lemma__EFreflexive :
                         (plth.or
                            (euclidean__axioms.BetS a c p)
                            (euclidean__axioms.BetS a p c))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point c p)
                      (plth.or
                         (euclidean__axioms.BetS c a p)
                         (plth.or
                            (euclidean__axioms.BetS a c p)
                            (euclidean__axioms.BetS a p c)))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (euclidean__axioms.BetS c a p)
                         (plth.or
                            (euclidean__axioms.BetS a c p)
                            (euclidean__axioms.BetS a p c))
-                        (logic.or__intror
+                        (logic.or_intro_right
                            (euclidean__axioms.BetS a c p)
                            (euclidean__axioms.BetS a p c)
                            H))))))
@@ -220,7 +220,7 @@ thm lemma__EFreflexive :
                                               a
                                               b
                                               c)))))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__axioms.Col
                              b
                              c
@@ -268,7 +268,7 @@ thm lemma__EFreflexive :
                                               a
                                               b
                                               c))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.Col
                                 b
                                 a
@@ -306,7 +306,7 @@ thm lemma__EFreflexive :
                                               a
                                               b
                                               c)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.Col
                                    a
                                    c
@@ -334,7 +334,7 @@ thm lemma__EFreflexive :
                                               a
                                               b
                                               c))) =>
-                                 logic.and__elim_right
+                                 logic.and_elim_right
                                    (euclidean__axioms.Col
                                       c
                                       a
@@ -389,7 +389,7 @@ thm lemma__EFreflexive :
                                       euclidean__axioms.Point
                                       a
                                       c)))) =>
-                      logic.and__elim_left
+                      logic.and_elim_left
                         (plth.neq
                            euclidean__axioms.Point
                            p
@@ -434,7 +434,7 @@ thm lemma__EFreflexive :
                                            c
                                            p
                                            a)))))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (euclidean__axioms.Col p a c)
                        (plth.and
                           (euclidean__axioms.Col p c a)
@@ -470,7 +470,7 @@ thm lemma__EFreflexive :
                                            c
                                            p
                                            a))))) =>
-                        logic.and__elim_left
+                        logic.and_elim_left
                           (euclidean__axioms.Col p c a)
                           (plth.and
                              (euclidean__axioms.Col c a p)
@@ -519,7 +519,7 @@ thm lemma__EFreflexive :
                            (plth.and
                               (plth.neq euclidean__axioms.Point b p)
                               (plth.neq euclidean__axioms.Point b d)))) =>
-                 logic.and__elim_left
+                 logic.and_elim_left
                    (plth.neq euclidean__axioms.Point p d)
                    (plth.and
                       (plth.neq euclidean__axioms.Point b p)
@@ -536,7 +536,7 @@ thm lemma__EFreflexive :
                                 (plth.and
                                    (euclidean__axioms.Col b d p)
                                    (euclidean__axioms.Col d p b)))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col p b d)
                   (plth.and
                      (euclidean__axioms.Col p d b)
@@ -554,7 +554,7 @@ thm lemma__EFreflexive :
                                 (plth.and
                                    (euclidean__axioms.Col b d p)
                                    (euclidean__axioms.Col d p b))))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col p d b)
                      (plth.and
                         (euclidean__axioms.Col d b p)
@@ -568,7 +568,7 @@ thm lemma__EFreflexive :
                                 (plth.and
                                    (euclidean__axioms.Col b d p)
                                    (euclidean__axioms.Col d p b)))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col d b p)
                         (plth.and
                            (euclidean__axioms.Col b d p)
@@ -578,7 +578,7 @@ thm lemma__EFreflexive :
                                 (plth.and
                                    (euclidean__axioms.Col b d p)
                                    (euclidean__axioms.Col d p b))) =>
-                         logic.and__elim_right
+                         logic.and_elim_right
                            (euclidean__axioms.Col b d p)
                            (euclidean__axioms.Col d p b)
                            H16)
@@ -596,7 +596,7 @@ thm lemma__EFreflexive :
                               (plth.and
                                  (euclidean__axioms.Col c p d)
                                  (euclidean__axioms.Col p d c)))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col d c p)
                  (plth.and
                     (euclidean__axioms.Col d p c)
@@ -614,7 +614,7 @@ thm lemma__EFreflexive :
                                (plth.and
                                   (euclidean__axioms.Col c p d)
                                   (euclidean__axioms.Col p d c))))) =>
-                  logic.and__elim_left
+                  logic.and_elim_left
                     (euclidean__axioms.Col d p c)
                     (plth.and
                        (euclidean__axioms.Col p c d)
@@ -641,7 +641,7 @@ thm lemma__EFreflexive :
                       (plth.and
                          (plth.neq euclidean__axioms.Point a p)
                          (plth.neq euclidean__axioms.Point a c)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point p c)
                (plth.and
                   (plth.neq euclidean__axioms.Point a p)
@@ -651,7 +651,7 @@ thm lemma__EFreflexive :
                       (plth.and
                          (plth.neq euclidean__axioms.Point a p)
                          (plth.neq euclidean__axioms.Point a c))) =>
-                logic.and__elim_right
+                logic.and_elim_right
                   (plth.neq euclidean__axioms.Point a p)
                   (plth.neq euclidean__axioms.Point a c)
                   H9)
@@ -667,7 +667,7 @@ thm lemma__EFreflexive :
                            (plth.and
                               (euclidean__axioms.Col a c p)
                               (euclidean__axioms.Col c p a)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.Col p a c)
               (plth.and
                  (euclidean__axioms.Col p c a)
@@ -685,7 +685,7 @@ thm lemma__EFreflexive :
                            (plth.and
                               (euclidean__axioms.Col a c p)
                               (euclidean__axioms.Col c p a))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col p c a)
                  (plth.and
                     (euclidean__axioms.Col c a p)
@@ -699,7 +699,7 @@ thm lemma__EFreflexive :
                             (plth.and
                                (euclidean__axioms.Col a c p)
                                (euclidean__axioms.Col c p a)))) =>
-                  logic.and__ind2
+                  logic.and_ind_right
                     (euclidean__axioms.Col c a p)
                     (plth.and
                        (euclidean__axioms.Col a c p)
@@ -709,7 +709,7 @@ thm lemma__EFreflexive :
                             (plth.and
                                (euclidean__axioms.Col a c p)
                                (euclidean__axioms.Col c p a))) =>
-                     logic.and__elim_left
+                     logic.and_elim_left
                        (euclidean__axioms.Col a c p)
                        (euclidean__axioms.Col c p a)
                        H12)
@@ -717,7 +717,7 @@ thm lemma__EFreflexive :
                  H8)
               H6)
              (lemma__collinearorder.lemma__collinearorder a p c H5)))
-         (logic.or__intror
+         (logic.or_intro_right
             (plth.eq euclidean__axioms.Point a p)
             (plth.or
                (plth.eq euclidean__axioms.Point a c)
@@ -728,7 +728,7 @@ thm lemma__EFreflexive :
                      (plth.or
                         (euclidean__axioms.BetS a p c)
                         (euclidean__axioms.BetS a c p)))))
-            (logic.or__intror
+            (logic.or_intro_right
                (plth.eq euclidean__axioms.Point a c)
                (plth.or
                   (plth.eq euclidean__axioms.Point p c)
@@ -737,23 +737,23 @@ thm lemma__EFreflexive :
                      (plth.or
                         (euclidean__axioms.BetS a p c)
                         (euclidean__axioms.BetS a c p))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point p c)
                   (plth.or
                      (euclidean__axioms.BetS p a c)
                      (plth.or
                         (euclidean__axioms.BetS a p c)
                         (euclidean__axioms.BetS a c p)))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (euclidean__axioms.BetS p a c)
                      (plth.or
                         (euclidean__axioms.BetS a p c)
                         (euclidean__axioms.BetS a c p))
-                     (logic.or__introl
+                     (logic.or_intro_left
                         (euclidean__axioms.BetS a p c)
                         (euclidean__axioms.BetS a c p)
                         H))))))
-        (logic.or__intror
+        (logic.or_intro_right
            (plth.eq euclidean__axioms.Point b p)
            (plth.or
               (plth.eq euclidean__axioms.Point b d)
@@ -762,22 +762,22 @@ thm lemma__EFreflexive :
                  (plth.or
                     (euclidean__axioms.BetS p b d)
                     (plth.or (euclidean__axioms.BetS b p d) (euclidean__axioms.BetS b d p)))))
-           (logic.or__intror
+           (logic.or_intro_right
               (plth.eq euclidean__axioms.Point b d)
               (plth.or
                  (plth.eq euclidean__axioms.Point p d)
                  (plth.or
                     (euclidean__axioms.BetS p b d)
                     (plth.or (euclidean__axioms.BetS b p d) (euclidean__axioms.BetS b d p))))
-              (logic.or__intror
+              (logic.or_intro_right
                  (plth.eq euclidean__axioms.Point p d)
                  (plth.or
                     (euclidean__axioms.BetS p b d)
                     (plth.or (euclidean__axioms.BetS b p d) (euclidean__axioms.BetS b d p)))
-                 (logic.or__intror
+                 (logic.or_intro_right
                     (euclidean__axioms.BetS p b d)
                     (plth.or (euclidean__axioms.BetS b p d) (euclidean__axioms.BetS b d p))
-                    (logic.or__introl
+                    (logic.or_intro_left
                        (euclidean__axioms.BetS b p d)
                        (euclidean__axioms.BetS b d p)
                        H0)))))))
@@ -791,7 +791,7 @@ thm lemma__EFreflexive :
                      (plth.and
                         (euclidean__axioms.nCol a c b)
                         (euclidean__axioms.nCol c b a)))))) =>
-      logic.and__ind2
+      logic.and_ind_right
         (euclidean__axioms.nCol b a c)
         (plth.and
            (euclidean__axioms.nCol b c a)
@@ -807,7 +807,7 @@ thm lemma__EFreflexive :
                      (plth.and
                         (euclidean__axioms.nCol a c b)
                         (euclidean__axioms.nCol c b a))))) =>
-         logic.and__ind2
+         logic.and_ind_right
            (euclidean__axioms.nCol b c a)
            (plth.and
               (euclidean__axioms.nCol c a b)
@@ -819,7 +819,7 @@ thm lemma__EFreflexive :
                      (plth.and
                         (euclidean__axioms.nCol a c b)
                         (euclidean__axioms.nCol c b a)))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.nCol c a b)
               (plth.and (euclidean__axioms.nCol a c b) (euclidean__axioms.nCol c b a))
               (euclidean__axioms.nCol a c b)
@@ -827,7 +827,7 @@ thm lemma__EFreflexive :
                      (plth.and
                         (euclidean__axioms.nCol a c b)
                         (euclidean__axioms.nCol c b a))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (euclidean__axioms.nCol a c b)
                  (euclidean__axioms.nCol c b a)
                  H8)

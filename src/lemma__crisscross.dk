@@ -36,7 +36,7 @@ thm lemma__crisscross :
                   plth.and
                     (euclidean__axioms.BetS A B E)
                     (euclidean__axioms.Cong B E A B)))) =>
-        logic.ex__ind
+        logic.ex_elim
           euclidean__axioms.Point
           (E:(plth.El euclidean__axioms.Point) =>
            plth.and (euclidean__axioms.BetS A B E) (euclidean__axioms.Cong B E A B))
@@ -46,7 +46,7 @@ thm lemma__crisscross :
                  (plth.and
                     (euclidean__axioms.BetS A B E)
                     (euclidean__axioms.Cong B E A B))) =>
-           logic.and__ind
+           logic.and_ind
              (euclidean__axioms.BetS A B E)
              (euclidean__axioms.Cong B E A B)
              (euclidean__defs.CR A D B C)
@@ -80,7 +80,7 @@ thm lemma__crisscross :
                                          B
                                          D
                                          C))))) =>
-                      logic.ex__ind
+                      logic.ex_elim
                         euclidean__axioms.Point
                         (F:(plth.El
                               euclidean__axioms.Point) =>
@@ -113,7 +113,7 @@ thm lemma__crisscross :
                                          B
                                          D
                                          C)))) =>
-                         logic.and__ind
+                         logic.and_ind
                            (euclidean__axioms.BetS C F E)
                            (plth.and
                               (euclidean__axioms.Col
@@ -140,7 +140,7 @@ thm lemma__crisscross :
                                          B
                                          D
                                          C))) =>
-                            logic.and__ind
+                            logic.and_ind
                               (euclidean__axioms.Col
                                  B
                                  D
@@ -315,7 +315,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     F
                                                                     D))))))) =>
-                                               logic.or__ind
+                                               logic.or_elim
                                                  (plth.eq
                                                     euclidean__axioms.Point
                                                     B
@@ -379,7 +379,7 @@ thm lemma__crisscross :
                                                                plth.false) =>
                                                        (H109:(plth.Prf
                                                                 plth.false) =>
-                                                        logic.false__ind
+                                                        logic.false_elim
                                                           plth.false
                                                           H109)
                                                          (H36
@@ -420,7 +420,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     F
                                                                     D)))))) =>
-                                                  logic.or__ind
+                                                  logic.or_elim
                                                     (plth.eq
                                                        euclidean__axioms.Point
                                                        B
@@ -477,7 +477,7 @@ thm lemma__crisscross :
                                                                     C))) =>
                                                          (H109:(plth.Prf
                                                                   plth.false) =>
-                                                          logic.false__ind
+                                                          logic.false_elim
                                                             plth.false
                                                             H109)
                                                            (H37
@@ -611,7 +611,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     A
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -660,7 +660,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     A
                                                                     B))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     C
@@ -1132,7 +1132,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))))) =>
-                                                                logic.and__ind2
+                                                                logic.and_ind_right
                                                                   (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -1181,7 +1181,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))))) =>
-                                                                   logic.and__ind2
+                                                                   logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     E
@@ -1220,7 +1220,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     A
@@ -1249,7 +1249,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     E
@@ -1267,7 +1267,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     H41)))
-                                                             (logic.or__intror
+                                                             (logic.or_intro_right
                                                                 (plth.eq
                                                                    euclidean__axioms.Point
                                                                    A
@@ -1296,7 +1296,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))))
-                                                                (logic.or__intror
+                                                                (logic.or_intro_right
                                                                    (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -1320,7 +1320,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))))
-                                                                   (logic.or__intror
+                                                                   (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -1339,7 +1339,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -1353,7 +1353,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -1378,7 +1378,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                              logic.and__elim_left
+                                                              logic.and_elim_left
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    B
@@ -1424,7 +1424,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     C)))))) =>
-                                                             logic.and__ind2
+                                                             logic.and_ind_right
                                                                (euclidean__axioms.Col
                                                                   F
                                                                   C
@@ -1473,7 +1473,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     C))))) =>
-                                                                logic.and__ind2
+                                                                logic.and_ind_right
                                                                   (euclidean__axioms.Col
                                                                     F
                                                                     E
@@ -1512,7 +1512,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     C)))) =>
-                                                                   logic.and__ind2
+                                                                   logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     C
@@ -1541,7 +1541,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     E
@@ -1559,7 +1559,7 @@ thm lemma__crisscross :
                                                                  F
                                                                  E
                                                                  H38)))
-                                                          (logic.or__intror
+                                                          (logic.or_intro_right
                                                              (plth.eq
                                                                 euclidean__axioms.Point
                                                                 C
@@ -1588,7 +1588,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))))
-                                                             (logic.or__intror
+                                                             (logic.or_intro_right
                                                                 (plth.eq
                                                                    euclidean__axioms.Point
                                                                    C
@@ -1612,7 +1612,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))))
-                                                                (logic.or__intror
+                                                                (logic.or_intro_right
                                                                    (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -1631,7 +1631,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))
-                                                                   (logic.or__intror
+                                                                   (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     C
@@ -1645,7 +1645,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -1675,7 +1675,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     F
                                                                     D))))) =>
-                                                     logic.or__ind
+                                                     logic.or_elim
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           D
@@ -1769,7 +1769,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B)))) =>
-                                                                  logic.ex__ind
+                                                                  logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (
                                                                     M:(
@@ -1805,7 +1805,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -1851,7 +1851,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C)) =>
                                                                     H53)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -1866,7 +1866,7 @@ thm lemma__crisscross :
                                                                     X
                                                                     C))
                                                                     M
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -2166,7 +2166,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     C)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     C
@@ -2215,7 +2215,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     C))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     A
@@ -2254,7 +2254,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     C)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     C
@@ -2283,7 +2283,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     A
@@ -2337,7 +2337,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     E)))) =>
-                                                                  logic.and__ind2
+                                                                  logic.and_ind_right
                                                                     (
                                                                     plth.neq
                                                                     euclidean__axioms.Point
@@ -2370,7 +2370,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     E))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2386,7 +2386,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     E
                                                                     H19)))
-                                                               (logic.or__intror
+                                                               (logic.or_intro_right
                                                                   (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2415,7 +2415,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     C
                                                                     F)))))
-                                                                  (logic.or__introl
+                                                                  (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2443,7 +2443,7 @@ thm lemma__crisscross :
                                                               (logic.eq__refl
                                                                  euclidean__axioms.Point
                                                                  C))
-                                                             (logic.or__intror
+                                                             (logic.or_intro_right
                                                                 (plth.eq
                                                                    euclidean__axioms.Point
                                                                    C
@@ -2472,7 +2472,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))))
-                                                                (logic.or__intror
+                                                                (logic.or_intro_right
                                                                    (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2496,7 +2496,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))))
-                                                                   (logic.or__intror
+                                                                   (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -2515,7 +2515,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     C
@@ -2529,7 +2529,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -2564,7 +2564,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     C
                                                                     A)))))) =>
-                                                              logic.and__ind2
+                                                              logic.and_ind_right
                                                                 (euclidean__axioms.nCol
                                                                    C
                                                                    A
@@ -2613,7 +2613,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     C
                                                                     A))))) =>
-                                                                 logic.and__elim_left
+                                                                 logic.and_elim_left
                                                                    (euclidean__axioms.nCol
                                                                     C
                                                                     F
@@ -2911,7 +2911,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     F
                                                                     D)))) =>
-                                                        logic.or__ind
+                                                        logic.or_elim
                                                           (euclidean__axioms.BetS
                                                              D
                                                              B
@@ -2959,7 +2959,7 @@ thm lemma__crisscross :
                                                                (H111:(
                                                                 plth.Prf
                                                                   plth.false) =>
-                                                                logic.false__ind
+                                                                logic.false_elim
                                                                   plth.false
                                                                   H111)
                                                                  (H39
@@ -3071,7 +3071,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     M)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (M:(
                                                                     plth.El
@@ -3100,7 +3100,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     M))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     M
@@ -3230,7 +3230,7 @@ thm lemma__crisscross :
                                                                     D)) =>
                                                                     H0
                                                                     H74)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -3245,7 +3245,7 @@ thm lemma__crisscross :
                                                                     X
                                                                     D))
                                                                     M
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -3273,7 +3273,7 @@ thm lemma__crisscross :
                                                                     H68
                                                                     H58
                                                                     H66))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -3304,7 +3304,7 @@ thm lemma__crisscross :
                                                                     B)))))
                                                                     H71))
                                                                     H10)
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -3333,7 +3333,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     A
                                                                     A)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -3357,7 +3357,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     A
                                                                     A))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -3546,7 +3546,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -3714,7 +3714,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -3872,7 +3872,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     x0))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (u:(
                                                                     plth.El
@@ -4020,7 +4020,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     X
                                                                     x0)))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (v:(
                                                                     plth.El
@@ -4158,7 +4158,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     X
                                                                     x0))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -4286,7 +4286,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4401,7 +4401,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -4506,7 +4506,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     A
@@ -4601,7 +4601,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     A
@@ -4686,7 +4686,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x
@@ -4761,7 +4761,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     D
@@ -4826,7 +4826,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     D
@@ -4881,7 +4881,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x1
@@ -4926,7 +4926,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     C
@@ -4977,7 +4977,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     D
                                                                     B)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__defs.Par
                                                                     C
                                                                     A
@@ -5027,7 +5027,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     M
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     B
@@ -5076,7 +5076,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     M
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     M
                                                                     A
@@ -5115,7 +5115,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     M
                                                                     B)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -5180,7 +5180,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     M
                                                                     E)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -5226,7 +5226,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -5275,7 +5275,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     E
@@ -5314,7 +5314,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     A
@@ -5343,7 +5343,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     E
@@ -5361,7 +5361,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     H60)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -5390,7 +5390,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     M
                                                                     B)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -5414,7 +5414,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     M
                                                                     B))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -5433,7 +5433,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     M
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     E
@@ -5447,7 +5447,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     M
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     E
                                                                     B
@@ -5457,7 +5457,7 @@ thm lemma__crisscross :
                                                                     M
                                                                     B)
                                                                     H57))))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5486,7 +5486,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5510,7 +5510,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -5529,7 +5529,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -5543,7 +5543,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -5605,7 +5605,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     E
                                                                     C)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     C
@@ -5669,7 +5669,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     E)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -5698,7 +5698,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     E))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -5714,7 +5714,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     E
                                                                     H19)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -5743,7 +5743,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     C
                                                                     F)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -5771,7 +5771,7 @@ thm lemma__crisscross :
                                                                     (logic.eq__refl
                                                                     euclidean__axioms.Point
                                                                     C))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -5800,7 +5800,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -5824,7 +5824,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -5843,7 +5843,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     C
@@ -5857,7 +5857,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -5893,7 +5893,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     F
                                                                     D)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     F
                                                                     D
@@ -5942,7 +5942,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     F
                                                                     D))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     F
                                                                     C
@@ -5981,7 +5981,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     F
                                                                     D)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     D
@@ -6010,7 +6010,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     F
                                                                     D))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.nCol
                                                                     D
                                                                     C
@@ -6063,7 +6063,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     F)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -6092,7 +6092,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     F))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -6134,7 +6134,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     D
                                                                     B)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     D
                                                                     B
@@ -6164,7 +6164,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F
                                                                     H21)))
-                                                                  (logic.or__intror
+                                                                  (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -6193,7 +6193,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     D
                                                                     B)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -6248,7 +6248,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     D
                                                                     B)))))) =>
-                                                                  logic.and__elim_left
+                                                                  logic.and_elim_left
                                                                     (
                                                                     euclidean__axioms.nCol
                                                                     D
@@ -6290,7 +6290,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     F
                                                                     D))) =>
-                                                           logic.or__ind
+                                                           logic.or_elim
                                                              (euclidean__axioms.BetS
                                                                 B
                                                                 D
@@ -6403,7 +6403,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     D
                                                                     J)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (J:(
                                                                     plth.El
@@ -6436,7 +6436,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     D
                                                                     J))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     J
@@ -6550,7 +6550,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (M:(
                                                                     plth.El
@@ -6583,7 +6583,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -6623,7 +6623,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C)) =>
                                                                     H74)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -6638,7 +6638,7 @@ thm lemma__crisscross :
                                                                     X
                                                                     C))
                                                                     M
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -6706,7 +6706,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     J
@@ -6735,7 +6735,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -6794,7 +6794,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     J
@@ -6823,7 +6823,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -6865,7 +6865,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     J
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     J
                                                                     A
@@ -6914,7 +6914,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     J
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     J
                                                                     E
@@ -6953,7 +6953,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     J
                                                                     A)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     A
@@ -7001,7 +7001,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     A
@@ -7031,7 +7031,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     H47)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -7060,7 +7060,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     J)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -7084,7 +7084,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     J))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     J
@@ -7103,7 +7103,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     J)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     J
                                                                     A
@@ -7117,7 +7117,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     J))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     J
@@ -7153,7 +7153,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     A
@@ -7202,7 +7202,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -7241,7 +7241,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     A
@@ -7270,7 +7270,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -7360,7 +7360,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     B
@@ -7409,7 +7409,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     C
@@ -7448,7 +7448,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -7477,7 +7477,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     E
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     C
@@ -7529,7 +7529,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -7549,7 +7549,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     H8)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -7578,7 +7578,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     E)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -7602,7 +7602,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     E))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -7651,7 +7651,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -7700,7 +7700,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     E
@@ -7739,7 +7739,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     A
@@ -7768,7 +7768,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     E
@@ -7830,7 +7830,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     A
@@ -7879,7 +7879,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -7918,7 +7918,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     A
@@ -7947,7 +7947,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -7982,7 +7982,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -8011,7 +8011,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8027,7 +8027,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     H8)))
-                                                                   (logic.or__intror
+                                                                   (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8056,7 +8056,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8080,7 +8080,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -8099,7 +8099,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -8113,7 +8113,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -8123,7 +8123,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     B)
                                                                     H8))))))
-                                                                  (logic.or__intror
+                                                                  (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8152,7 +8152,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     A
                                                                     B)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8284,7 +8284,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     Q)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (Q:(
                                                                     plth.El
@@ -8317,7 +8317,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     F
                                                                     Q))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     Q
@@ -8518,7 +8518,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (M:(
                                                                     plth.El
@@ -8551,7 +8551,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     M
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -8597,7 +8597,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C)) =>
                                                                     H85)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -8612,7 +8612,7 @@ thm lemma__crisscross :
                                                                     X
                                                                     C))
                                                                     M
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -8721,7 +8721,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     A
@@ -8770,7 +8770,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     C
                                                                     B
@@ -8809,7 +8809,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     B
                                                                     A
@@ -8838,7 +8838,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     C
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -8927,7 +8927,7 @@ thm lemma__crisscross :
                                                                     Q
                                                                     C
                                                                     F)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     F
@@ -8957,7 +8957,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     Q
                                                                     H59)))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -8987,7 +8987,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F)))))
                                                                     H67))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -9016,7 +9016,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     C
                                                                     C)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -9040,7 +9040,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     C
                                                                     C))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -9232,7 +9232,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -9400,7 +9400,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -9558,7 +9558,7 @@ thm lemma__crisscross :
                                                                     u
                                                                     X
                                                                     x0))))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (u:(
                                                                     plth.El
@@ -9706,7 +9706,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     X
                                                                     x0)))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (v:(
                                                                     plth.El
@@ -9844,7 +9844,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     X
                                                                     x0))))))))))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -9972,7 +9972,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -10087,7 +10087,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -10192,7 +10192,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     C
@@ -10287,7 +10287,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     C
@@ -10372,7 +10372,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x
@@ -10447,7 +10447,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     D
@@ -10512,7 +10512,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     D
@@ -10567,7 +10567,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x1
@@ -10612,7 +10612,7 @@ thm lemma__crisscross :
                                                                     x1
                                                                     x3
                                                                     x0)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -10669,7 +10669,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     B
                                                                     D)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -10715,7 +10715,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     B
@@ -10764,7 +10764,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     D
@@ -10803,7 +10803,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     D
                                                                     B
@@ -10832,7 +10832,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     F
                                                                     B))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     D
@@ -10850,7 +10850,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     D
                                                                     H61)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -10879,7 +10879,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     D
                                                                     F)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -10903,7 +10903,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     D
                                                                     F))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -10922,7 +10922,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     D
                                                                     F)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     B
@@ -10936,7 +10936,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     D
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     F
@@ -10977,7 +10977,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     Q
                                                                     F)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     F
@@ -11026,7 +11026,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     Q
                                                                     F))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     C
@@ -11065,7 +11065,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     Q
                                                                     F)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     F
@@ -11094,7 +11094,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     Q
                                                                     F))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     C
@@ -11155,7 +11155,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     E)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -11175,7 +11175,7 @@ thm lemma__crisscross :
                                                                     F
                                                                     E
                                                                     H19)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -11204,7 +11204,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     C
                                                                     F)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -11228,7 +11228,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     C
                                                                     F))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -11247,7 +11247,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     C
                                                                     F)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     E
@@ -11261,7 +11261,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     C
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     E
                                                                     F
@@ -11271,7 +11271,7 @@ thm lemma__crisscross :
                                                                     C
                                                                     F)
                                                                     H53))))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -11300,7 +11300,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     Q
                                                                     F)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     E
@@ -11324,7 +11324,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     Q
                                                                     F))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     F
@@ -11343,7 +11343,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     Q
                                                                     F)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     F
                                                                     E
@@ -11357,7 +11357,7 @@ thm lemma__crisscross :
                                                                     E
                                                                     Q
                                                                     F))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     E
                                                                     F
@@ -11409,7 +11409,7 @@ thm lemma__crisscross :
                                                                     D
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     E
                                                                     A
@@ -11473,7 +11473,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -11502,7 +11502,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     E))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -11518,7 +11518,7 @@ thm lemma__crisscross :
                                                                     B
                                                                     E
                                                                     H8)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -11547,7 +11547,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     A
                                                                     B)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -11576,7 +11576,7 @@ thm lemma__crisscross :
                                                                     logic.eq__refl
                                                                     euclidean__axioms.Point
                                                                     A))
-                                                                   (logic.or__intror
+                                                                   (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -11605,7 +11605,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -11629,7 +11629,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -11648,7 +11648,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     A
@@ -11662,7 +11662,7 @@ thm lemma__crisscross :
                                                                     A
                                                                     E
                                                                     B))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     B
@@ -11752,7 +11752,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     B
                                                                     A))))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 A
@@ -11810,7 +11810,7 @@ thm lemma__crisscross :
                                                                     euclidean__axioms.Point
                                                                     B
                                                                     A)))))) =>
-                                              logic.and__elim_left
+                                              logic.and_elim_left
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    C
@@ -11902,7 +11902,7 @@ thm lemma__crisscross :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  A))))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq
                                              euclidean__axioms.Point
                                              A
@@ -11960,7 +11960,7 @@ thm lemma__crisscross :
                                                                  euclidean__axioms.Point
                                                                  D
                                                                  A)))))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 C
@@ -12021,7 +12021,7 @@ thm lemma__crisscross :
                                                                 euclidean__axioms.Point
                                                                 D
                                                                 A))))))) =>
-                                       logic.and__elim_left
+                                       logic.and_elim_left
                                          (plth.neq
                                             euclidean__axioms.Point
                                             A
@@ -12076,7 +12076,7 @@ thm lemma__crisscross :
                                                          A
                                                          C
                                                          D))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.nCol
                                            A
                                            C
@@ -12114,7 +12114,7 @@ thm lemma__crisscross :
                                                          A
                                                          C
                                                          D)))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.nCol
                                               A
                                               B
@@ -12142,7 +12142,7 @@ thm lemma__crisscross :
                                                          A
                                                          C
                                                          D))) =>
-                                            logic.and__elim_right
+                                            logic.and_elim_right
                                               (euclidean__axioms.nCol
                                                  C
                                                  B
@@ -12190,7 +12190,7 @@ thm lemma__crisscross :
                                                               euclidean__axioms.Point
                                                               D
                                                               A))))))) =>
-                                     logic.and__ind2
+                                     logic.and_ind_right
                                        (plth.neq
                                           euclidean__axioms.Point
                                           A
@@ -12248,7 +12248,7 @@ thm lemma__crisscross :
                                                               euclidean__axioms.Point
                                                               D
                                                               A)))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq
                                              euclidean__axioms.Point
                                              B
@@ -12296,7 +12296,7 @@ thm lemma__crisscross :
                                                               euclidean__axioms.Point
                                                               D
                                                               A))))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 A
@@ -12380,7 +12380,7 @@ thm lemma__crisscross :
                                                             euclidean__axioms.Point
                                                             C
                                                             B))))))) =>
-                                   logic.and__elim_left
+                                   logic.and_elim_left
                                      (plth.neq
                                         euclidean__axioms.Point
                                         B
@@ -12427,7 +12427,7 @@ thm lemma__crisscross :
                          E
                          H14
                          H15))
-                     (logic.ex__intro
+                     (logic.ex_intro
                         euclidean__axioms.Point
                         (X:(plth.El euclidean__axioms.Point) =>
                          plth.and
@@ -12436,13 +12436,13 @@ thm lemma__crisscross :
                               (euclidean__axioms.Col B D X)
                               (euclidean__axioms.nCol B D A)))
                         B
-                        (logic.conj
+                        (logic.and_intro
                            (euclidean__axioms.BetS A B E)
                            (plth.and
                               (euclidean__axioms.Col B D B)
                               (euclidean__axioms.nCol B D A))
                            H8
-                           (logic.conj
+                           (logic.and_intro
                               (euclidean__axioms.Col B D B)
                               (euclidean__axioms.nCol B D A)
                               H11
@@ -12461,7 +12461,7 @@ thm lemma__crisscross :
                                       A
                                       D
                                       B)))) =>
-                      logic.and__elim_left
+                      logic.and_elim_left
                         (euclidean__defs.OS C A B D)
                         (plth.and
                            (euclidean__defs.OS A C D B)
@@ -12492,7 +12492,7 @@ thm lemma__crisscross :
                                            D
                                            B
                                            A)))))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (euclidean__axioms.nCol B A D)
                        (plth.and
                           (euclidean__axioms.nCol B D A)
@@ -12519,7 +12519,7 @@ thm lemma__crisscross :
                                            D
                                            B
                                            A))))) =>
-                        logic.and__elim_left
+                        logic.and_elim_left
                           (euclidean__axioms.nCol B D A)
                           (plth.and
                              (euclidean__axioms.nCol D A B)
@@ -12537,7 +12537,7 @@ thm lemma__crisscross :
                                  (plth.and
                                     (euclidean__axioms.nCol C B D)
                                     (euclidean__axioms.nCol A C D))))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (euclidean__axioms.nCol A C B)
                       (plth.and
                          (euclidean__axioms.nCol A B D)
@@ -12551,7 +12551,7 @@ thm lemma__crisscross :
                                  (plth.and
                                     (euclidean__axioms.nCol C B D)
                                     (euclidean__axioms.nCol A C D)))) =>
-                       logic.and__elim_left
+                       logic.and_elim_left
                          (euclidean__axioms.nCol A B D)
                          (plth.and
                             (euclidean__axioms.nCol C B D)
@@ -12559,7 +12559,7 @@ thm lemma__crisscross :
                          H14)
                       H12)
                      (lemma__parallelNC.lemma__parallelNC A C B D H)))
-                 (logic.or__intror
+                 (logic.or_intro_right
                     (plth.eq euclidean__axioms.Point B D)
                     (plth.or
                        (plth.eq euclidean__axioms.Point B B)
@@ -12570,7 +12570,7 @@ thm lemma__crisscross :
                              (plth.or
                                 (euclidean__axioms.BetS B D B)
                                 (euclidean__axioms.BetS B B D)))))
-                    (logic.or__introl
+                    (logic.or_intro_left
                        (plth.eq euclidean__axioms.Point B B)
                        (plth.or
                           (plth.eq euclidean__axioms.Point D B)
@@ -12596,7 +12596,7 @@ thm lemma__crisscross :
                             (plth.and
                                (plth.neq euclidean__axioms.Point B C)
                                (plth.neq euclidean__axioms.Point B A))))))) =>
-          logic.and__ind2
+          logic.and_ind_right
             (plth.neq euclidean__axioms.Point A C)
             (plth.and
                (plth.neq euclidean__axioms.Point C B)
@@ -12618,7 +12618,7 @@ thm lemma__crisscross :
                             (plth.and
                                (plth.neq euclidean__axioms.Point B C)
                                (plth.neq euclidean__axioms.Point B A)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point C B)
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
@@ -12636,7 +12636,7 @@ thm lemma__crisscross :
                             (plth.and
                                (plth.neq euclidean__axioms.Point B C)
                                (plth.neq euclidean__axioms.Point B A))))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.and
                      (plth.neq euclidean__axioms.Point C A)
@@ -12655,14 +12655,14 @@ thm lemma__crisscross :
                      (plth.and
                         (euclidean__axioms.nCol C B D)
                         (euclidean__axioms.nCol A C D))))) =>
-         logic.and__elim_left
+         logic.and_elim_left
            (euclidean__axioms.nCol A C B)
            (plth.and
               (euclidean__axioms.nCol A B D)
               (plth.and (euclidean__axioms.nCol C B D) (euclidean__axioms.nCol A C D)))
            H4)
           (lemma__parallelNC.lemma__parallelNC A C B D H)))
-      (logic.and__ind2
+      (logic.and_ind_right
          (plth.neq euclidean__axioms.Point B D)
          (plth.and
             (plth.neq euclidean__axioms.Point A C)
@@ -12674,7 +12674,7 @@ thm lemma__crisscross :
                    (plth.and
                       (plth.not (euclidean__defs.Meet B D A C))
                       (euclidean__defs.OS A C B D)))) =>
-          logic.and__ind2
+          logic.and_ind_right
             (plth.neq euclidean__axioms.Point A C)
             (plth.and (plth.not (euclidean__defs.Meet B D A C)) (euclidean__defs.OS A C B D))
             (euclidean__defs.OS A C B D)
@@ -12682,7 +12682,7 @@ thm lemma__crisscross :
                    (plth.and
                       (plth.not (euclidean__defs.Meet B D A C))
                       (euclidean__defs.OS A C B D))) =>
-             logic.and__elim_right
+             logic.and_elim_right
                (plth.not (euclidean__defs.Meet B D A C))
                (euclidean__defs.OS A C B D)
                H6)

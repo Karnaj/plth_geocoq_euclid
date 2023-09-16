@@ -77,7 +77,7 @@ thm lemma__NChelper :
                              (plth.and
                                 (euclidean__axioms.Col B Q P)
                                 (euclidean__axioms.Col Q P B)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col P B Q)
                (plth.and
                   (euclidean__axioms.Col P Q B)
@@ -95,7 +95,7 @@ thm lemma__NChelper :
                              (plth.and
                                 (euclidean__axioms.Col B Q P)
                                 (euclidean__axioms.Col Q P B))))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (euclidean__axioms.Col P Q B)
                   (plth.and
                      (euclidean__axioms.Col Q B P)
@@ -115,7 +115,7 @@ thm lemma__NChelper :
                            (plth.and
                               (euclidean__axioms.Col A Q P)
                               (euclidean__axioms.Col Q P A)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.Col P A Q)
               (plth.and
                  (euclidean__axioms.Col P Q A)
@@ -133,7 +133,7 @@ thm lemma__NChelper :
                             (plth.and
                                (euclidean__axioms.Col A Q P)
                                (euclidean__axioms.Col Q P A))))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (euclidean__axioms.Col P Q A)
                  (plth.and
                     (euclidean__axioms.Col Q A P)
@@ -164,7 +164,7 @@ thm lemma__NChelper :
                          (plth.and
                             (euclidean__axioms.Col A Q B)
                             (euclidean__axioms.Col Q B A)))))) =>
-          logic.and__elim_left
+          logic.and_elim_left
             (euclidean__axioms.Col B A Q)
             (plth.and
                (euclidean__axioms.Col B Q A)
@@ -185,7 +185,7 @@ thm lemma__NChelper :
                         (plth.and
                            (euclidean__axioms.Col A P B)
                            (euclidean__axioms.Col P B A)))))) =>
-         logic.and__elim_left
+         logic.and_elim_left
            (euclidean__axioms.Col B A P)
            (plth.and
               (euclidean__axioms.Col B P A)
@@ -209,7 +209,7 @@ thm lemma__NChelper :
     (H3:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
      (H4:(plth.Prf (euclidean__axioms.Col A B C)) =>
       euclidean__tactics.Col__nCol__False A B C H H4)
-       (logic.or__introl
+       (logic.or_intro_left
           (plth.eq euclidean__axioms.Point A B)
           (plth.or
              (plth.eq euclidean__axioms.Point A C)

@@ -49,7 +49,7 @@ thm lemma__betweennesspreserved :
                  plth.and
                    (euclidean__axioms.BetS a b d)
                    (euclidean__axioms.Cong b d b c)))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (d:(plth.El euclidean__axioms.Point) =>
           plth.and (euclidean__axioms.BetS a b d) (euclidean__axioms.Cong b d b c))
@@ -59,7 +59,7 @@ thm lemma__betweennesspreserved :
                 (plth.and
                    (euclidean__axioms.BetS a b d)
                    (euclidean__axioms.Cong b d b c))) =>
-          logic.and__ind
+          logic.and_ind
             (euclidean__axioms.BetS a b d)
             (euclidean__axioms.Cong b d b c)
             (euclidean__axioms.BetS a b c)
@@ -181,7 +181,7 @@ thm lemma__betweennesspreserved :
                  (plth.and
                     (plth.neq euclidean__axioms.Point A B)
                     (plth.neq euclidean__axioms.Point A C)))) =>
-        logic.and__elim_left
+        logic.and_elim_left
           (plth.neq euclidean__axioms.Point B C)
           (plth.and
              (plth.neq euclidean__axioms.Point A B)
@@ -195,7 +195,7 @@ thm lemma__betweennesspreserved :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C)))) =>
-      logic.and__ind2
+      logic.and_ind_right
         (plth.neq euclidean__axioms.Point B C)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point A C))
         (plth.neq euclidean__axioms.Point A B)
@@ -203,7 +203,7 @@ thm lemma__betweennesspreserved :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C))) =>
-         logic.and__elim_left
+         logic.and_elim_left
            (plth.neq euclidean__axioms.Point A B)
            (plth.neq euclidean__axioms.Point A C)
            H5)

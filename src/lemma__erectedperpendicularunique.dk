@@ -36,7 +36,7 @@ thm lemma__erectedperpendicularunique :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (D:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -54,7 +54,7 @@ thm lemma__erectedperpendicularunique :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))))) =>
-      logic.and__ind2
+      logic.and_ind_right
         (euclidean__axioms.BetS A B D)
         (plth.and
            (euclidean__axioms.Cong A B D B)
@@ -66,7 +66,7 @@ thm lemma__erectedperpendicularunique :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))) =>
-         logic.and__ind2
+         logic.and_ind_right
            (euclidean__axioms.Cong A B D B)
            (plth.and (euclidean__axioms.Cong A C D C) (plth.neq euclidean__axioms.Point B C))
            (euclidean__defs.Out B C E)
@@ -74,7 +74,7 @@ thm lemma__erectedperpendicularunique :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A C D C)
               (plth.neq euclidean__axioms.Point B C)
               (euclidean__defs.Out B C E)
@@ -88,7 +88,7 @@ thm lemma__erectedperpendicularunique :
                             plth.and
                               (euclidean__defs.Out B E H11)
                               (euclidean__axioms.Cong B H11 B C)))) =>
-                 logic.ex__ind
+                 logic.ex_elim
                    euclidean__axioms.Point
                    (H12:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -100,7 +100,7 @@ thm lemma__erectedperpendicularunique :
                            (plth.and
                               (euclidean__defs.Out B E H12)
                               (euclidean__axioms.Cong B H12 B C))) =>
-                    logic.and__ind
+                    logic.and_ind
                       (euclidean__defs.Out B E H12)
                       (euclidean__axioms.Cong B H12 B C)
                       (euclidean__defs.Out B C E)
@@ -332,7 +332,7 @@ thm lemma__erectedperpendicularunique :
                                         B
                                         C
                                         H))
-                                    (logic.or__introl
+                                    (logic.or_intro_left
                                        (plth.eq
                                           euclidean__axioms.Point
                                           A
@@ -380,7 +380,7 @@ thm lemma__erectedperpendicularunique :
                                                   C
                                                   H12
                                                   B)))) =>
-                                  logic.and__elim_left
+                                  logic.and_elim_left
                                     (euclidean__axioms.Cong
                                        C
                                        B
@@ -422,7 +422,7 @@ thm lemma__erectedperpendicularunique :
                                                  C
                                                  H12
                                                  A)))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (euclidean__axioms.Cong
                                       C
                                       A
@@ -471,7 +471,7 @@ thm lemma__erectedperpendicularunique :
                               H1
                               H17
                               H14))
-                          (logic.or__intror
+                          (logic.or_intro_right
                              (plth.eq euclidean__axioms.Point A B)
                              (plth.or
                                 (plth.eq euclidean__axioms.Point A B)
@@ -482,7 +482,7 @@ thm lemma__erectedperpendicularunique :
                                       (plth.or
                                          (euclidean__axioms.BetS A B B)
                                          (euclidean__axioms.BetS A B B)))))
-                             (logic.or__intror
+                             (logic.or_intro_right
                                 (plth.eq euclidean__axioms.Point A B)
                                 (plth.or
                                    (plth.eq euclidean__axioms.Point B B)
@@ -491,7 +491,7 @@ thm lemma__erectedperpendicularunique :
                                       (plth.or
                                          (euclidean__axioms.BetS A B B)
                                          (euclidean__axioms.BetS A B B))))
-                                (logic.or__introl
+                                (logic.or_intro_left
                                    (plth.eq euclidean__axioms.Point B B)
                                    (plth.or
                                       (euclidean__axioms.BetS B A B)
@@ -528,7 +528,7 @@ thm lemma__erectedperpendicularunique :
                                                euclidean__axioms.Point
                                                B
                                                E)))))) =>
-                    logic.ex__ind
+                    logic.ex_elim
                       euclidean__axioms.Point
                       (X:(plth.El euclidean__axioms.Point) =>
                        plth.and
@@ -548,7 +548,7 @@ thm lemma__erectedperpendicularunique :
                                     (plth.and
                                        (euclidean__axioms.Cong A E x E)
                                        (plth.neq euclidean__axioms.Point B E))))) =>
-                       logic.and__ind2
+                       logic.and_ind_right
                          (euclidean__axioms.BetS A B x)
                          (plth.and
                             (euclidean__axioms.Cong A B x B)
@@ -562,7 +562,7 @@ thm lemma__erectedperpendicularunique :
                                     (plth.and
                                        (euclidean__axioms.Cong A E x E)
                                        (plth.neq euclidean__axioms.Point B E)))) =>
-                          logic.and__ind2
+                          logic.and_ind_right
                             (euclidean__axioms.Cong A B x B)
                             (plth.and
                                (euclidean__axioms.Cong A E x E)
@@ -572,7 +572,7 @@ thm lemma__erectedperpendicularunique :
                                     (plth.and
                                        (euclidean__axioms.Cong A E x E)
                                        (plth.neq euclidean__axioms.Point B E))) =>
-                             logic.and__elim_right
+                             logic.and_elim_right
                                (euclidean__axioms.Cong A E x E)
                                (plth.neq euclidean__axioms.Point B E)
                                H15)

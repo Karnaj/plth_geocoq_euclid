@@ -45,7 +45,7 @@ thm lemma__trapezoiddiagonals :
                   plth.and
                     (euclidean__defs.Midpoint A M C)
                     (euclidean__defs.Midpoint B M D)))) =>
-        logic.ex__ind
+        logic.ex_elim
           euclidean__axioms.Point
           (M:(plth.El euclidean__axioms.Point) =>
            plth.and
@@ -62,7 +62,7 @@ thm lemma__trapezoiddiagonals :
                  (plth.and
                     (euclidean__defs.Midpoint A M C)
                     (euclidean__defs.Midpoint B M D))) =>
-           logic.and__ind
+           logic.and_ind
              (euclidean__defs.Midpoint A M C)
              (euclidean__defs.Midpoint B M D)
              (plth.ex
@@ -110,7 +110,7 @@ thm lemma__trapezoiddiagonals :
                                        C
                                        D
                                        P)))) =>
-                       logic.ex__ind
+                       logic.ex_elim
                          euclidean__axioms.Point
                          (P:(plth.El
                                euclidean__axioms.Point) =>
@@ -148,7 +148,7 @@ thm lemma__trapezoiddiagonals :
                                        C
                                        D
                                        P))) =>
-                          logic.and__ind
+                          logic.and_ind
                             (euclidean__axioms.BetS
                                B
                                E
@@ -200,7 +200,7 @@ thm lemma__trapezoiddiagonals :
                                                C
                                                H'
                                                E)))) =>
-                               logic.ex__ind
+                               logic.ex_elim
                                  euclidean__axioms.Point
                                  (H':(plth.El
                                         euclidean__axioms.Point) =>
@@ -238,7 +238,7 @@ thm lemma__trapezoiddiagonals :
                                                C
                                                H'
                                                E))) =>
-                                  logic.and__ind
+                                  logic.and_ind
                                     (euclidean__axioms.BetS
                                        B
                                        H'
@@ -270,7 +270,7 @@ thm lemma__trapezoiddiagonals :
                                                C
                                                H'
                                                E)) =>
-                                     logic.ex__intro
+                                     logic.ex_intro
                                        euclidean__axioms.Point
                                        (X:(plth.El
                                              euclidean__axioms.Point) =>
@@ -284,7 +284,7 @@ thm lemma__trapezoiddiagonals :
                                              X
                                              E))
                                        H'
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__axioms.BetS
                                              B
                                              H'
@@ -363,7 +363,7 @@ thm lemma__trapezoiddiagonals :
                                                    D)) =>
                                          H3
                                            H31)
-                                          (logic.ex__intro
+                                          (logic.ex_intro
                                              euclidean__axioms.Point
                                              (X:(plth.El
                                                    euclidean__axioms.Point) =>
@@ -387,7 +387,7 @@ thm lemma__trapezoiddiagonals :
                                                          D
                                                          X))))
                                              B
-                                             (logic.conj
+                                             (logic.and_intro
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    A
@@ -407,7 +407,7 @@ thm lemma__trapezoiddiagonals :
                                                          D
                                                          B)))
                                                 H4
-                                                (logic.conj
+                                                (logic.and_intro
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       C
@@ -422,7 +422,7 @@ thm lemma__trapezoiddiagonals :
                                                          D
                                                          B))
                                                    H5
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.Col
                                                          A
                                                          B
@@ -433,7 +433,7 @@ thm lemma__trapezoiddiagonals :
                                                          B)
                                                       H30
                                                       H29)))))
-                                         (logic.or__intror
+                                         (logic.or_intro_right
                                             (plth.eq
                                                euclidean__axioms.Point
                                                A
@@ -462,7 +462,7 @@ thm lemma__trapezoiddiagonals :
                                                            A
                                                            B
                                                            B)))))
-                                            (logic.or__intror
+                                            (logic.or_intro_right
                                                (plth.eq
                                                   euclidean__axioms.Point
                                                   A
@@ -486,7 +486,7 @@ thm lemma__trapezoiddiagonals :
                                                            A
                                                            B
                                                            B))))
-                                               (logic.or__introl
+                                               (logic.or_intro_left
                                                   (plth.eq
                                                      euclidean__axioms.Point
                                                      B
@@ -531,7 +531,7 @@ thm lemma__trapezoiddiagonals :
                                                                 D
                                                                 B
                                                                 C)))))) =>
-                                          logic.and__ind2
+                                          logic.and_ind_right
                                             (euclidean__axioms.Col
                                                B
                                                C
@@ -579,7 +579,7 @@ thm lemma__trapezoiddiagonals :
                                                                 D
                                                                 B
                                                                 C))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (euclidean__axioms.Col
                                                   B
                                                   D
@@ -617,7 +617,7 @@ thm lemma__trapezoiddiagonals :
                                                                 D
                                                                 B
                                                                 C)))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (euclidean__axioms.Col
                                                      D
                                                      C
@@ -645,7 +645,7 @@ thm lemma__trapezoiddiagonals :
                                                                 D
                                                                 B
                                                                 C))) =>
-                                                   logic.and__elim_left
+                                                   logic.and_elim_left
                                                      (euclidean__axioms.Col
                                                         C
                                                         D
@@ -704,7 +704,7 @@ thm lemma__trapezoiddiagonals :
                                                        euclidean__axioms.Point
                                                        C
                                                        P)))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (plth.neq
                                             euclidean__axioms.Point
                                             D
@@ -732,7 +732,7 @@ thm lemma__trapezoiddiagonals :
                                                        euclidean__axioms.Point
                                                        C
                                                        P))) =>
-                                          logic.and__elim_right
+                                          logic.and_elim_right
                                             (plth.neq
                                                euclidean__axioms.Point
                                                C
@@ -773,7 +773,7 @@ thm lemma__trapezoiddiagonals :
                                                             P
                                                             D
                                                             C)))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.Col
                                            D
                                            C
@@ -821,7 +821,7 @@ thm lemma__trapezoiddiagonals :
                                                             P
                                                             D
                                                             C))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Col
                                               D
                                               P
@@ -859,7 +859,7 @@ thm lemma__trapezoiddiagonals :
                                                             P
                                                             D
                                                             C)))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (euclidean__axioms.Col
                                                  P
                                                  C
@@ -881,7 +881,7 @@ thm lemma__trapezoiddiagonals :
                                           D
                                           P
                                           H24)))
-                                   (logic.or__intror
+                                   (logic.or_intro_right
                                       (plth.eq
                                          euclidean__axioms.Point
                                          C
@@ -910,7 +910,7 @@ thm lemma__trapezoiddiagonals :
                                                      C
                                                      P
                                                      D)))))
-                                      (logic.or__intror
+                                      (logic.or_intro_right
                                          (plth.eq
                                             euclidean__axioms.Point
                                             C
@@ -934,7 +934,7 @@ thm lemma__trapezoiddiagonals :
                                                      C
                                                      P
                                                      D))))
-                                         (logic.or__intror
+                                         (logic.or_intro_right
                                             (plth.eq
                                                euclidean__axioms.Point
                                                D
@@ -953,7 +953,7 @@ thm lemma__trapezoiddiagonals :
                                                      C
                                                      P
                                                      D)))
-                                            (logic.or__intror
+                                            (logic.or_intro_right
                                                (euclidean__axioms.BetS
                                                   D
                                                   C
@@ -967,7 +967,7 @@ thm lemma__trapezoiddiagonals :
                                                      C
                                                      P
                                                      D))
-                                               (logic.or__introl
+                                               (logic.or_intro_left
                                                   (euclidean__axioms.BetS
                                                      C
                                                      D
@@ -1002,7 +1002,7 @@ thm lemma__trapezoiddiagonals :
                                                           C
                                                           P
                                                           B)))))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (euclidean__axioms.Col
                                          P
                                          B
@@ -1050,7 +1050,7 @@ thm lemma__trapezoiddiagonals :
                                                           C
                                                           P
                                                           B))))) =>
-                                       logic.and__elim_left
+                                       logic.and_elim_left
                                          (euclidean__axioms.Col
                                             P
                                             C
@@ -1113,7 +1113,7 @@ thm lemma__trapezoiddiagonals :
                                          M
                                          C
                                          M)))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Cong
                               M
                               A
@@ -1147,7 +1147,7 @@ thm lemma__trapezoiddiagonals :
                                          M
                                          C
                                          M))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (euclidean__axioms.Cong
                                  M
                                  A
@@ -1185,7 +1185,7 @@ thm lemma__trapezoiddiagonals :
                                     C
                                     D)) =>
                           H3 H19)
-                           (logic.ex__intro
+                           (logic.ex_intro
                               euclidean__axioms.Point
                               (X:(plth.El
                                     euclidean__axioms.Point) =>
@@ -1209,7 +1209,7 @@ thm lemma__trapezoiddiagonals :
                                           D
                                           X))))
                               B
-                              (logic.conj
+                              (logic.and_intro
                                  (plth.neq
                                     euclidean__axioms.Point
                                     A
@@ -1229,7 +1229,7 @@ thm lemma__trapezoiddiagonals :
                                           D
                                           B)))
                                  H4
-                                 (logic.conj
+                                 (logic.and_intro
                                     (plth.neq
                                        euclidean__axioms.Point
                                        C
@@ -1244,7 +1244,7 @@ thm lemma__trapezoiddiagonals :
                                           D
                                           B))
                                     H5
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__axioms.Col
                                           A
                                           B
@@ -1255,7 +1255,7 @@ thm lemma__trapezoiddiagonals :
                                           B)
                                        H18
                                        H17)))))
-                          (logic.or__intror
+                          (logic.or_intro_right
                              (plth.eq
                                 euclidean__axioms.Point
                                 A
@@ -1284,7 +1284,7 @@ thm lemma__trapezoiddiagonals :
                                             A
                                             B
                                             B)))))
-                             (logic.or__intror
+                             (logic.or_intro_right
                                 (plth.eq
                                    euclidean__axioms.Point
                                    A
@@ -1308,7 +1308,7 @@ thm lemma__trapezoiddiagonals :
                                             A
                                             B
                                             B))))
-                                (logic.or__introl
+                                (logic.or_intro_left
                                    (plth.eq
                                       euclidean__axioms.Point
                                       B
@@ -1353,7 +1353,7 @@ thm lemma__trapezoiddiagonals :
                                                  C
                                                  D
                                                  B)))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.Col D B C)
                              (plth.and
                                 (euclidean__axioms.Col
@@ -1395,7 +1395,7 @@ thm lemma__trapezoiddiagonals :
                                                  C
                                                  D
                                                  B))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.Col
                                    D
                                    C
@@ -1433,7 +1433,7 @@ thm lemma__trapezoiddiagonals :
                                                  C
                                                  D
                                                  B)))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__axioms.Col
                                       C
                                       B
@@ -1461,7 +1461,7 @@ thm lemma__trapezoiddiagonals :
                                                  C
                                                  D
                                                  B))) =>
-                                    logic.and__elim_right
+                                    logic.and_elim_right
                                       (euclidean__axioms.Col
                                          B
                                          C
@@ -1498,7 +1498,7 @@ thm lemma__trapezoiddiagonals :
                                       M
                                       D
                                       M)))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Cong M B D M)
                         (plth.and
                            (euclidean__axioms.Cong M B M D)
@@ -1516,7 +1516,7 @@ thm lemma__trapezoiddiagonals :
                                       M
                                       D
                                       M))) =>
-                         logic.and__elim_right
+                         logic.and_elim_right
                            (euclidean__axioms.Cong M B M D)
                            (euclidean__axioms.Cong B M D M)
                            H16)
@@ -1527,19 +1527,19 @@ thm lemma__trapezoiddiagonals :
                           M
                           D
                           H13)))
-                   (logic.and__elim_right
+                   (logic.and_elim_right
                       (euclidean__axioms.BetS B M D)
                       (euclidean__axioms.Cong B M M D)
                       H9))
-                  (logic.and__elim_left
+                  (logic.and_elim_left
                      (euclidean__axioms.BetS B M D)
                      (euclidean__axioms.Cong B M M D)
                      H9))
-                 (logic.and__elim_right
+                 (logic.and_elim_right
                     (euclidean__axioms.BetS A M C)
                     (euclidean__axioms.Cong A M M C)
                     H8))
-                (logic.and__elim_left
+                (logic.and_elim_left
                    (euclidean__axioms.BetS A M C)
                    (euclidean__axioms.Cong A M M C)
                    H8))
@@ -1682,7 +1682,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-           logic.ex__ind
+           logic.ex_elim
              euclidean__axioms.Point
              (U:(plth.El euclidean__axioms.Point) =>
               plth.ex
@@ -1803,7 +1803,7 @@ thm lemma__trapezoiddiagonals :
                                                                  u
                                                                  X
                                                                  V)))))))))))))))) =>
-              logic.ex__ind
+              logic.ex_elim
                 euclidean__axioms.Point
                 (V:(plth.El euclidean__axioms.Point) =>
                  plth.ex
@@ -1918,7 +1918,7 @@ thm lemma__trapezoiddiagonals :
                                                                  u
                                                                  X
                                                                  x0))))))))))))))) =>
-                 logic.ex__ind
+                 logic.ex_elim
                    euclidean__axioms.Point
                    (u:(plth.El euclidean__axioms.Point) =>
                     plth.ex
@@ -2027,7 +2027,7 @@ thm lemma__trapezoiddiagonals :
                                                                  x1
                                                                  X
                                                                  x0)))))))))))))) =>
-                    logic.ex__ind
+                    logic.ex_elim
                       euclidean__axioms.Point
                       (v:(plth.El euclidean__axioms.Point) =>
                        plth.ex
@@ -2130,7 +2130,7 @@ thm lemma__trapezoiddiagonals :
                                                                  x1
                                                                  X
                                                                  x0))))))))))))) =>
-                       logic.ex__ind
+                       logic.ex_elim
                          euclidean__axioms.Point
                          (X:(plth.El euclidean__axioms.Point) =>
                           plth.and
@@ -2383,7 +2383,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                            logic.ex__ind
+                            logic.ex_elim
                               euclidean__axioms.Point
                               (U:(plth.El euclidean__axioms.Point) =>
                                plth.ex
@@ -2535,7 +2535,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                               logic.ex__ind
+                               logic.ex_elim
                                  euclidean__axioms.Point
                                  (V:(plth.El
                                        euclidean__axioms.Point) =>
@@ -2681,7 +2681,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     x5))))))))))))))) =>
-                                  logic.ex__ind
+                                  logic.ex_elim
                                     euclidean__axioms.Point
                                     (u:(plth.El
                                           euclidean__axioms.Point) =>
@@ -2822,7 +2822,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5)))))))))))))) =>
-                                     logic.ex__ind
+                                     logic.ex_elim
                                        euclidean__axioms.Point
                                        (v:(plth.El
                                              euclidean__axioms.Point) =>
@@ -2955,7 +2955,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5))))))))))))) =>
-                                        logic.ex__ind
+                                        logic.ex_elim
                                           euclidean__axioms.Point
                                           (X:(plth.El
                                                 euclidean__axioms.Point) =>
@@ -3080,7 +3080,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 A
@@ -3194,7 +3194,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5))))))))))) =>
-                                              logic.and__elim_left
+                                              logic.and_elim_left
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    C
@@ -3390,7 +3390,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (U:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -3499,7 +3499,7 @@ thm lemma__trapezoiddiagonals :
                                                                 u
                                                                 X
                                                                 V)))))))))))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (V:(plth.El euclidean__axioms.Point) =>
                 plth.ex
@@ -3602,7 +3602,7 @@ thm lemma__trapezoiddiagonals :
                                                                 u
                                                                 X
                                                                 x0))))))))))))))) =>
-                logic.ex__ind
+                logic.ex_elim
                   euclidean__axioms.Point
                   (u:(plth.El euclidean__axioms.Point) =>
                    plth.ex
@@ -3702,7 +3702,7 @@ thm lemma__trapezoiddiagonals :
                                                                 x1
                                                                 X
                                                                 x0)))))))))))))) =>
-                   logic.ex__ind
+                   logic.ex_elim
                      euclidean__axioms.Point
                      (v:(plth.El euclidean__axioms.Point) =>
                       plth.ex
@@ -3796,7 +3796,7 @@ thm lemma__trapezoiddiagonals :
                                                                 x1
                                                                 X
                                                                 x0))))))))))))) =>
-                      logic.ex__ind
+                      logic.ex_elim
                         euclidean__axioms.Point
                         (X:(plth.El euclidean__axioms.Point) =>
                          plth.and
@@ -4038,7 +4038,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                           logic.ex__ind
+                           logic.ex_elim
                              euclidean__axioms.Point
                              (U:(plth.El euclidean__axioms.Point) =>
                               plth.ex
@@ -4189,7 +4189,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                              logic.ex__ind
+                              logic.ex_elim
                                 euclidean__axioms.Point
                                 (V:(plth.El euclidean__axioms.Point) =>
                                  plth.ex
@@ -4333,7 +4333,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     x5))))))))))))))) =>
-                                 logic.ex__ind
+                                 logic.ex_elim
                                    euclidean__axioms.Point
                                    (u:(plth.El
                                          euclidean__axioms.Point) =>
@@ -4471,7 +4471,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5)))))))))))))) =>
-                                    logic.ex__ind
+                                    logic.ex_elim
                                       euclidean__axioms.Point
                                       (v:(plth.El
                                             euclidean__axioms.Point) =>
@@ -4604,7 +4604,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5))))))))))))) =>
-                                       logic.ex__ind
+                                       logic.ex_elim
                                          euclidean__axioms.Point
                                          (X:(plth.El
                                                euclidean__axioms.Point) =>
@@ -4729,7 +4729,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (plth.neq
                                                euclidean__axioms.Point
                                                A
@@ -4922,7 +4922,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (U:(plth.El euclidean__axioms.Point) =>
             plth.ex
@@ -5031,7 +5031,7 @@ thm lemma__trapezoiddiagonals :
                                                                u
                                                                X
                                                                V)))))))))))))))) =>
-            logic.ex__ind
+            logic.ex_elim
               euclidean__axioms.Point
               (V:(plth.El euclidean__axioms.Point) =>
                plth.ex
@@ -5134,7 +5134,7 @@ thm lemma__trapezoiddiagonals :
                                                                u
                                                                X
                                                                x0))))))))))))))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (u:(plth.El euclidean__axioms.Point) =>
                   plth.ex
@@ -5231,7 +5231,7 @@ thm lemma__trapezoiddiagonals :
                                                                x1
                                                                X
                                                                x0)))))))))))))) =>
-                  logic.ex__ind
+                  logic.ex_elim
                     euclidean__axioms.Point
                     (v:(plth.El euclidean__axioms.Point) =>
                      plth.ex
@@ -5322,7 +5322,7 @@ thm lemma__trapezoiddiagonals :
                                                                x1
                                                                X
                                                                x0))))))))))))) =>
-                     logic.ex__ind
+                     logic.ex_elim
                        euclidean__axioms.Point
                        (X:(plth.El euclidean__axioms.Point) =>
                         plth.and
@@ -5562,7 +5562,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                          logic.ex__ind
+                          logic.ex_elim
                             euclidean__axioms.Point
                             (U:(plth.El euclidean__axioms.Point) =>
                              plth.ex
@@ -5710,7 +5710,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                             logic.ex__ind
+                             logic.ex_elim
                                euclidean__axioms.Point
                                (V:(plth.El euclidean__axioms.Point) =>
                                 plth.ex
@@ -5851,7 +5851,7 @@ thm lemma__trapezoiddiagonals :
                                                                     u
                                                                     X
                                                                     x5))))))))))))))) =>
-                                logic.ex__ind
+                                logic.ex_elim
                                   euclidean__axioms.Point
                                   (u:(plth.El euclidean__axioms.Point) =>
                                    plth.ex
@@ -5985,7 +5985,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5)))))))))))))) =>
-                                   logic.ex__ind
+                                   logic.ex_elim
                                      euclidean__axioms.Point
                                      (v:(plth.El
                                            euclidean__axioms.Point) =>
@@ -6114,7 +6114,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     X
                                                                     x5))))))))))))) =>
-                                      logic.ex__ind
+                                      logic.ex_elim
                                         euclidean__axioms.Point
                                         (X:(plth.El
                                               euclidean__axioms.Point) =>
@@ -6235,7 +6235,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (plth.neq
                                               euclidean__axioms.Point
                                               A
@@ -6349,7 +6349,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5))))))))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  C
@@ -6453,7 +6453,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Col
                                                     A
                                                     B
@@ -6547,7 +6547,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5))))))))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Col
                                                        A
                                                        B
@@ -6631,7 +6631,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (plth.neq
                                                           euclidean__axioms.Point
                                                           x4
@@ -6705,7 +6705,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5))))))) =>
-                                                        logic.and__ind2
+                                                        logic.and_ind_right
                                                           (euclidean__axioms.Col
                                                              C
                                                              D
@@ -6769,7 +6769,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))))) =>
-                                                           logic.and__ind2
+                                                           logic.and_ind_right
                                                              (euclidean__axioms.Col
                                                                 C
                                                                 D
@@ -6823,7 +6823,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5))))) =>
-                                                              logic.and__ind2
+                                                              logic.and_ind_right
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    x6
@@ -6868,7 +6868,7 @@ thm lemma__trapezoiddiagonals :
                                                                     x6
                                                                     x8
                                                                     x5)))) =>
-                                                                 logic.and__elim_left
+                                                                 logic.and_elim_left
                                                                    (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -6907,6 +6907,6 @@ thm lemma__trapezoiddiagonals :
            __TmpHyp)
           H3)
          H2))
-     (logic.and__elim_right (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H))
-    (logic.and__elim_left (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H).
+     (logic.and_elim_right (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H))
+    (logic.and_elim_left (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H).
 

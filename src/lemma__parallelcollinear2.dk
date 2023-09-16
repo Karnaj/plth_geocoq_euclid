@@ -56,7 +56,7 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d)))))))))) =>
-     logic.ex__ind
+     logic.ex_elim
        euclidean__axioms.Point
        (p:(plth.El euclidean__axioms.Point) =>
         plth.ex
@@ -96,7 +96,7 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d))))))))) =>
-        logic.ex__ind
+        logic.ex_elim
           euclidean__axioms.Point
           (q:(plth.El euclidean__axioms.Point) =>
            plth.ex
@@ -130,7 +130,7 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d)))))))) =>
-           logic.ex__ind
+           logic.ex_elim
              euclidean__axioms.Point
              (r:(plth.El euclidean__axioms.Point) =>
               plth.and
@@ -158,7 +158,7 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d))))))) =>
-              logic.and__ind
+              logic.and_ind
                 (euclidean__axioms.Col A B p)
                 (plth.and
                    (euclidean__axioms.Col A B r)
@@ -181,7 +181,7 @@ thm lemma__parallelcollinear2 :
                                 (plth.and
                                    (euclidean__axioms.nCol A B c)
                                    (euclidean__axioms.nCol A B d)))))) =>
-                 logic.and__ind
+                 logic.and_ind
                    (euclidean__axioms.Col A B r)
                    (plth.and
                       (euclidean__axioms.BetS c p q)
@@ -200,7 +200,7 @@ thm lemma__parallelcollinear2 :
                                  (plth.and
                                     (euclidean__axioms.nCol A B c)
                                     (euclidean__axioms.nCol A B d))))) =>
-                    logic.and__ind
+                    logic.and_ind
                       (euclidean__axioms.BetS c p q)
                       (plth.and
                          (euclidean__axioms.BetS d r q)
@@ -215,7 +215,7 @@ thm lemma__parallelcollinear2 :
                                  (plth.and
                                     (euclidean__axioms.nCol A B c)
                                     (euclidean__axioms.nCol A B d)))) =>
-                       logic.and__ind
+                       logic.and_ind
                          (euclidean__axioms.BetS d r q)
                          (plth.and
                             (euclidean__axioms.nCol A B c)
@@ -226,13 +226,13 @@ thm lemma__parallelcollinear2 :
                                  (plth.and
                                     (euclidean__axioms.nCol A B c)
                                     (euclidean__axioms.nCol A B d))) =>
-                          logic.and__ind
+                          logic.and_ind
                             (euclidean__axioms.nCol A B c)
                             (euclidean__axioms.nCol A B d)
                             (euclidean__defs.TP A B C d)
                             (H15:(plth.Prf (euclidean__axioms.nCol A B c)) =>
                              H16:(plth.Prf (euclidean__axioms.nCol A B d)) =>
-                             logic.and__ind
+                             logic.and_ind
                                (plth.neq euclidean__axioms.Point A B)
                                (plth.and
                                   (plth.neq euclidean__axioms.Point c d)
@@ -249,7 +249,7 @@ thm lemma__parallelcollinear2 :
                                              (plth.not
                                                 (euclidean__defs.Meet A B c d))
                                              (euclidean__defs.OS c d A B)))) =>
-                                logic.and__ind
+                                logic.and_ind
                                   (plth.neq euclidean__axioms.Point c d)
                                   (plth.and
                                      (plth.not (euclidean__defs.Meet A B c d))
@@ -262,7 +262,7 @@ thm lemma__parallelcollinear2 :
                                              (plth.not
                                                 (euclidean__defs.Meet A B c d))
                                              (euclidean__defs.OS c d A B))) =>
-                                   logic.and__ind
+                                   logic.and_ind
                                      (plth.not (euclidean__defs.Meet A B c d))
                                      (euclidean__defs.OS c d A B)
                                      (euclidean__defs.TP A B C d)
@@ -441,7 +441,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     E
                                                                     p)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (E:(
                                                                     plth.El
@@ -474,7 +474,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     E
                                                                     p))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     q
                                                                     E
@@ -528,7 +528,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (F:(
                                                                     plth.El
@@ -561,7 +561,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     q
                                                                     F
@@ -680,7 +680,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     A
                                                                     B)) =>
-                                                                    logic.conj
+                                                                    logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -703,7 +703,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     B)))
                                                                     H17
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -721,7 +721,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     B))
                                                                     H23
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -775,7 +775,7 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     d
                                                                     R)))))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (R:(
                                                                     plth.El
@@ -824,7 +824,7 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     d
                                                                     R))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -866,7 +866,7 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     d
                                                                     R)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -898,7 +898,7 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     d
                                                                     R))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -966,7 +966,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     A
                                                                     B)) =>
-                                                                    logic.ex__intro
+                                                                    logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -991,7 +991,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     X))))
                                                                     R
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -1011,7 +1011,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     R)))
                                                                     H76
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -1026,7 +1026,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     R))
                                                                     H19
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1070,7 +1070,7 @@ thm lemma__parallelcollinear2 :
                                                                     R
                                                                     c
                                                                     d)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     c
                                                                     d
@@ -1185,7 +1185,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     c
@@ -1234,7 +1234,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     d
@@ -1267,7 +1267,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     A
                                                                     B)) =>
-                                                                    logic.or__intror
+                                                                    logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -1296,7 +1296,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -1320,7 +1320,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -1339,7 +1339,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     c
@@ -1353,7 +1353,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     c
                                                                     C
@@ -1476,7 +1476,7 @@ thm lemma__parallelcollinear2 :
                                                                     C)) =>
                                                                     H72
                                                                     H85)))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -1521,7 +1521,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))))
                                                                     q
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -1561,7 +1561,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))))
                                                                     F
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -1596,7 +1596,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))
                                                                     r
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1626,7 +1626,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))
                                                                     H84
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1651,7 +1651,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))
                                                                     H9
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -1671,7 +1671,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))
                                                                     H71
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     d
                                                                     r
@@ -1686,7 +1686,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))
                                                                     H13
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -1752,7 +1752,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     p
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     A
@@ -1801,7 +1801,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     p
                                                                     A))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     r
@@ -1853,7 +1853,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     B
                                                                     p)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     p
@@ -1902,7 +1902,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     B
                                                                     p))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     r
@@ -1941,7 +1941,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     B
                                                                     p)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     p
@@ -1970,7 +1970,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     B
                                                                     p))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     r
@@ -2100,7 +2100,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     A
                                                                     H77)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -2129,7 +2129,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     A
                                                                     A)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -2153,7 +2153,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     A
                                                                     A))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -2202,7 +2202,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     B
@@ -2251,7 +2251,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     A
@@ -2290,7 +2290,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -2319,7 +2319,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -2355,7 +2355,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     B)) =>
-                                                                    logic.false__ind
+                                                                    logic.false_elim
                                                                     plth.false
                                                                     (H17
                                                                     Heq))
@@ -2464,7 +2464,7 @@ thm lemma__parallelcollinear2 :
                                                                     C)) =>
                                                                     H72
                                                                     H84)))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -2509,7 +2509,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))))
                                                                     q
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -2549,7 +2549,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))))
                                                                     F
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -2584,7 +2584,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))
                                                                     r
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -2614,7 +2614,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))
                                                                     H83
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -2639,7 +2639,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))
                                                                     H9
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -2659,7 +2659,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))
                                                                     H71
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     d
                                                                     r
@@ -2674,7 +2674,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))
                                                                     H13
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -2715,7 +2715,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     F
                                                                     A)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     A
@@ -2764,7 +2764,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     F
                                                                     A))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     F
                                                                     B
@@ -2803,7 +2803,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     F
                                                                     A)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -2832,7 +2832,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     F
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -2981,7 +2981,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     A
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3030,7 +3030,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     A
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     r
@@ -3069,7 +3069,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     A
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     B
@@ -3098,7 +3098,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     A
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     r
@@ -3142,7 +3142,7 @@ thm lemma__parallelcollinear2 :
                                                                     F
                                                                     r
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     A
@@ -3228,7 +3228,7 @@ thm lemma__parallelcollinear2 :
                                                                     C)) =>
                                                                     H72
                                                                     H80)))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -3273,7 +3273,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))))
                                                                     q
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -3313,7 +3313,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))))
                                                                     F
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -3348,7 +3348,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))
                                                                     r
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3378,7 +3378,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))
                                                                     H79
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3403,7 +3403,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))
                                                                     H9
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     F
@@ -3423,7 +3423,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))
                                                                     H71
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     d
                                                                     r
@@ -3438,7 +3438,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))
                                                                     H13
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     B
@@ -3527,7 +3527,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     B
@@ -3576,7 +3576,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     A
@@ -3615,7 +3615,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3644,7 +3644,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     p
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -3688,7 +3688,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     r
                                                                     p)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     p
@@ -3737,7 +3737,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     r
                                                                     p))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     A
@@ -3776,7 +3776,7 @@ thm lemma__parallelcollinear2 :
                                                                     A
                                                                     r
                                                                     p)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     p
@@ -3860,7 +3860,7 @@ thm lemma__parallelcollinear2 :
                                                                     d)) =>
                                                                     H21
                                                                     H72)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -3885,7 +3885,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     X))))
                                                                     C
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -3905,7 +3905,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C)))
                                                                     H17
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -3920,7 +3920,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C))
                                                                     H19
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3957,7 +3957,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     c
@@ -4006,7 +4006,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     d
@@ -4045,7 +4045,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     d
                                                                     c
@@ -4074,7 +4074,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     C
                                                                     c))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     c
                                                                     d
@@ -4092,7 +4092,7 @@ thm lemma__parallelcollinear2 :
                                                                     C
                                                                     d
                                                                     H70)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -4121,7 +4121,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -4145,7 +4145,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4164,7 +4164,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     c
@@ -4178,7 +4178,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     d
                                                                     C))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     c
                                                                     C
@@ -4214,7 +4214,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     A
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -4263,7 +4263,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     A
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     p
@@ -4302,7 +4302,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     A
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     B
@@ -4331,7 +4331,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     A
                                                                     B))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     p
@@ -4375,7 +4375,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     r
                                                                     B)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     B
@@ -4424,7 +4424,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     r
                                                                     B))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     r
                                                                     p
@@ -4463,7 +4463,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     r
                                                                     B)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     B
@@ -4492,7 +4492,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     r
                                                                     B))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     p
@@ -4540,7 +4540,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     B
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -4596,7 +4596,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     B
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -4649,7 +4649,7 @@ thm lemma__parallelcollinear2 :
                                                                     H9
                                                                     H7
                                                                     H17))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -4678,7 +4678,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -4702,7 +4702,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     r
@@ -4721,7 +4721,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     r
                                                                     p
@@ -4735,7 +4735,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     F
                                                                     r))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     p
                                                                     r
@@ -4808,7 +4808,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     c)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -4837,7 +4837,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     c))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -4853,7 +4853,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     c
                                                                     H27)))
-                                                                 (logic.or__intror
+                                                                 (logic.or_intro_right
                                                                     (
                                                                     plth.eq
                                                                     euclidean__axioms.Point
@@ -4885,7 +4885,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     p)))))
                                                                     (
-                                                                    logic.or__introl
+                                                                    logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -4937,7 +4937,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     p
                                                                     q)))))) =>
-                                                                 logic.and__ind2
+                                                                 logic.and_ind_right
                                                                    (euclidean__axioms.Col
                                                                     p
                                                                     q
@@ -4986,7 +4986,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     p
                                                                     q))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     c
@@ -5025,7 +5025,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     p
                                                                     q)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     c
                                                                     q
@@ -5054,7 +5054,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     p
                                                                     q))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     q
                                                                     c
@@ -5091,7 +5091,7 @@ thm lemma__parallelcollinear2 :
                                                                     H40
                                                                     H44
                                                                     H42))))
-                                                             (logic.or__intror
+                                                             (logic.or_intro_right
                                                                 (plth.eq
                                                                    euclidean__axioms.Point
                                                                    q
@@ -5120,7 +5120,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     p
                                                                     p)))))
-                                                                (logic.or__intror
+                                                                (logic.or_intro_right
                                                                    (plth.eq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -5144,7 +5144,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     p
                                                                     p))))
-                                                                   (logic.or__introl
+                                                                   (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -5204,7 +5204,7 @@ thm lemma__parallelcollinear2 :
                                                                     c
                                                                     H30
                                                                     H44)))
-                                                               (logic.or__intror
+                                                               (logic.or_intro_right
                                                                   (plth.eq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -5233,7 +5233,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     c
                                                                     r)))))
-                                                                  (logic.or__introl
+                                                                  (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     p
@@ -5507,7 +5507,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     d
                                                                     q)))))) =>
-                                                          logic.and__ind2
+                                                          logic.and_ind_right
                                                             (euclidean__axioms.nCol
                                                                d
                                                                q
@@ -5556,7 +5556,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     d
                                                                     q))))) =>
-                                                             logic.and__ind2
+                                                             logic.and_ind_right
                                                                (euclidean__axioms.nCol
                                                                   d
                                                                   p
@@ -5595,7 +5595,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     d
                                                                     q)))) =>
-                                                                logic.and__ind2
+                                                                logic.and_ind_right
                                                                   (euclidean__axioms.nCol
                                                                     p
                                                                     q
@@ -5624,7 +5624,7 @@ thm lemma__parallelcollinear2 :
                                                                     p
                                                                     d
                                                                     q))) =>
-                                                                   logic.and__elim_left
+                                                                   logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     q
                                                                     p
@@ -5675,7 +5675,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     d)))) =>
-                                                        logic.and__ind2
+                                                        logic.and_ind_right
                                                           (plth.neq
                                                              euclidean__axioms.Point
                                                              r
@@ -5703,7 +5703,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     d))) =>
-                                                           logic.and__elim_right
+                                                           logic.and_elim_right
                                                              (plth.neq
                                                                 euclidean__axioms.Point
                                                                 q
@@ -5719,7 +5719,7 @@ thm lemma__parallelcollinear2 :
                                                             r
                                                             d
                                                             H25)))
-                                                     (logic.or__intror
+                                                     (logic.or_intro_right
                                                         (plth.eq
                                                            euclidean__axioms.Point
                                                            r
@@ -5750,7 +5750,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     d
                                                                     d)))))
-                                                        (logic.or__intror
+                                                        (logic.or_intro_right
                                                            (plth.eq
                                                               euclidean__axioms.Point
                                                               r
@@ -5776,7 +5776,7 @@ thm lemma__parallelcollinear2 :
                                                                     r
                                                                     d
                                                                     d))))
-                                                           (logic.or__introl
+                                                           (logic.or_intro_left
                                                               (plth.eq
                                                                  euclidean__axioms.Point
                                                                  d
@@ -5826,7 +5826,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r
                                                                     q)))))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (euclidean__axioms.Col
                                                           r
                                                           q
@@ -5874,7 +5874,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r
                                                                     q))))) =>
-                                                        logic.and__elim_left
+                                                        logic.and_elim_left
                                                           (euclidean__axioms.Col
                                                              r
                                                              d
@@ -5900,7 +5900,7 @@ thm lemma__parallelcollinear2 :
                                                          r
                                                          d
                                                          H33)))
-                                                  (logic.or__intror
+                                                  (logic.or_intro_right
                                                      (plth.eq
                                                         euclidean__axioms.Point
                                                         q
@@ -5929,7 +5929,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     d
                                                                     r)))))
-                                                     (logic.or__intror
+                                                     (logic.or_intro_right
                                                         (plth.eq
                                                            euclidean__axioms.Point
                                                            q
@@ -5953,7 +5953,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     d
                                                                     r))))
-                                                        (logic.or__intror
+                                                        (logic.or_intro_right
                                                            (plth.eq
                                                               euclidean__axioms.Point
                                                               r
@@ -5972,7 +5972,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     d
                                                                     r)))
-                                                           (logic.or__intror
+                                                           (logic.or_intro_right
                                                               (euclidean__axioms.BetS
                                                                  r
                                                                  q
@@ -5986,7 +5986,7 @@ thm lemma__parallelcollinear2 :
                                                                     q
                                                                     d
                                                                     r))
-                                                              (logic.or__introl
+                                                              (logic.or_intro_left
                                                                  (euclidean__axioms.BetS
                                                                     q
                                                                     r
@@ -6021,7 +6021,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r
                                                                     p)))))) =>
-                                                   logic.and__ind2
+                                                   logic.and_ind_right
                                                      (euclidean__axioms.nCol
                                                         r
                                                         p
@@ -6069,7 +6069,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     r
                                                                     p))))) =>
-                                                      logic.and__elim_left
+                                                      logic.and_elim_left
                                                         (euclidean__axioms.nCol
                                                            r
                                                            d
@@ -6174,7 +6174,7 @@ thm lemma__parallelcollinear2 :
                                                                 d)) =>
                                                       H21
                                                         H36)
-                                                       (logic.ex__intro
+                                                       (logic.ex_intro
                                                           euclidean__axioms.Point
                                                           (X:(plth.El
                                                                 euclidean__axioms.Point) =>
@@ -6198,7 +6198,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     X))))
                                                           p
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (plth.neq
                                                                 euclidean__axioms.Point
                                                                 A
@@ -6218,7 +6218,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     p)))
                                                              H17
-                                                             (logic.conj
+                                                             (logic.and_intro
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    c
@@ -6233,7 +6233,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     p))
                                                                 H19
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -6269,7 +6269,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     c
                                                                     p)))))) =>
-                                                        logic.and__ind2
+                                                        logic.and_ind_right
                                                           (euclidean__axioms.Col
                                                              c
                                                              p
@@ -6317,7 +6317,7 @@ thm lemma__parallelcollinear2 :
                                                                     d
                                                                     c
                                                                     p))))) =>
-                                                           logic.and__elim_left
+                                                           logic.and_elim_left
                                                              (euclidean__axioms.Col
                                                                 c
                                                                 d
@@ -6380,7 +6380,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     c)))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (plth.neq
                                                            euclidean__axioms.Point
                                                            p
@@ -6408,7 +6408,7 @@ thm lemma__parallelcollinear2 :
                                                                     euclidean__axioms.Point
                                                                     q
                                                                     c))) =>
-                                                         logic.and__elim_left
+                                                         logic.and_elim_left
                                                            (plth.neq
                                                               euclidean__axioms.Point
                                                               q
@@ -6503,7 +6503,7 @@ thm lemma__parallelcollinear2 :
                                                       H28
                                                       H31))
                                                   H28)
-                                                 (logic.or__intror
+                                                 (logic.or_intro_right
                                                     (plth.eq
                                                        euclidean__axioms.Point
                                                        q
@@ -6532,7 +6532,7 @@ thm lemma__parallelcollinear2 :
                                                                    q
                                                                    d
                                                                    r)))))
-                                                    (logic.or__intror
+                                                    (logic.or_intro_right
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           q
@@ -6556,7 +6556,7 @@ thm lemma__parallelcollinear2 :
                                                                    q
                                                                    d
                                                                    r))))
-                                                       (logic.or__intror
+                                                       (logic.or_intro_right
                                                           (plth.eq
                                                              euclidean__axioms.Point
                                                              r
@@ -6575,7 +6575,7 @@ thm lemma__parallelcollinear2 :
                                                                    q
                                                                    d
                                                                    r)))
-                                                          (logic.or__intror
+                                                          (logic.or_intro_right
                                                              (euclidean__axioms.BetS
                                                                 r
                                                                 q
@@ -6589,7 +6589,7 @@ thm lemma__parallelcollinear2 :
                                                                    q
                                                                    d
                                                                    r))
-                                                             (logic.or__introl
+                                                             (logic.or_intro_left
                                                                 (euclidean__axioms.BetS
                                                                    q
                                                                    r
@@ -6599,7 +6599,7 @@ thm lemma__parallelcollinear2 :
                                                                    d
                                                                    r)
                                                                 H25)))))))
-                                             (logic.or__intror
+                                             (logic.or_intro_right
                                                 (plth.eq
                                                    euclidean__axioms.Point
                                                    q
@@ -6628,7 +6628,7 @@ thm lemma__parallelcollinear2 :
                                                                q
                                                                c
                                                                p)))))
-                                                (logic.or__intror
+                                                (logic.or_intro_right
                                                    (plth.eq
                                                       euclidean__axioms.Point
                                                       q
@@ -6652,7 +6652,7 @@ thm lemma__parallelcollinear2 :
                                                                q
                                                                c
                                                                p))))
-                                                   (logic.or__intror
+                                                   (logic.or_intro_right
                                                       (plth.eq
                                                          euclidean__axioms.Point
                                                          p
@@ -6671,7 +6671,7 @@ thm lemma__parallelcollinear2 :
                                                                q
                                                                c
                                                                p)))
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (euclidean__axioms.BetS
                                                             p
                                                             q
@@ -6685,7 +6685,7 @@ thm lemma__parallelcollinear2 :
                                                                q
                                                                c
                                                                p))
-                                                         (logic.or__introl
+                                                         (logic.or_intro_left
                                                             (euclidean__axioms.BetS
                                                                q
                                                                p
@@ -6722,7 +6722,7 @@ thm lemma__parallelcollinear2 :
                                                           euclidean__axioms.Point
                                                           c
                                                           d)))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (plth.neq
                                                euclidean__axioms.Point
                                                C
@@ -6819,7 +6819,7 @@ thm lemma__parallelcollinear2 :
                                                          A
                                                          B
                                                          d))))))))))))) =>
-         logic.and__ind2
+         logic.and_ind_right
            (plth.neq euclidean__axioms.Point A B)
            (plth.and
               (plth.neq euclidean__axioms.Point c d)
@@ -6896,7 +6896,7 @@ thm lemma__parallelcollinear2 :
                                                    A
                                                    B
                                                    d)))))))))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (plth.neq euclidean__axioms.Point c d)
               (plth.and
                  (plth.not (euclidean__defs.Meet A B c d))
@@ -6969,7 +6969,7 @@ thm lemma__parallelcollinear2 :
                                                    A
                                                    B
                                                    d))))))))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (plth.not (euclidean__defs.Meet A B c d))
                  (plth.ex
                     euclidean__axioms.Point
@@ -7038,7 +7038,7 @@ thm lemma__parallelcollinear2 :
                                                    A
                                                    B
                                                    d)))))))))) =>
-                  logic.ex__ind
+                  logic.ex_elim
                     euclidean__axioms.Point
                     (X:(plth.El euclidean__axioms.Point) =>
                      plth.ex
@@ -7103,7 +7103,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d))))))))) =>
-                     logic.ex__ind
+                     logic.ex_elim
                        euclidean__axioms.Point
                        (U:(plth.El euclidean__axioms.Point) =>
                         plth.ex
@@ -7162,7 +7162,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d)))))))) =>
-                        logic.ex__ind
+                        logic.ex_elim
                           euclidean__axioms.Point
                           (V:(plth.El euclidean__axioms.Point) =>
                            plth.and
@@ -7224,7 +7224,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d))))))) =>
-                           logic.and__ind
+                           logic.and_ind
                              (euclidean__axioms.Col A B x0)
                              (plth.and
                                 (euclidean__axioms.Col A B x1)
@@ -7284,7 +7284,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d)))))) =>
-                              logic.and__ind
+                              logic.and_ind
                                 (euclidean__axioms.Col A B x1)
                                 (plth.and
                                    (euclidean__axioms.BetS c x0 x)
@@ -7344,7 +7344,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d))))) =>
-                                 logic.and__ind
+                                 logic.and_ind
                                    (euclidean__axioms.BetS c x0 x)
                                    (plth.and
                                       (euclidean__axioms.BetS d x1 x)
@@ -7405,7 +7405,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d)))) =>
-                                    logic.and__ind
+                                    logic.and_ind
                                       (euclidean__axioms.BetS d x1 x)
                                       (plth.and
                                          (euclidean__axioms.nCol A B c)
@@ -7466,7 +7466,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d))) =>
-                                       logic.and__ind
+                                       logic.and_ind
                                          (euclidean__axioms.nCol A B c)
                                          (euclidean__axioms.nCol A B d)
                                          (plth.ex
@@ -7520,7 +7520,7 @@ thm lemma__parallelcollinear2 :
                                                     A
                                                     B
                                                     d)) =>
-                                          logic.ex__intro
+                                          logic.ex_intro
                                             euclidean__axioms.Point
                                             (p:(plth.El
                                                   euclidean__axioms.Point) =>
@@ -7562,7 +7562,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))))
                                             x0
-                                            (logic.ex__intro
+                                            (logic.ex_intro
                                                euclidean__axioms.Point
                                                (q:(plth.El
                                                      euclidean__axioms.Point) =>
@@ -7600,7 +7600,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))))
                                                x
-                                               (logic.ex__intro
+                                               (logic.ex_intro
                                                   euclidean__axioms.Point
                                                   (r:(plth.El
                                                         euclidean__axioms.Point) =>
@@ -7634,7 +7634,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))))
                                                   x1
-                                                  (logic.conj
+                                                  (logic.and_intro
                                                      (euclidean__axioms.Col
                                                         A
                                                         B
@@ -7664,7 +7664,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))))
                                                      H13
-                                                     (logic.conj
+                                                     (logic.and_intro
                                                         (euclidean__axioms.Col
                                                            A
                                                            B
@@ -7689,7 +7689,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))))
                                                         H15
-                                                        (logic.conj
+                                                        (logic.and_intro
                                                            (euclidean__axioms.BetS
                                                               c
                                                               x0
@@ -7709,7 +7709,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d)))
                                                            H17
-                                                           (logic.conj
+                                                           (logic.and_intro
                                                               (euclidean__axioms.BetS
                                                                  d
                                                                  x1
@@ -7724,7 +7724,7 @@ thm lemma__parallelcollinear2 :
                                                                     B
                                                                     d))
                                                               H19
-                                                              (logic.conj
+                                                              (logic.and_intro
                                                                  (euclidean__axioms.nCol
                                                                     A
                                                                     B

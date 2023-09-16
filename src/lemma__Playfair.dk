@@ -41,7 +41,7 @@ thm lemma__Playfair :
                        (plth.or
                           (euclidean__defs.CR A D B C)
                           (euclidean__defs.CR A C B D))) =>
-           logic.or__ind
+           logic.or_elim
              (euclidean__defs.CR A D B C)
              (euclidean__defs.CR A C B D)
              (euclidean__axioms.Col C D E)
@@ -83,7 +83,7 @@ thm lemma__Playfair :
                          plth.and
                            (euclidean__axioms.BetS A p C)
                            (euclidean__axioms.BetS B p D)))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (p:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -95,7 +95,7 @@ thm lemma__Playfair :
                         (plth.and
                            (euclidean__axioms.BetS A p C)
                            (euclidean__axioms.BetS B p D))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS A p C)
                     (euclidean__axioms.BetS B p D)
                     (euclidean__axioms.Col C D E)
@@ -166,7 +166,7 @@ thm lemma__Playfair :
                                            A
                                            E
                                            C)))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (euclidean__defs.Par B A C E)
                              (plth.and
                                 (euclidean__defs.Par A B E C)
@@ -192,7 +192,7 @@ thm lemma__Playfair :
                                           A
                                           D
                                           C)))) =>
-                          logic.and__elim_left
+                          logic.and_elim_left
                             (euclidean__defs.Par B A C D)
                             (plth.and
                                (euclidean__defs.Par A B D C)
@@ -208,14 +208,14 @@ thm lemma__Playfair :
                                 (plth.or
                                    (euclidean__defs.CR A D B C)
                                    (euclidean__defs.CR A C B D))) =>
-                         logic.ex__intro
+                         logic.ex_intro
                            euclidean__axioms.Point
                            (X:(plth.El euclidean__axioms.Point) =>
                             plth.and
                               (euclidean__axioms.BetS B X D)
                               (euclidean__axioms.BetS A X C))
                            p
-                           (logic.conj
+                           (logic.and_intro
                               (euclidean__axioms.BetS B p D)
                               (euclidean__axioms.BetS A p C)
                               H10
@@ -242,16 +242,16 @@ thm lemma__Playfair :
                (H6:(plth.Prf (plth.imp (euclidean__defs.CR A D B C) plth.false)) =>
                 (H7:(plth.Prf
                        (plth.imp (euclidean__defs.CR A C B D) plth.false)) =>
-                 logic.false__ind plth.false H5)
+                 logic.false_elim plth.false H5)
                   (H7:(plth.Prf (euclidean__defs.CR A C B D)) =>
                    H4
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (euclidean__defs.CR A D B C)
                         (euclidean__defs.CR A C B D)
                         H7)))
                  (H6:(plth.Prf (euclidean__defs.CR A D B C)) =>
                   H4
-                    (logic.or__introl
+                    (logic.or_intro_left
                        (euclidean__defs.CR A D B C)
                        (euclidean__defs.CR A C B D)
                        H6)))
@@ -267,7 +267,7 @@ thm lemma__Playfair :
                     plth.and
                       (euclidean__axioms.BetS A p C)
                       (euclidean__axioms.BetS D p B)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (p:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS A p C) (euclidean__axioms.BetS D p B))
@@ -277,7 +277,7 @@ thm lemma__Playfair :
                    (plth.and
                       (euclidean__axioms.BetS A p C)
                       (euclidean__axioms.BetS D p B))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS A p C)
                (euclidean__axioms.BetS D p B)
                plth.false
@@ -288,18 +288,18 @@ thm lemma__Playfair :
                   (H12:(plth.Prf (euclidean__axioms.BetS B p D)) =>
                    (H13:(plth.Prf (euclidean__defs.CR A C B D)) =>
                     H3
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (euclidean__defs.CR A D B C)
                          (euclidean__defs.CR A C B D)
                          H13))
-                     (logic.ex__intro
+                     (logic.ex_intro
                         euclidean__axioms.Point
                         (X:(plth.El euclidean__axioms.Point) =>
                          plth.and
                            (euclidean__axioms.BetS A X C)
                            (euclidean__axioms.BetS B X D))
                         p
-                        (logic.conj
+                        (logic.and_intro
                            (euclidean__axioms.BetS A p C)
                            (euclidean__axioms.BetS B p D)
                            H8
@@ -315,7 +315,7 @@ thm lemma__Playfair :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point D p)
                                  (plth.neq euclidean__axioms.Point D B)))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (plth.neq euclidean__axioms.Point p B)
                       (plth.and
                          (plth.neq euclidean__axioms.Point D p)
@@ -325,7 +325,7 @@ thm lemma__Playfair :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point D p)
                                  (plth.neq euclidean__axioms.Point D B))) =>
-                       logic.and__elim_right
+                       logic.and_elim_right
                          (plth.neq euclidean__axioms.Point D p)
                          (plth.neq euclidean__axioms.Point D B)
                          H12)
@@ -342,7 +342,7 @@ thm lemma__Playfair :
              H4
              (H5:(plth.Prf (euclidean__defs.CR A D B C)) =>
               H3
-                (logic.or__introl
+                (logic.or_intro_left
                    (euclidean__defs.CR A D B C)
                    (euclidean__defs.CR A C B D)
                    H5))))
@@ -352,7 +352,7 @@ thm lemma__Playfair :
                     (plth.and
                        (euclidean__defs.Par A B D C)
                        (euclidean__defs.Par B A D C)))) =>
-           logic.and__ind2
+           logic.and_ind_right
              (euclidean__defs.Par B A C D)
              (plth.and (euclidean__defs.Par A B D C) (euclidean__defs.Par B A D C))
              (euclidean__defs.Par A B D C)
@@ -360,7 +360,7 @@ thm lemma__Playfair :
                     (plth.and
                        (euclidean__defs.Par A B D C)
                        (euclidean__defs.Par B A D C))) =>
-              logic.and__elim_left
+              logic.and_elim_left
                 (euclidean__defs.Par A B D C)
                 (euclidean__defs.Par B A D C)
                 H6)
@@ -477,7 +477,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-        logic.ex__ind
+        logic.ex_elim
           euclidean__axioms.Point
           (U:(plth.El euclidean__axioms.Point) =>
            plth.ex
@@ -583,7 +583,7 @@ thm lemma__Playfair :
                                                               u
                                                               X
                                                               V)))))))))))))))) =>
-           logic.ex__ind
+           logic.ex_elim
              euclidean__axioms.Point
              (V:(plth.El euclidean__axioms.Point) =>
               plth.ex
@@ -683,7 +683,7 @@ thm lemma__Playfair :
                                                               u
                                                               X
                                                               x0))))))))))))))) =>
-              logic.ex__ind
+              logic.ex_elim
                 euclidean__axioms.Point
                 (u:(plth.El euclidean__axioms.Point) =>
                  plth.ex
@@ -777,7 +777,7 @@ thm lemma__Playfair :
                                                               x1
                                                               X
                                                               x0)))))))))))))) =>
-                 logic.ex__ind
+                 logic.ex_elim
                    euclidean__axioms.Point
                    (v:(plth.El euclidean__axioms.Point) =>
                     plth.ex
@@ -865,7 +865,7 @@ thm lemma__Playfair :
                                                               x1
                                                               X
                                                               x0))))))))))))) =>
-                    logic.ex__ind
+                    logic.ex_elim
                       euclidean__axioms.Point
                       (X:(plth.El euclidean__axioms.Point) =>
                        plth.and
@@ -1101,7 +1101,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                         logic.ex__ind
+                         logic.ex_elim
                            euclidean__axioms.Point
                            (U:(plth.El euclidean__axioms.Point) =>
                             plth.ex
@@ -1250,7 +1250,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                            logic.ex__ind
+                            logic.ex_elim
                               euclidean__axioms.Point
                               (V:(plth.El euclidean__axioms.Point) =>
                                plth.ex
@@ -1392,7 +1392,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     x5))))))))))))))) =>
-                               logic.ex__ind
+                               logic.ex_elim
                                  euclidean__axioms.Point
                                  (u:(plth.El euclidean__axioms.Point) =>
                                   plth.ex
@@ -1527,7 +1527,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     X
                                                                     x5)))))))))))))) =>
-                                  logic.ex__ind
+                                  logic.ex_elim
                                     euclidean__axioms.Point
                                     (v:(plth.El euclidean__axioms.Point) =>
                                      plth.ex
@@ -1655,7 +1655,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     X
                                                                     x5))))))))))))) =>
-                                     logic.ex__ind
+                                     logic.ex_elim
                                        euclidean__axioms.Point
                                        (X:(plth.El
                                              euclidean__axioms.Point) =>
@@ -1777,7 +1777,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))))) =>
-                                        logic.and__ind2
+                                        logic.and_ind_right
                                           (plth.neq
                                              euclidean__axioms.Point
                                              A
@@ -1891,7 +1891,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     x8
                                                                     x5))))))))))) =>
-                                           logic.and__elim_left
+                                           logic.and_elim_left
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 C
@@ -2066,7 +2066,7 @@ thm lemma__Playfair :
                                                                    u
                                                                    X
                                                                    V))))))))))))))))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (U:(plth.El euclidean__axioms.Point) =>
           plth.ex
@@ -2153,7 +2153,7 @@ thm lemma__Playfair :
                                                              u
                                                              X
                                                              V)))))))))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (V:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -2234,7 +2234,7 @@ thm lemma__Playfair :
                                                              u
                                                              X
                                                              x0))))))))))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (u:(plth.El euclidean__axioms.Point) =>
                 plth.ex
@@ -2312,7 +2312,7 @@ thm lemma__Playfair :
                                                              x1
                                                              X
                                                              x0)))))))))))))) =>
-                logic.ex__ind
+                logic.ex_elim
                   euclidean__axioms.Point
                   (v:(plth.El euclidean__axioms.Point) =>
                    plth.ex
@@ -2387,7 +2387,7 @@ thm lemma__Playfair :
                                                              x1
                                                              X
                                                              x0))))))))))))) =>
-                   logic.ex__ind
+                   logic.ex_elim
                      euclidean__axioms.Point
                      (X:(plth.El euclidean__axioms.Point) =>
                       plth.and
@@ -2609,7 +2609,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     V))))))))))))))))) =>
-                        logic.ex__ind
+                        logic.ex_elim
                           euclidean__axioms.Point
                           (U:(plth.El euclidean__axioms.Point) =>
                            plth.ex
@@ -2751,7 +2751,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     V)))))))))))))))) =>
-                           logic.ex__ind
+                           logic.ex_elim
                              euclidean__axioms.Point
                              (V:(plth.El euclidean__axioms.Point) =>
                               plth.ex
@@ -2887,7 +2887,7 @@ thm lemma__Playfair :
                                                                     u
                                                                     X
                                                                     x5))))))))))))))) =>
-                              logic.ex__ind
+                              logic.ex_elim
                                 euclidean__axioms.Point
                                 (u:(plth.El euclidean__axioms.Point) =>
                                  plth.ex
@@ -3016,7 +3016,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     X
                                                                     x5)))))))))))))) =>
-                                 logic.ex__ind
+                                 logic.ex_elim
                                    euclidean__axioms.Point
                                    (v:(plth.El euclidean__axioms.Point) =>
                                     plth.ex
@@ -3138,7 +3138,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     X
                                                                     x5))))))))))))) =>
-                                    logic.ex__ind
+                                    logic.ex_elim
                                       euclidean__axioms.Point
                                       (X:(plth.El euclidean__axioms.Point) =>
                                        plth.and
@@ -3253,7 +3253,7 @@ thm lemma__Playfair :
                                                                     x6
                                                                     x8
                                                                     x5)))))))))))) =>
-                                       logic.and__elim_left
+                                       logic.and_elim_left
                                          (plth.neq euclidean__axioms.Point A B)
                                          (plth.and
                                             (plth.neq

@@ -25,7 +25,7 @@ thm lemma__samesidereflexive :
                 plth.and
                   (euclidean__axioms.BetS P A C)
                   (euclidean__axioms.Cong A C A P)))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (C:(plth.El euclidean__axioms.Point) =>
          plth.and (euclidean__axioms.BetS P A C) (euclidean__axioms.Cong A C A P))
@@ -35,14 +35,14 @@ thm lemma__samesidereflexive :
                (plth.and
                   (euclidean__axioms.BetS P A C)
                   (euclidean__axioms.Cong A C A P))) =>
-         logic.and__ind3
+         logic.and_ind_left
            (euclidean__axioms.BetS P A C)
            (euclidean__axioms.Cong A C A P)
            (euclidean__defs.OS P P A B)
            (__ =>
             (H7:(plth.Prf (euclidean__axioms.Col A B A)) =>
              (H8:(plth.Prf (euclidean__defs.OS P P A B)) => H8)
-               (logic.ex__intro
+               (logic.ex_intro
                   euclidean__axioms.Point
                   (X:(plth.El euclidean__axioms.Point) =>
                    plth.ex
@@ -63,7 +63,7 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P))))))))
                   C
-                  (logic.ex__intro
+                  (logic.ex_intro
                      euclidean__axioms.Point
                      (U:(plth.El euclidean__axioms.Point) =>
                       plth.ex
@@ -81,7 +81,7 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P)))))))
                      A
-                     (logic.ex__intro
+                     (logic.ex_intro
                         euclidean__axioms.Point
                         (V:(plth.El euclidean__axioms.Point) =>
                          plth.and
@@ -96,7 +96,7 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P))))))
                         A
-                        (logic.conj
+                        (logic.and_intro
                            (euclidean__axioms.Col A B A)
                            (plth.and
                               (euclidean__axioms.Col A B A)
@@ -108,7 +108,7 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P)))))
                            H7
-                           (logic.conj
+                           (logic.and_intro
                               (euclidean__axioms.Col A B A)
                               (plth.and
                                  (euclidean__axioms.BetS P A C)
@@ -118,7 +118,7 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P))))
                               H7
-                              (logic.conj
+                              (logic.and_intro
                                  (euclidean__axioms.BetS P A C)
                                  (plth.and
                                     (euclidean__axioms.BetS P A C)
@@ -126,18 +126,18 @@ thm lemma__samesidereflexive :
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P)))
                                  __
-                                 (logic.conj
+                                 (logic.and_intro
                                     (euclidean__axioms.BetS P A C)
                                     (plth.and
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P))
                                     __
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__axioms.nCol A B P)
                                        (euclidean__axioms.nCol A B P)
                                        H
                                        H)))))))))
-              (logic.or__intror
+              (logic.or_intro_right
                  (plth.eq euclidean__axioms.Point A B)
                  (plth.or
                     (plth.eq euclidean__axioms.Point A A)
@@ -148,7 +148,7 @@ thm lemma__samesidereflexive :
                           (plth.or
                              (euclidean__axioms.BetS A B A)
                              (euclidean__axioms.BetS A A B)))))
-                 (logic.or__introl
+                 (logic.or_intro_left
                     (plth.eq euclidean__axioms.Point A A)
                     (plth.or
                        (plth.eq euclidean__axioms.Point B A)
@@ -175,7 +175,7 @@ thm lemma__samesidereflexive :
             P
             H1
             H))
-        (logic.or__intror
+        (logic.or_intro_right
            (plth.eq euclidean__axioms.Point A B)
            (plth.or
               (plth.eq euclidean__axioms.Point A A)
@@ -184,7 +184,7 @@ thm lemma__samesidereflexive :
                  (plth.or
                     (euclidean__axioms.BetS B A A)
                     (plth.or (euclidean__axioms.BetS A B A) (euclidean__axioms.BetS A A B)))))
-           (logic.or__introl
+           (logic.or_intro_left
               (plth.eq euclidean__axioms.Point A A)
               (plth.or
                  (plth.eq euclidean__axioms.Point B A)

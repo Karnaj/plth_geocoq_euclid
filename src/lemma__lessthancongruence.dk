@@ -37,14 +37,14 @@ thm lemma__lessthancongruence :
             euclidean__axioms.Point
             (G:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (G:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B))
      (euclidean__defs.Lt A B E F)
      (G:(plth.El euclidean__axioms.Point) =>
       H2:(plth.Prf (plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS C G D)
         (euclidean__axioms.Cong C G A B)
         (euclidean__defs.Lt A B E F)
@@ -60,7 +60,7 @@ thm lemma__lessthancongruence :
                        plth.and
                          (euclidean__axioms.BetS F E P)
                          (euclidean__axioms.Cong E P F E)))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (P:(plth.El euclidean__axioms.Point) =>
                 plth.and
@@ -72,7 +72,7 @@ thm lemma__lessthancongruence :
                       (plth.and
                          (euclidean__axioms.BetS F E P)
                          (euclidean__axioms.Cong E P F E))) =>
-                logic.and__ind3
+                logic.and_ind_left
                   (euclidean__axioms.BetS F E P)
                   (euclidean__axioms.Cong E P F E)
                   (euclidean__defs.Lt A B E F)
@@ -98,7 +98,7 @@ thm lemma__lessthancongruence :
                                         H16
                                         A
                                         B)))) =>
-                        logic.ex__ind
+                        logic.ex_elim
                           euclidean__axioms.Point
                           (H17:(plth.El euclidean__axioms.Point) =>
                            plth.and
@@ -117,7 +117,7 @@ thm lemma__lessthancongruence :
                                         H17
                                         A
                                         B))) =>
-                           logic.and__ind
+                           logic.and_ind
                              (euclidean__axioms.BetS P E H17)
                              (euclidean__axioms.Cong E H17 A B)
                              (euclidean__defs.Lt A B E F)
@@ -163,7 +163,7 @@ thm lemma__lessthancongruence :
                                                   Q
                                                   E
                                                   P)))) =>
-                                  logic.ex__ind
+                                  logic.ex_elim
                                     euclidean__axioms.Point
                                     (Q:(plth.El
                                           euclidean__axioms.Point) =>
@@ -195,7 +195,7 @@ thm lemma__lessthancongruence :
                                                   Q
                                                   E
                                                   P))) =>
-                                     logic.and__ind
+                                     logic.and_ind
                                        (euclidean__axioms.BetS
                                           D
                                           C
@@ -297,7 +297,7 @@ thm lemma__lessthancongruence :
                                                                E
                                                                F)) =>
                                                      H40)
-                                                      (logic.ex__intro
+                                                      (logic.ex_intro
                                                          euclidean__axioms.Point
                                                          (X:(plth.El
                                                                euclidean__axioms.Point) =>
@@ -312,7 +312,7 @@ thm lemma__lessthancongruence :
                                                                A
                                                                B))
                                                          H17
-                                                         (logic.conj
+                                                         (logic.and_intro
                                                             (euclidean__axioms.BetS
                                                                E
                                                                H17
@@ -347,7 +347,7 @@ thm lemma__lessthancongruence :
                                                                    D
                                                                    H17
                                                                    F))) =>
-                                                      logic.and__elim_right
+                                                      logic.and_elim_right
                                                         (euclidean__axioms.Cong
                                                            H17
                                                            F
@@ -470,7 +470,7 @@ thm lemma__lessthancongruence :
                                                    euclidean__axioms.Point
                                                    P
                                                    H17)))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (plth.neq
                                         euclidean__axioms.Point
                                         E
@@ -498,7 +498,7 @@ thm lemma__lessthancongruence :
                                                    euclidean__axioms.Point
                                                    P
                                                    H17))) =>
-                                      logic.and__elim_left
+                                      logic.and_elim_left
                                         (plth.neq
                                            euclidean__axioms.Point
                                            P
@@ -625,7 +625,7 @@ thm lemma__lessthancongruence :
                                          euclidean__axioms.Point
                                          C
                                          D)))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (plth.neq euclidean__axioms.Point G D)
                            (plth.and
                               (plth.neq euclidean__axioms.Point C G)
@@ -641,7 +641,7 @@ thm lemma__lessthancongruence :
                                          euclidean__axioms.Point
                                          C
                                          D))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (plth.neq euclidean__axioms.Point C G)
                               (plth.neq euclidean__axioms.Point C D)
                               H16)
@@ -663,7 +663,7 @@ thm lemma__lessthancongruence :
                                         euclidean__axioms.Point
                                         P
                                         F)))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (plth.neq euclidean__axioms.Point E F)
                           (plth.and
                              (plth.neq euclidean__axioms.Point P E)
@@ -679,7 +679,7 @@ thm lemma__lessthancongruence :
                                         euclidean__axioms.Point
                                         P
                                         F))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (plth.neq euclidean__axioms.Point P E)
                              (plth.neq euclidean__axioms.Point P F)
                              H15)
@@ -703,7 +703,7 @@ thm lemma__lessthancongruence :
                       (plth.and
                          (plth.neq euclidean__axioms.Point C G)
                          (plth.neq euclidean__axioms.Point C D)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point G D)
                (plth.and
                   (plth.neq euclidean__axioms.Point C G)
@@ -713,7 +713,7 @@ thm lemma__lessthancongruence :
                       (plth.and
                          (plth.neq euclidean__axioms.Point C G)
                          (plth.neq euclidean__axioms.Point C D))) =>
-                logic.and__elim_right
+                logic.and_elim_right
                   (plth.neq euclidean__axioms.Point C G)
                   (plth.neq euclidean__axioms.Point C D)
                   H7)

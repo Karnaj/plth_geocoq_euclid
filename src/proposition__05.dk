@@ -29,7 +29,7 @@ thm proposition__05 :
         plth.nnpp
           (euclidean__defs.CongA A B C A C B)
           (H6:(plth.Prf (plth.not (euclidean__defs.CongA A B C A C B))) =>
-           logic.and__ind2
+           logic.and_ind_right
              (euclidean__axioms.Cong C B B C)
              (plth.and
                 (euclidean__defs.CongA A C B A B C)
@@ -39,16 +39,16 @@ thm proposition__05 :
                      (plth.and
                         (euclidean__defs.CongA A C B A B C)
                         (euclidean__defs.CongA A B C A C B))) =>
-              logic.and__ind2
+              logic.and_ind_right
                 (euclidean__defs.CongA A C B A B C)
                 (euclidean__defs.CongA A B C A C B)
                 plth.false
                 (H16:(plth.Prf (euclidean__defs.CongA A B C A C B)) =>
-                 (H23:(plth.Prf plth.false) => logic.false__ind plth.false H23)
+                 (H23:(plth.Prf plth.false) => logic.false_elim plth.false H23)
                    (H6 H16))
                 H12)
              H5))
-         (logic.and__ind2
+         (logic.and_ind_right
             (euclidean__axioms.Triangle A B C)
             (euclidean__axioms.Cong A B A C)
             (plth.and
@@ -77,7 +77,7 @@ thm proposition__05 :
                            (plth.and
                               (euclidean__axioms.Col C B A)
                               (euclidean__axioms.Col B A C)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.Col A C B)
               (plth.and
                  (euclidean__axioms.Col A B C)
@@ -95,7 +95,7 @@ thm proposition__05 :
                            (plth.and
                               (euclidean__axioms.Col C B A)
                               (euclidean__axioms.Col B A C))))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (euclidean__axioms.Col A B C)
                  (plth.and
                     (euclidean__axioms.Col B C A)
@@ -105,8 +105,8 @@ thm proposition__05 :
                  H8)
               H6)
              (lemma__collinearorder.lemma__collinearorder C A B H3))))
-      (logic.and__elim_left (euclidean__axioms.nCol A B C) (euclidean__axioms.Cong A B A C) H0))
-     (logic.and__ind2
+      (logic.and_elim_left (euclidean__axioms.nCol A B C) (euclidean__axioms.Cong A B A C) H0))
+     (logic.and_ind_right
         (euclidean__axioms.Triangle A B C)
         (euclidean__axioms.Cong A B A C)
         (euclidean__axioms.Cong A C A B)

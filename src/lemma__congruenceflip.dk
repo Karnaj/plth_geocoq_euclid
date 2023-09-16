@@ -30,11 +30,11 @@ thm lemma__congruenceflip :
     (H2:(plth.Prf (euclidean__axioms.Cong B A C D)) =>
      (H3:(plth.Prf (euclidean__axioms.Cong A B D C)) =>
       (H4:(plth.Prf (euclidean__axioms.Cong B A D C)) =>
-       logic.conj
+       logic.and_intro
          (euclidean__axioms.Cong B A D C)
          (plth.and (euclidean__axioms.Cong B A C D) (euclidean__axioms.Cong A B D C))
          H4
-         (logic.conj
+         (logic.and_intro
             (euclidean__axioms.Cong B A C D)
             (euclidean__axioms.Cong A B D C)
             H2

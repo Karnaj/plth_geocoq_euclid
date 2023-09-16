@@ -29,7 +29,7 @@ thm lemma__3__7a :
               euclidean__axioms.Point
               (E:(plth.El euclidean__axioms.Point) =>
                plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E C D)))) =>
-     logic.ex__ind
+     logic.ex_elim
        euclidean__axioms.Point
        (E:(plth.El euclidean__axioms.Point) =>
         plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E C D))
@@ -37,7 +37,7 @@ thm lemma__3__7a :
        (E:(plth.El euclidean__axioms.Point) =>
         H4:(plth.Prf
               (plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E C D))) =>
-        logic.and__ind
+        logic.and_ind
           (euclidean__axioms.BetS A C E)
           (euclidean__axioms.Cong C E C D)
           (euclidean__axioms.BetS A C D)
@@ -66,7 +66,7 @@ thm lemma__3__7a :
                 (plth.and
                    (plth.neq euclidean__axioms.Point B C)
                    (plth.neq euclidean__axioms.Point B D)))) =>
-       logic.and__elim_left
+       logic.and_elim_left
          (plth.neq euclidean__axioms.Point C D)
          (plth.and
             (plth.neq euclidean__axioms.Point B C)
@@ -79,7 +79,7 @@ thm lemma__3__7a :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C)))) =>
-      logic.and__ind2
+      logic.and_ind_right
         (plth.neq euclidean__axioms.Point B C)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point A C))
         (plth.neq euclidean__axioms.Point A C)
@@ -87,7 +87,7 @@ thm lemma__3__7a :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C))) =>
-         logic.and__elim_right
+         logic.and_elim_right
            (plth.neq euclidean__axioms.Point A B)
            (plth.neq euclidean__axioms.Point A C)
            H3)

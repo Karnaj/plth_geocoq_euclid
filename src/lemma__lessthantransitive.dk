@@ -35,14 +35,14 @@ thm lemma__lessthantransitive :
             euclidean__axioms.Point
             (G:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (G:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B))
      (euclidean__defs.Lt A B E F)
      (G:(plth.El euclidean__axioms.Point) =>
       H2:(plth.Prf (plth.and (euclidean__axioms.BetS C G D) (euclidean__axioms.Cong C G A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS C G D)
         (euclidean__axioms.Cong C G A B)
         (euclidean__defs.Lt A B E F)
@@ -55,7 +55,7 @@ thm lemma__lessthantransitive :
                     plth.and
                       (euclidean__axioms.BetS E H5 F)
                       (euclidean__axioms.Cong E H5 C D)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (H6:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS E H6 F) (euclidean__axioms.Cong E H6 C D))
@@ -65,7 +65,7 @@ thm lemma__lessthantransitive :
                    (plth.and
                       (euclidean__axioms.BetS E H6 F)
                       (euclidean__axioms.Cong E H6 C D))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS E H6 F)
                (euclidean__axioms.Cong E H6 C D)
                (euclidean__defs.Lt A B E F)
@@ -80,7 +80,7 @@ thm lemma__lessthantransitive :
                               plth.and
                                 (euclidean__defs.Out E H6 K)
                                 (euclidean__axioms.Cong E K C G)))) =>
-                   logic.ex__ind
+                   logic.ex_elim
                      euclidean__axioms.Point
                      (K:(plth.El euclidean__axioms.Point) =>
                       plth.and
@@ -92,7 +92,7 @@ thm lemma__lessthantransitive :
                              (plth.and
                                 (euclidean__defs.Out E H6 K)
                                 (euclidean__axioms.Cong E K C G))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (euclidean__defs.Out E H6 K)
                         (euclidean__axioms.Cong E K C G)
                         (euclidean__defs.Lt A B E F)
@@ -122,7 +122,7 @@ thm lemma__lessthantransitive :
                                         E
                                         F)) =>
                               H20)
-                               (logic.ex__intro
+                               (logic.ex_intro
                                   euclidean__axioms.Point
                                   (X:(plth.El
                                         euclidean__axioms.Point) =>
@@ -134,7 +134,7 @@ thm lemma__lessthantransitive :
                                         A
                                         B))
                                   K
-                                  (logic.conj
+                                  (logic.and_intro
                                      (euclidean__axioms.BetS E K F)
                                      (euclidean__axioms.Cong
                                         E
@@ -180,7 +180,7 @@ thm lemma__lessthantransitive :
                                                      E
                                                      H6
                                                      K)))) =>
-                                logic.or__ind
+                                logic.or_elim
                                   (euclidean__axioms.BetS E K H6)
                                   (plth.or
                                      (plth.eq
@@ -208,7 +208,7 @@ thm lemma__lessthantransitive :
                                                 E
                                                 H6
                                                 K))) =>
-                                   logic.or__ind
+                                   logic.or_elim
                                      (plth.eq
                                         euclidean__axioms.Point
                                         H6
@@ -279,7 +279,7 @@ thm lemma__lessthantransitive :
                                                              H6))) =>
                                                 (H29:(plth.Prf
                                                         plth.false) =>
-                                                 logic.false__ind
+                                                 logic.false_elim
                                                    plth.false
                                                    H29)
                                                   (H27
@@ -317,7 +317,7 @@ thm lemma__lessthantransitive :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     D)))) =>
-                                                    logic.and__elim_left
+                                                    logic.and_elim_left
                                                       (plth.neq
                                                          euclidean__axioms.Point
                                                          G
@@ -349,7 +349,7 @@ thm lemma__lessthantransitive :
                                                 C
                                                 G
                                                 G
-                                                (logic.or__intror
+                                                (logic.or_intro_right
                                                    (euclidean__axioms.BetS
                                                       C
                                                       G
@@ -363,7 +363,7 @@ thm lemma__lessthantransitive :
                                                          C
                                                          G
                                                          G))
-                                                   (logic.or__introl
+                                                   (logic.or_intro_left
                                                       (plth.eq
                                                          euclidean__axioms.Point
                                                          G
@@ -381,7 +381,7 @@ thm lemma__lessthantransitive :
                                               C
                                               G
                                               D
-                                              (logic.or__intror
+                                              (logic.or_intro_right
                                                  (euclidean__axioms.BetS
                                                     C
                                                     D
@@ -395,7 +395,7 @@ thm lemma__lessthantransitive :
                                                        C
                                                        G
                                                        D))
-                                                 (logic.or__intror
+                                                 (logic.or_intro_right
                                                     (plth.eq
                                                        euclidean__axioms.Point
                                                        D
@@ -522,7 +522,7 @@ thm lemma__lessthantransitive :
                                                            J
                                                            H6
                                                            K)))) =>
-                                           logic.ex__ind
+                                           logic.ex_elim
                                              euclidean__axioms.Point
                                              (J:(plth.El
                                                    euclidean__axioms.Point) =>
@@ -553,7 +553,7 @@ thm lemma__lessthantransitive :
                                                            J
                                                            H6
                                                            K))) =>
-                                              logic.and__ind
+                                              logic.and_ind
                                                 (euclidean__axioms.BetS
                                                    C
                                                    D
@@ -630,7 +630,7 @@ thm lemma__lessthantransitive :
                                                                     H6))) =>
                                                            (H37:(plth.Prf
                                                                    plth.false) =>
-                                                            logic.false__ind
+                                                            logic.false_elim
                                                               plth.false
                                                               H37)
                                                              (H35
@@ -772,7 +772,7 @@ thm lemma__lessthantransitive :
                                                                     euclidean__axioms.Point
                                                                     G
                                                                     J)))) =>
-                                                              logic.and__ind2
+                                                              logic.and_ind_right
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    D
@@ -801,7 +801,7 @@ thm lemma__lessthantransitive :
                                                                     euclidean__axioms.Point
                                                                     G
                                                                     J))) =>
-                                                                 logic.and__elim_right
+                                                                 logic.and_elim_right
                                                                    (plth.neq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -856,7 +856,7 @@ thm lemma__lessthantransitive :
                                                        C
                                                        D
                                                        G
-                                                       (logic.or__introl
+                                                       (logic.or_intro_left
                                                           (euclidean__axioms.BetS
                                                              C
                                                              G
@@ -876,7 +876,7 @@ thm lemma__lessthantransitive :
                                                       C
                                                       D
                                                       J
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (euclidean__axioms.BetS
                                                             C
                                                             J
@@ -890,7 +890,7 @@ thm lemma__lessthantransitive :
                                                                C
                                                                D
                                                                J))
-                                                         (logic.or__intror
+                                                         (logic.or_intro_right
                                                             (plth.eq
                                                                euclidean__axioms.Point
                                                                J
@@ -925,7 +925,7 @@ thm lemma__lessthantransitive :
                                                              euclidean__axioms.Point
                                                              E
                                                              K)))) =>
-                                             logic.and__elim_left
+                                             logic.and_elim_left
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   H6
@@ -960,7 +960,7 @@ thm lemma__lessthantransitive :
                                                             euclidean__axioms.Point
                                                             C
                                                             D)))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  G
@@ -988,7 +988,7 @@ thm lemma__lessthantransitive :
                                                             euclidean__axioms.Point
                                                             C
                                                             D))) =>
-                                               logic.and__elim_right
+                                               logic.and_elim_right
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     C
@@ -1039,7 +1039,7 @@ thm lemma__lessthantransitive :
                                (plth.and
                                   (plth.neq euclidean__axioms.Point C G)
                                   (plth.neq euclidean__axioms.Point C D)))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (plth.neq euclidean__axioms.Point G D)
                        (plth.and
                           (plth.neq euclidean__axioms.Point C G)
@@ -1049,7 +1049,7 @@ thm lemma__lessthantransitive :
                                (plth.and
                                   (plth.neq euclidean__axioms.Point C G)
                                   (plth.neq euclidean__axioms.Point C D))) =>
-                        logic.and__elim_left
+                        logic.and_elim_left
                           (plth.neq euclidean__axioms.Point C G)
                           (plth.neq euclidean__axioms.Point C D)
                           H13)
@@ -1061,7 +1061,7 @@ thm lemma__lessthantransitive :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point E H6)
                                  (plth.neq euclidean__axioms.Point E F)))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (plth.neq euclidean__axioms.Point H6 F)
                       (plth.and
                          (plth.neq euclidean__axioms.Point E H6)
@@ -1071,7 +1071,7 @@ thm lemma__lessthantransitive :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point E H6)
                                  (plth.neq euclidean__axioms.Point E F))) =>
-                       logic.and__elim_left
+                       logic.and_elim_left
                          (plth.neq euclidean__axioms.Point E H6)
                          (plth.neq euclidean__axioms.Point E F)
                          H12)

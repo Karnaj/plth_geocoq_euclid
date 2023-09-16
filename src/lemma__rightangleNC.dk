@@ -26,7 +26,7 @@ thm lemma__rightangleNC :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (D:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -44,7 +44,7 @@ thm lemma__rightangleNC :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A B D)
         (plth.and
            (euclidean__axioms.Cong A B D B)
@@ -57,7 +57,7 @@ thm lemma__rightangleNC :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong A B D B)
            (plth.and (euclidean__axioms.Cong A C D C) (plth.neq euclidean__axioms.Point B C))
            (euclidean__axioms.nCol A B C)
@@ -66,7 +66,7 @@ thm lemma__rightangleNC :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A C D C)
               (plth.neq euclidean__axioms.Point B C)
               (euclidean__axioms.nCol A B C)
@@ -215,7 +215,7 @@ thm lemma__rightangleNC :
                                                                    A
                                                                    D
                                                                    C))))))) =>
-                                     logic.or__ind
+                                     logic.or_elim
                                        (plth.eq
                                           euclidean__axioms.Point
                                           A
@@ -525,7 +525,7 @@ thm lemma__rightangleNC :
                                                               A
                                                               D
                                                               C)))))) =>
-                                        logic.or__ind
+                                        logic.or_elim
                                           (plth.eq
                                              euclidean__axioms.Point
                                              A
@@ -596,7 +596,7 @@ thm lemma__rightangleNC :
                                                                   euclidean__axioms.Point
                                                                   A
                                                                   D)))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (plth.neq
                                                        euclidean__axioms.Point
                                                        B
@@ -624,7 +624,7 @@ thm lemma__rightangleNC :
                                                                   euclidean__axioms.Point
                                                                   A
                                                                   D))) =>
-                                                     logic.and__elim_right
+                                                     logic.and_elim_right
                                                        (plth.neq
                                                           euclidean__axioms.Point
                                                           A
@@ -660,7 +660,7 @@ thm lemma__rightangleNC :
                                                               A
                                                               D
                                                               C))))) =>
-                                           logic.or__ind
+                                           logic.or_elim
                                              (plth.eq
                                                 euclidean__axioms.Point
                                                 C
@@ -721,7 +721,7 @@ thm lemma__rightangleNC :
                                                               A
                                                               D
                                                               C)))) =>
-                                              logic.or__ind
+                                              logic.or_elim
                                                 (euclidean__axioms.BetS
                                                    C
                                                    A
@@ -772,7 +772,7 @@ thm lemma__rightangleNC :
                                                               A
                                                               D
                                                               C))) =>
-                                                 logic.or__ind
+                                                 logic.or_elim
                                                    (euclidean__axioms.BetS
                                                       A
                                                       C
@@ -890,7 +890,7 @@ thm lemma__rightangleNC :
                                                       D
                                                       B
                                                       A)))))) =>
-                                logic.and__elim_left
+                                logic.and_elim_left
                                   (euclidean__axioms.Col
                                      B
                                      A
@@ -945,7 +945,7 @@ thm lemma__rightangleNC :
                                                      C
                                                      B
                                                      A)))))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col B A C)
                                  (plth.and
                                     (euclidean__axioms.Col
@@ -972,7 +972,7 @@ thm lemma__rightangleNC :
                                    B
                                    C
                                    H16)))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (plth.eq euclidean__axioms.Point A B)
                                (plth.or
                                   (plth.eq
@@ -998,7 +998,7 @@ thm lemma__rightangleNC :
                                               A
                                               D
                                               B)))))
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (plth.eq
                                      euclidean__axioms.Point
                                      A
@@ -1022,7 +1022,7 @@ thm lemma__rightangleNC :
                                               A
                                               D
                                               B))))
-                                  (logic.or__intror
+                                  (logic.or_intro_right
                                      (plth.eq
                                         euclidean__axioms.Point
                                         B
@@ -1041,7 +1041,7 @@ thm lemma__rightangleNC :
                                               A
                                               D
                                               B)))
-                                     (logic.or__intror
+                                     (logic.or_intro_right
                                         (euclidean__axioms.BetS
                                            B
                                            A
@@ -1055,7 +1055,7 @@ thm lemma__rightangleNC :
                                               A
                                               D
                                               B))
-                                        (logic.or__introl
+                                        (logic.or_intro_left
                                            (euclidean__axioms.BetS
                                               A
                                               B
@@ -1099,7 +1099,7 @@ thm lemma__rightangleNC :
                                            A
                                            C
                                            D))) =>
-                              logic.and__elim_left
+                              logic.and_elim_left
                                 (euclidean__axioms.Cong C D C A)
                                 (euclidean__axioms.Cong C A C D)
                                 H17)
@@ -1148,7 +1148,7 @@ thm lemma__rightangleNC :
                                             C
                                             C
                                             D)))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (euclidean__axioms.Cong C A C D)
                               (plth.and
                                  (euclidean__axioms.Cong C A D C)
@@ -1176,7 +1176,7 @@ thm lemma__rightangleNC :
                           H12 H16)
                            ((H16:(plth.Prf plth.false) =>
                              (H17:(plth.Prf plth.false) =>
-                              logic.false__ind
+                              logic.false_elim
                                 (plth.eq
                                    euclidean__axioms.Point
                                    C
@@ -1333,7 +1333,7 @@ thm lemma__rightangleNC :
                                                 euclidean__axioms.Point
                                                 A
                                                 D)))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (plth.neq
                                      euclidean__axioms.Point
                                      B
@@ -1361,7 +1361,7 @@ thm lemma__rightangleNC :
                                                 euclidean__axioms.Point
                                                 A
                                                 D))) =>
-                                   logic.and__elim_right
+                                   logic.and_elim_right
                                      (plth.neq
                                         euclidean__axioms.Point
                                         A
@@ -1767,7 +1767,7 @@ thm lemma__rightangleNC :
                                 (plth.and
                                    (plth.neq euclidean__axioms.Point A B)
                                    (plth.neq euclidean__axioms.Point A D)))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (plth.neq euclidean__axioms.Point B D)
                         (plth.and
                            (plth.neq euclidean__axioms.Point A B)
@@ -1777,7 +1777,7 @@ thm lemma__rightangleNC :
                                 (plth.and
                                    (plth.neq euclidean__axioms.Point A B)
                                    (plth.neq euclidean__axioms.Point A D))) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (plth.neq euclidean__axioms.Point A B)
                            (plth.neq euclidean__axioms.Point A D)
                            H13)
@@ -1795,7 +1795,7 @@ thm lemma__rightangleNC :
                            C
                            H9
                            H12))
-                       (logic.conj
+                       (logic.and_intro
                           (euclidean__axioms.BetS A C D)
                           (euclidean__axioms.Cong A C C D)
                           H10
@@ -1806,7 +1806,7 @@ thm lemma__rightangleNC :
                                   (plth.and
                                      (euclidean__axioms.Cong C A D C)
                                      (euclidean__axioms.Cong A C C D)))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__axioms.Cong C A C D)
                           (plth.and
                              (euclidean__axioms.Cong C A D C)
@@ -1816,13 +1816,13 @@ thm lemma__rightangleNC :
                                   (plth.and
                                      (euclidean__axioms.Cong C A D C)
                                      (euclidean__axioms.Cong A C C D))) =>
-                           logic.and__elim_right
+                           logic.and_elim_right
                              (euclidean__axioms.Cong C A D C)
                              (euclidean__axioms.Cong A C C D)
                              H13)
                           H11)
                          (lemma__congruenceflip.lemma__congruenceflip A C D C H6))))
-                  (logic.conj
+                  (logic.and_intro
                      (euclidean__axioms.BetS A B D)
                      (euclidean__axioms.Cong A B B D)
                      H2
@@ -1833,7 +1833,7 @@ thm lemma__rightangleNC :
                             (plth.and
                                (euclidean__axioms.Cong B A D B)
                                (euclidean__axioms.Cong A B B D)))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Cong B A B D)
                      (plth.and
                         (euclidean__axioms.Cong B A D B)
@@ -1843,7 +1843,7 @@ thm lemma__rightangleNC :
                              (plth.and
                                 (euclidean__axioms.Cong B A D B)
                                 (euclidean__axioms.Cong A B B D))) =>
-                      logic.and__elim_right
+                      logic.and_elim_right
                         (euclidean__axioms.Cong B A D B)
                         (euclidean__axioms.Cong A B B D)
                         H10)

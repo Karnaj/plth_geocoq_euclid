@@ -26,7 +26,7 @@ thm lemma__8__2 :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (D:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -44,7 +44,7 @@ thm lemma__8__2 :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A B D)
         (plth.and
            (euclidean__axioms.Cong A B D B)
@@ -57,7 +57,7 @@ thm lemma__8__2 :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C)))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong A B D B)
            (plth.and (euclidean__axioms.Cong A C D C) (plth.neq euclidean__axioms.Point B C))
            (euclidean__defs.Per C B A)
@@ -66,7 +66,7 @@ thm lemma__8__2 :
                   (plth.and
                      (euclidean__axioms.Cong A C D C)
                      (plth.neq euclidean__axioms.Point B C))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A C D C)
               (plth.neq euclidean__axioms.Point B C)
               (euclidean__defs.Per C B A)
@@ -80,7 +80,7 @@ thm lemma__8__2 :
                            plth.and
                              (euclidean__axioms.BetS C B E)
                              (euclidean__axioms.Cong B E B C)))) =>
-                 logic.ex__ind
+                 logic.ex_elim
                    euclidean__axioms.Point
                    (E:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -92,7 +92,7 @@ thm lemma__8__2 :
                            (plth.and
                               (euclidean__axioms.BetS C B E)
                               (euclidean__axioms.Cong B E B C))) =>
-                    logic.and__ind
+                    logic.and_ind
                       (euclidean__axioms.BetS C B E)
                       (euclidean__axioms.Cong B E B C)
                       (euclidean__defs.Per C B A)
@@ -239,7 +239,7 @@ thm lemma__8__2 :
                                                          B
                                                          A)) =>
                                                H36)
-                                                (logic.ex__intro
+                                                (logic.ex_intro
                                                    euclidean__axioms.Point
                                                    (X:(plth.El
                                                          euclidean__axioms.Point) =>
@@ -265,7 +265,7 @@ thm lemma__8__2 :
                                                                B
                                                                A))))
                                                    E
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.BetS
                                                          C
                                                          B
@@ -287,7 +287,7 @@ thm lemma__8__2 :
                                                                B
                                                                A)))
                                                       H11
-                                                      (logic.conj
+                                                      (logic.and_intro
                                                          (euclidean__axioms.Cong
                                                             C
                                                             B
@@ -304,7 +304,7 @@ thm lemma__8__2 :
                                                                B
                                                                A))
                                                          H34
-                                                         (logic.conj
+                                                         (logic.and_intro
                                                             (euclidean__axioms.Cong
                                                                C
                                                                A
@@ -335,7 +335,7 @@ thm lemma__8__2 :
                                                                 C
                                                                 E
                                                                 B)))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (euclidean__axioms.Cong
                                                      C
                                                      B
@@ -377,7 +377,7 @@ thm lemma__8__2 :
                                                                C
                                                                A
                                                                E)))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Cong
                                                     C
                                                     A
@@ -411,7 +411,7 @@ thm lemma__8__2 :
                                                                C
                                                                A
                                                                E))) =>
-                                                  logic.and__elim_left
+                                                  logic.and_elim_left
                                                     (euclidean__axioms.Cong
                                                        C
                                                        A
@@ -430,7 +430,7 @@ thm lemma__8__2 :
                                                    E
                                                    A
                                                    H32)))
-                                            (logic.and__ind3
+                                            (logic.and_ind_left
                                                (euclidean__axioms.Cong
                                                   C
                                                   D
@@ -490,7 +490,7 @@ thm lemma__8__2 :
                                                              C
                                                              C
                                                              D)))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (euclidean__axioms.Cong
                                                   C
                                                   A
@@ -524,7 +524,7 @@ thm lemma__8__2 :
                                                              C
                                                              C
                                                              D))) =>
-                                                logic.and__elim_right
+                                                logic.and_elim_right
                                                   (euclidean__axioms.Cong
                                                      C
                                                      A
@@ -611,7 +611,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   A)))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (euclidean__axioms.Col
                                                  B
                                                  A
@@ -659,7 +659,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   A))))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Col
                                                     B
                                                     E
@@ -697,7 +697,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   A)))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Col
                                                        E
                                                        A
@@ -725,7 +725,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   A))) =>
-                                                     logic.and__elim_right
+                                                     logic.and_elim_right
                                                        (euclidean__axioms.Col
                                                           A
                                                           E
@@ -809,7 +809,7 @@ thm lemma__8__2 :
                                                                     C
                                                                     A
                                                                     B)))))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (euclidean__axioms.Col
                                                      A
                                                      B
@@ -880,7 +880,7 @@ thm lemma__8__2 :
                                                              euclidean__axioms.Point
                                                              C
                                                              E)))) =>
-                                             logic.and__elim_left
+                                             logic.and_elim_left
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   B
@@ -925,7 +925,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   C)))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (euclidean__axioms.Col
                                                  B
                                                  C
@@ -973,7 +973,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   C))))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Col
                                                     B
                                                     E
@@ -1011,7 +1011,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   C)))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Col
                                                        E
                                                        C
@@ -1039,7 +1039,7 @@ thm lemma__8__2 :
                                                                   E
                                                                   B
                                                                   C))) =>
-                                                     logic.and__elim_right
+                                                     logic.and_elim_right
                                                        (euclidean__axioms.Col
                                                           C
                                                           E
@@ -1057,7 +1057,7 @@ thm lemma__8__2 :
                                                 B
                                                 E
                                                 H27)))
-                                         (logic.or__intror
+                                         (logic.or_intro_right
                                             (plth.eq
                                                euclidean__axioms.Point
                                                C
@@ -1086,7 +1086,7 @@ thm lemma__8__2 :
                                                            C
                                                            E
                                                            B)))))
-                                            (logic.or__intror
+                                            (logic.or_intro_right
                                                (plth.eq
                                                   euclidean__axioms.Point
                                                   C
@@ -1110,7 +1110,7 @@ thm lemma__8__2 :
                                                            C
                                                            E
                                                            B))))
-                                               (logic.or__intror
+                                               (logic.or_intro_right
                                                   (plth.eq
                                                      euclidean__axioms.Point
                                                      B
@@ -1129,7 +1129,7 @@ thm lemma__8__2 :
                                                            C
                                                            E
                                                            B)))
-                                                  (logic.or__intror
+                                                  (logic.or_intro_right
                                                      (euclidean__axioms.BetS
                                                         B
                                                         C
@@ -1143,7 +1143,7 @@ thm lemma__8__2 :
                                                            C
                                                            E
                                                            B))
-                                                     (logic.or__introl
+                                                     (logic.or_intro_left
                                                         (euclidean__axioms.BetS
                                                            C
                                                            B
@@ -1165,7 +1165,7 @@ thm lemma__8__2 :
                                                     A
                                                     B
                                                     D))) =>
-                                       logic.and__elim_left
+                                       logic.and_elim_left
                                          (euclidean__axioms.Cong
                                             B
                                             D
@@ -1208,7 +1208,7 @@ thm lemma__8__2 :
                                      B
                                      C
                                      H18))
-                                 (logic.conj
+                                 (logic.and_intro
                                     (euclidean__defs.Out
                                        B
                                        A
@@ -1223,7 +1223,7 @@ thm lemma__8__2 :
                                    B
                                    A
                                    A
-                                   (logic.or__intror
+                                   (logic.or_intro_right
                                       (euclidean__axioms.BetS
                                          B
                                          A
@@ -1237,7 +1237,7 @@ thm lemma__8__2 :
                                             B
                                             A
                                             A))
-                                      (logic.or__introl
+                                      (logic.or_intro_left
                                          (plth.eq
                                             euclidean__axioms.Point
                                             A
@@ -1248,7 +1248,7 @@ thm lemma__8__2 :
                                             A)
                                          H16))
                                    H14))
-                               (logic.conj
+                               (logic.and_intro
                                   (euclidean__defs.Out B C C)
                                   (euclidean__axioms.BetS A B D)
                                   H17
@@ -1262,7 +1262,7 @@ thm lemma__8__2 :
                                 B
                                 C
                                 C
-                                (logic.or__intror
+                                (logic.or_intro_right
                                    (euclidean__axioms.BetS B C C)
                                    (plth.or
                                       (plth.eq
@@ -1270,7 +1270,7 @@ thm lemma__8__2 :
                                          C
                                          C)
                                       (euclidean__axioms.BetS B C C))
-                                   (logic.or__introl
+                                   (logic.or_intro_left
                                       (plth.eq
                                          euclidean__axioms.Point
                                          C
@@ -1290,7 +1290,7 @@ thm lemma__8__2 :
                                      (plth.and
                                         (plth.neq euclidean__axioms.Point A B)
                                         (plth.neq euclidean__axioms.Point A D)))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (plth.neq euclidean__axioms.Point B D)
                              (plth.and
                                 (plth.neq euclidean__axioms.Point A B)
@@ -1300,7 +1300,7 @@ thm lemma__8__2 :
                                      (plth.and
                                         (plth.neq euclidean__axioms.Point A B)
                                         (plth.neq euclidean__axioms.Point A D))) =>
-                              logic.and__elim_left
+                              logic.and_elim_left
                                 (plth.neq euclidean__axioms.Point A B)
                                 (plth.neq euclidean__axioms.Point A D)
                                 H15)

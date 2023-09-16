@@ -41,7 +41,7 @@ thm lemma__notperp :
                 plth.and
                   (euclidean__axioms.BetS B C Q)
                   (euclidean__axioms.Cong C Q C P)))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (Q:(plth.El euclidean__axioms.Point) =>
          plth.and (euclidean__axioms.BetS B C Q) (euclidean__axioms.Cong C Q C P))
@@ -58,7 +58,7 @@ thm lemma__notperp :
                (plth.and
                   (euclidean__axioms.BetS B C Q)
                   (euclidean__axioms.Cong C Q C P))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.BetS B C Q)
            (euclidean__axioms.Cong C Q C P)
            (plth.ex
@@ -79,7 +79,7 @@ thm lemma__notperp :
                         plth.and
                           (euclidean__axioms.BetS P M Q)
                           (euclidean__axioms.Cong M P M Q)))) =>
-              logic.ex__ind
+              logic.ex_elim
                 euclidean__axioms.Point
                 (M:(plth.El euclidean__axioms.Point) =>
                  plth.and
@@ -98,7 +98,7 @@ thm lemma__notperp :
                         (plth.and
                            (euclidean__axioms.BetS P M Q)
                            (euclidean__axioms.Cong M P M Q))) =>
-                 logic.and__ind
+                 logic.and_ind
                    (euclidean__axioms.BetS P M Q)
                    (euclidean__axioms.Cong M P M Q)
                    (plth.ex
@@ -184,7 +184,7 @@ thm lemma__notperp :
                                                  A
                                                  B
                                                  R))) =>
-                                    logic.ex__ind
+                                    logic.ex_elim
                                       euclidean__axioms.Point
                                       (R:(plth.El
                                             euclidean__axioms.Point) =>
@@ -247,7 +247,7 @@ thm lemma__notperp :
                                                               E
                                                               R
                                                               M)))))) =>
-                                        logic.ex__ind
+                                        logic.ex_elim
                                           euclidean__axioms.Point
                                           (E:(plth.El
                                                 euclidean__axioms.Point) =>
@@ -312,7 +312,7 @@ thm lemma__notperp :
                                                               E
                                                               R
                                                               M))))) =>
-                                           logic.and__ind
+                                           logic.and_ind
                                              (euclidean__axioms.Col
                                                 M
                                                 R
@@ -371,7 +371,7 @@ thm lemma__notperp :
                                                               E
                                                               R
                                                               M)))) =>
-                                              logic.and__ind
+                                              logic.and_ind
                                                 (euclidean__axioms.Col
                                                    A
                                                    B
@@ -420,7 +420,7 @@ thm lemma__notperp :
                                                               E
                                                               R
                                                               M))) =>
-                                                 logic.and__ind
+                                                 logic.and_ind
                                                    (euclidean__axioms.Col
                                                       A
                                                       B
@@ -486,7 +486,7 @@ thm lemma__notperp :
                                                                     A
                                                                     C
                                                                     M))) =>
-                                                         logic.ex__intro
+                                                         logic.ex_intro
                                                            euclidean__axioms.Point
                                                            (X:(plth.El
                                                                  euclidean__axioms.Point) =>
@@ -508,7 +508,7 @@ thm lemma__notperp :
                                                                     C
                                                                     X))))
                                                            M
-                                                           (logic.conj
+                                                           (logic.and_intro
                                                               (euclidean__axioms.nCol
                                                                  A
                                                                  B
@@ -530,7 +530,7 @@ thm lemma__notperp :
                                                                  B
                                                                  M
                                                                  H27)
-                                                              (logic.conj
+                                                              (logic.and_intro
                                                                  (euclidean__defs.OS
                                                                     M
                                                                     P
@@ -799,7 +799,7 @@ thm lemma__notperp :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     B)) =>
-                                                                    logic.false__ind
+                                                                    logic.false_elim
                                                                     plth.false
                                                                     (H19
                                                                     Heq))
@@ -1092,7 +1092,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     B
                                                                     C)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -1141,7 +1141,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     B
                                                                     C))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     Q
@@ -1180,7 +1180,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     B
                                                                     C)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     Q
                                                                     C
@@ -1209,7 +1209,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     B
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     Q
@@ -1253,7 +1253,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     C
                                                                     B)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     B
@@ -1283,7 +1283,7 @@ thm lemma__notperp :
                                                                     C
                                                                     Q
                                                                     H53)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -1312,7 +1312,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     C)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -1336,7 +1336,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     C))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -1355,7 +1355,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     C)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     C
                                                                     B
@@ -1369,7 +1369,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     C))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     C
@@ -1397,7 +1397,7 @@ thm lemma__notperp :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     Q)) =>
-                                                                    logic.false__ind
+                                                                    logic.false_elim
                                                                     plth.false
                                                                     (H49
                                                                     Heq))
@@ -1444,7 +1444,7 @@ thm lemma__notperp :
                                                                     euclidean__axioms.Point
                                                                     B
                                                                     Q)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -1464,7 +1464,7 @@ thm lemma__notperp :
                                                                     C
                                                                     Q
                                                                     H6)))
-                                                                  (logic.ex__intro
+                                                                  (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -1491,7 +1491,7 @@ thm lemma__notperp :
                                                                     M
                                                                     C))))
                                                                     P
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     Q
                                                                     M
@@ -1513,7 +1513,7 @@ thm lemma__notperp :
                                                                     M
                                                                     C)))
                                                                     H46
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     M
@@ -1530,7 +1530,7 @@ thm lemma__notperp :
                                                                     M
                                                                     C))
                                                                     H47
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     C
@@ -1555,7 +1555,7 @@ thm lemma__notperp :
                                                                     M
                                                                     Q
                                                                     M))) =>
-                                                                   logic.and__elim_left
+                                                                   logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     M
@@ -1594,7 +1594,7 @@ thm lemma__notperp :
                                                                     Q
                                                                     P
                                                                     C)))) =>
-                                                                 logic.and__elim_left
+                                                                 logic.and_elim_left
                                                                    (euclidean__axioms.Cong
                                                                     Q
                                                                     C
@@ -1974,7 +1974,7 @@ thm lemma__notperp :
                                                                     E
                                                                     R
                                                                     C)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     R
                                                                     C
@@ -2023,7 +2023,7 @@ thm lemma__notperp :
                                                                     E
                                                                     R
                                                                     C))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     R
                                                                     E
@@ -2062,7 +2062,7 @@ thm lemma__notperp :
                                                                     E
                                                                     R
                                                                     C)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     E
                                                                     C
@@ -2091,7 +2091,7 @@ thm lemma__notperp :
                                                                     E
                                                                     R
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     E
@@ -2269,7 +2269,7 @@ thm lemma__notperp :
                                                                     R
                                                                     B
                                                                     A)))))) =>
-                                                                   logic.and__elim_left
+                                                                   logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     A
@@ -2327,7 +2327,7 @@ thm lemma__notperp :
                                                                     C
                                                                     B
                                                                     A)))))) =>
-                                                                  logic.and__elim_left
+                                                                  logic.and_elim_left
                                                                     (
                                                                     euclidean__axioms.Col
                                                                     B
@@ -2384,7 +2384,7 @@ thm lemma__notperp :
                                                                     A
                                                                     B
                                                                     C)))))) =>
-                                                           logic.and__ind2
+                                                           logic.and_ind_right
                                                              (euclidean__axioms.Col
                                                                 B
                                                                 C
@@ -2432,7 +2432,7 @@ thm lemma__notperp :
                                                                     A
                                                                     B
                                                                     C))))) =>
-                                                              logic.and__ind2
+                                                              logic.and_ind_right
                                                                 (euclidean__axioms.Col
                                                                    B
                                                                    A
@@ -2471,7 +2471,7 @@ thm lemma__notperp :
                                                                     A
                                                                     B
                                                                     C)))) =>
-                                                                 logic.and__ind2
+                                                                 logic.and_ind_right
                                                                    (euclidean__axioms.Col
                                                                     A
                                                                     C
@@ -2500,7 +2500,7 @@ thm lemma__notperp :
                                                                     A
                                                                     B
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     A
@@ -2535,7 +2535,7 @@ thm lemma__notperp :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     B)))) =>
-                                                          logic.and__ind2
+                                                          logic.and_ind_right
                                                             (plth.neq
                                                                euclidean__axioms.Point
                                                                C
@@ -2564,7 +2564,7 @@ thm lemma__notperp :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     B))) =>
-                                                             logic.and__elim_left
+                                                             logic.and_elim_left
                                                                (plth.neq
                                                                   euclidean__axioms.Point
                                                                   A
@@ -2855,7 +2855,7 @@ thm lemma__notperp :
                                                                     A
                                                                     P
                                                                     B)))))) =>
-                                                    logic.and__ind2
+                                                    logic.and_ind_right
                                                       (euclidean__axioms.Col
                                                          P
                                                          B
@@ -2905,7 +2905,7 @@ thm lemma__notperp :
                                                                     A
                                                                     P
                                                                     B))))) =>
-                                                       logic.and__ind2
+                                                       logic.and_ind_right
                                                          (euclidean__axioms.Col
                                                             P
                                                             A
@@ -2945,7 +2945,7 @@ thm lemma__notperp :
                                                                     A
                                                                     P
                                                                     B)))) =>
-                                                          logic.and__elim_left
+                                                          logic.and_elim_left
                                                             (euclidean__axioms.Col
                                                                A
                                                                B
@@ -3008,7 +3008,7 @@ thm lemma__notperp :
                                                                  euclidean__axioms.Point
                                                                  B
                                                                  Q)))) =>
-                                                 logic.and__ind2
+                                                 logic.and_ind_right
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       C
@@ -3036,7 +3036,7 @@ thm lemma__notperp :
                                                                  euclidean__axioms.Point
                                                                  B
                                                                  Q))) =>
-                                                    logic.and__elim_right
+                                                    logic.and_elim_right
                                                       (plth.neq
                                                          euclidean__axioms.Point
                                                          B
@@ -3077,7 +3077,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     A)))))) =>
-                                                logic.and__ind2
+                                                logic.and_ind_right
                                                   (euclidean__axioms.Col
                                                      Q
                                                      A
@@ -3125,7 +3125,7 @@ thm lemma__notperp :
                                                                     B
                                                                     Q
                                                                     A))))) =>
-                                                   logic.and__elim_left
+                                                   logic.and_elim_left
                                                      (euclidean__axioms.Col
                                                         Q
                                                         B
@@ -3176,7 +3176,7 @@ thm lemma__notperp :
                                                                     B
                                                                     P
                                                                     Q)))))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (euclidean__axioms.Col
                                                     P
                                                     Q
@@ -3224,7 +3224,7 @@ thm lemma__notperp :
                                                                     B
                                                                     P
                                                                     Q))))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Col
                                                        P
                                                        B
@@ -3262,7 +3262,7 @@ thm lemma__notperp :
                                                                     B
                                                                     P
                                                                     Q)))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (euclidean__axioms.Col
                                                           B
                                                           Q
@@ -3290,7 +3290,7 @@ thm lemma__notperp :
                                                                     B
                                                                     P
                                                                     Q))) =>
-                                                        logic.and__elim_left
+                                                        logic.and_elim_left
                                                           (euclidean__axioms.Col
                                                              Q
                                                              B
@@ -3345,7 +3345,7 @@ thm lemma__notperp :
                                                              euclidean__axioms.Point
                                                              P
                                                              Q)))) =>
-                                             logic.and__elim_left
+                                             logic.and_elim_left
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   M
@@ -3390,7 +3390,7 @@ thm lemma__notperp :
                                                                   Q
                                                                   M
                                                                   B)))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (euclidean__axioms.Col
                                                  M
                                                  B
@@ -3438,7 +3438,7 @@ thm lemma__notperp :
                                                                   Q
                                                                   M
                                                                   B))))) =>
-                                               logic.and__elim_left
+                                               logic.and_elim_left
                                                  (euclidean__axioms.Col
                                                     M
                                                     Q
@@ -3489,7 +3489,7 @@ thm lemma__notperp :
                                                                  Q
                                                                  M
                                                                  P)))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (euclidean__axioms.Col
                                                 M
                                                 P
@@ -3537,7 +3537,7 @@ thm lemma__notperp :
                                                                  Q
                                                                  M
                                                                  P))))) =>
-                                              logic.and__elim_left
+                                              logic.and_elim_left
                                                 (euclidean__axioms.Col
                                                    M
                                                    Q
@@ -3563,7 +3563,7 @@ thm lemma__notperp :
                                                M
                                                Q
                                                H29)))
-                                        (logic.or__intror
+                                        (logic.or_intro_right
                                            (plth.eq
                                               euclidean__axioms.Point
                                               P
@@ -3592,7 +3592,7 @@ thm lemma__notperp :
                                                           P
                                                           Q
                                                           M)))))
-                                           (logic.or__intror
+                                           (logic.or_intro_right
                                               (plth.eq
                                                  euclidean__axioms.Point
                                                  P
@@ -3616,7 +3616,7 @@ thm lemma__notperp :
                                                           P
                                                           Q
                                                           M))))
-                                              (logic.or__intror
+                                              (logic.or_intro_right
                                                  (plth.eq
                                                     euclidean__axioms.Point
                                                     M
@@ -3635,7 +3635,7 @@ thm lemma__notperp :
                                                           P
                                                           Q
                                                           M)))
-                                                 (logic.or__intror
+                                                 (logic.or_intro_right
                                                     (euclidean__axioms.BetS
                                                        M
                                                        P
@@ -3649,7 +3649,7 @@ thm lemma__notperp :
                                                           P
                                                           Q
                                                           M))
-                                                    (logic.or__introl
+                                                    (logic.or_intro_left
                                                        (euclidean__axioms.BetS
                                                           P
                                                           M
@@ -3699,7 +3699,7 @@ thm lemma__notperp :
                                                      P
                                                      B
                                                      A)))) =>
-                                     logic.and__elim_left
+                                     logic.and_elim_left
                                        (euclidean__defs.OS
                                           M
                                           P
@@ -3758,7 +3758,7 @@ thm lemma__notperp :
                                                          Q
                                                          B
                                                          A)))))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (euclidean__axioms.Col
                                         B
                                         A
@@ -3806,7 +3806,7 @@ thm lemma__notperp :
                                                          Q
                                                          B
                                                          A))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.Col
                                            B
                                            Q
@@ -3844,7 +3844,7 @@ thm lemma__notperp :
                                                          Q
                                                          B
                                                          A)))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Col
                                               Q
                                               A
@@ -3872,7 +3872,7 @@ thm lemma__notperp :
                                                          Q
                                                          B
                                                          A))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (euclidean__axioms.Col
                                                  A
                                                  Q
@@ -3894,7 +3894,7 @@ thm lemma__notperp :
                                    Q
                                    P
                                    M
-                                   (logic.or__introl
+                                   (logic.or_intro_left
                                       (euclidean__axioms.BetS
                                          Q
                                          M
@@ -3939,7 +3939,7 @@ thm lemma__notperp :
                                               euclidean__axioms.Point
                                               A
                                               B)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (plth.neq
                                    euclidean__axioms.Point
                                    C
@@ -3967,7 +3967,7 @@ thm lemma__notperp :
                                               euclidean__axioms.Point
                                               A
                                               B))) =>
-                                 logic.and__elim_right
+                                 logic.and_elim_right
                                    (plth.neq
                                       euclidean__axioms.Point
                                       A
@@ -4008,7 +4008,7 @@ thm lemma__notperp :
                                                    Q
                                                    A
                                                    B)))))) =>
-                             logic.and__elim_left
+                             logic.and_elim_left
                                (euclidean__axioms.Col A B Q)
                                (plth.and
                                   (euclidean__axioms.Col
@@ -4057,7 +4057,7 @@ thm lemma__notperp :
                                    H14
                                    H16
                                    H15))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point C B)
                             (plth.or
                                (plth.eq euclidean__axioms.Point C Q)
@@ -4077,7 +4077,7 @@ thm lemma__notperp :
                                            C
                                            Q
                                            B)))))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (plth.eq euclidean__axioms.Point C Q)
                                (plth.or
                                   (plth.eq
@@ -4095,7 +4095,7 @@ thm lemma__notperp :
                                            C
                                            Q
                                            B))))
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (plth.eq
                                      euclidean__axioms.Point
                                      B
@@ -4111,7 +4111,7 @@ thm lemma__notperp :
                                            C
                                            Q
                                            B)))
-                                  (logic.or__introl
+                                  (logic.or_intro_left
                                      (euclidean__axioms.BetS B C Q)
                                      (plth.or
                                         (euclidean__axioms.BetS
@@ -4163,7 +4163,7 @@ thm lemma__notperp :
                                                B
                                                C
                                                A)))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col C A B)
                            (plth.and
                               (euclidean__axioms.Col C B A)
@@ -4190,7 +4190,7 @@ thm lemma__notperp :
                                                B
                                                C
                                                A))))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (euclidean__axioms.Col C B A)
                               (plth.and
                                  (euclidean__axioms.Col B A C)
@@ -4204,7 +4204,7 @@ thm lemma__notperp :
                              C
                              B
                              H13)))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point A C)
                          (plth.or
                             (plth.eq euclidean__axioms.Point A B)
@@ -4215,7 +4215,7 @@ thm lemma__notperp :
                                   (plth.or
                                      (euclidean__axioms.BetS A C B)
                                      (euclidean__axioms.BetS A B C)))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point A B)
                             (plth.or
                                (plth.eq euclidean__axioms.Point C B)
@@ -4224,19 +4224,19 @@ thm lemma__notperp :
                                   (plth.or
                                      (euclidean__axioms.BetS A C B)
                                      (euclidean__axioms.BetS A B C))))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (plth.eq euclidean__axioms.Point C B)
                                (plth.or
                                   (euclidean__axioms.BetS C A B)
                                   (plth.or
                                      (euclidean__axioms.BetS A C B)
                                      (euclidean__axioms.BetS A B C)))
-                               (logic.or__intror
+                               (logic.or_intro_right
                                   (euclidean__axioms.BetS C A B)
                                   (plth.or
                                      (euclidean__axioms.BetS A C B)
                                      (euclidean__axioms.BetS A B C))
-                                  (logic.or__introl
+                                  (logic.or_intro_left
                                      (euclidean__axioms.BetS A C B)
                                      (euclidean__axioms.BetS A B C)
                                      H))))))
@@ -4283,7 +4283,7 @@ thm lemma__notperp :
                                                P
                                                A
                                                B)))))) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (euclidean__axioms.Col A B P)
                            (plth.and
                               (euclidean__axioms.Col A P B)
@@ -4342,7 +4342,7 @@ thm lemma__notperp :
                                              P
                                              C
                                              B)))))) =>
-                       logic.and__elim_left
+                       logic.and_elim_left
                          (euclidean__axioms.Col C B P)
                          (plth.and
                             (euclidean__axioms.Col C P B)
@@ -4373,7 +4373,7 @@ thm lemma__notperp :
                                             B
                                             C
                                             A)))))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col C A B)
                         (plth.and
                            (euclidean__axioms.Col C B A)
@@ -4397,7 +4397,7 @@ thm lemma__notperp :
                                             B
                                             C
                                             A))))) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (euclidean__axioms.Col C B A)
                            (plth.and
                               (euclidean__axioms.Col B A C)
@@ -4411,7 +4411,7 @@ thm lemma__notperp :
                           C
                           B
                           H11)))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point A C)
                       (plth.or
                          (plth.eq euclidean__axioms.Point A B)
@@ -4422,7 +4422,7 @@ thm lemma__notperp :
                                (plth.or
                                   (euclidean__axioms.BetS A C B)
                                   (euclidean__axioms.BetS A B C)))))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point A B)
                          (plth.or
                             (plth.eq euclidean__axioms.Point C B)
@@ -4431,19 +4431,19 @@ thm lemma__notperp :
                                (plth.or
                                   (euclidean__axioms.BetS A C B)
                                   (euclidean__axioms.BetS A B C))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point C B)
                             (plth.or
                                (euclidean__axioms.BetS C A B)
                                (plth.or
                                   (euclidean__axioms.BetS A C B)
                                   (euclidean__axioms.BetS A B C)))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (euclidean__axioms.BetS C A B)
                                (plth.or
                                   (euclidean__axioms.BetS A C B)
                                   (euclidean__axioms.BetS A B C))
-                               (logic.or__introl
+                               (logic.or_intro_left
                                   (euclidean__axioms.BetS A C B)
                                   (euclidean__axioms.BetS A B C)
                                   H))))))
@@ -4467,7 +4467,7 @@ thm lemma__notperp :
                      H0
                      H3
                      H7))
-                 (logic.or__intror
+                 (logic.or_intro_right
                     (plth.eq euclidean__axioms.Point B C)
                     (plth.or
                        (plth.eq euclidean__axioms.Point B Q)
@@ -4478,7 +4478,7 @@ thm lemma__notperp :
                              (plth.or
                                 (euclidean__axioms.BetS B C Q)
                                 (euclidean__axioms.BetS B Q C)))))
-                    (logic.or__intror
+                    (logic.or_intro_right
                        (plth.eq euclidean__axioms.Point B Q)
                        (plth.or
                           (plth.eq euclidean__axioms.Point C Q)
@@ -4487,19 +4487,19 @@ thm lemma__notperp :
                              (plth.or
                                 (euclidean__axioms.BetS B C Q)
                                 (euclidean__axioms.BetS B Q C))))
-                       (logic.or__intror
+                       (logic.or_intro_right
                           (plth.eq euclidean__axioms.Point C Q)
                           (plth.or
                              (euclidean__axioms.BetS C B Q)
                              (plth.or
                                 (euclidean__axioms.BetS B C Q)
                                 (euclidean__axioms.BetS B Q C)))
-                          (logic.or__intror
+                          (logic.or_intro_right
                              (euclidean__axioms.BetS C B Q)
                              (plth.or
                                 (euclidean__axioms.BetS B C Q)
                                 (euclidean__axioms.BetS B Q C))
-                             (logic.or__introl
+                             (logic.or_intro_left
                                 (euclidean__axioms.BetS B C Q)
                                 (euclidean__axioms.BetS B Q C)
                                 H6)))))))
@@ -4521,7 +4521,7 @@ thm lemma__notperp :
                             (plth.and
                                (euclidean__axioms.Col A B C)
                                (euclidean__axioms.Col B C A)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col C A B)
                (plth.and
                   (euclidean__axioms.Col C B A)
@@ -4539,7 +4539,7 @@ thm lemma__notperp :
                             (plth.and
                                (euclidean__axioms.Col A B C)
                                (euclidean__axioms.Col B C A))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col C B A)
                   (plth.and
                      (euclidean__axioms.Col B A C)
@@ -4553,7 +4553,7 @@ thm lemma__notperp :
                              (plth.and
                                 (euclidean__axioms.Col A B C)
                                 (euclidean__axioms.Col B C A)))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col B A C)
                      (plth.and
                         (euclidean__axioms.Col A B C)
@@ -4563,7 +4563,7 @@ thm lemma__notperp :
                              (plth.and
                                 (euclidean__axioms.Col A B C)
                                 (euclidean__axioms.Col B C A))) =>
-                      logic.and__elim_left
+                      logic.and_elim_left
                         (euclidean__axioms.Col A B C)
                         (euclidean__axioms.Col B C A)
                         H12)
@@ -4571,7 +4571,7 @@ thm lemma__notperp :
                   H8)
                H6)
               (lemma__collinearorder.lemma__collinearorder A C B H5)))
-          (logic.or__intror
+          (logic.or_intro_right
              (plth.eq euclidean__axioms.Point A C)
              (plth.or
                 (plth.eq euclidean__axioms.Point A B)
@@ -4582,7 +4582,7 @@ thm lemma__notperp :
                       (plth.or
                          (euclidean__axioms.BetS A C B)
                          (euclidean__axioms.BetS A B C)))))
-             (logic.or__intror
+             (logic.or_intro_right
                 (plth.eq euclidean__axioms.Point A B)
                 (plth.or
                    (plth.eq euclidean__axioms.Point C B)
@@ -4591,19 +4591,19 @@ thm lemma__notperp :
                       (plth.or
                          (euclidean__axioms.BetS A C B)
                          (euclidean__axioms.BetS A B C))))
-                (logic.or__intror
+                (logic.or_intro_right
                    (plth.eq euclidean__axioms.Point C B)
                    (plth.or
                       (euclidean__axioms.BetS C A B)
                       (plth.or
                          (euclidean__axioms.BetS A C B)
                          (euclidean__axioms.BetS A B C)))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (euclidean__axioms.BetS C A B)
                       (plth.or
                          (euclidean__axioms.BetS A C B)
                          (euclidean__axioms.BetS A B C))
-                      (logic.or__introl
+                      (logic.or_intro_left
                          (euclidean__axioms.BetS A C B)
                          (euclidean__axioms.BetS A B C)
                          H))))))
@@ -4633,7 +4633,7 @@ thm lemma__notperp :
                (plth.and
                   (plth.neq euclidean__axioms.Point A C)
                   (plth.neq euclidean__axioms.Point A B)))) =>
-      logic.and__elim_left
+      logic.and_elim_left
         (plth.neq euclidean__axioms.Point C B)
         (plth.and (plth.neq euclidean__axioms.Point A C) (plth.neq euclidean__axioms.Point A B))
         H1)

@@ -21,7 +21,7 @@ thm lemma__partnotequalwhole :
            (plth.ex
               euclidean__axioms.Point
               (D:(plth.El euclidean__axioms.Point) => euclidean__axioms.BetS B A D))) =>
-     logic.ex__ind
+     logic.ex_elim
        euclidean__axioms.Point
        (D:(plth.El euclidean__axioms.Point) => euclidean__axioms.BetS B A D)
        (plth.not (euclidean__axioms.Cong A B A C))
@@ -40,7 +40,7 @@ thm lemma__partnotequalwhole :
                        (plth.and
                           (plth.neq euclidean__axioms.Point A B)
                           (plth.neq euclidean__axioms.Point A C)))) =>
-              logic.and__elim_left
+              logic.and_elim_left
                 (plth.neq euclidean__axioms.Point B C)
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
@@ -58,7 +58,7 @@ thm lemma__partnotequalwhole :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C)))) =>
-      logic.and__ind2
+      logic.and_ind_right
         (plth.neq euclidean__axioms.Point B C)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point A C))
         (plth.neq euclidean__axioms.Point A B)
@@ -66,7 +66,7 @@ thm lemma__partnotequalwhole :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C))) =>
-         logic.and__elim_left
+         logic.and_elim_left
            (plth.neq euclidean__axioms.Point A B)
            (plth.neq euclidean__axioms.Point A C)
            H2)

@@ -37,7 +37,7 @@ thm lemma__outerconnectivity :
               euclidean__axioms.Point
               (E:(plth.El euclidean__axioms.Point) =>
                plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E A D)))) =>
-     logic.ex__ind
+     logic.ex_elim
        euclidean__axioms.Point
        (E:(plth.El euclidean__axioms.Point) =>
         plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E A D))
@@ -45,7 +45,7 @@ thm lemma__outerconnectivity :
        (E:(plth.El euclidean__axioms.Point) =>
         H6:(plth.Prf
               (plth.and (euclidean__axioms.BetS A C E) (euclidean__axioms.Cong C E A D))) =>
-        logic.and__ind
+        logic.and_ind
           (euclidean__axioms.BetS A C E)
           (euclidean__axioms.Cong C E A D)
           (plth.eq euclidean__axioms.Point C D)
@@ -61,7 +61,7 @@ thm lemma__outerconnectivity :
                           plth.and
                             (euclidean__axioms.BetS A D F)
                             (euclidean__axioms.Cong D F A C)))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (F:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -73,7 +73,7 @@ thm lemma__outerconnectivity :
                          (plth.and
                             (euclidean__axioms.BetS A D F)
                             (euclidean__axioms.Cong D F A C))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.BetS A D F)
                     (euclidean__axioms.Cong D F A C)
                     (plth.eq euclidean__axioms.Point C D)
@@ -484,7 +484,7 @@ thm lemma__outerconnectivity :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A D)))) =>
-       logic.and__ind2
+       logic.and_ind_right
          (plth.neq euclidean__axioms.Point B D)
          (plth.and
             (plth.neq euclidean__axioms.Point A B)
@@ -494,7 +494,7 @@ thm lemma__outerconnectivity :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A D))) =>
-          logic.and__elim_right
+          logic.and_elim_right
             (plth.neq euclidean__axioms.Point A B)
             (plth.neq euclidean__axioms.Point A D)
             H6)

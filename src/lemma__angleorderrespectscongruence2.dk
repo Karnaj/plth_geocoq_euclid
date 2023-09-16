@@ -61,7 +61,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q)))))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (P:(plth.El euclidean__axioms.Point) =>
       plth.ex
@@ -91,7 +91,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q))))))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (Q:(plth.El euclidean__axioms.Point) =>
          plth.ex
@@ -115,7 +115,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q)))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (R:(plth.El euclidean__axioms.Point) =>
             plth.and
@@ -133,7 +133,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q))))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.BetS P Q R)
               (plth.and
                  (euclidean__defs.Out E D P)
@@ -146,7 +146,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q)))) =>
-               logic.and__ind
+               logic.and_ind
                  (euclidean__defs.Out E D P)
                  (plth.and (euclidean__defs.Out E F R) (euclidean__defs.CongA A B C D E Q))
                  (euclidean__defs.LtA a b c D E F)
@@ -155,7 +155,7 @@ thm lemma__angleorderrespectscongruence2 :
                         (plth.and
                            (euclidean__defs.Out E F R)
                            (euclidean__defs.CongA A B C D E Q))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__defs.Out E F R)
                     (euclidean__defs.CongA A B C D E Q)
                     (euclidean__defs.LtA a b c D E F)
@@ -163,7 +163,7 @@ thm lemma__angleorderrespectscongruence2 :
                      H10:(plth.Prf (euclidean__defs.CongA A B C D E Q)) =>
                      (H11:(plth.Prf (euclidean__defs.CongA a b c D E Q)) =>
                       (H12:(plth.Prf (euclidean__defs.LtA a b c D E F)) => H12)
-                        (logic.ex__intro
+                        (logic.ex_intro
                            euclidean__axioms.Point
                            (U:(plth.El euclidean__axioms.Point) =>
                             plth.ex
@@ -180,7 +180,7 @@ thm lemma__angleorderrespectscongruence2 :
                                           (euclidean__defs.Out E F V)
                                           (euclidean__defs.CongA a b c D E X))))))
                            P
-                           (logic.ex__intro
+                           (logic.ex_intro
                               euclidean__axioms.Point
                               (X:(plth.El euclidean__axioms.Point) =>
                                plth.ex
@@ -194,7 +194,7 @@ thm lemma__angleorderrespectscongruence2 :
                                           (euclidean__defs.Out E F V)
                                           (euclidean__defs.CongA a b c D E X)))))
                               Q
-                              (logic.ex__intro
+                              (logic.ex_intro
                                  euclidean__axioms.Point
                                  (V:(plth.El euclidean__axioms.Point) =>
                                   plth.and
@@ -205,7 +205,7 @@ thm lemma__angleorderrespectscongruence2 :
                                           (euclidean__defs.Out E F V)
                                           (euclidean__defs.CongA a b c D E Q))))
                                  R
-                                 (logic.conj
+                                 (logic.and_intro
                                     (euclidean__axioms.BetS P Q R)
                                     (plth.and
                                        (euclidean__defs.Out E D P)
@@ -213,13 +213,13 @@ thm lemma__angleorderrespectscongruence2 :
                                           (euclidean__defs.Out E F R)
                                           (euclidean__defs.CongA a b c D E Q)))
                                     H5
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__defs.Out E D P)
                                        (plth.and
                                           (euclidean__defs.Out E F R)
                                           (euclidean__defs.CongA a b c D E Q))
                                        H7
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__defs.Out E F R)
                                           (euclidean__defs.CongA a b c D E Q)
                                           H9

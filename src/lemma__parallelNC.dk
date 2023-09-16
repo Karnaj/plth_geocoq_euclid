@@ -78,7 +78,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b))))))))))))))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (M:(plth.El euclidean__axioms.Point) =>
       plth.ex
@@ -168,7 +168,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b)))))))))))))))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (a:(plth.El euclidean__axioms.Point) =>
          plth.ex
@@ -252,7 +252,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b))))))))))))))) =>
-         logic.ex__ind
+         logic.ex_elim
            euclidean__axioms.Point
            (b:(plth.El euclidean__axioms.Point) =>
             plth.ex
@@ -330,7 +330,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b)))))))))))))) =>
-            logic.ex__ind
+            logic.ex_elim
               euclidean__axioms.Point
               (c:(plth.El euclidean__axioms.Point) =>
                plth.ex
@@ -402,7 +402,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b))))))))))))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (d:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -470,7 +470,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b)))))))))))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (plth.neq euclidean__axioms.Point A B)
                     (plth.and
                        (plth.neq euclidean__axioms.Point C D)
@@ -533,7 +533,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b))))))))))) =>
-                     logic.and__ind
+                     logic.and_ind
                        (plth.neq euclidean__axioms.Point C D)
                        (plth.and
                           (euclidean__axioms.Col A B a)
@@ -592,7 +592,7 @@ thm lemma__parallelNC :
                                                          c
                                                          M
                                                          b)))))))))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__axioms.Col A B a)
                           (plth.and
                              (euclidean__axioms.Col A B b)
@@ -646,7 +646,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b))))))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.Col A B b)
                              (plth.and
                                 (plth.neq euclidean__axioms.Point a b)
@@ -696,7 +696,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b)))))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (plth.neq euclidean__axioms.Point a b)
                                 (plth.and
                                    (euclidean__axioms.Col C D c)
@@ -742,7 +742,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b))))))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__axioms.Col C D c)
                                    (plth.and
                                       (euclidean__axioms.Col C D d)
@@ -784,7 +784,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b)))))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (euclidean__axioms.Col C D d)
                                       (plth.and
                                          (plth.neq euclidean__axioms.Point c d)
@@ -822,7 +822,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b))))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (plth.neq euclidean__axioms.Point c d)
                                          (plth.and
                                             (plth.not (euclidean__defs.Meet A B C D))
@@ -853,7 +853,7 @@ thm lemma__parallelNC :
                                                           c
                                                           M
                                                           b)))) =>
-                                          logic.and__ind3
+                                          logic.and_ind_left
                                             (plth.not (euclidean__defs.Meet A B C D))
                                             (plth.and
                                                (euclidean__axioms.BetS a M d)
@@ -890,7 +890,7 @@ thm lemma__parallelNC :
                                                               A
                                                               B
                                                               D))) =>
-                                                 logic.conj
+                                                 logic.and_intro
                                                    (euclidean__axioms.nCol
                                                       A
                                                       B
@@ -914,7 +914,7 @@ thm lemma__parallelNC :
                                                       B
                                                       C
                                                       H27)
-                                                   (logic.conj
+                                                   (logic.and_intro
                                                       (euclidean__axioms.nCol
                                                          A
                                                          C
@@ -933,7 +933,7 @@ thm lemma__parallelNC :
                                                          C
                                                          D
                                                          H26)
-                                                      (logic.conj
+                                                      (logic.and_intro
                                                          (euclidean__axioms.nCol
                                                             B
                                                             C
@@ -974,7 +974,7 @@ thm lemma__parallelNC :
                                                                 C
                                                                 D)) =>
                                                       __ H32)
-                                                       (logic.ex__intro
+                                                       (logic.ex_intro
                                                           euclidean__axioms.Point
                                                           (X:(plth.El
                                                                 euclidean__axioms.Point) =>
@@ -998,7 +998,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     X))))
                                                           D
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (plth.neq
                                                                 euclidean__axioms.Point
                                                                 A
@@ -1018,7 +1018,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     D)))
                                                              H6
-                                                             (logic.conj
+                                                             (logic.and_intro
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    C
@@ -1033,7 +1033,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     D))
                                                                 H8
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1044,7 +1044,7 @@ thm lemma__parallelNC :
                                                                     D)
                                                                    H29
                                                                    H31)))))
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (plth.eq
                                                             euclidean__axioms.Point
                                                             C
@@ -1073,7 +1073,7 @@ thm lemma__parallelNC :
                                                                     C
                                                                     D
                                                                     D)))))
-                                                         (logic.or__intror
+                                                         (logic.or_intro_right
                                                             (plth.eq
                                                                euclidean__axioms.Point
                                                                C
@@ -1097,7 +1097,7 @@ thm lemma__parallelNC :
                                                                     C
                                                                     D
                                                                     D))))
-                                                            (logic.or__introl
+                                                            (logic.or_intro_left
                                                                (plth.eq
                                                                   euclidean__axioms.Point
                                                                   D
@@ -1147,7 +1147,7 @@ thm lemma__parallelNC :
                                                                 C
                                                                 D)) =>
                                                       __ H32)
-                                                       (logic.ex__intro
+                                                       (logic.ex_intro
                                                           euclidean__axioms.Point
                                                           (X:(plth.El
                                                                 euclidean__axioms.Point) =>
@@ -1171,7 +1171,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     X))))
                                                           B
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (plth.neq
                                                                 euclidean__axioms.Point
                                                                 A
@@ -1191,7 +1191,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     B)))
                                                              H6
-                                                             (logic.conj
+                                                             (logic.and_intro
                                                                 (plth.neq
                                                                    euclidean__axioms.Point
                                                                    C
@@ -1206,7 +1206,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     B))
                                                                 H8
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1217,7 +1217,7 @@ thm lemma__parallelNC :
                                                                     B)
                                                                    H31
                                                                    H29)))))
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (plth.eq
                                                             euclidean__axioms.Point
                                                             A
@@ -1246,7 +1246,7 @@ thm lemma__parallelNC :
                                                                     A
                                                                     B
                                                                     B)))))
-                                                         (logic.or__intror
+                                                         (logic.or_intro_right
                                                             (plth.eq
                                                                euclidean__axioms.Point
                                                                A
@@ -1270,7 +1270,7 @@ thm lemma__parallelNC :
                                                                     A
                                                                     B
                                                                     B))))
-                                                            (logic.or__introl
+                                                            (logic.or_intro_left
                                                                (plth.eq
                                                                   euclidean__axioms.Point
                                                                   B
@@ -1318,7 +1318,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C
                                                                     B)))))) =>
-                                                      logic.and__ind2
+                                                      logic.and_ind_right
                                                         (euclidean__axioms.Col
                                                            C
                                                            B
@@ -1366,7 +1366,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C
                                                                     B))))) =>
-                                                         logic.and__elim_left
+                                                         logic.and_elim_left
                                                            (euclidean__axioms.Col
                                                               C
                                                               D
@@ -1414,7 +1414,7 @@ thm lemma__parallelNC :
                                                               C
                                                               D)) =>
                                                     __ H30)
-                                                     (logic.ex__intro
+                                                     (logic.ex_intro
                                                         euclidean__axioms.Point
                                                         (X:(plth.El
                                                               euclidean__axioms.Point) =>
@@ -1438,7 +1438,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     X))))
                                                         C
-                                                        (logic.conj
+                                                        (logic.and_intro
                                                            (plth.neq
                                                               euclidean__axioms.Point
                                                               A
@@ -1458,7 +1458,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C)))
                                                            H6
-                                                           (logic.conj
+                                                           (logic.and_intro
                                                               (plth.neq
                                                                  euclidean__axioms.Point
                                                                  C
@@ -1473,7 +1473,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C))
                                                               H8
-                                                              (logic.conj
+                                                              (logic.and_intro
                                                                  (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1484,7 +1484,7 @@ thm lemma__parallelNC :
                                                                     C)
                                                                  H27
                                                                  H29)))))
-                                                    (logic.or__intror
+                                                    (logic.or_intro_right
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           C
@@ -1513,7 +1513,7 @@ thm lemma__parallelNC :
                                                                     C
                                                                     C
                                                                     D)))))
-                                                       (logic.or__introl
+                                                       (logic.or_intro_left
                                                           (plth.eq
                                                              euclidean__axioms.Point
                                                              C
@@ -1568,7 +1568,7 @@ thm lemma__parallelNC :
                                                               C
                                                               D)) =>
                                                     __ H30)
-                                                     (logic.ex__intro
+                                                     (logic.ex_intro
                                                         euclidean__axioms.Point
                                                         (X:(plth.El
                                                               euclidean__axioms.Point) =>
@@ -1592,7 +1592,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     X))))
                                                         A
-                                                        (logic.conj
+                                                        (logic.and_intro
                                                            (plth.neq
                                                               euclidean__axioms.Point
                                                               A
@@ -1612,7 +1612,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     A)))
                                                            H6
-                                                           (logic.conj
+                                                           (logic.and_intro
                                                               (plth.neq
                                                                  euclidean__axioms.Point
                                                                  C
@@ -1627,7 +1627,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     A))
                                                               H8
-                                                              (logic.conj
+                                                              (logic.and_intro
                                                                  (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -1638,7 +1638,7 @@ thm lemma__parallelNC :
                                                                     A)
                                                                  H29
                                                                  H27)))))
-                                                    (logic.or__intror
+                                                    (logic.or_intro_right
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           A
@@ -1667,7 +1667,7 @@ thm lemma__parallelNC :
                                                                     A
                                                                     A
                                                                     B)))))
-                                                       (logic.or__introl
+                                                       (logic.or_intro_left
                                                           (plth.eq
                                                              euclidean__axioms.Point
                                                              A
@@ -1722,7 +1722,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C
                                                                     A)))))) =>
-                                                    logic.and__ind2
+                                                    logic.and_ind_right
                                                       (euclidean__axioms.Col
                                                          C
                                                          A
@@ -1772,7 +1772,7 @@ thm lemma__parallelNC :
                                                                     D
                                                                     C
                                                                     A))))) =>
-                                                       logic.and__elim_left
+                                                       logic.and_elim_left
                                                          (euclidean__axioms.Col
                                                             C
                                                             D
@@ -1920,7 +1920,7 @@ thm lemma__parallelNC :
                                                                    u
                                                                    X
                                                                    V))))))))))))))))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (U:(plth.El euclidean__axioms.Point) =>
           plth.ex
@@ -2056,7 +2056,7 @@ thm lemma__parallelNC :
                                                              u
                                                              X
                                                              V)))))))))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (V:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -2186,7 +2186,7 @@ thm lemma__parallelNC :
                                                              u
                                                              X
                                                              x0))))))))))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (u:(plth.El euclidean__axioms.Point) =>
                 plth.ex
@@ -2313,7 +2313,7 @@ thm lemma__parallelNC :
                                                              x1
                                                              X
                                                              x0)))))))))))))) =>
-                logic.ex__ind
+                logic.ex_elim
                   euclidean__axioms.Point
                   (v:(plth.El euclidean__axioms.Point) =>
                    plth.ex
@@ -2443,7 +2443,7 @@ thm lemma__parallelNC :
                                                              x1
                                                              X
                                                              x0))))))))))))) =>
-                   logic.ex__ind
+                   logic.ex_elim
                      euclidean__axioms.Point
                      (X:(plth.El euclidean__axioms.Point) =>
                       plth.and
@@ -2573,7 +2573,7 @@ thm lemma__parallelNC :
                                                              x1
                                                              x3
                                                              x0)))))))))))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (plth.neq euclidean__axioms.Point A B)
                         (plth.and
                            (plth.neq euclidean__axioms.Point C D)
@@ -2698,7 +2698,7 @@ thm lemma__parallelNC :
                                                              x1
                                                              x3
                                                              x0))))))))))) =>
-                         logic.and__ind
+                         logic.and_ind
                            (plth.neq euclidean__axioms.Point C D)
                            (plth.and
                               (euclidean__axioms.Col A B x)
@@ -2825,7 +2825,7 @@ thm lemma__parallelNC :
                                                              x1
                                                              x3
                                                              x0)))))))))) =>
-                            logic.and__ind
+                            logic.and_ind
                               (euclidean__axioms.Col A B x)
                               (plth.and
                                  (euclidean__axioms.Col A B x0)
@@ -2958,7 +2958,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0))))))))) =>
-                               logic.and__ind
+                               logic.and_ind
                                  (euclidean__axioms.Col A B x0)
                                  (plth.and
                                     (plth.neq euclidean__axioms.Point x x0)
@@ -3088,7 +3088,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0)))))))) =>
-                                  logic.and__ind
+                                  logic.and_ind
                                     (plth.neq euclidean__axioms.Point x x0)
                                     (plth.and
                                        (euclidean__axioms.Col C D x1)
@@ -3216,7 +3216,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0))))))) =>
-                                     logic.and__ind
+                                     logic.and_ind
                                        (euclidean__axioms.Col C D x1)
                                        (plth.and
                                           (euclidean__axioms.Col C D x2)
@@ -3338,7 +3338,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0)))))) =>
-                                        logic.and__ind
+                                        logic.and_ind
                                           (euclidean__axioms.Col C D x2)
                                           (plth.and
                                              (plth.neq
@@ -3457,7 +3457,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0))))) =>
-                                           logic.and__ind
+                                           logic.and_ind
                                              (plth.neq
                                                 euclidean__axioms.Point
                                                 x1
@@ -3572,7 +3572,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0)))) =>
-                                              logic.and__ind
+                                              logic.and_ind
                                                 (plth.not
                                                    (euclidean__defs.Meet A B C D))
                                                 (plth.and
@@ -3677,7 +3677,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0))) =>
-                                                 logic.and__ind
+                                                 logic.and_ind
                                                    (euclidean__axioms.BetS
                                                       x
                                                       x3
@@ -3773,7 +3773,7 @@ thm lemma__parallelNC :
                                                               x1
                                                               x3
                                                               x0)) =>
-                                                    logic.ex__intro
+                                                    logic.ex_intro
                                                       euclidean__axioms.Point
                                                       (M:(plth.El
                                                             euclidean__axioms.Point) =>
@@ -3851,7 +3851,7 @@ thm lemma__parallelNC :
                                                                     M
                                                                     b)))))))))))))))
                                                       x3
-                                                      (logic.ex__intro
+                                                      (logic.ex_intro
                                                          euclidean__axioms.Point
                                                          (a:(plth.El
                                                                euclidean__axioms.Point) =>
@@ -3925,7 +3925,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     b))))))))))))))
                                                          x
-                                                         (logic.ex__intro
+                                                         (logic.ex_intro
                                                             euclidean__axioms.Point
                                                             (b:(plth.El
                                                                   euclidean__axioms.Point) =>
@@ -3995,7 +3995,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     b)))))))))))))
                                                             x0
-                                                            (logic.ex__intro
+                                                            (logic.ex_intro
                                                                euclidean__axioms.Point
                                                                (c:(plth.El
                                                                     euclidean__axioms.Point) =>
@@ -4061,7 +4061,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))))))))))))
                                                                x1
-                                                               (logic.ex__intro
+                                                               (logic.ex_intro
                                                                   euclidean__axioms.Point
                                                                   (d:(
                                                                    plth.El
@@ -4123,7 +4123,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0)))))))))))
                                                                   x2
-                                                                  (logic.conj
+                                                                  (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -4180,7 +4180,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))))))))))
                                                                     H6
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4232,7 +4232,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0)))))))))
                                                                     H8
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -4279,7 +4279,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))))))))
                                                                     H10
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -4321,7 +4321,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0)))))))
                                                                     H12
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x
@@ -4358,7 +4358,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))))))
                                                                     H14
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     D
@@ -4390,7 +4390,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0)))))
                                                                     H16
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     D
@@ -4417,7 +4417,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))))
                                                                     H18
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     x1
@@ -4439,7 +4439,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0)))
                                                                     H20
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -4456,7 +4456,7 @@ thm lemma__parallelNC :
                                                                     x3
                                                                     x0))
                                                                     H22
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     x
                                                                     x3

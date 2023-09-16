@@ -20,14 +20,14 @@ thm lemma__rayimpliescollinear :
             euclidean__axioms.Point
             (J:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (J:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B))
      (euclidean__axioms.Col A B C)
      (J:(plth.El euclidean__axioms.Point) =>
       H1:(plth.Prf (plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS J A C)
         (euclidean__axioms.BetS J A B)
         (euclidean__axioms.Col A B C)
@@ -48,7 +48,7 @@ thm lemma__rayimpliescollinear :
                     C
                     H7
                     (lemma__collinear4.lemma__collinear4 J A B C H5 H6 H4))))
-             (logic.or__intror
+             (logic.or_intro_right
                 (plth.eq euclidean__axioms.Point J A)
                 (plth.or
                    (plth.eq euclidean__axioms.Point J C)
@@ -59,7 +59,7 @@ thm lemma__rayimpliescollinear :
                          (plth.or
                             (euclidean__axioms.BetS J A C)
                             (euclidean__axioms.BetS J C A)))))
-                (logic.or__intror
+                (logic.or_intro_right
                    (plth.eq euclidean__axioms.Point J C)
                    (plth.or
                       (plth.eq euclidean__axioms.Point A C)
@@ -68,23 +68,23 @@ thm lemma__rayimpliescollinear :
                          (plth.or
                             (euclidean__axioms.BetS J A C)
                             (euclidean__axioms.BetS J C A))))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point A C)
                       (plth.or
                          (euclidean__axioms.BetS A J C)
                          (plth.or
                             (euclidean__axioms.BetS J A C)
                             (euclidean__axioms.BetS J C A)))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (euclidean__axioms.BetS A J C)
                          (plth.or
                             (euclidean__axioms.BetS J A C)
                             (euclidean__axioms.BetS J C A))
-                         (logic.or__introl
+                         (logic.or_intro_left
                             (euclidean__axioms.BetS J A C)
                             (euclidean__axioms.BetS J C A)
                             H2))))))
-            (logic.or__intror
+            (logic.or_intro_right
                (plth.eq euclidean__axioms.Point J A)
                (plth.or
                   (plth.eq euclidean__axioms.Point J B)
@@ -95,7 +95,7 @@ thm lemma__rayimpliescollinear :
                         (plth.or
                            (euclidean__axioms.BetS J A B)
                            (euclidean__axioms.BetS J B A)))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point J B)
                   (plth.or
                      (plth.eq euclidean__axioms.Point A B)
@@ -104,19 +104,19 @@ thm lemma__rayimpliescollinear :
                         (plth.or
                            (euclidean__axioms.BetS J A B)
                            (euclidean__axioms.BetS J B A))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point A B)
                      (plth.or
                         (euclidean__axioms.BetS A J B)
                         (plth.or
                            (euclidean__axioms.BetS J A B)
                            (euclidean__axioms.BetS J B A)))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (euclidean__axioms.BetS A J B)
                         (plth.or
                            (euclidean__axioms.BetS J A B)
                            (euclidean__axioms.BetS J B A))
-                        (logic.or__introl
+                        (logic.or_intro_left
                            (euclidean__axioms.BetS J A B)
                            (euclidean__axioms.BetS J B A)
                            H3))))))
@@ -126,7 +126,7 @@ thm lemma__rayimpliescollinear :
                       (plth.and
                          (plth.neq euclidean__axioms.Point J A)
                          (plth.neq euclidean__axioms.Point J B)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point A B)
                (plth.and
                   (plth.neq euclidean__axioms.Point J A)
@@ -136,7 +136,7 @@ thm lemma__rayimpliescollinear :
                       (plth.and
                          (plth.neq euclidean__axioms.Point J A)
                          (plth.neq euclidean__axioms.Point J B))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point J A)
                   (plth.neq euclidean__axioms.Point J B)
                   H6)

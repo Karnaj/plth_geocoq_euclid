@@ -19,11 +19,11 @@ thm lemma__TCreflexive :
    (H1:(plth.Prf (euclidean__axioms.Cong B C B C)) =>
     (H2:(plth.Prf (euclidean__axioms.Cong A C A C)) =>
      (H3:(plth.Prf (euclidean__axioms.Cong__3 A B C A B C)) => H3)
-       (logic.conj
+       (logic.and_intro
           (euclidean__axioms.Cong A B A B)
           (plth.and (euclidean__axioms.Cong B C B C) (euclidean__axioms.Cong A C A C))
           H0
-          (logic.conj
+          (logic.and_intro
              (euclidean__axioms.Cong B C B C)
              (euclidean__axioms.Cong A C A C)
              H1

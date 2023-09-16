@@ -83,7 +83,7 @@ thm lemma__together :
              plth.and
                (euclidean__axioms.BetS A a R)
                (plth.and (euclidean__axioms.Cong a R B b) (euclidean__defs.Lt C c A R))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (R:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -101,7 +101,7 @@ thm lemma__together :
             (plth.and
                (euclidean__axioms.BetS A a R)
                (plth.and (euclidean__axioms.Cong a R B b) (euclidean__defs.Lt C c A R)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A a R)
         (plth.and (euclidean__axioms.Cong a R B b) (euclidean__defs.Lt C c A R))
         (plth.and
@@ -113,7 +113,7 @@ thm lemma__together :
                  (plth.neq euclidean__axioms.Point C c))))
         (H6:(plth.Prf (euclidean__axioms.BetS A a R)) =>
          H7:(plth.Prf (plth.and (euclidean__axioms.Cong a R B b) (euclidean__defs.Lt C c A R))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong a R B b)
            (euclidean__defs.Lt C c A R)
            (plth.and
@@ -160,7 +160,7 @@ thm lemma__together :
                                         S
                                         C
                                         c)))) =>
-                        logic.ex__ind
+                        logic.ex_elim
                           euclidean__axioms.Point
                           (S:(plth.El
                                 euclidean__axioms.Point) =>
@@ -200,7 +200,7 @@ thm lemma__together :
                                         S
                                         C
                                         c))) =>
-                           logic.and__ind
+                           logic.and_ind
                              (euclidean__axioms.BetS A S R)
                              (euclidean__axioms.Cong
                                 A
@@ -248,7 +248,7 @@ thm lemma__together :
                                           euclidean__axioms.Point
                                           C
                                           c)) =>
-                                logic.conj
+                                logic.and_intro
                                   (euclidean__defs.Lt
                                      P
                                      Q
@@ -269,7 +269,7 @@ thm lemma__together :
                                            C
                                            c)))
                                   H17
-                                  (logic.conj
+                                  (logic.and_intro
                                      (plth.neq
                                         euclidean__axioms.Point
                                         A
@@ -284,7 +284,7 @@ thm lemma__together :
                                            C
                                            c))
                                      H18
-                                     (logic.conj
+                                     (logic.and_intro
                                         (plth.neq
                                            euclidean__axioms.Point
                                            B
@@ -317,7 +317,7 @@ thm lemma__together :
                                                   euclidean__axioms.Point
                                                   A
                                                   R)))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (plth.neq
                                        euclidean__axioms.Point
                                        S
@@ -345,7 +345,7 @@ thm lemma__together :
                                                   euclidean__axioms.Point
                                                   A
                                                   R))) =>
-                                     logic.and__elim_left
+                                     logic.and_elim_left
                                        (plth.neq
                                           euclidean__axioms.Point
                                           A
@@ -386,7 +386,7 @@ thm lemma__together :
                                          euclidean__axioms.Point
                                          A
                                          R)))) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (plth.neq euclidean__axioms.Point a R)
                            (plth.and
                               (plth.neq
@@ -418,7 +418,7 @@ thm lemma__together :
                                         euclidean__axioms.Point
                                         A
                                         R)))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (plth.neq euclidean__axioms.Point a R)
                           (plth.and
                              (plth.neq euclidean__axioms.Point A a)
@@ -434,7 +434,7 @@ thm lemma__together :
                                         euclidean__axioms.Point
                                         A
                                         R))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (plth.neq euclidean__axioms.Point A a)
                              (plth.neq euclidean__axioms.Point A R)
                              H20)

@@ -26,7 +26,7 @@ thm lemma__oppositesidesymmetric :
              plth.and
                (euclidean__axioms.BetS P R Q)
                (plth.and (euclidean__axioms.Col A B R) (euclidean__axioms.nCol A B P))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (R:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -38,13 +38,13 @@ thm lemma__oppositesidesymmetric :
             (plth.and
                (euclidean__axioms.BetS P R Q)
                (plth.and (euclidean__axioms.Col A B R) (euclidean__axioms.nCol A B P)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS P R Q)
         (plth.and (euclidean__axioms.Col A B R) (euclidean__axioms.nCol A B P))
         (euclidean__axioms.TS Q A B P)
         (H2:(plth.Prf (euclidean__axioms.BetS P R Q)) =>
          H3:(plth.Prf (plth.and (euclidean__axioms.Col A B R) (euclidean__axioms.nCol A B P))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Col A B R)
            (euclidean__axioms.nCol A B P)
            (euclidean__axioms.TS Q A B P)
@@ -54,7 +54,7 @@ thm lemma__oppositesidesymmetric :
              (H7:(plth.Prf (euclidean__axioms.BetS Q R P)) =>
               (H8:(plth.Prf (plth.not (euclidean__axioms.Col A B Q))) =>
                (H9:(plth.Prf (euclidean__axioms.TS Q A B P)) => H9)
-                 (logic.ex__intro
+                 (logic.ex_intro
                     euclidean__axioms.Point
                     (X:(plth.El euclidean__axioms.Point) =>
                      plth.and
@@ -63,13 +63,13 @@ thm lemma__oppositesidesymmetric :
                           (euclidean__axioms.Col A B X)
                           (euclidean__axioms.nCol A B Q)))
                     R
-                    (logic.conj
+                    (logic.and_intro
                        (euclidean__axioms.BetS Q R P)
                        (plth.and
                           (euclidean__axioms.Col A B R)
                           (euclidean__axioms.nCol A B Q))
                        H7
-                       (logic.conj
+                       (logic.and_intro
                           (euclidean__axioms.Col A B R)
                           (euclidean__axioms.nCol A B Q)
                           H4
@@ -122,7 +122,7 @@ thm lemma__oppositesidesymmetric :
                                                    B
                                                    P
                                                    A)))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (euclidean__axioms.Col P A B)
                                (plth.and
                                   (euclidean__axioms.Col
@@ -164,7 +164,7 @@ thm lemma__oppositesidesymmetric :
                                                    B
                                                    P
                                                    A))))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (euclidean__axioms.Col
                                      P
                                      B
@@ -202,7 +202,7 @@ thm lemma__oppositesidesymmetric :
                                                    B
                                                    P
                                                    A)))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (euclidean__axioms.Col
                                         B
                                         A
@@ -230,7 +230,7 @@ thm lemma__oppositesidesymmetric :
                                                    B
                                                    P
                                                    A))) =>
-                                      logic.and__elim_left
+                                      logic.and_elim_left
                                         (euclidean__axioms.Col
                                            A
                                            B
@@ -278,7 +278,7 @@ thm lemma__oppositesidesymmetric :
                                                 euclidean__axioms.Point
                                                 R
                                                 B))) =>
-                              logic.or__ind
+                              logic.or_elim
                                 (plth.eq
                                    euclidean__axioms.Point
                                    R
@@ -377,7 +377,7 @@ thm lemma__oppositesidesymmetric :
                                                                     B
                                                                     A
                                                                     P)))))) =>
-                                               logic.and__elim_left
+                                               logic.and_elim_left
                                                  (euclidean__axioms.Col
                                                     A
                                                     P
@@ -448,7 +448,7 @@ thm lemma__oppositesidesymmetric :
                                                             euclidean__axioms.Point
                                                             P
                                                             Q)))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  R
@@ -476,7 +476,7 @@ thm lemma__oppositesidesymmetric :
                                                             euclidean__axioms.Point
                                                             P
                                                             Q))) =>
-                                               logic.and__elim_right
+                                               logic.and_elim_right
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     P
@@ -517,7 +517,7 @@ thm lemma__oppositesidesymmetric :
                                                                  P
                                                                  Q
                                                                  B)))))) =>
-                                           logic.and__ind2
+                                           logic.and_ind_right
                                              (euclidean__axioms.Col
                                                 Q
                                                 B
@@ -565,7 +565,7 @@ thm lemma__oppositesidesymmetric :
                                                                  P
                                                                  Q
                                                                  B))))) =>
-                                              logic.and__elim_left
+                                              logic.and_elim_left
                                                 (euclidean__axioms.Col
                                                    Q
                                                    P
@@ -761,7 +761,7 @@ thm lemma__oppositesidesymmetric :
                                                         euclidean__axioms.Point
                                                         P
                                                         Q)))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (plth.neq
                                              euclidean__axioms.Point
                                              R
@@ -806,7 +806,7 @@ thm lemma__oppositesidesymmetric :
                                                              Q
                                                              B
                                                              A)))))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (euclidean__axioms.Col
                                             B
                                             A
@@ -854,7 +854,7 @@ thm lemma__oppositesidesymmetric :
                                                              Q
                                                              B
                                                              A))))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (euclidean__axioms.Col
                                                B
                                                Q
@@ -905,7 +905,7 @@ thm lemma__oppositesidesymmetric :
                                                             Q
                                                             B
                                                             P)))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.Col
                                            B
                                            P
@@ -953,7 +953,7 @@ thm lemma__oppositesidesymmetric :
                                                             Q
                                                             B
                                                             P))))) =>
-                                         logic.and__elim_left
+                                         logic.and_elim_left
                                            (euclidean__axioms.Col
                                               B
                                               Q
@@ -1144,7 +1144,7 @@ thm lemma__oppositesidesymmetric :
                                                             A
                                                             P
                                                             B)))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (euclidean__axioms.Col
                                            P
                                            B
@@ -1192,7 +1192,7 @@ thm lemma__oppositesidesymmetric :
                                                             A
                                                             P
                                                             B))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (euclidean__axioms.Col
                                               P
                                               A
@@ -1230,7 +1230,7 @@ thm lemma__oppositesidesymmetric :
                                                             A
                                                             P
                                                             B)))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (euclidean__axioms.Col
                                                  A
                                                  B
@@ -1258,7 +1258,7 @@ thm lemma__oppositesidesymmetric :
                                                             A
                                                             P
                                                             B))) =>
-                                               logic.and__elim_right
+                                               logic.and_elim_right
                                                  (euclidean__axioms.Col
                                                     B
                                                     A
@@ -1327,7 +1327,7 @@ thm lemma__oppositesidesymmetric :
                                                  R
                                                  B
                                                  A)))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.Col B A R)
                              (plth.and
                                 (euclidean__axioms.Col B R A)
@@ -1363,7 +1363,7 @@ thm lemma__oppositesidesymmetric :
                                                  R
                                                  B
                                                  A))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.Col B R A)
                                 (plth.and
                                    (euclidean__axioms.Col R A B)
@@ -1392,7 +1392,7 @@ thm lemma__oppositesidesymmetric :
                                                  R
                                                  B
                                                  A)))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__axioms.Col R A B)
                                    (plth.and
                                       (euclidean__axioms.Col
@@ -1414,7 +1414,7 @@ thm lemma__oppositesidesymmetric :
                                                  R
                                                  B
                                                  A))) =>
-                                    logic.and__elim_right
+                                    logic.and_elim_right
                                       (euclidean__axioms.Col
                                          A
                                          R
@@ -1466,7 +1466,7 @@ thm lemma__oppositesidesymmetric :
                                          euclidean__axioms.Point
                                          Q
                                          P)))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (plth.neq euclidean__axioms.Point R P)
                            (plth.and
                               (plth.neq euclidean__axioms.Point Q R)
@@ -1482,7 +1482,7 @@ thm lemma__oppositesidesymmetric :
                                          euclidean__axioms.Point
                                          Q
                                          P))) =>
-                            logic.and__elim_left
+                            logic.and_elim_left
                               (plth.neq euclidean__axioms.Point Q R)
                               (plth.neq euclidean__axioms.Point Q P)
                               H15)
@@ -1508,7 +1508,7 @@ thm lemma__oppositesidesymmetric :
                                               Q
                                               R
                                               P)))))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__axioms.Col R P Q)
                           (plth.and
                              (euclidean__axioms.Col R Q P)
@@ -1532,7 +1532,7 @@ thm lemma__oppositesidesymmetric :
                                               Q
                                               R
                                               P))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__axioms.Col R Q P)
                              (plth.and
                                 (euclidean__axioms.Col Q P R)
@@ -1552,7 +1552,7 @@ thm lemma__oppositesidesymmetric :
                                               Q
                                               R
                                               P)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.Col Q P R)
                                 (plth.and
                                    (euclidean__axioms.Col P Q R)
@@ -1568,7 +1568,7 @@ thm lemma__oppositesidesymmetric :
                                               Q
                                               R
                                               P))) =>
-                                 logic.and__elim_right
+                                 logic.and_elim_right
                                    (euclidean__axioms.Col P Q R)
                                    (euclidean__axioms.Col Q R P)
                                    H18)
@@ -1586,7 +1586,7 @@ thm lemma__oppositesidesymmetric :
                                        (plth.and
                                           (euclidean__axioms.Col B R Q)
                                           (euclidean__axioms.Col R Q B)))))) =>
-                       logic.and__ind2
+                       logic.and_ind_right
                          (euclidean__axioms.Col Q B R)
                          (plth.and
                             (euclidean__axioms.Col Q R B)
@@ -1604,7 +1604,7 @@ thm lemma__oppositesidesymmetric :
                                        (plth.and
                                           (euclidean__axioms.Col B R Q)
                                           (euclidean__axioms.Col R Q B))))) =>
-                          logic.and__elim_left
+                          logic.and_elim_left
                             (euclidean__axioms.Col Q R B)
                             (plth.and
                                (euclidean__axioms.Col R B Q)
@@ -1625,7 +1625,7 @@ thm lemma__oppositesidesymmetric :
                           R
                           H10
                           (lemma__collinear4.lemma__collinear4 A B Q R H8 H4 H6))))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point P R)
                       (plth.or
                          (plth.eq euclidean__axioms.Point P Q)
@@ -1636,7 +1636,7 @@ thm lemma__oppositesidesymmetric :
                                (plth.or
                                   (euclidean__axioms.BetS P R Q)
                                   (euclidean__axioms.BetS P Q R)))))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point P Q)
                          (plth.or
                             (plth.eq euclidean__axioms.Point R Q)
@@ -1645,19 +1645,19 @@ thm lemma__oppositesidesymmetric :
                                (plth.or
                                   (euclidean__axioms.BetS P R Q)
                                   (euclidean__axioms.BetS P Q R))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point R Q)
                             (plth.or
                                (euclidean__axioms.BetS R P Q)
                                (plth.or
                                   (euclidean__axioms.BetS P R Q)
                                   (euclidean__axioms.BetS P Q R)))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (euclidean__axioms.BetS R P Q)
                                (plth.or
                                   (euclidean__axioms.BetS P R Q)
                                   (euclidean__axioms.BetS P Q R))
-                               (logic.or__introl
+                               (logic.or_intro_left
                                   (euclidean__axioms.BetS P R Q)
                                   (euclidean__axioms.BetS P Q R)
                                   H2)))))))
@@ -1665,7 +1665,7 @@ thm lemma__oppositesidesymmetric :
               (H6:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
                (H7:(plth.Prf (euclidean__axioms.Col A B P)) =>
                 euclidean__tactics.Col__nCol__False A B P H5 H7)
-                 (logic.or__introl
+                 (logic.or_intro_left
                     (plth.eq euclidean__axioms.Point A B)
                     (plth.or
                        (plth.eq euclidean__axioms.Point A P)

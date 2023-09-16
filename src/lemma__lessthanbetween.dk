@@ -23,14 +23,14 @@ thm lemma__lessthanbetween :
             euclidean__axioms.Point
             (M:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.Cong A M A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (M:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.Cong A M A B))
      (euclidean__axioms.BetS A B C)
      (M:(plth.El euclidean__axioms.Point) =>
       H2:(plth.Prf (plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.Cong A M A B))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A M C)
         (euclidean__axioms.Cong A M A B)
         (euclidean__axioms.BetS A B C)
@@ -76,12 +76,12 @@ thm lemma__lessthanbetween :
                A
                M
                C
-               (logic.or__intror
+               (logic.or_intro_right
                   (euclidean__axioms.BetS A C M)
                   (plth.or
                      (plth.eq euclidean__axioms.Point C M)
                      (euclidean__axioms.BetS A M C))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point C M)
                      (euclidean__axioms.BetS A M C)
                      H3))
@@ -92,7 +92,7 @@ thm lemma__lessthanbetween :
                       (plth.and
                          (plth.neq euclidean__axioms.Point A M)
                          (plth.neq euclidean__axioms.Point A C)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point M C)
                (plth.and
                   (plth.neq euclidean__axioms.Point A M)
@@ -102,7 +102,7 @@ thm lemma__lessthanbetween :
                       (plth.and
                          (plth.neq euclidean__axioms.Point A M)
                          (plth.neq euclidean__axioms.Point A C))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point A M)
                   (plth.neq euclidean__axioms.Point A C)
                   H7)

@@ -133,7 +133,7 @@ thm lemma__angleaddition :
              plth.and
                (euclidean__defs.CongA A B C P Q S)
                (plth.and (euclidean__defs.CongA D E F S Q R) (euclidean__axioms.BetS P S R))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (S:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -145,14 +145,14 @@ thm lemma__angleaddition :
             (plth.and
                (euclidean__defs.CongA A B C P Q S)
                (plth.and (euclidean__defs.CongA D E F S Q R) (euclidean__axioms.BetS P S R)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__defs.CongA A B C P Q S)
         (plth.and (euclidean__defs.CongA D E F S Q R) (euclidean__axioms.BetS P S R))
         (euclidean__defs.CongA P Q R p q r)
         (H5:(plth.Prf (euclidean__defs.CongA A B C P Q S)) =>
          H6:(plth.Prf
                (plth.and (euclidean__defs.CongA D E F S Q R) (euclidean__axioms.BetS P S R))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__defs.CongA D E F S Q R)
            (euclidean__axioms.BetS P S R)
            (euclidean__defs.CongA P Q R p q r)
@@ -167,7 +167,7 @@ thm lemma__angleaddition :
                          (plth.and
                             (euclidean__defs.CongA d e f s q r)
                             (euclidean__axioms.BetS p s r))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (s:(plth.El euclidean__axioms.Point) =>
                 plth.and
@@ -183,7 +183,7 @@ thm lemma__angleaddition :
                           (plth.and
                              (euclidean__defs.CongA d e f s q r)
                              (euclidean__axioms.BetS p s r)))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__defs.CongA a b c p q s)
                   (plth.and
                      (euclidean__defs.CongA d e f s q r)
@@ -194,7 +194,7 @@ thm lemma__angleaddition :
                           (plth.and
                              (euclidean__defs.CongA d e f s q r)
                              (euclidean__axioms.BetS p s r))) =>
-                   logic.and__ind
+                   logic.and_ind
                      (euclidean__defs.CongA d e f s q r)
                      (euclidean__axioms.BetS p s r)
                      (euclidean__defs.CongA P Q R p q r)
@@ -241,7 +241,7 @@ thm lemma__angleaddition :
                                                  G
                                                  Q
                                                  P)))) =>
-                                 logic.ex__ind
+                                 logic.ex_elim
                                    euclidean__axioms.Point
                                    (G:(plth.El
                                          euclidean__axioms.Point) =>
@@ -275,7 +275,7 @@ thm lemma__angleaddition :
                                                  G
                                                  Q
                                                  P))) =>
-                                    logic.and__ind
+                                    logic.and_ind
                                       (euclidean__defs.Out
                                          q
                                          p
@@ -318,7 +318,7 @@ thm lemma__angleaddition :
                                                         H29
                                                         Q
                                                         S)))) =>
-                                        logic.ex__ind
+                                        logic.ex_elim
                                           euclidean__axioms.Point
                                           (H30:(plth.El
                                                   euclidean__axioms.Point) =>
@@ -352,7 +352,7 @@ thm lemma__angleaddition :
                                                         H30
                                                         Q
                                                         S))) =>
-                                           logic.and__ind
+                                           logic.and_ind
                                              (euclidean__defs.Out
                                                 q
                                                 s
@@ -395,7 +395,7 @@ thm lemma__angleaddition :
                                                                K
                                                                Q
                                                                R)))) =>
-                                               logic.ex__ind
+                                               logic.ex_elim
                                                  euclidean__axioms.Point
                                                  (K:(plth.El
                                                        euclidean__axioms.Point) =>
@@ -429,7 +429,7 @@ thm lemma__angleaddition :
                                                                K
                                                                Q
                                                                R))) =>
-                                                  logic.and__ind
+                                                  logic.and_ind
                                                     (euclidean__defs.Out
                                                        q
                                                        r
@@ -883,7 +883,7 @@ thm lemma__angleaddition :
                                                                     q
                                                                     r)) =>
                                                                     H95)
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -946,7 +946,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R)))))))))))
                                                                     P
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -1004,7 +1004,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R))))))))))
                                                                     R
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (u:(
                                                                     plth.El
@@ -1057,7 +1057,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R)))))))))
                                                                     G
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (v:(
                                                                     plth.El
@@ -1105,7 +1105,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R))))))))
                                                                     K
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     Q
                                                                     P
@@ -1148,7 +1148,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R)))))))
                                                                     H83
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     Q
                                                                     R
@@ -1186,7 +1186,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R))))))
                                                                     H84
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     q
                                                                     p
@@ -1219,7 +1219,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R)))))
                                                                     H27
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     q
                                                                     r
@@ -1247,7 +1247,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R))))
                                                                     H36
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     P
@@ -1270,7 +1270,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R)))
                                                                     H92
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     Q
                                                                     R
@@ -1287,7 +1287,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R))
                                                                     H93
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Cong
                                                                     P
                                                                     R
@@ -1343,7 +1343,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     P)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     R
                                                                     P
@@ -1392,7 +1392,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     P))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     R
                                                                     Q
@@ -1431,7 +1431,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     P)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     Q
                                                                     P
@@ -1460,7 +1460,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     P))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     P
                                                                     Q
@@ -1512,7 +1512,7 @@ thm lemma__angleaddition :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     R)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     S
@@ -1541,7 +1541,7 @@ thm lemma__angleaddition :
                                                                     euclidean__axioms.Point
                                                                     P
                                                                     R))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1557,7 +1557,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     R
                                                                     H8)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1586,7 +1586,7 @@ thm lemma__angleaddition :
                                                                     P
                                                                     P
                                                                     S)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1612,7 +1612,7 @@ thm lemma__angleaddition :
                                                                     S))))
                                                                     H87)))
                                                                     H81)
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1641,7 +1641,7 @@ thm lemma__angleaddition :
                                                                     P
                                                                     R
                                                                     S)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1665,7 +1665,7 @@ thm lemma__angleaddition :
                                                                     P
                                                                     R
                                                                     S))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     S
@@ -1684,7 +1684,7 @@ thm lemma__angleaddition :
                                                                     P
                                                                     R
                                                                     S)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     S
                                                                     P
@@ -1698,7 +1698,7 @@ thm lemma__angleaddition :
                                                                     P
                                                                     R
                                                                     S))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     P
                                                                     S
@@ -1734,7 +1734,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     P)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     Q
                                                                     P
@@ -1783,7 +1783,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     P))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     Q
                                                                     S
@@ -1822,7 +1822,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     P)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     S
                                                                     P
@@ -1851,7 +1851,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     P))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     P
                                                                     S
@@ -1873,7 +1873,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     R
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     Q
                                                                     R
@@ -1887,7 +1887,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     R))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     R
@@ -1902,7 +1902,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     P
                                                                     P
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     Q
                                                                     P
@@ -1916,7 +1916,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     P
                                                                     P))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     P
@@ -1933,7 +1933,7 @@ thm lemma__angleaddition :
                                                                     (logic.eq__refl
                                                                     euclidean__axioms.Point
                                                                     P))
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     H30
                                                                     K
@@ -1983,7 +1983,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     S))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     G
                                                                     H30
@@ -2142,7 +2142,7 @@ thm lemma__angleaddition :
                                                                     D0
                                                                     B0
                                                                     A0)) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__defs.Supp
                                                                     A0
                                                                     B0
@@ -2166,7 +2166,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     q
                                                                     q
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     H30
                                                                     q
@@ -2180,7 +2180,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     q
                                                                     q))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -2242,7 +2242,7 @@ thm lemma__angleaddition :
                                                                     r
                                                                     K
                                                                     H36))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -2271,7 +2271,7 @@ thm lemma__angleaddition :
                                                                     q
                                                                     q
                                                                     H30)))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -2302,7 +2302,7 @@ thm lemma__angleaddition :
                                                                     p
                                                                     r
                                                                     H67))
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -2322,7 +2322,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     p)))
                                                                     s
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     p
                                                                     s
@@ -2337,7 +2337,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     p))
                                                                     H14
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     q
                                                                     H30
@@ -2374,7 +2374,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     q
                                                                     p)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.nCol
                                                                     q
                                                                     p
@@ -2423,7 +2423,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     q
                                                                     p))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     q
                                                                     H30
@@ -2472,7 +2472,7 @@ thm lemma__angleaddition :
                                                                     p
                                                                     H63))
                                                                     H22)
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -2501,7 +2501,7 @@ thm lemma__angleaddition :
                                                                     G
                                                                     q
                                                                     q)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     G
@@ -2525,7 +2525,7 @@ thm lemma__angleaddition :
                                                                     G
                                                                     q
                                                                     q))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     q
@@ -2574,7 +2574,7 @@ thm lemma__angleaddition :
                                                                     G
                                                                     p
                                                                     q)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     q
@@ -2623,7 +2623,7 @@ thm lemma__angleaddition :
                                                                     G
                                                                     p
                                                                     q))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     p
                                                                     G
@@ -2662,7 +2662,7 @@ thm lemma__angleaddition :
                                                                     G
                                                                     p
                                                                     q)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     G
                                                                     q
@@ -2715,7 +2715,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     s
                                                                     q)))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     s
                                                                     q
@@ -2764,7 +2764,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     s
                                                                     q))))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     s
                                                                     H30
@@ -2803,7 +2803,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     s
                                                                     q)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Col
                                                                     H30
                                                                     q
@@ -2832,7 +2832,7 @@ thm lemma__angleaddition :
                                                                     H30
                                                                     s
                                                                     q))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     q
                                                                     H30
@@ -2901,7 +2901,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     S)))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     H30
                                                                     K
@@ -2986,7 +2986,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     R
                                                                     S))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.CongA
                                                                     q
                                                                     H30
@@ -3112,7 +3112,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     S
                                                                     P)))) =>
-                                                                    logic.ex__intro
+                                                                    logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (X:(
                                                                     plth.El
@@ -3160,7 +3160,7 @@ thm lemma__angleaddition :
                                                                     Y
                                                                     Z)))))))
                                                                     P
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (Y:(
                                                                     plth.El
@@ -3203,7 +3203,7 @@ thm lemma__angleaddition :
                                                                     Y
                                                                     Z))))))
                                                                     S
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (Z:(
                                                                     plth.El
@@ -3241,7 +3241,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Z)))))
                                                                     R
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (U:(
                                                                     plth.El
@@ -3274,7 +3274,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     R))))
                                                                     Q
-                                                                    (logic.ex__intro
+                                                                    (logic.ex_intro
                                                                     euclidean__axioms.Point
                                                                     (V:(
                                                                     plth.El
@@ -3302,7 +3302,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     R)))
                                                                     Q
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Supp
                                                                     P
                                                                     S
@@ -3325,7 +3325,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     R))
                                                                     H55
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.CongA
                                                                     G
                                                                     H30
@@ -3348,7 +3348,7 @@ thm lemma__angleaddition :
                                                                     __TmpHyp)
                                                                     H56)
                                                                     H50))
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__defs.Out
                                                                     S
                                                                     Q
@@ -3363,7 +3363,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     Q
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     S
                                                                     Q
@@ -3377,7 +3377,7 @@ thm lemma__angleaddition :
                                                                     S
                                                                     Q
                                                                     Q))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     Q
@@ -3419,7 +3419,7 @@ thm lemma__angleaddition :
                                                                     euclidean__axioms.Point
                                                                     R
                                                                     S))))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     S
@@ -3458,7 +3458,7 @@ thm lemma__angleaddition :
                                                                     euclidean__axioms.Point
                                                                     Q))
                                                                     (
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__axioms.Cong
                                                                     G
                                                                     H30
@@ -3503,7 +3503,7 @@ thm lemma__angleaddition :
                                                                     Q
                                                                     S
                                                                     P))) =>
-                                                                    logic.and__ind2
+                                                                    logic.and_ind_right
                                                                     (euclidean__defs.CongA
                                                                     q
                                                                     G
@@ -3741,7 +3741,7 @@ thm lemma__angleaddition :
                                                             euclidean__axioms.Point
                                                             r
                                                             s))))))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (plth.neq
                                         euclidean__axioms.Point
                                         s
@@ -3799,7 +3799,7 @@ thm lemma__angleaddition :
                                                             euclidean__axioms.Point
                                                             r
                                                             s)))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (plth.neq
                                            euclidean__axioms.Point
                                            q
@@ -3847,7 +3847,7 @@ thm lemma__angleaddition :
                                                             euclidean__axioms.Point
                                                             r
                                                             s))))) =>
-                                         logic.and__ind2
+                                         logic.and_ind_right
                                            (plth.neq
                                               euclidean__axioms.Point
                                               s
@@ -3885,7 +3885,7 @@ thm lemma__angleaddition :
                                                             euclidean__axioms.Point
                                                             r
                                                             s)))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  q
@@ -3938,7 +3938,7 @@ thm lemma__angleaddition :
                                                            euclidean__axioms.Point
                                                            r
                                                            s))))))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (plth.neq
                                        euclidean__axioms.Point
                                        s
@@ -3996,7 +3996,7 @@ thm lemma__angleaddition :
                                                            euclidean__axioms.Point
                                                            r
                                                            s)))))) =>
-                                     logic.and__elim_left
+                                     logic.and_elim_left
                                        (plth.neq
                                           euclidean__axioms.Point
                                           q
@@ -4057,7 +4057,7 @@ thm lemma__angleaddition :
                                                           euclidean__axioms.Point
                                                           s
                                                           p))))))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (plth.neq
                                       euclidean__axioms.Point
                                       p
@@ -4115,7 +4115,7 @@ thm lemma__angleaddition :
                                                           euclidean__axioms.Point
                                                           s
                                                           p)))))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (plth.neq
                                          euclidean__axioms.Point
                                          q
@@ -4163,7 +4163,7 @@ thm lemma__angleaddition :
                                                           euclidean__axioms.Point
                                                           s
                                                           p))))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (plth.neq
                                             euclidean__axioms.Point
                                             p
@@ -4201,7 +4201,7 @@ thm lemma__angleaddition :
                                                           euclidean__axioms.Point
                                                           s
                                                           p)))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (plth.neq
                                                euclidean__axioms.Point
                                                q
@@ -4286,7 +4286,7 @@ thm lemma__angleaddition :
                                                        euclidean__axioms.Point
                                                        R
                                                        S))))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (plth.neq euclidean__axioms.Point S Q)
                                 (plth.and
                                    (plth.neq euclidean__axioms.Point Q R)
@@ -4335,7 +4335,7 @@ thm lemma__angleaddition :
                                                        euclidean__axioms.Point
                                                        R
                                                        S)))))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (plth.neq euclidean__axioms.Point Q R)
                                    (plth.and
                                       (plth.neq
@@ -4393,7 +4393,7 @@ thm lemma__angleaddition :
                                                       euclidean__axioms.Point
                                                       R
                                                       S))))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (plth.neq euclidean__axioms.Point S Q)
                                (plth.and
                                   (plth.neq euclidean__axioms.Point Q R)
@@ -4439,7 +4439,7 @@ thm lemma__angleaddition :
                                                       euclidean__axioms.Point
                                                       R
                                                       S)))))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (plth.neq euclidean__axioms.Point Q R)
                                   (plth.and
                                      (plth.neq euclidean__axioms.Point S R)
@@ -4478,7 +4478,7 @@ thm lemma__angleaddition :
                                                       euclidean__axioms.Point
                                                       R
                                                       S))))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (plth.neq euclidean__axioms.Point S R)
                                      (plth.and
                                         (plth.neq
@@ -4510,7 +4510,7 @@ thm lemma__angleaddition :
                                                       euclidean__axioms.Point
                                                       R
                                                       S)))) =>
-                                      logic.and__elim_left
+                                      logic.and_elim_left
                                         (plth.neq
                                            euclidean__axioms.Point
                                            Q
@@ -4556,7 +4556,7 @@ thm lemma__angleaddition :
                                                      euclidean__axioms.Point
                                                      S
                                                      P))))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (plth.neq euclidean__axioms.Point P Q)
                               (plth.and
                                  (plth.neq euclidean__axioms.Point Q S)
@@ -4599,7 +4599,7 @@ thm lemma__angleaddition :
                                                      euclidean__axioms.Point
                                                      S
                                                      P)))))) =>
-                               logic.and__ind2
+                               logic.and_ind_right
                                  (plth.neq euclidean__axioms.Point Q S)
                                  (plth.and
                                     (plth.neq euclidean__axioms.Point P S)
@@ -4635,7 +4635,7 @@ thm lemma__angleaddition :
                                                      euclidean__axioms.Point
                                                      S
                                                      P))))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (plth.neq euclidean__axioms.Point P S)
                                     (plth.and
                                        (plth.neq euclidean__axioms.Point Q P)
@@ -4664,7 +4664,7 @@ thm lemma__angleaddition :
                                                      euclidean__axioms.Point
                                                      S
                                                      P)))) =>
-                                     logic.and__elim_left
+                                     logic.and_elim_left
                                        (plth.neq euclidean__axioms.Point Q P)
                                        (plth.and
                                           (plth.neq

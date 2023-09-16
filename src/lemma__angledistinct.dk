@@ -48,7 +48,7 @@ thm lemma__angledistinct :
         (H6:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point a b))) =>
          (H7:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point b c))) =>
           (H8:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point a c))) =>
-           logic.conj
+           logic.and_intro
              (plth.neq euclidean__axioms.Point A B)
              (plth.and
                 (plth.neq euclidean__axioms.Point B C)
@@ -60,7 +60,7 @@ thm lemma__angledistinct :
                          (plth.neq euclidean__axioms.Point b c)
                          (plth.neq euclidean__axioms.Point a c)))))
              H1
-             (logic.conj
+             (logic.and_intro
                 (plth.neq euclidean__axioms.Point B C)
                 (plth.and
                    (plth.neq euclidean__axioms.Point A C)
@@ -70,7 +70,7 @@ thm lemma__angledistinct :
                          (plth.neq euclidean__axioms.Point b c)
                          (plth.neq euclidean__axioms.Point a c))))
                 H2
-                (logic.conj
+                (logic.and_intro
                    (plth.neq euclidean__axioms.Point A C)
                    (plth.and
                       (plth.neq euclidean__axioms.Point a b)
@@ -78,13 +78,13 @@ thm lemma__angledistinct :
                          (plth.neq euclidean__axioms.Point b c)
                          (plth.neq euclidean__axioms.Point a c)))
                    H3
-                   (logic.conj
+                   (logic.and_intro
                       (plth.neq euclidean__axioms.Point a b)
                       (plth.and
                          (plth.neq euclidean__axioms.Point b c)
                          (plth.neq euclidean__axioms.Point a c))
                       H6
-                      (logic.conj
+                      (logic.and_intro
                          (plth.neq euclidean__axioms.Point b c)
                          (plth.neq euclidean__axioms.Point a c)
                          H7
@@ -92,7 +92,7 @@ thm lemma__angledistinct :
             (H8:(plth.Prf (plth.eq euclidean__axioms.Point a c)) =>
              (H9:(plth.Prf (euclidean__axioms.Col a b c)) =>
               euclidean__tactics.Col__nCol__False a b c H5 H9)
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point a b)
                   (plth.or
                      (plth.eq euclidean__axioms.Point a c)
@@ -103,7 +103,7 @@ thm lemma__angledistinct :
                            (plth.or
                               (euclidean__axioms.BetS a b c)
                               (euclidean__axioms.BetS a c b)))))
-                  (logic.or__introl
+                  (logic.or_intro_left
                      (plth.eq euclidean__axioms.Point a c)
                      (plth.or
                         (plth.eq euclidean__axioms.Point b c)
@@ -116,7 +116,7 @@ thm lemma__angledistinct :
            (H7:(plth.Prf (plth.eq euclidean__axioms.Point b c)) =>
             (H8:(plth.Prf (euclidean__axioms.Col a b c)) =>
              euclidean__tactics.Col__nCol__False a b c H5 H8)
-              (logic.or__intror
+              (logic.or_intro_right
                  (plth.eq euclidean__axioms.Point a b)
                  (plth.or
                     (plth.eq euclidean__axioms.Point a c)
@@ -127,7 +127,7 @@ thm lemma__angledistinct :
                           (plth.or
                              (euclidean__axioms.BetS a b c)
                              (euclidean__axioms.BetS a c b)))))
-                 (logic.or__intror
+                 (logic.or_intro_right
                     (plth.eq euclidean__axioms.Point a c)
                     (plth.or
                        (plth.eq euclidean__axioms.Point b c)
@@ -136,7 +136,7 @@ thm lemma__angledistinct :
                           (plth.or
                              (euclidean__axioms.BetS a b c)
                              (euclidean__axioms.BetS a c b))))
-                    (logic.or__introl
+                    (logic.or_intro_left
                        (plth.eq euclidean__axioms.Point b c)
                        (plth.or
                           (euclidean__axioms.BetS b a c)
@@ -147,7 +147,7 @@ thm lemma__angledistinct :
           (H6:(plth.Prf (plth.eq euclidean__axioms.Point a b)) =>
            (H7:(plth.Prf (euclidean__axioms.Col a b c)) =>
             euclidean__tactics.Col__nCol__False a b c H5 H7)
-             (logic.or__introl
+             (logic.or_intro_left
                 (plth.eq euclidean__axioms.Point a b)
                 (plth.or
                    (plth.eq euclidean__axioms.Point a c)
@@ -252,7 +252,7 @@ thm lemma__angledistinct :
                                                             a
                                                             b
                                                             c))))))))))))) =>
-            logic.ex__ind
+            logic.ex_elim
               euclidean__axioms.Point
               (U:(plth.El euclidean__axioms.Point) =>
                plth.ex
@@ -332,7 +332,7 @@ thm lemma__angledistinct :
                                                       a
                                                       b
                                                       c)))))))))))) =>
-               logic.ex__ind
+               logic.ex_elim
                  euclidean__axioms.Point
                  (V:(plth.El euclidean__axioms.Point) =>
                   plth.ex
@@ -406,7 +406,7 @@ thm lemma__angledistinct :
                                                       a
                                                       b
                                                       c))))))))))) =>
-                  logic.ex__ind
+                  logic.ex_elim
                     euclidean__axioms.Point
                     (u:(plth.El euclidean__axioms.Point) =>
                      plth.ex
@@ -474,7 +474,7 @@ thm lemma__angledistinct :
                                                       a
                                                       b
                                                       c)))))))))) =>
-                     logic.ex__ind
+                     logic.ex_elim
                        euclidean__axioms.Point
                        (v:(plth.El euclidean__axioms.Point) =>
                         plth.and
@@ -539,7 +539,7 @@ thm lemma__angledistinct :
                                                       a
                                                       b
                                                       c))))))))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__defs.Out b a x)
                           (plth.and
                              (euclidean__defs.Out b c x0)
@@ -598,7 +598,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c)))))))) =>
-                           logic.and__ind2
+                           logic.and_ind_right
                              (euclidean__defs.Out b c x0)
                              (plth.and
                                 (euclidean__defs.Out B A x1)
@@ -653,7 +653,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c))))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__defs.Out B A x1)
                                 (plth.and
                                    (euclidean__defs.Out B C x2)
@@ -704,7 +704,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c)))))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__defs.Out B C x2)
                                    (plth.and
                                       (euclidean__axioms.Cong b x B x1)
@@ -748,7 +748,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c))))) =>
-                                    logic.and__ind2
+                                    logic.and_ind_right
                                       (euclidean__axioms.Cong b x B x1)
                                       (plth.and
                                          (euclidean__axioms.Cong
@@ -784,7 +784,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c)))) =>
-                                       logic.and__ind2
+                                       logic.and_ind_right
                                          (euclidean__axioms.Cong
                                             b
                                             x0
@@ -812,7 +812,7 @@ thm lemma__angledistinct :
                                                        a
                                                        b
                                                        c))) =>
-                                          logic.and__elim_right
+                                          logic.and_elim_right
                                             (euclidean__axioms.Cong
                                                x
                                                x0
@@ -839,7 +839,7 @@ thm lemma__angledistinct :
        (H3:(plth.Prf (plth.eq euclidean__axioms.Point A C)) =>
         (H4:(plth.Prf (euclidean__axioms.Col A B C)) =>
          euclidean__tactics.Col__nCol__False A B C H0 H4)
-          (logic.or__intror
+          (logic.or_intro_right
              (plth.eq euclidean__axioms.Point A B)
              (plth.or
                 (plth.eq euclidean__axioms.Point A C)
@@ -850,7 +850,7 @@ thm lemma__angledistinct :
                       (plth.or
                          (euclidean__axioms.BetS A B C)
                          (euclidean__axioms.BetS A C B)))))
-             (logic.or__introl
+             (logic.or_intro_left
                 (plth.eq euclidean__axioms.Point A C)
                 (plth.or
                    (plth.eq euclidean__axioms.Point B C)
@@ -863,7 +863,7 @@ thm lemma__angledistinct :
       (H2:(plth.Prf (plth.eq euclidean__axioms.Point B C)) =>
        (H3:(plth.Prf (euclidean__axioms.Col A B C)) =>
         euclidean__tactics.Col__nCol__False A B C H0 H3)
-         (logic.or__intror
+         (logic.or_intro_right
             (plth.eq euclidean__axioms.Point A B)
             (plth.or
                (plth.eq euclidean__axioms.Point A C)
@@ -874,7 +874,7 @@ thm lemma__angledistinct :
                      (plth.or
                         (euclidean__axioms.BetS A B C)
                         (euclidean__axioms.BetS A C B)))))
-            (logic.or__intror
+            (logic.or_intro_right
                (plth.eq euclidean__axioms.Point A C)
                (plth.or
                   (plth.eq euclidean__axioms.Point B C)
@@ -883,7 +883,7 @@ thm lemma__angledistinct :
                      (plth.or
                         (euclidean__axioms.BetS A B C)
                         (euclidean__axioms.BetS A C B))))
-               (logic.or__introl
+               (logic.or_intro_left
                   (plth.eq euclidean__axioms.Point B C)
                   (plth.or
                      (euclidean__axioms.BetS B A C)
@@ -894,7 +894,7 @@ thm lemma__angledistinct :
      (H1:(plth.Prf (plth.eq euclidean__axioms.Point A B)) =>
       (H2:(plth.Prf (euclidean__axioms.Col A B C)) =>
        euclidean__tactics.Col__nCol__False A B C H0 H2)
-        (logic.or__introl
+        (logic.or_intro_left
            (plth.eq euclidean__axioms.Point A B)
            (plth.or
               (plth.eq euclidean__axioms.Point A C)
@@ -967,7 +967,7 @@ thm lemma__angledistinct :
                                                        A
                                                        B
                                                        C))))))))))))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (U:(plth.El euclidean__axioms.Point) =>
           plth.ex
@@ -1021,7 +1021,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x V u v)
                                               (euclidean__axioms.nCol A B C)))))))))))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (V:(plth.El euclidean__axioms.Point) =>
              plth.ex
@@ -1069,7 +1069,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x x0 u v)
                                               (euclidean__axioms.nCol A B C))))))))))) =>
-             logic.ex__ind
+             logic.ex_elim
                euclidean__axioms.Point
                (u:(plth.El euclidean__axioms.Point) =>
                 plth.ex
@@ -1111,7 +1111,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x x0 x1 v)
                                               (euclidean__axioms.nCol A B C)))))))))) =>
-                logic.ex__ind
+                logic.ex_elim
                   euclidean__axioms.Point
                   (v:(plth.El euclidean__axioms.Point) =>
                    plth.and
@@ -1147,7 +1147,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x x0 x1 x2)
                                               (euclidean__axioms.nCol A B C))))))))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__defs.Out B A x)
                      (plth.and
                         (euclidean__defs.Out B C x0)
@@ -1177,7 +1177,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x x0 x1 x2)
                                               (euclidean__axioms.nCol A B C)))))))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__defs.Out B C x0)
                         (plth.and
                            (euclidean__defs.Out b a x1)
@@ -1203,7 +1203,7 @@ thm lemma__angledistinct :
                                            (plth.and
                                               (euclidean__axioms.Cong x x0 x1 x2)
                                               (euclidean__axioms.nCol A B C))))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__defs.Out b a x1)
                            (plth.and
                               (euclidean__defs.Out b c x2)
@@ -1229,7 +1229,7 @@ thm lemma__angledistinct :
                                                   x1
                                                   x2)
                                                (euclidean__axioms.nCol A B C)))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__defs.Out b c x2)
                               (plth.and
                                  (euclidean__axioms.Cong B x b x1)
@@ -1251,7 +1251,7 @@ thm lemma__angledistinct :
                                                   x1
                                                   x2)
                                                (euclidean__axioms.nCol A B C))))) =>
-                               logic.and__ind2
+                               logic.and_ind_right
                                  (euclidean__axioms.Cong B x b x1)
                                  (plth.and
                                     (euclidean__axioms.Cong B x0 b x2)
@@ -1269,7 +1269,7 @@ thm lemma__angledistinct :
                                                   x1
                                                   x2)
                                                (euclidean__axioms.nCol A B C)))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (euclidean__axioms.Cong B x0 b x2)
                                     (plth.and
                                        (euclidean__axioms.Cong x x0 x1 x2)
@@ -1283,7 +1283,7 @@ thm lemma__angledistinct :
                                                   x1
                                                   x2)
                                                (euclidean__axioms.nCol A B C))) =>
-                                     logic.and__elim_right
+                                     logic.and_elim_right
                                        (euclidean__axioms.Cong x x0 x1 x2)
                                        (euclidean__axioms.nCol A B C)
                                        H16)

@@ -62,7 +62,7 @@ thm lemma__interior5 :
                 plth.and
                   (euclidean__axioms.BetS C A M)
                   (euclidean__axioms.Cong A M B C)))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (M:(plth.El euclidean__axioms.Point) =>
          plth.and (euclidean__axioms.BetS C A M) (euclidean__axioms.Cong A M B C))
@@ -72,7 +72,7 @@ thm lemma__interior5 :
                (plth.and
                   (euclidean__axioms.BetS C A M)
                   (euclidean__axioms.Cong A M B C))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.BetS C A M)
            (euclidean__axioms.Cong A M B C)
            (euclidean__axioms.Cong B D b d)
@@ -98,7 +98,7 @@ thm lemma__interior5 :
                                    m
                                    b
                                    c)))) =>
-                   logic.ex__ind
+                   logic.ex_elim
                      euclidean__axioms.Point
                      (m:(plth.El euclidean__axioms.Point) =>
                       plth.and
@@ -114,7 +114,7 @@ thm lemma__interior5 :
                                    m
                                    b
                                    c))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (euclidean__axioms.BetS c a m)
                         (euclidean__axioms.Cong a m b c)
                         (euclidean__axioms.Cong B D b d)
@@ -253,7 +253,7 @@ thm lemma__interior5 :
                                                                B
                                                                b
                                                                d)))) =>
-                                               logic.and__elim_left
+                                               logic.and_elim_left
                                                  (euclidean__axioms.Cong
                                                     B
                                                     D
@@ -310,7 +310,7 @@ thm lemma__interior5 :
                                                              M
                                                              m
                                                              d)))) =>
-                                             logic.and__elim_left
+                                             logic.and_elim_left
                                                (euclidean__axioms.Cong
                                                   M
                                                   D
@@ -377,7 +377,7 @@ thm lemma__interior5 :
                                                          A
                                                          a
                                                          m)))) =>
-                                         logic.and__elim_left
+                                         logic.and_elim_left
                                            (euclidean__axioms.Cong
                                               A
                                               M
@@ -443,7 +443,7 @@ thm lemma__interior5 :
                                                 A
                                                 c
                                                 a))) =>
-                                   logic.and__elim_left
+                                   logic.and_elim_left
                                      (euclidean__axioms.Cong
                                         c
                                         a
@@ -538,7 +538,7 @@ thm lemma__interior5 :
                                     euclidean__axioms.Point
                                     a
                                     c)))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (plth.neq euclidean__axioms.Point b c)
                       (plth.and
                          (plth.neq euclidean__axioms.Point a b)
@@ -554,7 +554,7 @@ thm lemma__interior5 :
                                     euclidean__axioms.Point
                                     a
                                     c))) =>
-                       logic.and__elim_right
+                       logic.and_elim_right
                          (plth.neq euclidean__axioms.Point a b)
                          (plth.neq euclidean__axioms.Point a c)
                          H18)
@@ -588,7 +588,7 @@ thm lemma__interior5 :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A C)))) =>
-       logic.and__ind2
+       logic.and_ind_right
          (plth.neq euclidean__axioms.Point B C)
          (plth.and
             (plth.neq euclidean__axioms.Point A B)
@@ -598,7 +598,7 @@ thm lemma__interior5 :
                 (plth.and
                    (plth.neq euclidean__axioms.Point A B)
                    (plth.neq euclidean__axioms.Point A C))) =>
-          logic.and__elim_right
+          logic.and_elim_right
             (plth.neq euclidean__axioms.Point A B)
             (plth.neq euclidean__axioms.Point A C)
             H8)
@@ -610,7 +610,7 @@ thm lemma__interior5 :
                (plth.and
                   (plth.neq euclidean__axioms.Point A B)
                   (plth.neq euclidean__axioms.Point A C)))) =>
-      logic.and__elim_left
+      logic.and_elim_left
         (plth.neq euclidean__axioms.Point B C)
         (plth.and (plth.neq euclidean__axioms.Point A B) (plth.neq euclidean__axioms.Point A C))
         H5)

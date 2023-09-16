@@ -40,7 +40,7 @@ thm lemma__squareparallelogram :
                 plth.and
                   (euclidean__axioms.BetS D A R)
                   (euclidean__axioms.Cong A R D A)))) =>
-      logic.ex__ind
+      logic.ex_elim
         euclidean__axioms.Point
         (R:(plth.El euclidean__axioms.Point) =>
          plth.and (euclidean__axioms.BetS D A R) (euclidean__axioms.Cong A R D A))
@@ -50,12 +50,12 @@ thm lemma__squareparallelogram :
                (plth.and
                   (euclidean__axioms.BetS D A R)
                   (euclidean__axioms.Cong A R D A))) =>
-         logic.and__ind3
+         logic.and_ind_left
            (euclidean__axioms.BetS D A R)
            (euclidean__axioms.Cong A R D A)
            (euclidean__defs.PG A B C D)
            (H5:(plth.Prf (euclidean__axioms.BetS D A R)) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A B C D)
               (plth.and
                  (euclidean__axioms.Cong A B B C)
@@ -82,7 +82,7 @@ thm lemma__squareparallelogram :
                                  (plth.and
                                     (euclidean__defs.Per B C D)
                                     (euclidean__defs.Per C D A))))))) =>
-               logic.and__ind
+               logic.and_ind
                  (euclidean__axioms.Cong A B B C)
                  (plth.and
                     (euclidean__axioms.Cong A B D A)
@@ -105,7 +105,7 @@ thm lemma__squareparallelogram :
                                   (plth.and
                                      (euclidean__defs.Per B C D)
                                      (euclidean__defs.Per C D A)))))) =>
-                  logic.and__ind
+                  logic.and_ind
                     (euclidean__axioms.Cong A B D A)
                     (plth.and
                        (euclidean__defs.Per D A B)
@@ -124,7 +124,7 @@ thm lemma__squareparallelogram :
                                   (plth.and
                                      (euclidean__defs.Per B C D)
                                      (euclidean__defs.Per C D A))))) =>
-                     logic.and__ind
+                     logic.and_ind
                        (euclidean__defs.Per D A B)
                        (plth.and
                           (euclidean__defs.Per A B C)
@@ -139,7 +139,7 @@ thm lemma__squareparallelogram :
                                   (plth.and
                                      (euclidean__defs.Per B C D)
                                      (euclidean__defs.Per C D A)))) =>
-                        logic.and__ind
+                        logic.and_ind
                           (euclidean__defs.Per A B C)
                           (plth.and
                              (euclidean__defs.Per B C D)
@@ -150,7 +150,7 @@ thm lemma__squareparallelogram :
                                   (plth.and
                                      (euclidean__defs.Per B C D)
                                      (euclidean__defs.Per C D A))) =>
-                           logic.and__ind
+                           logic.and_ind
                              (euclidean__defs.Per B C D)
                              (euclidean__defs.Per C D A)
                              (euclidean__defs.PG A B C D)
@@ -215,7 +215,7 @@ thm lemma__squareparallelogram :
                                                              B
                                                              c
                                                              E)))))) =>
-                                       logic.ex__ind
+                                       logic.ex_elim
                                          euclidean__axioms.Point
                                          (c:(plth.El
                                                euclidean__axioms.Point) =>
@@ -269,7 +269,7 @@ thm lemma__squareparallelogram :
                                                              B
                                                              c
                                                              E))))) =>
-                                          logic.ex__ind
+                                          logic.ex_elim
                                             euclidean__axioms.Point
                                             (E:(plth.El
                                                   euclidean__axioms.Point) =>
@@ -315,7 +315,7 @@ thm lemma__squareparallelogram :
                                                              B
                                                              c
                                                              E)))) =>
-                                             logic.and__ind
+                                             logic.and_ind
                                                (euclidean__defs.SQ
                                                   A
                                                   B
@@ -355,7 +355,7 @@ thm lemma__squareparallelogram :
                                                              B
                                                              c
                                                              E))) =>
-                                                logic.and__ind
+                                                logic.and_ind
                                                   (euclidean__axioms.TS
                                                      E
                                                      A
@@ -652,7 +652,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     m
                                                                     D)))) =>
-                                                                    logic.ex__ind
+                                                                    logic.ex_elim
                                                                     euclidean__axioms.Point
                                                                     (m:(
                                                                     plth.El
@@ -685,7 +685,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     m
                                                                     D))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Midpoint
                                                                     A
                                                                     m
@@ -711,7 +711,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     m
                                                                     D)) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     B
                                                                     D
@@ -761,7 +761,7 @@ thm lemma__squareparallelogram :
                                                                     C
                                                                     D
                                                                     B))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.CongA
                                                                     c
                                                                     B
@@ -799,7 +799,7 @@ thm lemma__squareparallelogram :
                                                                     C
                                                                     D
                                                                     B)) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -881,7 +881,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -951,7 +951,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -1009,7 +1009,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     E
                                                                     A
@@ -1055,7 +1055,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     A
                                                                     B
@@ -1091,7 +1091,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     B
                                                                     c
@@ -1450,7 +1450,7 @@ thm lemma__squareparallelogram :
                                                                     C
                                                                     D)) =>
                                                                     H133)
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -2454,7 +2454,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     m
                                                                     C
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     C
@@ -2468,7 +2468,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     m
                                                                     C))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -2479,7 +2479,7 @@ thm lemma__squareparallelogram :
                                                                     C)
                                                                     H128))
                                                                     H129))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -2503,7 +2503,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     m
                                                                     c
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     c
@@ -2517,7 +2517,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     m
                                                                     c))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -2545,7 +2545,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -2580,7 +2580,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -2596,7 +2596,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     C
                                                                     H128)))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -2742,7 +2742,7 @@ thm lemma__squareparallelogram :
                                                                     b
                                                                     a
                                                                     c0)) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     B0
                                                                     C0
@@ -3271,7 +3271,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     m
                                                                     C)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     m
                                                                     c
@@ -3403,7 +3403,7 @@ thm lemma__squareparallelogram :
                                                                     b
                                                                     a
                                                                     c0)) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     B0
                                                                     C0
@@ -3458,7 +3458,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     c
                                                                     c
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     c
@@ -3472,7 +3472,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     c
                                                                     c))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -3514,7 +3514,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     m
                                                                     c))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -3579,7 +3579,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     m
                                                                     c)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -3634,7 +3634,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     m
                                                                     c))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -3679,7 +3679,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     m
                                                                     c)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -3951,7 +3951,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     C
                                                                     C
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     C
@@ -3965,7 +3965,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     C
                                                                     C))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4007,7 +4007,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4072,7 +4072,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -4127,7 +4127,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     C
@@ -4172,7 +4172,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -4202,7 +4202,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     B
                                                                     m
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     D
                                                                     m
@@ -4234,7 +4234,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     B)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -4269,7 +4269,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     D
                                                                     B))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -4285,7 +4285,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     B
                                                                     H104)))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     m
@@ -4624,7 +4624,7 @@ thm lemma__squareparallelogram :
                                                                     C
                                                                     B
                                                                     D)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     D
@@ -4679,7 +4679,7 @@ thm lemma__squareparallelogram :
                                                                     C
                                                                     B
                                                                     D))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -4728,7 +4728,7 @@ thm lemma__squareparallelogram :
                                                                     H104
                                                                     H105
                                                                     H106))))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     m
@@ -4764,7 +4764,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     B
                                                                     D)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -4811,7 +4811,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     D
                                                                     C)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     D
                                                                     C
@@ -4866,7 +4866,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     D
                                                                     C))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     D
                                                                     m
@@ -4911,7 +4911,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     D
                                                                     C)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     m
                                                                     C
@@ -4946,7 +4946,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     D
                                                                     C))) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     m
@@ -4990,7 +4990,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     m
                                                                     B)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     m
                                                                     B
@@ -5045,7 +5045,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     m
                                                                     B))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     m
                                                                     D
@@ -5071,7 +5071,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     D
                                                                     H103)))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     m
@@ -5116,7 +5116,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     m
                                                                     D)) =>
-                                                                    logic.or__intror
+                                                                    logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -5145,7 +5145,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     D
                                                                     m)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -5169,7 +5169,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     D
                                                                     m))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -5188,7 +5188,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     D
                                                                     m)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     m
                                                                     B
@@ -5202,7 +5202,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     D
                                                                     m))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     B
                                                                     m
@@ -5239,7 +5239,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     c
                                                                     m)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.nCol
                                                                     c
                                                                     m
@@ -5294,7 +5294,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     c
                                                                     m))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     c
                                                                     D
@@ -5338,7 +5338,7 @@ thm lemma__squareparallelogram :
                                                                     H98
                                                                     H96
                                                                     H99))))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -5374,7 +5374,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     c)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -5421,7 +5421,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     m
                                                                     A)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     m
                                                                     A
@@ -5476,7 +5476,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     m
                                                                     A))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     m
                                                                     c
@@ -5521,7 +5521,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     m
                                                                     A)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Col
                                                                     c
                                                                     A
@@ -5556,7 +5556,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     m
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     c
@@ -5574,7 +5574,7 @@ thm lemma__squareparallelogram :
                                                                     m
                                                                     c
                                                                     H97)))
-                                                                    (logic.and__ind3
+                                                                    (logic.and_ind_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -5619,7 +5619,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     m
                                                                     c)) =>
-                                                                    logic.or__intror
+                                                                    logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5648,7 +5648,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     m)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5672,7 +5672,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     m))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     m
@@ -5691,7 +5691,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     m)))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     m
                                                                     A
@@ -5705,7 +5705,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     m))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     m
@@ -5716,7 +5716,7 @@ thm lemma__squareparallelogram :
                                                                     m)
                                                                     H97)))))
                                                                     H86))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5745,7 +5745,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     c)))))
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -5769,7 +5769,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     c
                                                                     c))))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     c
@@ -5818,7 +5818,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D
                                                                     c)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.nCol
                                                                     D
                                                                     c
@@ -5873,7 +5873,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D
                                                                     c))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.nCol
                                                                     D
                                                                     A
@@ -5918,7 +5918,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D
                                                                     c)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.nCol
                                                                     A
                                                                     c
@@ -6194,7 +6194,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     D
                                                                     C)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     D
                                                                     c
@@ -6370,7 +6370,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     H63
                                                                     H62))
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6451,7 +6451,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6520,7 +6520,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6577,7 +6577,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     D
                                                                     A
@@ -6622,7 +6622,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     A
                                                                     B
@@ -6657,7 +6657,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__defs.Per
                                                                     B
                                                                     c
@@ -6692,7 +6692,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     C
                                                                     B)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     c
                                                                     B
@@ -6731,7 +6731,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     c
                                                                     H58))
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6813,7 +6813,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     D
                                                                     A))))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6862,7 +6862,7 @@ thm lemma__squareparallelogram :
                                                                     B
                                                                     D
                                                                     H54))
-                                                                    (logic.and__elim_left
+                                                                    (logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6900,7 +6900,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     A))))))
                                                                     H53))
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -6982,7 +6982,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -7052,7 +7052,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -7110,7 +7110,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     E
                                                                     A
@@ -7156,7 +7156,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     A
                                                                     B
@@ -7192,7 +7192,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     B
                                                                     c
@@ -7451,7 +7451,7 @@ thm lemma__squareparallelogram :
                                                                     H54)
                                                                     H34))
                                                                     H7)
-                                                                    (logic.and__ind
+                                                                    (logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -7533,7 +7533,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -7603,7 +7603,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -7661,7 +7661,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     E
                                                                     A
@@ -7707,7 +7707,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     A
                                                                     B
@@ -7743,7 +7743,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))) =>
-                                                                    logic.and__ind
+                                                                    logic.and_ind
                                                                     (euclidean__defs.Per
                                                                     B
                                                                     c
@@ -8014,7 +8014,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D
                                                                     D
-                                                                    (logic.or__intror
+                                                                    (logic.or_intro_right
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     D
@@ -8028,7 +8028,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D
                                                                     D))
-                                                                    (logic.or__introl
+                                                                    (logic.or_intro_left
                                                                     (plth.eq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -8058,7 +8058,7 @@ thm lemma__squareparallelogram :
                                                                     euclidean__axioms.Point
                                                                     R
                                                                     D)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -8097,7 +8097,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     A
                                                                     D)))) =>
-                                                                   logic.and__elim_left
+                                                                   logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     E
@@ -8137,7 +8137,7 @@ thm lemma__squareparallelogram :
                                                                   B
                                                                   A
                                                                   H43))
-                                                              (logic.and__ind
+                                                              (logic.and_ind
                                                                  (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -8223,7 +8223,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))))) =>
-                                                                  logic.and__ind
+                                                                  logic.and_ind
                                                                     (
                                                                     euclidean__axioms.Cong
                                                                     A
@@ -8297,7 +8297,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -8325,7 +8325,7 @@ thm lemma__squareparallelogram :
                                                                     H46)
                                                                     H44)
                                                                  H34))
-                                                             (logic.ex__intro
+                                                             (logic.ex_intro
                                                                 euclidean__axioms.Point
                                                                 (X:(plth.El
                                                                     euclidean__axioms.Point) =>
@@ -8339,7 +8339,7 @@ thm lemma__squareparallelogram :
                                                                     A
                                                                     D))
                                                                 R
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.BetS
                                                                     R
                                                                     A
@@ -8355,7 +8355,7 @@ thm lemma__squareparallelogram :
                                                                A
                                                                R
                                                                H40))
-                                                           (logic.and__ind
+                                                           (logic.and_ind
                                                               (euclidean__axioms.Cong
                                                                  A
                                                                  B
@@ -8436,7 +8436,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))))) =>
-                                                               logic.and__ind
+                                                               logic.and_ind
                                                                  (euclidean__axioms.Cong
                                                                     A
                                                                     B
@@ -8509,7 +8509,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A)))))) =>
-                                                                  logic.and__ind
+                                                                  logic.and_ind
                                                                     (
                                                                     euclidean__axioms.Cong
                                                                     A
@@ -8570,7 +8570,7 @@ thm lemma__squareparallelogram :
                                                                     c
                                                                     E
                                                                     A))))) =>
-                                                                    logic.and__ind3
+                                                                    logic.and_ind_left
                                                                     (euclidean__defs.Per
                                                                     E
                                                                     A
@@ -8680,7 +8680,7 @@ thm lemma__squareparallelogram :
                                                                     B0
                                                                     A0
                                                                     C0)) =>
-                                                                    logic.and__elim_right
+                                                                    logic.and_elim_right
                                                                     (euclidean__defs.RT
                                                                     G
                                                                     A0
@@ -8748,7 +8748,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     A
                                                                     R)))))) =>
-                                                         logic.and__ind
+                                                         logic.and_ind
                                                            (euclidean__axioms.Col
                                                               A
                                                               R
@@ -8803,7 +8803,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     A
                                                                     R))))) =>
-                                                            logic.and__ind
+                                                            logic.and_ind
                                                               (euclidean__axioms.Col
                                                                  A
                                                                  D
@@ -8848,7 +8848,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     A
                                                                     R)))) =>
-                                                               logic.and__ind
+                                                               logic.and_ind
                                                                  (euclidean__axioms.Col
                                                                     D
                                                                     R
@@ -8887,7 +8887,7 @@ thm lemma__squareparallelogram :
                                                                     D
                                                                     A
                                                                     R))) =>
-                                                                  logic.and__elim_right
+                                                                  logic.and_elim_right
                                                                     (
                                                                     euclidean__axioms.Col
                                                                     R
@@ -8907,7 +8907,7 @@ thm lemma__squareparallelogram :
                                                              A
                                                              D
                                                              H35)))
-                                                      (logic.or__intror
+                                                      (logic.or_intro_right
                                                          (plth.eq
                                                             euclidean__axioms.Point
                                                             R
@@ -8936,7 +8936,7 @@ thm lemma__squareparallelogram :
                                                                     R
                                                                     D
                                                                     A)))))
-                                                         (logic.or__intror
+                                                         (logic.or_intro_right
                                                             (plth.eq
                                                                euclidean__axioms.Point
                                                                R
@@ -8960,7 +8960,7 @@ thm lemma__squareparallelogram :
                                                                     R
                                                                     D
                                                                     A))))
-                                                            (logic.or__intror
+                                                            (logic.or_intro_right
                                                                (plth.eq
                                                                   euclidean__axioms.Point
                                                                   A
@@ -8979,7 +8979,7 @@ thm lemma__squareparallelogram :
                                                                     R
                                                                     D
                                                                     A)))
-                                                               (logic.or__intror
+                                                               (logic.or_intro_right
                                                                   (euclidean__axioms.BetS
                                                                     A
                                                                     R
@@ -8993,7 +8993,7 @@ thm lemma__squareparallelogram :
                                                                     R
                                                                     D
                                                                     A))
-                                                                  (logic.or__introl
+                                                                  (logic.or_intro_left
                                                                     (euclidean__axioms.BetS
                                                                     R
                                                                     A
@@ -9120,7 +9120,7 @@ thm lemma__squareparallelogram :
                                                                B
                                                                A
                                                                R)))))) =>
-                                         logic.and__ind
+                                         logic.and_ind
                                            (euclidean__axioms.nCol
                                               A
                                               R
@@ -9173,7 +9173,7 @@ thm lemma__squareparallelogram :
                                                                B
                                                                A
                                                                R))))) =>
-                                            logic.and__elim_left
+                                            logic.and_elim_left
                                               (euclidean__axioms.nCol
                                                  A
                                                  B
@@ -9232,7 +9232,7 @@ thm lemma__squareparallelogram :
                                                        euclidean__axioms.Point
                                                        R
                                                        D)))) =>
-                                       logic.and__ind
+                                       logic.and_ind
                                          (plth.neq
                                             euclidean__axioms.Point
                                             A
@@ -9265,7 +9265,7 @@ thm lemma__squareparallelogram :
                                                        euclidean__axioms.Point
                                                        R
                                                        D))) =>
-                                          logic.and__elim_left
+                                          logic.and_elim_left
                                             (plth.neq
                                                euclidean__axioms.Point
                                                R
@@ -9281,7 +9281,7 @@ thm lemma__squareparallelogram :
                                            A
                                            D
                                            H19)))
-                                    (logic.or__intror
+                                    (logic.or_intro_right
                                        (plth.eq
                                           euclidean__axioms.Point
                                           D
@@ -9310,7 +9310,7 @@ thm lemma__squareparallelogram :
                                                       D
                                                       A
                                                       A)))))
-                                       (logic.or__intror
+                                       (logic.or_intro_right
                                           (plth.eq
                                              euclidean__axioms.Point
                                              D
@@ -9334,7 +9334,7 @@ thm lemma__squareparallelogram :
                                                       D
                                                       A
                                                       A))))
-                                          (logic.or__introl
+                                          (logic.or_intro_left
                                              (plth.eq
                                                 euclidean__axioms.Point
                                                 A
@@ -9357,7 +9357,7 @@ thm lemma__squareparallelogram :
                                    (logic.eq__refl
                                       euclidean__axioms.Point
                                       A))
-                                  (logic.or__intror
+                                  (logic.or_intro_right
                                      (plth.eq euclidean__axioms.Point D A)
                                      (plth.or
                                         (plth.eq
@@ -9383,7 +9383,7 @@ thm lemma__squareparallelogram :
                                                     D
                                                     R
                                                     A)))))
-                                     (logic.or__intror
+                                     (logic.or_intro_right
                                         (plth.eq
                                            euclidean__axioms.Point
                                            D
@@ -9407,7 +9407,7 @@ thm lemma__squareparallelogram :
                                                     D
                                                     R
                                                     A))))
-                                        (logic.or__intror
+                                        (logic.or_intro_right
                                            (plth.eq
                                               euclidean__axioms.Point
                                               A
@@ -9426,7 +9426,7 @@ thm lemma__squareparallelogram :
                                                     D
                                                     R
                                                     A)))
-                                           (logic.or__intror
+                                           (logic.or_intro_right
                                               (euclidean__axioms.BetS
                                                  A
                                                  D
@@ -9440,7 +9440,7 @@ thm lemma__squareparallelogram :
                                                     D
                                                     R
                                                     A))
-                                              (logic.or__introl
+                                              (logic.or_intro_left
                                                  (euclidean__axioms.BetS
                                                     D
                                                     A
@@ -9480,7 +9480,7 @@ thm lemma__squareparallelogram :
                                                             euclidean__axioms.Point
                                                             B
                                                             D))))))) =>
-                                   logic.and__ind
+                                   logic.and_ind
                                      (plth.neq euclidean__axioms.Point D A)
                                      (plth.and
                                         (plth.neq
@@ -9537,7 +9537,7 @@ thm lemma__squareparallelogram :
                                                             euclidean__axioms.Point
                                                             B
                                                             D)))))) =>
-                                      logic.and__elim_left
+                                      logic.and_elim_left
                                         (plth.neq
                                            euclidean__axioms.Point
                                            A
@@ -9594,7 +9594,7 @@ thm lemma__squareparallelogram :
                            (plth.and
                               (plth.neq euclidean__axioms.Point B A)
                               (plth.neq euclidean__axioms.Point B D))))))) =>
-        logic.and__elim_left
+        logic.and_elim_left
           (plth.neq euclidean__axioms.Point D A)
           (plth.and
              (plth.neq euclidean__axioms.Point A B)
@@ -9607,7 +9607,7 @@ thm lemma__squareparallelogram :
                       (plth.neq euclidean__axioms.Point B D)))))
           H14)
          (lemma__NCdistinct.lemma__NCdistinct D A B H1)))
-     (logic.and__ind
+     (logic.and_ind
         (euclidean__axioms.Cong A B C D)
         (plth.and
            (euclidean__axioms.Cong A B B C)
@@ -9632,7 +9632,7 @@ thm lemma__squareparallelogram :
                            (plth.and
                               (euclidean__defs.Per B C D)
                               (euclidean__defs.Per C D A))))))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong A B B C)
            (plth.and
               (euclidean__axioms.Cong A B D A)
@@ -9653,7 +9653,7 @@ thm lemma__squareparallelogram :
                            (plth.and
                               (euclidean__defs.Per B C D)
                               (euclidean__defs.Per C D A)))))) =>
-            logic.and__ind
+            logic.and_ind
               (euclidean__axioms.Cong A B D A)
               (plth.and
                  (euclidean__defs.Per D A B)
@@ -9670,7 +9670,7 @@ thm lemma__squareparallelogram :
                            (plth.and
                               (euclidean__defs.Per B C D)
                               (euclidean__defs.Per C D A))))) =>
-               logic.and__ind3
+               logic.and_ind_left
                  (euclidean__defs.Per D A B)
                  (plth.and
                     (euclidean__defs.Per A B C)

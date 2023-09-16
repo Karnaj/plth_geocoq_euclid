@@ -36,7 +36,7 @@ thm lemma__trichotomy1 :
              euclidean__axioms.Point
              (P:(plth.El euclidean__axioms.Point) =>
               plth.and (euclidean__axioms.BetS B A P) (euclidean__axioms.Cong A P A B)))) =>
-    logic.ex__ind
+    logic.ex_elim
       euclidean__axioms.Point
       (P:(plth.El euclidean__axioms.Point) =>
        plth.and (euclidean__axioms.BetS B A P) (euclidean__axioms.Cong A P A B))
@@ -44,7 +44,7 @@ thm lemma__trichotomy1 :
       (P:(plth.El euclidean__axioms.Point) =>
        H5:(plth.Prf
              (plth.and (euclidean__axioms.BetS B A P) (euclidean__axioms.Cong A P A B))) =>
-       logic.and__ind3
+       logic.and_ind_left
          (euclidean__axioms.BetS B A P)
          (euclidean__axioms.Cong A P A B)
          (euclidean__axioms.Cong A B C D)
@@ -59,7 +59,7 @@ thm lemma__trichotomy1 :
                          plth.and
                            (euclidean__axioms.BetS P A E)
                            (euclidean__axioms.Cong A E C D)))) =>
-              logic.ex__ind
+              logic.ex_elim
                 euclidean__axioms.Point
                 (E:(plth.El euclidean__axioms.Point) =>
                  plth.and
@@ -71,7 +71,7 @@ thm lemma__trichotomy1 :
                         (plth.and
                            (euclidean__axioms.BetS P A E)
                            (euclidean__axioms.Cong A E C D))) =>
-                 logic.and__ind
+                 logic.and_ind
                    (euclidean__axioms.BetS P A E)
                    (euclidean__axioms.Cong A E C D)
                    (euclidean__axioms.Cong A B C D)
@@ -249,14 +249,14 @@ thm lemma__trichotomy1 :
                        (H16:(plth.Prf (euclidean__axioms.BetS A E B)) =>
                         (H17:(plth.Prf (euclidean__defs.Lt C D A B)) =>
                          H0 H17)
-                          (logic.ex__intro
+                          (logic.ex_intro
                              euclidean__axioms.Point
                              (X:(plth.El euclidean__axioms.Point) =>
                               plth.and
                                 (euclidean__axioms.BetS A X B)
                                 (euclidean__axioms.Cong A X C D))
                              E
-                             (logic.conj
+                             (logic.and_intro
                                 (euclidean__axioms.BetS A E B)
                                 (euclidean__axioms.Cong A E C D)
                                 H16
@@ -276,14 +276,14 @@ thm lemma__trichotomy1 :
                               D
                               H17
                               H14))
-                          (logic.ex__intro
+                          (logic.ex_intro
                              euclidean__axioms.Point
                              (X:(plth.El euclidean__axioms.Point) =>
                               plth.and
                                 (euclidean__axioms.BetS A X E)
                                 (euclidean__axioms.Cong A X A B))
                              B
-                             (logic.conj
+                             (logic.and_intro
                                 (euclidean__axioms.BetS A B E)
                                 (euclidean__axioms.Cong A B A B)
                                 H15
@@ -299,7 +299,7 @@ thm lemma__trichotomy1 :
                         (plth.and
                            (plth.neq euclidean__axioms.Point B A)
                            (plth.neq euclidean__axioms.Point B P)))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (plth.neq euclidean__axioms.Point A P)
                  (plth.and
                     (plth.neq euclidean__axioms.Point B A)

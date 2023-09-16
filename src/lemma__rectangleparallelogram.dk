@@ -37,7 +37,7 @@ thm lemma__rectangleparallelogram :
                  plth.and
                    (euclidean__axioms.BetS A M C)
                    (euclidean__axioms.BetS B M D)))) =>
-       logic.ex__ind
+       logic.ex_elim
          euclidean__axioms.Point
          (M:(plth.El euclidean__axioms.Point) =>
           plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.BetS B M D))
@@ -47,13 +47,13 @@ thm lemma__rectangleparallelogram :
                 (plth.and
                    (euclidean__axioms.BetS A M C)
                    (euclidean__axioms.BetS B M D))) =>
-          logic.and__ind
+          logic.and_ind
             (euclidean__axioms.BetS A M C)
             (euclidean__axioms.BetS B M D)
             (euclidean__defs.PG A B C D)
             (H6:(plth.Prf (euclidean__axioms.BetS A M C)) =>
              H7:(plth.Prf (euclidean__axioms.BetS B M D)) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__defs.Per D A B)
                (plth.and
                   (euclidean__defs.Per A B C)
@@ -72,7 +72,7 @@ thm lemma__rectangleparallelogram :
                             (plth.and
                                (euclidean__defs.Per C D A)
                                (euclidean__defs.CR A C B D))))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__defs.Per A B C)
                   (plth.and
                      (euclidean__defs.Per B C D)
@@ -87,7 +87,7 @@ thm lemma__rectangleparallelogram :
                              (plth.and
                                 (euclidean__defs.Per C D A)
                                 (euclidean__defs.CR A C B D)))) =>
-                   logic.and__ind
+                   logic.and_ind
                      (euclidean__defs.Per B C D)
                      (plth.and
                         (euclidean__defs.Per C D A)
@@ -98,7 +98,7 @@ thm lemma__rectangleparallelogram :
                              (plth.and
                                 (euclidean__defs.Per C D A)
                                 (euclidean__defs.CR A C B D))) =>
-                      logic.and__ind
+                      logic.and_ind
                         (euclidean__defs.Per C D A)
                         (euclidean__defs.CR A C B D)
                         (euclidean__defs.PG A B C D)
@@ -224,7 +224,7 @@ thm lemma__rectangleparallelogram :
                                                            C
                                                            D)) =>
                                                  H39)
-                                                  (logic.conj
+                                                  (logic.and_intro
                                                      (euclidean__defs.Par
                                                         A
                                                         B
@@ -237,7 +237,7 @@ thm lemma__rectangleparallelogram :
                                                         C)
                                                      H29
                                                      H38))
-                                                 (logic.ex__intro
+                                                 (logic.ex_intro
                                                     euclidean__axioms.Point
                                                     (U:(plth.El
                                                           euclidean__axioms.Point) =>
@@ -314,7 +314,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     V)))))))))))))))
                                                     A
-                                                    (logic.ex__intro
+                                                    (logic.ex_intro
                                                        euclidean__axioms.Point
                                                        (V:(plth.El
                                                              euclidean__axioms.Point) =>
@@ -387,7 +387,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     V))))))))))))))
                                                        D
-                                                       (logic.ex__intro
+                                                       (logic.ex_intro
                                                           euclidean__axioms.Point
                                                           (u:(plth.El
                                                                 euclidean__axioms.Point) =>
@@ -456,7 +456,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     D)))))))))))))
                                                           B
-                                                          (logic.ex__intro
+                                                          (logic.ex_intro
                                                              euclidean__axioms.Point
                                                              (v:(plth.El
                                                                    euclidean__axioms.Point) =>
@@ -521,7 +521,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     D))))))))))))
                                                              C
-                                                             (logic.ex__intro
+                                                             (logic.ex_intro
                                                                 euclidean__axioms.Point
                                                                 (X:(plth.El
                                                                     euclidean__axioms.Point) =>
@@ -582,7 +582,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     D)))))))))))
                                                                 M
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -639,7 +639,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D))))))))))
                                                                    H31
-                                                                   (logic.conj
+                                                                   (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -691,7 +691,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D)))))))))
                                                                     H32
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     D
@@ -738,7 +738,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D))))))))
                                                                     H34
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     D
@@ -780,7 +780,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D)))))))
                                                                     H35
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -817,7 +817,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D))))))
                                                                     H31
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -849,7 +849,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D)))))
                                                                     H36
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     B
                                                                     C
@@ -876,7 +876,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D))))
                                                                     H37
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     B
@@ -898,7 +898,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D)))
                                                                     H32
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -915,7 +915,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     D))
                                                                     H30
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -926,7 +926,7 @@ thm lemma__rectangleparallelogram :
                                                                     D)
                                                                     H6
                                                                     H7))))))))))))))))
-                                                (logic.or__intror
+                                                (logic.or_intro_right
                                                    (plth.eq
                                                       euclidean__axioms.Point
                                                       B
@@ -955,7 +955,7 @@ thm lemma__rectangleparallelogram :
                                                                   B
                                                                   C
                                                                   C)))))
-                                                   (logic.or__intror
+                                                   (logic.or_intro_right
                                                       (plth.eq
                                                          euclidean__axioms.Point
                                                          B
@@ -979,7 +979,7 @@ thm lemma__rectangleparallelogram :
                                                                   B
                                                                   C
                                                                   C))))
-                                                      (logic.or__introl
+                                                      (logic.or_intro_left
                                                          (plth.eq
                                                             euclidean__axioms.Point
                                                             C
@@ -999,7 +999,7 @@ thm lemma__rectangleparallelogram :
                                                                   C
                                                                   C)))
                                                          H24))))
-                                               (logic.or__intror
+                                               (logic.or_intro_right
                                                   (plth.eq
                                                      euclidean__axioms.Point
                                                      B
@@ -1028,7 +1028,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  B
                                                                  C)))))
-                                                  (logic.or__introl
+                                                  (logic.or_intro_left
                                                      (plth.eq
                                                         euclidean__axioms.Point
                                                         B
@@ -1053,7 +1053,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  C))))
                                                      H22)))
-                                              (logic.or__intror
+                                              (logic.or_intro_right
                                                  (plth.eq
                                                     euclidean__axioms.Point
                                                     A
@@ -1082,7 +1082,7 @@ thm lemma__rectangleparallelogram :
                                                                 A
                                                                 D
                                                                 D)))))
-                                                 (logic.or__intror
+                                                 (logic.or_intro_right
                                                     (plth.eq
                                                        euclidean__axioms.Point
                                                        A
@@ -1106,7 +1106,7 @@ thm lemma__rectangleparallelogram :
                                                                 A
                                                                 D
                                                                 D))))
-                                                    (logic.or__introl
+                                                    (logic.or_intro_left
                                                        (plth.eq
                                                           euclidean__axioms.Point
                                                           D
@@ -1126,7 +1126,7 @@ thm lemma__rectangleparallelogram :
                                                                 D
                                                                 D)))
                                                        H33))))
-                                             (logic.or__intror
+                                             (logic.or_intro_right
                                                 (plth.eq
                                                    euclidean__axioms.Point
                                                    A
@@ -1155,7 +1155,7 @@ thm lemma__rectangleparallelogram :
                                                                A
                                                                A
                                                                D)))))
-                                                (logic.or__introl
+                                                (logic.or_intro_left
                                                    (plth.eq
                                                       euclidean__axioms.Point
                                                       A
@@ -1211,7 +1211,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     A))))))) =>
-                                             logic.and__ind2
+                                             logic.and_ind_right
                                                (plth.neq
                                                   euclidean__axioms.Point
                                                   A
@@ -1269,7 +1269,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     C
                                                                     A)))))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (plth.neq
                                                      euclidean__axioms.Point
                                                      B
@@ -1330,7 +1330,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))))))) =>
-                                            logic.and__ind2
+                                            logic.and_ind_right
                                               (plth.neq
                                                  euclidean__axioms.Point
                                                  C
@@ -1388,7 +1388,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))))) =>
-                                               logic.and__ind2
+                                               logic.and_ind_right
                                                  (plth.neq
                                                     euclidean__axioms.Point
                                                     D
@@ -1436,7 +1436,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (plth.neq
                                                        euclidean__axioms.Point
                                                        C
@@ -1474,7 +1474,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C)))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (plth.neq
                                                           euclidean__axioms.Point
                                                           D
@@ -1502,7 +1502,7 @@ thm lemma__rectangleparallelogram :
                                                                     euclidean__axioms.Point
                                                                     A
                                                                     C))) =>
-                                                        logic.and__elim_left
+                                                        logic.and_elim_left
                                                           (plth.neq
                                                              euclidean__axioms.Point
                                                              A
@@ -1551,7 +1551,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  C
                                                                  P)))))) =>
-                                           logic.ex__ind
+                                           logic.ex_elim
                                              euclidean__axioms.Point
                                              (P:(plth.El
                                                    euclidean__axioms.Point) =>
@@ -1597,7 +1597,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  C
                                                                  P))))) =>
-                                              logic.and__ind
+                                              logic.and_ind
                                                 (plth.neq
                                                    euclidean__axioms.Point
                                                    A
@@ -1637,7 +1637,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  C
                                                                  P)))) =>
-                                                 logic.and__ind
+                                                 logic.and_ind
                                                    (plth.neq
                                                       euclidean__axioms.Point
                                                       B
@@ -1667,7 +1667,7 @@ thm lemma__rectangleparallelogram :
                                                                  B
                                                                  C
                                                                  P))) =>
-                                                    logic.and__ind
+                                                    logic.and_ind
                                                       (euclidean__axioms.Col
                                                          A
                                                          D
@@ -1800,7 +1800,7 @@ thm lemma__rectangleparallelogram :
                                                                     P
                                                                     C
                                                                     B)))))) =>
-                                                                 logic.and__elim_left
+                                                                 logic.and_elim_left
                                                                    (euclidean__axioms.Col
                                                                     C
                                                                     B
@@ -1868,7 +1868,7 @@ thm lemma__rectangleparallelogram :
                                                                     P
                                                                     D
                                                                     A)))))) =>
-                                                              logic.and__elim_left
+                                                              logic.and_elim_left
                                                                 (euclidean__axioms.Col
                                                                    D
                                                                    A
@@ -1965,7 +1965,7 @@ thm lemma__rectangleparallelogram :
                                                                     B
                                                                     D
                                                                     A)))))) =>
-                                                                logic.and__elim_left
+                                                                logic.and_elim_left
                                                                   (euclidean__axioms.Col
                                                                     D
                                                                     A
@@ -2298,7 +2298,7 @@ thm lemma__rectangleparallelogram :
                                                                     A
                                                                     C
                                                                     B)))))) =>
-                                                               logic.and__ind2
+                                                               logic.and_ind_right
                                                                  (euclidean__axioms.Col
                                                                     C
                                                                     B
@@ -2350,7 +2350,7 @@ thm lemma__rectangleparallelogram :
                                                                     A
                                                                     C
                                                                     B))))) =>
-                                                                  logic.and__ind2
+                                                                  logic.and_ind_right
                                                                     (
                                                                     euclidean__axioms.Col
                                                                     C
@@ -2393,7 +2393,7 @@ thm lemma__rectangleparallelogram :
                                                                     A
                                                                     C
                                                                     B)))) =>
-                                                                    logic.and__elim_left
+                                                                    logic.and_elim_left
                                                                     (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -2660,7 +2660,7 @@ thm lemma__rectangleparallelogram :
                                                 H32)
                                              H31)
                                             H30))
-                                        (logic.ex__intro
+                                        (logic.ex_intro
                                            euclidean__axioms.Point
                                            (U:(plth.El
                                                  euclidean__axioms.Point) =>
@@ -2737,7 +2737,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     V)))))))))))))))
                                            A
-                                           (logic.ex__intro
+                                           (logic.ex_intro
                                               euclidean__axioms.Point
                                               (V:(plth.El
                                                     euclidean__axioms.Point) =>
@@ -2810,7 +2810,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     V))))))))))))))
                                               B
-                                              (logic.ex__intro
+                                              (logic.ex_intro
                                                  euclidean__axioms.Point
                                                  (u:(plth.El
                                                        euclidean__axioms.Point) =>
@@ -2879,7 +2879,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     B)))))))))))))
                                                  D
-                                                 (logic.ex__intro
+                                                 (logic.ex_intro
                                                     euclidean__axioms.Point
                                                     (v:(plth.El
                                                           euclidean__axioms.Point) =>
@@ -2944,7 +2944,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     B))))))))))))
                                                     C
-                                                    (logic.ex__intro
+                                                    (logic.ex_intro
                                                        euclidean__axioms.Point
                                                        (X:(plth.El
                                                              euclidean__axioms.Point) =>
@@ -3005,7 +3005,7 @@ thm lemma__rectangleparallelogram :
                                                                     X
                                                                     B)))))))))))
                                                        M
-                                                       (logic.conj
+                                                       (logic.and_intro
                                                           (plth.neq
                                                              euclidean__axioms.Point
                                                              A
@@ -3062,7 +3062,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B))))))))))
                                                           H17
-                                                          (logic.conj
+                                                          (logic.and_intro
                                                              (plth.neq
                                                                 euclidean__axioms.Point
                                                                 C
@@ -3114,7 +3114,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B)))))))))
                                                              H18
-                                                             (logic.conj
+                                                             (logic.and_intro
                                                                 (euclidean__axioms.Col
                                                                    A
                                                                    B
@@ -3161,7 +3161,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B))))))))
                                                                 H21
-                                                                (logic.conj
+                                                                (logic.and_intro
                                                                    (euclidean__axioms.Col
                                                                     A
                                                                     B
@@ -3203,7 +3203,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B)))))))
                                                                    H23
-                                                                   (logic.conj
+                                                                   (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     A
@@ -3240,7 +3240,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B))))))
                                                                     H17
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     D
@@ -3272,7 +3272,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B)))))
                                                                     H27
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.Col
                                                                     C
                                                                     D
@@ -3299,7 +3299,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B))))
                                                                     H25
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.neq
                                                                     euclidean__axioms.Point
                                                                     D
@@ -3321,7 +3321,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B)))
                                                                     H19
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (plth.not
                                                                     (euclidean__defs.Meet
                                                                     A
@@ -3338,7 +3338,7 @@ thm lemma__rectangleparallelogram :
                                                                     M
                                                                     B))
                                                                     H16
-                                                                    (logic.conj
+                                                                    (logic.and_intro
                                                                     (euclidean__axioms.BetS
                                                                     A
                                                                     M
@@ -3354,7 +3354,7 @@ thm lemma__rectangleparallelogram :
                                           M
                                           D
                                           H7))
-                                      (logic.or__intror
+                                      (logic.or_intro_right
                                          (plth.eq
                                             euclidean__axioms.Point
                                             C
@@ -3383,7 +3383,7 @@ thm lemma__rectangleparallelogram :
                                                         C
                                                         D
                                                         D)))))
-                                         (logic.or__intror
+                                         (logic.or_intro_right
                                             (plth.eq
                                                euclidean__axioms.Point
                                                C
@@ -3407,7 +3407,7 @@ thm lemma__rectangleparallelogram :
                                                         C
                                                         D
                                                         D))))
-                                            (logic.or__introl
+                                            (logic.or_intro_left
                                                (plth.eq
                                                   euclidean__axioms.Point
                                                   D
@@ -3430,7 +3430,7 @@ thm lemma__rectangleparallelogram :
                                      (logic.eq__refl
                                         euclidean__axioms.Point
                                         D))
-                                    (logic.or__intror
+                                    (logic.or_intro_right
                                        (plth.eq
                                           euclidean__axioms.Point
                                           C
@@ -3459,7 +3459,7 @@ thm lemma__rectangleparallelogram :
                                                       C
                                                       C
                                                       D)))))
-                                       (logic.or__introl
+                                       (logic.or_intro_left
                                           (plth.eq
                                              euclidean__axioms.Point
                                              C
@@ -3487,7 +3487,7 @@ thm lemma__rectangleparallelogram :
                                    (logic.eq__refl
                                       euclidean__axioms.Point
                                       C))
-                                  (logic.or__intror
+                                  (logic.or_intro_right
                                      (plth.eq
                                         euclidean__axioms.Point
                                         A
@@ -3516,7 +3516,7 @@ thm lemma__rectangleparallelogram :
                                                     A
                                                     B
                                                     B)))))
-                                     (logic.or__intror
+                                     (logic.or_intro_right
                                         (plth.eq
                                            euclidean__axioms.Point
                                            A
@@ -3540,7 +3540,7 @@ thm lemma__rectangleparallelogram :
                                                     A
                                                     B
                                                     B))))
-                                        (logic.or__introl
+                                        (logic.or_intro_left
                                            (plth.eq
                                               euclidean__axioms.Point
                                               B
@@ -3563,7 +3563,7 @@ thm lemma__rectangleparallelogram :
                                  (logic.eq__refl
                                     euclidean__axioms.Point
                                     B))
-                                (logic.or__intror
+                                (logic.or_intro_right
                                    (plth.eq
                                       euclidean__axioms.Point
                                       A
@@ -3592,7 +3592,7 @@ thm lemma__rectangleparallelogram :
                                                   A
                                                   A
                                                   B)))))
-                                   (logic.or__introl
+                                   (logic.or_intro_left
                                       (plth.eq
                                          euclidean__axioms.Point
                                          A
@@ -3650,7 +3650,7 @@ thm lemma__rectangleparallelogram :
                                                          euclidean__axioms.Point
                                                          A
                                                          C))))))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (plth.neq
                                      euclidean__axioms.Point
                                      C
@@ -3708,7 +3708,7 @@ thm lemma__rectangleparallelogram :
                                                          euclidean__axioms.Point
                                                          A
                                                          C)))))) =>
-                                   logic.and__ind2
+                                   logic.and_ind_right
                                      (plth.neq
                                         euclidean__axioms.Point
                                         D
@@ -3756,7 +3756,7 @@ thm lemma__rectangleparallelogram :
                                                          euclidean__axioms.Point
                                                          A
                                                          C))))) =>
-                                      logic.and__ind2
+                                      logic.and_ind_right
                                         (plth.neq
                                            euclidean__axioms.Point
                                            C
@@ -3794,7 +3794,7 @@ thm lemma__rectangleparallelogram :
                                                          euclidean__axioms.Point
                                                          A
                                                          C)))) =>
-                                         logic.and__elim_left
+                                         logic.and_elim_left
                                            (plth.neq
                                               euclidean__axioms.Point
                                               D
@@ -3847,7 +3847,7 @@ thm lemma__rectangleparallelogram :
                                                         euclidean__axioms.Point
                                                         A
                                                         C))))))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (plth.neq euclidean__axioms.Point C D)
                                  (plth.and
                                     (plth.neq
@@ -3909,7 +3909,7 @@ thm lemma__rectangleparallelogram :
                                                        euclidean__axioms.Point
                                                        C
                                                        A))))))) =>
-                              logic.and__elim_left
+                              logic.and_elim_left
                                 (plth.neq euclidean__axioms.Point A B)
                                 (plth.and
                                    (plth.neq euclidean__axioms.Point B C)
@@ -3959,7 +3959,7 @@ thm lemma__rectangleparallelogram :
                                                    C
                                                    D
                                                    P)))))) =>
-                             logic.ex__ind
+                             logic.ex_elim
                                euclidean__axioms.Point
                                (P:(plth.El euclidean__axioms.Point) =>
                                 plth.and
@@ -3991,7 +3991,7 @@ thm lemma__rectangleparallelogram :
                                                    C
                                                    D
                                                    P))))) =>
-                                logic.and__ind
+                                logic.and_ind
                                   (plth.neq euclidean__axioms.Point A B)
                                   (plth.and
                                      (plth.neq euclidean__axioms.Point C D)
@@ -4019,7 +4019,7 @@ thm lemma__rectangleparallelogram :
                                                    C
                                                    D
                                                    P)))) =>
-                                   logic.and__ind
+                                   logic.and_ind
                                      (plth.neq euclidean__axioms.Point C D)
                                      (plth.and
                                         (euclidean__axioms.Col A B P)
@@ -4040,7 +4040,7 @@ thm lemma__rectangleparallelogram :
                                                    C
                                                    D
                                                    P))) =>
-                                      logic.and__ind
+                                      logic.and_ind
                                         (euclidean__axioms.Col A B P)
                                         (euclidean__axioms.Col C D P)
                                         plth.false
@@ -4168,7 +4168,7 @@ thm lemma__rectangleparallelogram :
                                                                     P
                                                                     B
                                                                     A)))))) =>
-                                                logic.and__elim_left
+                                                logic.and_elim_left
                                                   (euclidean__axioms.Col
                                                      B
                                                      A
@@ -4263,7 +4263,7 @@ thm lemma__rectangleparallelogram :
                                                                     D
                                                                     B
                                                                     A)))))) =>
-                                                  logic.and__ind2
+                                                  logic.and_ind_right
                                                     (euclidean__axioms.Col
                                                        B
                                                        A
@@ -4311,7 +4311,7 @@ thm lemma__rectangleparallelogram :
                                                                     D
                                                                     B
                                                                     A))))) =>
-                                                     logic.and__ind2
+                                                     logic.and_ind_right
                                                        (euclidean__axioms.Col
                                                           B
                                                           D
@@ -4349,7 +4349,7 @@ thm lemma__rectangleparallelogram :
                                                                     D
                                                                     B
                                                                     A)))) =>
-                                                        logic.and__elim_left
+                                                        logic.and_elim_left
                                                           (euclidean__axioms.Col
                                                              D
                                                              A
@@ -4689,7 +4689,7 @@ thm lemma__rectangleparallelogram :
                H0)
             H5)
          H4)
-        (logic.and__ind2
+        (logic.and_ind_right
            (euclidean__defs.Per D A B)
            (plth.and
               (euclidean__defs.Per A B C)
@@ -4720,7 +4720,7 @@ thm lemma__rectangleparallelogram :
                                plth.and
                                  (euclidean__axioms.BetS A X C)
                                  (euclidean__axioms.BetS B X D))))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__defs.Per A B C)
               (plth.and
                  (euclidean__defs.Per B C D)
@@ -4749,7 +4749,7 @@ thm lemma__rectangleparallelogram :
                                plth.and
                                  (euclidean__axioms.BetS A X C)
                                  (euclidean__axioms.BetS B X D)))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__defs.Per B C D)
                  (plth.and
                     (euclidean__defs.Per C D A)
@@ -4774,7 +4774,7 @@ thm lemma__rectangleparallelogram :
                                plth.and
                                  (euclidean__axioms.BetS A X C)
                                  (euclidean__axioms.BetS B X D))))) =>
-                  logic.and__elim_right
+                  logic.and_elim_right
                     (euclidean__defs.Per C D A)
                     (plth.ex
                        euclidean__axioms.Point
@@ -4786,7 +4786,7 @@ thm lemma__rectangleparallelogram :
                  H7)
               H5)
            H0))
-       (logic.and__ind2
+       (logic.and_ind_right
           (euclidean__defs.Per D A B)
           (plth.and
              (euclidean__defs.Per A B C)
@@ -4802,7 +4802,7 @@ thm lemma__rectangleparallelogram :
                        (plth.and
                           (euclidean__defs.Per C D A)
                           (euclidean__defs.CR A C B D))))) =>
-           logic.and__ind2
+           logic.and_ind_right
              (euclidean__defs.Per A B C)
              (plth.and
                 (euclidean__defs.Per B C D)
@@ -4814,7 +4814,7 @@ thm lemma__rectangleparallelogram :
                        (plth.and
                           (euclidean__defs.Per C D A)
                           (euclidean__defs.CR A C B D)))) =>
-              logic.and__ind2
+              logic.and_ind_right
                 (euclidean__defs.Per B C D)
                 (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))
                 (euclidean__axioms.nCol C D A)
@@ -4822,7 +4822,7 @@ thm lemma__rectangleparallelogram :
                        (plth.and
                           (euclidean__defs.Per C D A)
                           (euclidean__defs.CR A C B D))) =>
-                 logic.and__ind3
+                 logic.and_ind_left
                    (euclidean__defs.Per C D A)
                    (euclidean__defs.CR A C B D)
                    (euclidean__axioms.nCol C D A)
@@ -4832,7 +4832,7 @@ thm lemma__rectangleparallelogram :
                 H6)
              H4)
           H0))
-      (logic.and__ind2
+      (logic.and_ind_right
          (euclidean__defs.Per D A B)
          (plth.and
             (euclidean__defs.Per A B C)
@@ -4846,7 +4846,7 @@ thm lemma__rectangleparallelogram :
                    (plth.and
                       (euclidean__defs.Per B C D)
                       (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))))) =>
-          logic.and__ind3
+          logic.and_ind_left
             (euclidean__defs.Per A B C)
             (plth.and
                (euclidean__defs.Per B C D)
@@ -4856,7 +4856,7 @@ thm lemma__rectangleparallelogram :
              lemma__rightangleNC.lemma__rightangleNC A B C H4)
             H3)
          H0))
-     (logic.and__ind3
+     (logic.and_ind_left
         (euclidean__defs.Per D A B)
         (plth.and
            (euclidean__defs.Per A B C)

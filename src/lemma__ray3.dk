@@ -27,14 +27,14 @@ thm lemma__ray3 :
             euclidean__axioms.Point
             (E:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS E B D) (euclidean__axioms.BetS E B C)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (E:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS E B D) (euclidean__axioms.BetS E B C))
      (euclidean__defs.Out B D V)
      (E:(plth.El euclidean__axioms.Point) =>
       H2:(plth.Prf (plth.and (euclidean__axioms.BetS E B D) (euclidean__axioms.BetS E B C))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS E B D)
         (euclidean__axioms.BetS E B C)
         (euclidean__defs.Out B D V)
@@ -47,7 +47,7 @@ thm lemma__ray3 :
                     plth.and
                       (euclidean__axioms.BetS H5 B V)
                       (euclidean__axioms.BetS H5 B C)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (H6:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS H6 B V) (euclidean__axioms.BetS H6 B C))
@@ -57,7 +57,7 @@ thm lemma__ray3 :
                    (plth.and
                       (euclidean__axioms.BetS H6 B V)
                       (euclidean__axioms.BetS H6 B C))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS H6 B V)
                (euclidean__axioms.BetS H6 B C)
                (euclidean__defs.Out B D V)
@@ -66,14 +66,14 @@ thm lemma__ray3 :
                 (H10:(plth.Prf (plth.not (plth.not (euclidean__axioms.BetS E B V)))) =>
                  (H11:(plth.Prf (euclidean__defs.Out B D V)) => H11)
                    ((H11:(plth.Prf (euclidean__axioms.BetS E B V)) =>
-                     logic.ex__intro
+                     logic.ex_intro
                        euclidean__axioms.Point
                        (X:(plth.El euclidean__axioms.Point) =>
                         plth.and
                           (euclidean__axioms.BetS X B V)
                           (euclidean__axioms.BetS X B D))
                        E
-                       (logic.conj
+                       (logic.and_intro
                           (euclidean__axioms.BetS E B V)
                           (euclidean__axioms.BetS E B D)
                           H11

@@ -32,20 +32,20 @@ thm lemma__rectanglerotate :
              euclidean__axioms.Point
              (M:(plth.El euclidean__axioms.Point) =>
               plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.BetS B M D)))) =>
-    logic.ex__ind
+    logic.ex_elim
       euclidean__axioms.Point
       (M:(plth.El euclidean__axioms.Point) =>
        plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.BetS B M D))
       (euclidean__defs.RE B C D A)
       (M:(plth.El euclidean__axioms.Point) =>
        H2:(plth.Prf (plth.and (euclidean__axioms.BetS A M C) (euclidean__axioms.BetS B M D))) =>
-       logic.and__ind
+       logic.and_ind
          (euclidean__axioms.BetS A M C)
          (euclidean__axioms.BetS B M D)
          (euclidean__defs.RE B C D A)
          (H3:(plth.Prf (euclidean__axioms.BetS A M C)) =>
           H4:(plth.Prf (euclidean__axioms.BetS B M D)) =>
-          logic.and__ind
+          logic.and_ind
             (euclidean__defs.Per D A B)
             (plth.and
                (euclidean__defs.Per A B C)
@@ -62,7 +62,7 @@ thm lemma__rectanglerotate :
                          (plth.and
                             (euclidean__defs.Per C D A)
                             (euclidean__defs.CR A C B D))))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__defs.Per A B C)
                (plth.and
                   (euclidean__defs.Per B C D)
@@ -75,7 +75,7 @@ thm lemma__rectanglerotate :
                          (plth.and
                             (euclidean__defs.Per C D A)
                             (euclidean__defs.CR A C B D)))) =>
-                logic.and__ind
+                logic.and_ind
                   (euclidean__defs.Per B C D)
                   (plth.and (euclidean__defs.Per C D A) (euclidean__defs.CR A C B D))
                   (euclidean__defs.RE B C D A)
@@ -84,7 +84,7 @@ thm lemma__rectanglerotate :
                           (plth.and
                              (euclidean__defs.Per C D A)
                              (euclidean__defs.CR A C B D))) =>
-                   logic.and__ind3
+                   logic.and_ind_left
                      (euclidean__defs.Per C D A)
                      (euclidean__defs.CR A C B D)
                      (euclidean__defs.RE B C D A)
@@ -92,7 +92,7 @@ thm lemma__rectanglerotate :
                       (H13:(plth.Prf (euclidean__axioms.BetS C M A)) =>
                        (H14:(plth.Prf (euclidean__defs.CR B D C A)) =>
                         (H15:(plth.Prf (euclidean__defs.RE B C D A)) => H15)
-                          (logic.conj
+                          (logic.and_intro
                              (euclidean__defs.Per A B C)
                              (plth.and
                                 (euclidean__defs.Per B C D)
@@ -102,7 +102,7 @@ thm lemma__rectanglerotate :
                                       (euclidean__defs.Per D A B)
                                       (euclidean__defs.CR B D C A))))
                              H7
-                             (logic.conj
+                             (logic.and_intro
                                 (euclidean__defs.Per B C D)
                                 (plth.and
                                    (euclidean__defs.Per C D A)
@@ -110,25 +110,25 @@ thm lemma__rectanglerotate :
                                       (euclidean__defs.Per D A B)
                                       (euclidean__defs.CR B D C A)))
                                 H9
-                                (logic.conj
+                                (logic.and_intro
                                    (euclidean__defs.Per C D A)
                                    (plth.and
                                       (euclidean__defs.Per D A B)
                                       (euclidean__defs.CR B D C A))
                                    H11
-                                   (logic.conj
+                                   (logic.and_intro
                                       (euclidean__defs.Per D A B)
                                       (euclidean__defs.CR B D C A)
                                       H5
                                       H14)))))
-                         (logic.ex__intro
+                         (logic.ex_intro
                             euclidean__axioms.Point
                             (X:(plth.El euclidean__axioms.Point) =>
                              plth.and
                                (euclidean__axioms.BetS B X D)
                                (euclidean__axioms.BetS C X A))
                             M
-                            (logic.conj
+                            (logic.and_intro
                                (euclidean__axioms.BetS B M D)
                                (euclidean__axioms.BetS C M A)
                                H4
@@ -140,7 +140,7 @@ thm lemma__rectanglerotate :
             H0)
          H2)
       H1)
-     (logic.and__ind2
+     (logic.and_ind_right
         (euclidean__defs.Per D A B)
         (plth.and
            (euclidean__defs.Per A B C)
@@ -169,7 +169,7 @@ thm lemma__rectanglerotate :
                             plth.and
                               (euclidean__axioms.BetS A X C)
                               (euclidean__axioms.BetS B X D))))))) =>
-         logic.and__ind2
+         logic.and_ind_right
            (euclidean__defs.Per A B C)
            (plth.and
               (euclidean__defs.Per B C D)
@@ -194,7 +194,7 @@ thm lemma__rectanglerotate :
                             plth.and
                               (euclidean__axioms.BetS A X C)
                               (euclidean__axioms.BetS B X D)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__defs.Per B C D)
               (plth.and
                  (euclidean__defs.Per C D A)
@@ -215,7 +215,7 @@ thm lemma__rectanglerotate :
                             plth.and
                               (euclidean__axioms.BetS A X C)
                               (euclidean__axioms.BetS B X D))))) =>
-               logic.and__elim_right
+               logic.and_elim_right
                  (euclidean__defs.Per C D A)
                  (plth.ex
                     euclidean__axioms.Point

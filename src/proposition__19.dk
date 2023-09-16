@@ -32,7 +32,7 @@ thm proposition__19 :
              (euclidean__defs.Lt A B A C)
              (H10:(plth.Prf (plth.not (euclidean__defs.Lt A B A C))) =>
               (H41:(plth.Prf plth.false) =>
-               logic.false__ind plth.false H41)
+               logic.false_elim plth.false H41)
                 (H9 H10)))
             (H9:(plth.Prf (plth.not (euclidean__defs.Lt A B A C))) =>
              (H10:(plth.Prf (euclidean__axioms.Cong A B A C)) =>
@@ -63,7 +63,7 @@ thm proposition__19 :
                                      euclidean__axioms.Point
                                      A
                                      C))))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point A B)
                (plth.and
                   (plth.neq euclidean__axioms.Point B C)
@@ -91,7 +91,7 @@ thm proposition__19 :
                                       euclidean__axioms.Point
                                       A
                                       C)))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (plth.neq euclidean__axioms.Point B C)
                   (plth.and
                      (plth.neq euclidean__axioms.Point A C)
@@ -115,7 +115,7 @@ thm proposition__19 :
                                       euclidean__axioms.Point
                                       A
                                       C))))) =>
-                   logic.and__elim_left
+                   logic.and_elim_left
                      (plth.neq euclidean__axioms.Point A C)
                      (plth.and
                         (plth.neq euclidean__axioms.Point A B)
@@ -138,7 +138,7 @@ thm proposition__19 :
                               (plth.and
                                  (plth.neq euclidean__axioms.Point B C)
                                  (plth.neq euclidean__axioms.Point A C))))))) =>
-            logic.and__elim_left
+            logic.and_elim_left
               (plth.neq euclidean__axioms.Point A B)
               (plth.and
                  (plth.neq euclidean__axioms.Point B C)
@@ -253,7 +253,7 @@ thm proposition__19 :
                 B
                 H7))
             (proposition__05.proposition__05 A B C H6))
-           (logic.conj
+           (logic.and_intro
               (euclidean__axioms.Triangle A B C)
               (euclidean__axioms.Cong A B A C)
               H1
@@ -269,7 +269,7 @@ thm proposition__19 :
                        (plth.and
                           (euclidean__axioms.nCol B A C)
                           (euclidean__axioms.nCol A C B)))))) =>
-        logic.and__ind2
+        logic.and_ind_right
           (euclidean__axioms.nCol C B A)
           (plth.and
              (euclidean__axioms.nCol C A B)
@@ -285,7 +285,7 @@ thm proposition__19 :
                        (plth.and
                           (euclidean__axioms.nCol B A C)
                           (euclidean__axioms.nCol A C B))))) =>
-           logic.and__ind2
+           logic.and_ind_right
              (euclidean__axioms.nCol C A B)
              (plth.and
                 (euclidean__axioms.nCol A B C)
@@ -297,7 +297,7 @@ thm proposition__19 :
                        (plth.and
                           (euclidean__axioms.nCol B A C)
                           (euclidean__axioms.nCol A C B)))) =>
-              logic.and__ind2
+              logic.and_ind_right
                 (euclidean__axioms.nCol A B C)
                 (plth.and (euclidean__axioms.nCol B A C) (euclidean__axioms.nCol A C B))
                 (euclidean__axioms.nCol A C B)
@@ -305,7 +305,7 @@ thm proposition__19 :
                        (plth.and
                           (euclidean__axioms.nCol B A C)
                           (euclidean__axioms.nCol A C B))) =>
-                 logic.and__elim_right
+                 logic.and_elim_right
                    (euclidean__axioms.nCol B A C)
                    (euclidean__axioms.nCol A C B)
                    H9)
@@ -323,7 +323,7 @@ thm proposition__19 :
                       (plth.and
                          (euclidean__axioms.nCol A C B)
                          (euclidean__axioms.nCol C B A)))))) =>
-       logic.and__ind2
+       logic.and_ind_right
          (euclidean__axioms.nCol B A C)
          (plth.and
             (euclidean__axioms.nCol B C A)
@@ -339,7 +339,7 @@ thm proposition__19 :
                       (plth.and
                          (euclidean__axioms.nCol A C B)
                          (euclidean__axioms.nCol C B A))))) =>
-          logic.and__elim_left
+          logic.and_elim_left
             (euclidean__axioms.nCol B C A)
             (plth.and
                (euclidean__axioms.nCol C A B)

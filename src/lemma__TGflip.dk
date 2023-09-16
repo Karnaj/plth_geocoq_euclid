@@ -38,7 +38,7 @@ thm lemma__TGflip :
              plth.and
                (euclidean__axioms.BetS A a H0)
                (plth.and (euclidean__axioms.Cong a H0 B b) (euclidean__defs.Lt C c A H0))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (H1:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -50,14 +50,14 @@ thm lemma__TGflip :
             (plth.and
                (euclidean__axioms.BetS A a H1)
                (plth.and (euclidean__axioms.Cong a H1 B b) (euclidean__defs.Lt C c A H1)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS A a H1)
         (plth.and (euclidean__axioms.Cong a H1 B b) (euclidean__defs.Lt C c A H1))
         (plth.and (euclidean__defs.TG a A B b C c) (euclidean__defs.TG A a B b c C))
         (H3:(plth.Prf (euclidean__axioms.BetS A a H1)) =>
          H4:(plth.Prf
                (plth.and (euclidean__axioms.Cong a H1 B b) (euclidean__defs.Lt C c A H1))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong a H1 B b)
            (euclidean__defs.Lt C c A H1)
            (plth.and (euclidean__defs.TG a A B b C c) (euclidean__defs.TG A a B b c C))
@@ -74,7 +74,7 @@ thm lemma__TGflip :
                             plth.and
                               (euclidean__axioms.BetS a A h)
                               (euclidean__axioms.Cong A h B b)))) =>
-                 logic.ex__ind
+                 logic.ex_elim
                    euclidean__axioms.Point
                    (h:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -88,7 +88,7 @@ thm lemma__TGflip :
                            (plth.and
                               (euclidean__axioms.BetS a A h)
                               (euclidean__axioms.Cong A h B b))) =>
-                    logic.and__ind
+                    logic.and_ind
                       (euclidean__axioms.BetS a A h)
                       (euclidean__axioms.Cong A h B b)
                       (plth.and
@@ -147,7 +147,7 @@ thm lemma__TGflip :
                                            c
                                            a
                                            h)) =>
-                                 logic.conj
+                                 logic.and_intro
                                    (euclidean__defs.TG
                                       a
                                       A
@@ -165,7 +165,7 @@ thm lemma__TGflip :
                                    H20
                                    H23)
                                   H19)
-                                 (logic.ex__intro
+                                 (logic.ex_intro
                                     euclidean__axioms.Point
                                     (X:(plth.El
                                           euclidean__axioms.Point) =>
@@ -186,7 +186,7 @@ thm lemma__TGflip :
                                              A
                                              X)))
                                     H1
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__axioms.BetS
                                           A
                                           a
@@ -203,7 +203,7 @@ thm lemma__TGflip :
                                              A
                                              H1))
                                        H3
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__axioms.Cong
                                              a
                                              H1
@@ -228,7 +228,7 @@ thm lemma__TGflip :
                                (euclidean__axioms.cn__equalityreverse
                                   C
                                   c))
-                              (logic.ex__intro
+                              (logic.ex_intro
                                  euclidean__axioms.Point
                                  (X:(plth.El
                                        euclidean__axioms.Point) =>
@@ -249,7 +249,7 @@ thm lemma__TGflip :
                                           a
                                           X)))
                                  h
-                                 (logic.conj
+                                 (logic.and_intro
                                     (euclidean__axioms.BetS
                                        a
                                        A
@@ -266,7 +266,7 @@ thm lemma__TGflip :
                                           a
                                           h))
                                     H13
-                                    (logic.conj
+                                    (logic.and_intro
                                        (euclidean__axioms.Cong
                                           A
                                           h
@@ -325,7 +325,7 @@ thm lemma__TGflip :
                            (plth.and
                               (plth.neq euclidean__axioms.Point A a)
                               (plth.neq euclidean__axioms.Point A H1)))) =>
-                  logic.and__elim_left
+                  logic.and_elim_left
                     (plth.neq euclidean__axioms.Point a H1)
                     (plth.and
                        (plth.neq euclidean__axioms.Point A a)
@@ -339,7 +339,7 @@ thm lemma__TGflip :
                          (plth.and
                             (plth.neq euclidean__axioms.Point A a)
                             (plth.neq euclidean__axioms.Point A H1)))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (plth.neq euclidean__axioms.Point a H1)
                   (plth.and
                      (plth.neq euclidean__axioms.Point A a)
@@ -349,7 +349,7 @@ thm lemma__TGflip :
                          (plth.and
                             (plth.neq euclidean__axioms.Point A a)
                             (plth.neq euclidean__axioms.Point A H1))) =>
-                   logic.and__elim_left
+                   logic.and_elim_left
                      (plth.neq euclidean__axioms.Point A a)
                      (plth.neq euclidean__axioms.Point A H1)
                      H9)

@@ -105,7 +105,7 @@ thm lemma__collinearbetween :
                                            E
                                            H
                                            F))))))) =>
-             logic.or__ind
+             logic.or_elim
                (plth.eq euclidean__axioms.Point E F)
                (plth.or
                   (plth.eq euclidean__axioms.Point E H)
@@ -127,7 +127,7 @@ thm lemma__collinearbetween :
                            (plth.not (euclidean__axioms.BetS E H F))) =>
                     (H19:(plth.Prf plth.false) =>
                      (H20:(plth.Prf plth.false) =>
-                      logic.false__ind plth.false H20)
+                      logic.false_elim plth.false H20)
                        (H17 H18))
                       (H13 H16)))
                   (H17:(plth.Prf
@@ -143,7 +143,7 @@ thm lemma__collinearbetween :
                                 (plth.or
                                    (euclidean__axioms.BetS E F H)
                                    (euclidean__axioms.BetS E H F)))))) =>
-                logic.or__ind
+                logic.or_elim
                   (plth.eq euclidean__axioms.Point E H)
                   (plth.or
                      (plth.eq euclidean__axioms.Point F H)
@@ -164,7 +164,7 @@ thm lemma__collinearbetween :
                               (plth.not
                                  (euclidean__axioms.BetS E H F))) =>
                        (H20:(plth.Prf plth.false) =>
-                        logic.false__ind plth.false H20)
+                        logic.false_elim plth.false H20)
                          (H18 H19)))
                      (H18:(plth.Prf
                              (plth.not (euclidean__axioms.BetS E H F))) =>
@@ -267,7 +267,7 @@ thm lemma__collinearbetween :
                                 (plth.or
                                    (euclidean__axioms.BetS E F H)
                                    (euclidean__axioms.BetS E H F))))) =>
-                   logic.or__ind
+                   logic.or_elim
                      (plth.eq euclidean__axioms.Point F H)
                      (plth.or
                         (euclidean__axioms.BetS F E H)
@@ -287,7 +287,7 @@ thm lemma__collinearbetween :
                                  (plth.not
                                     (euclidean__axioms.BetS E H F))) =>
                           (H21:(plth.Prf plth.false) =>
-                           logic.false__ind plth.false H21)
+                           logic.false_elim plth.false H21)
                             (H19 H20)))
                         (H19:(plth.Prf
                                 (plth.not
@@ -401,7 +401,7 @@ thm lemma__collinearbetween :
                                 (plth.or
                                    (euclidean__axioms.BetS E F H)
                                    (euclidean__axioms.BetS E H F)))) =>
-                      logic.or__ind
+                      logic.or_elim
                         (euclidean__axioms.BetS F E H)
                         (plth.or
                            (euclidean__axioms.BetS E F H)
@@ -425,7 +425,7 @@ thm lemma__collinearbetween :
                                           F))) =>
                              (H22:(plth.Prf plth.false) =>
                               (H23:(plth.Prf plth.false) =>
-                               logic.false__ind plth.false H23)
+                               logic.false_elim plth.false H23)
                                 (H20 H21))
                                (H12 H19)))
                            (H20:(plth.Prf
@@ -436,7 +436,7 @@ thm lemma__collinearbetween :
                                 (plth.or
                                    (euclidean__axioms.BetS E F H)
                                    (euclidean__axioms.BetS E H F))) =>
-                         logic.or__ind
+                         logic.or_elim
                            (euclidean__axioms.BetS E F H)
                            (euclidean__axioms.BetS E H F)
                            (euclidean__axioms.BetS E H F)
@@ -459,7 +459,7 @@ thm lemma__collinearbetween :
                                              F))) =>
                                 (H23:(plth.Prf plth.false) =>
                                  (H24:(plth.Prf plth.false) =>
-                                  logic.false__ind
+                                  logic.false_elim
                                     plth.false
                                     H24)
                                    (H21 H22))
@@ -487,7 +487,7 @@ thm lemma__collinearbetween :
           (H15:(plth.Prf (euclidean__axioms.Col A B E)) =>
            (H16:(plth.Prf (euclidean__axioms.Col A B F)) =>
             (H17:(plth.Prf (euclidean__defs.Meet A B C D)) => H6 H17)
-              (logic.ex__intro
+              (logic.ex_intro
                  euclidean__axioms.Point
                  (X:(plth.El euclidean__axioms.Point) =>
                   plth.and
@@ -498,7 +498,7 @@ thm lemma__collinearbetween :
                           (euclidean__axioms.Col A B X)
                           (euclidean__axioms.Col C D X))))
                  F
-                 (logic.conj
+                 (logic.and_intro
                     (plth.neq euclidean__axioms.Point A B)
                     (plth.and
                        (plth.neq euclidean__axioms.Point C D)
@@ -506,13 +506,13 @@ thm lemma__collinearbetween :
                           (euclidean__axioms.Col A B F)
                           (euclidean__axioms.Col C D F)))
                     H2
-                    (logic.conj
+                    (logic.and_intro
                        (plth.neq euclidean__axioms.Point C D)
                        (plth.and
                           (euclidean__axioms.Col A B F)
                           (euclidean__axioms.Col C D F))
                        H3
-                       (logic.conj
+                       (logic.and_intro
                           (euclidean__axioms.Col A B F)
                           (euclidean__axioms.Col C D F)
                           H16
@@ -563,7 +563,7 @@ thm lemma__collinearbetween :
                               (plth.and
                                  (euclidean__axioms.Col A B E)
                                  (euclidean__axioms.Col B E A)))))) =>
-              logic.and__ind2
+              logic.and_ind_right
                 (euclidean__axioms.Col E A B)
                 (plth.and
                    (euclidean__axioms.Col E B A)
@@ -581,7 +581,7 @@ thm lemma__collinearbetween :
                               (plth.and
                                  (euclidean__axioms.Col A B E)
                                  (euclidean__axioms.Col B E A))))) =>
-                 logic.and__ind2
+                 logic.and_ind_right
                    (euclidean__axioms.Col E B A)
                    (plth.and
                       (euclidean__axioms.Col B A E)
@@ -595,7 +595,7 @@ thm lemma__collinearbetween :
                               (plth.and
                                  (euclidean__axioms.Col A B E)
                                  (euclidean__axioms.Col B E A)))) =>
-                    logic.and__ind2
+                    logic.and_ind_right
                       (euclidean__axioms.Col B A E)
                       (plth.and
                          (euclidean__axioms.Col A B E)
@@ -605,7 +605,7 @@ thm lemma__collinearbetween :
                               (plth.and
                                  (euclidean__axioms.Col A B E)
                                  (euclidean__axioms.Col B E A))) =>
-                       logic.and__elim_left
+                       logic.and_elim_left
                          (euclidean__axioms.Col A B E)
                          (euclidean__axioms.Col B E A)
                          H21)
@@ -623,7 +623,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col F C D)
                (plth.and
                   (euclidean__axioms.Col F D C)
@@ -641,7 +641,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col F D C)
                   (plth.and
                      (euclidean__axioms.Col D C F)
@@ -655,7 +655,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C)))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col D C F)
                      (plth.and
                         (euclidean__axioms.Col C D F)
@@ -665,7 +665,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C))) =>
-                      logic.and__elim_left
+                      logic.and_elim_left
                         (euclidean__axioms.Col C D F)
                         (euclidean__axioms.Col D F C)
                         H20)
@@ -682,7 +682,7 @@ thm lemma__collinearbetween :
                      plth.and
                        (euclidean__axioms.BetS F R D)
                        (euclidean__axioms.BetS A E R)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (R:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS F R D) (euclidean__axioms.BetS A E R))
@@ -692,7 +692,7 @@ thm lemma__collinearbetween :
                     (plth.and
                        (euclidean__axioms.BetS F R D)
                        (euclidean__axioms.BetS A E R))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS F R D)
                (euclidean__axioms.BetS A E R)
                plth.false
@@ -739,7 +739,7 @@ thm lemma__collinearbetween :
                                        C
                                        D)) =>
                              H6 H30)
-                              (logic.ex__intro
+                              (logic.ex_intro
                                  euclidean__axioms.Point
                                  (X:(plth.El
                                        euclidean__axioms.Point) =>
@@ -763,7 +763,7 @@ thm lemma__collinearbetween :
                                              D
                                              X))))
                                  R
-                                 (logic.conj
+                                 (logic.and_intro
                                     (plth.neq
                                        euclidean__axioms.Point
                                        A
@@ -783,7 +783,7 @@ thm lemma__collinearbetween :
                                              D
                                              R)))
                                     H2
-                                    (logic.conj
+                                    (logic.and_intro
                                        (plth.neq
                                           euclidean__axioms.Point
                                           C
@@ -798,7 +798,7 @@ thm lemma__collinearbetween :
                                              D
                                              R))
                                        H3
-                                       (logic.conj
+                                       (logic.and_intro
                                           (euclidean__axioms.Col
                                              A
                                              B
@@ -834,7 +834,7 @@ thm lemma__collinearbetween :
                                                      B
                                                      R
                                                      A)))))) =>
-                               logic.and__ind2
+                               logic.and_ind_right
                                  (euclidean__axioms.Col
                                     R
                                     A
@@ -882,7 +882,7 @@ thm lemma__collinearbetween :
                                                      B
                                                      R
                                                      A))))) =>
-                                  logic.and__ind2
+                                  logic.and_ind_right
                                     (euclidean__axioms.Col
                                        R
                                        B
@@ -920,7 +920,7 @@ thm lemma__collinearbetween :
                                                      B
                                                      R
                                                      A)))) =>
-                                     logic.and__ind2
+                                     logic.and_ind_right
                                        (euclidean__axioms.Col
                                           B
                                           A
@@ -948,7 +948,7 @@ thm lemma__collinearbetween :
                                                      B
                                                      R
                                                      A))) =>
-                                        logic.and__elim_left
+                                        logic.and_elim_left
                                           (euclidean__axioms.Col
                                              A
                                              B
@@ -1007,7 +1007,7 @@ thm lemma__collinearbetween :
                                             euclidean__axioms.Point
                                             A
                                             R)))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (plth.neq
                                  euclidean__axioms.Point
                                  E
@@ -1035,7 +1035,7 @@ thm lemma__collinearbetween :
                                             euclidean__axioms.Point
                                             A
                                             R))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (plth.neq
                                     euclidean__axioms.Point
                                     A
@@ -1076,7 +1076,7 @@ thm lemma__collinearbetween :
                                                  B
                                                  E
                                                  A)))))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (euclidean__axioms.Col E A B)
                              (plth.and
                                 (euclidean__axioms.Col
@@ -1128,7 +1128,7 @@ thm lemma__collinearbetween :
                                                 R
                                                 E
                                                 A)))))) =>
-                          logic.and__elim_left
+                          logic.and_elim_left
                             (euclidean__axioms.Col E A R)
                             (plth.and
                                (euclidean__axioms.Col E R A)
@@ -1177,7 +1177,7 @@ thm lemma__collinearbetween :
                                                C
                                                R
                                                D)))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col R D C)
                            (plth.and
                               (euclidean__axioms.Col R C D)
@@ -1213,7 +1213,7 @@ thm lemma__collinearbetween :
                                                C
                                                R
                                                D))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col R C D)
                               (plth.and
                                  (euclidean__axioms.Col C D R)
@@ -1242,7 +1242,7 @@ thm lemma__collinearbetween :
                                                C
                                                R
                                                D)))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col C D R)
                                  (plth.and
                                     (euclidean__axioms.Col
@@ -1299,7 +1299,7 @@ thm lemma__collinearbetween :
                                              D
                                              F
                                              C)))))) =>
-                       logic.and__ind2
+                       logic.and_ind_right
                          (euclidean__axioms.Col F C D)
                          (plth.and
                             (euclidean__axioms.Col F D C)
@@ -1326,7 +1326,7 @@ thm lemma__collinearbetween :
                                              D
                                              F
                                              C))))) =>
-                          logic.and__elim_left
+                          logic.and_elim_left
                             (euclidean__axioms.Col F D C)
                             (plth.and
                                (euclidean__axioms.Col D C F)
@@ -1356,7 +1356,7 @@ thm lemma__collinearbetween :
                                             D
                                             R
                                             F)))))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col R F D)
                         (plth.and
                            (euclidean__axioms.Col R D F)
@@ -1380,7 +1380,7 @@ thm lemma__collinearbetween :
                                             D
                                             R
                                             F))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col R D F)
                            (plth.and
                               (euclidean__axioms.Col D F R)
@@ -1400,7 +1400,7 @@ thm lemma__collinearbetween :
                                             D
                                             R
                                             F)))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col D F R)
                               (plth.and
                                  (euclidean__axioms.Col F D R)
@@ -1416,7 +1416,7 @@ thm lemma__collinearbetween :
                                             D
                                             R
                                             F))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col F D R)
                                  (euclidean__axioms.Col D R F)
                                  H26)
@@ -1428,7 +1428,7 @@ thm lemma__collinearbetween :
                           R
                           D
                           H18)))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point A E)
                       (plth.or
                          (plth.eq euclidean__axioms.Point A R)
@@ -1439,7 +1439,7 @@ thm lemma__collinearbetween :
                                (plth.or
                                   (euclidean__axioms.BetS A E R)
                                   (euclidean__axioms.BetS A R E)))))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point A R)
                          (plth.or
                             (plth.eq euclidean__axioms.Point E R)
@@ -1448,23 +1448,23 @@ thm lemma__collinearbetween :
                                (plth.or
                                   (euclidean__axioms.BetS A E R)
                                   (euclidean__axioms.BetS A R E))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point E R)
                             (plth.or
                                (euclidean__axioms.BetS E A R)
                                (plth.or
                                   (euclidean__axioms.BetS A E R)
                                   (euclidean__axioms.BetS A R E)))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (euclidean__axioms.BetS E A R)
                                (plth.or
                                   (euclidean__axioms.BetS A E R)
                                   (euclidean__axioms.BetS A R E))
-                               (logic.or__introl
+                               (logic.or_intro_left
                                   (euclidean__axioms.BetS A E R)
                                   (euclidean__axioms.BetS A R E)
                                   H17))))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point F R)
                      (plth.or
                         (plth.eq euclidean__axioms.Point F D)
@@ -1475,7 +1475,7 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS F R D)
                                  (euclidean__axioms.BetS F D R)))))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (plth.eq euclidean__axioms.Point F D)
                         (plth.or
                            (plth.eq euclidean__axioms.Point R D)
@@ -1484,19 +1484,19 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS F R D)
                                  (euclidean__axioms.BetS F D R))))
-                        (logic.or__intror
+                        (logic.or_intro_right
                            (plth.eq euclidean__axioms.Point R D)
                            (plth.or
                               (euclidean__axioms.BetS R F D)
                               (plth.or
                                  (euclidean__axioms.BetS F R D)
                                  (euclidean__axioms.BetS F D R)))
-                           (logic.or__intror
+                           (logic.or_intro_right
                               (euclidean__axioms.BetS R F D)
                               (plth.or
                                  (euclidean__axioms.BetS F R D)
                                  (euclidean__axioms.BetS F D R))
-                              (logic.or__introl
+                              (logic.or_intro_left
                                  (euclidean__axioms.BetS F R D)
                                  (euclidean__axioms.BetS F D R)
                                  H16))))))
@@ -1520,7 +1520,7 @@ thm lemma__collinearbetween :
                 (H19:(plth.Prf (euclidean__axioms.Col A B A)) =>
                  (H20:(plth.Prf (euclidean__defs.Meet A B C D)) =>
                   H6 H20)
-                   (logic.ex__intro
+                   (logic.ex_intro
                       euclidean__axioms.Point
                       (X:(plth.El euclidean__axioms.Point) =>
                        plth.and
@@ -1531,7 +1531,7 @@ thm lemma__collinearbetween :
                                (euclidean__axioms.Col A B X)
                                (euclidean__axioms.Col C D X))))
                       A
-                      (logic.conj
+                      (logic.and_intro
                          (plth.neq euclidean__axioms.Point A B)
                          (plth.and
                             (plth.neq euclidean__axioms.Point C D)
@@ -1539,18 +1539,18 @@ thm lemma__collinearbetween :
                                (euclidean__axioms.Col A B A)
                                (euclidean__axioms.Col C D A)))
                          H2
-                         (logic.conj
+                         (logic.and_intro
                             (plth.neq euclidean__axioms.Point C D)
                             (plth.and
                                (euclidean__axioms.Col A B A)
                                (euclidean__axioms.Col C D A))
                             H3
-                            (logic.conj
+                            (logic.and_intro
                                (euclidean__axioms.Col A B A)
                                (euclidean__axioms.Col C D A)
                                H19
                                H17)))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point A B)
                      (plth.or
                         (plth.eq euclidean__axioms.Point A A)
@@ -1561,7 +1561,7 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS A B A)
                                  (euclidean__axioms.BetS A A B)))))
-                     (logic.or__introl
+                     (logic.or_intro_left
                         (plth.eq euclidean__axioms.Point A A)
                         (plth.or
                            (plth.eq euclidean__axioms.Point B A)
@@ -1582,7 +1582,7 @@ thm lemma__collinearbetween :
                                   (plth.and
                                      (euclidean__axioms.Col D A C)
                                      (euclidean__axioms.Col A C D)))))) =>
-                  logic.and__elim_left
+                  logic.and_elim_left
                     (euclidean__axioms.Col C D A)
                     (plth.and
                        (euclidean__axioms.Col C A D)
@@ -1614,7 +1614,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col A F D)
                                    (euclidean__axioms.Col F D A)))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col D A F)
                   (plth.and
                      (euclidean__axioms.Col D F A)
@@ -1632,7 +1632,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col A F D)
                                    (euclidean__axioms.Col F D A))))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col D F A)
                      (plth.and
                         (euclidean__axioms.Col F A D)
@@ -1646,7 +1646,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col A F D)
                                    (euclidean__axioms.Col F D A)))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col F A D)
                         (plth.and
                            (euclidean__axioms.Col A F D)
@@ -1656,7 +1656,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col A F D)
                                    (euclidean__axioms.Col F D A))) =>
-                         logic.and__elim_right
+                         logic.and_elim_right
                            (euclidean__axioms.Col A F D)
                            (euclidean__axioms.Col F D A)
                            H21)
@@ -1674,7 +1674,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col C D F)
                                   (euclidean__axioms.Col D F C)))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col F C D)
                  (plth.and
                     (euclidean__axioms.Col F D C)
@@ -1692,7 +1692,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col C D F)
                                   (euclidean__axioms.Col D F C))))) =>
-                  logic.and__elim_left
+                  logic.and_elim_left
                     (euclidean__axioms.Col F D C)
                     (plth.and
                        (euclidean__axioms.Col D C F)
@@ -1712,7 +1712,7 @@ thm lemma__collinearbetween :
                      plth.and
                        (euclidean__axioms.BetS E Q A)
                        (euclidean__axioms.BetS D F Q)))) =>
-          logic.ex__ind
+          logic.ex_elim
             euclidean__axioms.Point
             (Q:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS E Q A) (euclidean__axioms.BetS D F Q))
@@ -1722,7 +1722,7 @@ thm lemma__collinearbetween :
                     (plth.and
                        (euclidean__axioms.BetS E Q A)
                        (euclidean__axioms.BetS D F Q))) =>
-             logic.and__ind
+             logic.and_ind
                (euclidean__axioms.BetS E Q A)
                (euclidean__axioms.BetS D F Q)
                plth.false
@@ -1765,7 +1765,7 @@ thm lemma__collinearbetween :
                                       C
                                       D)) =>
                             H6 H29)
-                             (logic.ex__intro
+                             (logic.ex_intro
                                 euclidean__axioms.Point
                                 (X:(plth.El
                                       euclidean__axioms.Point) =>
@@ -1789,7 +1789,7 @@ thm lemma__collinearbetween :
                                             D
                                             X))))
                                 Q
-                                (logic.conj
+                                (logic.and_intro
                                    (plth.neq
                                       euclidean__axioms.Point
                                       A
@@ -1809,7 +1809,7 @@ thm lemma__collinearbetween :
                                             D
                                             Q)))
                                    H2
-                                   (logic.conj
+                                   (logic.and_intro
                                       (plth.neq
                                          euclidean__axioms.Point
                                          C
@@ -1824,7 +1824,7 @@ thm lemma__collinearbetween :
                                             D
                                             Q))
                                       H3
-                                      (logic.conj
+                                      (logic.and_intro
                                          (euclidean__axioms.Col
                                             A
                                             B
@@ -1860,7 +1860,7 @@ thm lemma__collinearbetween :
                                                     C
                                                     Q
                                                     D)))))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__axioms.Col
                                    Q
                                    D
@@ -1908,7 +1908,7 @@ thm lemma__collinearbetween :
                                                     C
                                                     Q
                                                     D))))) =>
-                                 logic.and__ind2
+                                 logic.and_ind_right
                                    (euclidean__axioms.Col
                                       Q
                                       C
@@ -1946,7 +1946,7 @@ thm lemma__collinearbetween :
                                                     C
                                                     Q
                                                     D)))) =>
-                                    logic.and__elim_left
+                                    logic.and_elim_left
                                       (euclidean__axioms.Col
                                          C
                                          D
@@ -2015,7 +2015,7 @@ thm lemma__collinearbetween :
                                                   D
                                                   F
                                                   C)))))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col
                                  F
                                  C
@@ -2063,7 +2063,7 @@ thm lemma__collinearbetween :
                                                   D
                                                   F
                                                   C))))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col
                                     F
                                     D
@@ -2114,7 +2114,7 @@ thm lemma__collinearbetween :
                                                  Q
                                                  F
                                                  D)))))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (euclidean__axioms.Col F D Q)
                              (plth.and
                                 (euclidean__axioms.Col
@@ -2166,7 +2166,7 @@ thm lemma__collinearbetween :
                                                 B
                                                 Q
                                                 A)))))) =>
-                          logic.and__ind2
+                          logic.and_ind_right
                             (euclidean__axioms.Col Q A B)
                             (plth.and
                                (euclidean__axioms.Col Q B A)
@@ -2205,7 +2205,7 @@ thm lemma__collinearbetween :
                                                 B
                                                 Q
                                                 A))))) =>
-                             logic.and__ind2
+                             logic.and_ind_right
                                (euclidean__axioms.Col Q B A)
                                (plth.and
                                   (euclidean__axioms.Col
@@ -2237,7 +2237,7 @@ thm lemma__collinearbetween :
                                                 B
                                                 Q
                                                 A)))) =>
-                                logic.and__ind2
+                                logic.and_ind_right
                                   (euclidean__axioms.Col
                                      B
                                      A
@@ -2265,7 +2265,7 @@ thm lemma__collinearbetween :
                                                 B
                                                 Q
                                                 A))) =>
-                                   logic.and__elim_left
+                                   logic.and_elim_left
                                      (euclidean__axioms.Col
                                         A
                                         B
@@ -2325,7 +2325,7 @@ thm lemma__collinearbetween :
                                              B
                                              E
                                              A)))))) =>
-                       logic.and__elim_left
+                       logic.and_elim_left
                          (euclidean__axioms.Col E A B)
                          (plth.and
                             (euclidean__axioms.Col E B A)
@@ -2356,7 +2356,7 @@ thm lemma__collinearbetween :
                                             A
                                             Q
                                             E)))))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col Q E A)
                         (plth.and
                            (euclidean__axioms.Col Q A E)
@@ -2380,7 +2380,7 @@ thm lemma__collinearbetween :
                                             A
                                             Q
                                             E))))) =>
-                         logic.and__ind2
+                         logic.and_ind_right
                            (euclidean__axioms.Col Q A E)
                            (plth.and
                               (euclidean__axioms.Col A E Q)
@@ -2400,7 +2400,7 @@ thm lemma__collinearbetween :
                                             A
                                             Q
                                             E)))) =>
-                            logic.and__ind2
+                            logic.and_ind_right
                               (euclidean__axioms.Col A E Q)
                               (plth.and
                                  (euclidean__axioms.Col E A Q)
@@ -2416,7 +2416,7 @@ thm lemma__collinearbetween :
                                             A
                                             Q
                                             E))) =>
-                               logic.and__elim_left
+                               logic.and_elim_left
                                  (euclidean__axioms.Col E A Q)
                                  (euclidean__axioms.Col A Q E)
                                  H26)
@@ -2428,7 +2428,7 @@ thm lemma__collinearbetween :
                           Q
                           A
                           H18)))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point D F)
                       (plth.or
                          (plth.eq euclidean__axioms.Point D Q)
@@ -2439,7 +2439,7 @@ thm lemma__collinearbetween :
                                (plth.or
                                   (euclidean__axioms.BetS D F Q)
                                   (euclidean__axioms.BetS D Q F)))))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (plth.eq euclidean__axioms.Point D Q)
                          (plth.or
                             (plth.eq euclidean__axioms.Point F Q)
@@ -2448,23 +2448,23 @@ thm lemma__collinearbetween :
                                (plth.or
                                   (euclidean__axioms.BetS D F Q)
                                   (euclidean__axioms.BetS D Q F))))
-                         (logic.or__intror
+                         (logic.or_intro_right
                             (plth.eq euclidean__axioms.Point F Q)
                             (plth.or
                                (euclidean__axioms.BetS F D Q)
                                (plth.or
                                   (euclidean__axioms.BetS D F Q)
                                   (euclidean__axioms.BetS D Q F)))
-                            (logic.or__intror
+                            (logic.or_intro_right
                                (euclidean__axioms.BetS F D Q)
                                (plth.or
                                   (euclidean__axioms.BetS D F Q)
                                   (euclidean__axioms.BetS D Q F))
-                               (logic.or__introl
+                               (logic.or_intro_left
                                   (euclidean__axioms.BetS D F Q)
                                   (euclidean__axioms.BetS D Q F)
                                   H17))))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point E Q)
                      (plth.or
                         (plth.eq euclidean__axioms.Point E A)
@@ -2475,7 +2475,7 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS E Q A)
                                  (euclidean__axioms.BetS E A Q)))))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (plth.eq euclidean__axioms.Point E A)
                         (plth.or
                            (plth.eq euclidean__axioms.Point Q A)
@@ -2484,19 +2484,19 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS E Q A)
                                  (euclidean__axioms.BetS E A Q))))
-                        (logic.or__intror
+                        (logic.or_intro_right
                            (plth.eq euclidean__axioms.Point Q A)
                            (plth.or
                               (euclidean__axioms.BetS Q E A)
                               (plth.or
                                  (euclidean__axioms.BetS E Q A)
                                  (euclidean__axioms.BetS E A Q)))
-                           (logic.or__intror
+                           (logic.or_intro_right
                               (euclidean__axioms.BetS Q E A)
                               (plth.or
                                  (euclidean__axioms.BetS E Q A)
                                  (euclidean__axioms.BetS E A Q))
-                              (logic.or__introl
+                              (logic.or_intro_left
                                  (euclidean__axioms.BetS E Q A)
                                  (euclidean__axioms.BetS E A Q)
                                  H16))))))
@@ -2520,7 +2520,7 @@ thm lemma__collinearbetween :
                 (H19:(plth.Prf (euclidean__axioms.Col C D D)) =>
                  (H20:(plth.Prf (euclidean__defs.Meet A B C D)) =>
                   H6 H20)
-                   (logic.ex__intro
+                   (logic.ex_intro
                       euclidean__axioms.Point
                       (X:(plth.El euclidean__axioms.Point) =>
                        plth.and
@@ -2531,7 +2531,7 @@ thm lemma__collinearbetween :
                                (euclidean__axioms.Col A B X)
                                (euclidean__axioms.Col C D X))))
                       D
-                      (logic.conj
+                      (logic.and_intro
                          (plth.neq euclidean__axioms.Point A B)
                          (plth.and
                             (plth.neq euclidean__axioms.Point C D)
@@ -2539,18 +2539,18 @@ thm lemma__collinearbetween :
                                (euclidean__axioms.Col A B D)
                                (euclidean__axioms.Col C D D)))
                          H2
-                         (logic.conj
+                         (logic.and_intro
                             (plth.neq euclidean__axioms.Point C D)
                             (plth.and
                                (euclidean__axioms.Col A B D)
                                (euclidean__axioms.Col C D D))
                             H3
-                            (logic.conj
+                            (logic.and_intro
                                (euclidean__axioms.Col A B D)
                                (euclidean__axioms.Col C D D)
                                H17
                                H19)))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point C D)
                      (plth.or
                         (plth.eq euclidean__axioms.Point C D)
@@ -2561,7 +2561,7 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS C D D)
                                  (euclidean__axioms.BetS C D D)))))
-                     (logic.or__intror
+                     (logic.or_intro_right
                         (plth.eq euclidean__axioms.Point C D)
                         (plth.or
                            (plth.eq euclidean__axioms.Point D D)
@@ -2570,7 +2570,7 @@ thm lemma__collinearbetween :
                               (plth.or
                                  (euclidean__axioms.BetS C D D)
                                  (euclidean__axioms.BetS C D D))))
-                        (logic.or__introl
+                        (logic.or_intro_left
                            (plth.eq euclidean__axioms.Point D D)
                            (plth.or
                               (euclidean__axioms.BetS D C D)
@@ -2601,7 +2601,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col D E A)
                                    (euclidean__axioms.Col E A D)))))) =>
-                logic.and__ind2
+                logic.and_ind_right
                   (euclidean__axioms.Col A D E)
                   (plth.and
                      (euclidean__axioms.Col A E D)
@@ -2619,7 +2619,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col D E A)
                                    (euclidean__axioms.Col E A D))))) =>
-                   logic.and__ind2
+                   logic.and_ind_right
                      (euclidean__axioms.Col A E D)
                      (plth.and
                         (euclidean__axioms.Col E D A)
@@ -2633,7 +2633,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col D E A)
                                    (euclidean__axioms.Col E A D)))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (euclidean__axioms.Col E D A)
                         (plth.and
                            (euclidean__axioms.Col D E A)
@@ -2643,7 +2643,7 @@ thm lemma__collinearbetween :
                                 (plth.and
                                    (euclidean__axioms.Col D E A)
                                    (euclidean__axioms.Col E A D))) =>
-                         logic.and__elim_right
+                         logic.and_elim_right
                            (euclidean__axioms.Col D E A)
                            (euclidean__axioms.Col E A D)
                            H21)
@@ -2661,7 +2661,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col A B E)
                                   (euclidean__axioms.Col B E A)))))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (euclidean__axioms.Col E A B)
                  (plth.and
                     (euclidean__axioms.Col E B A)
@@ -2683,7 +2683,7 @@ thm lemma__collinearbetween :
             (H17:(plth.Prf (plth.eq euclidean__axioms.Point A A)) =>
              (H18:(plth.Prf (euclidean__axioms.Col A B A)) =>
               (H19:(plth.Prf (euclidean__defs.Meet A B C D)) => H6 H19)
-                (logic.ex__intro
+                (logic.ex_intro
                    euclidean__axioms.Point
                    (X:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -2694,7 +2694,7 @@ thm lemma__collinearbetween :
                             (euclidean__axioms.Col A B X)
                             (euclidean__axioms.Col C D X))))
                    A
-                   (logic.conj
+                   (logic.and_intro
                       (plth.neq euclidean__axioms.Point A B)
                       (plth.and
                          (plth.neq euclidean__axioms.Point C D)
@@ -2702,18 +2702,18 @@ thm lemma__collinearbetween :
                             (euclidean__axioms.Col A B A)
                             (euclidean__axioms.Col C D A)))
                       H2
-                      (logic.conj
+                      (logic.and_intro
                          (plth.neq euclidean__axioms.Point C D)
                          (plth.and
                             (euclidean__axioms.Col A B A)
                             (euclidean__axioms.Col C D A))
                          H3
-                         (logic.conj
+                         (logic.and_intro
                             (euclidean__axioms.Col A B A)
                             (euclidean__axioms.Col C D A)
                             H18
                             H16)))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point A B)
                   (plth.or
                      (plth.eq euclidean__axioms.Point A A)
@@ -2724,7 +2724,7 @@ thm lemma__collinearbetween :
                            (plth.or
                               (euclidean__axioms.BetS A B A)
                               (euclidean__axioms.BetS A A B)))))
-                  (logic.or__introl
+                  (logic.or_intro_left
                      (plth.eq euclidean__axioms.Point A A)
                      (plth.or
                         (plth.eq euclidean__axioms.Point B A)
@@ -2745,7 +2745,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col D C A)
                                   (euclidean__axioms.Col C A D)))))) =>
-               logic.and__ind2
+               logic.and_ind_right
                  (euclidean__axioms.Col A D C)
                  (plth.and
                     (euclidean__axioms.Col A C D)
@@ -2763,7 +2763,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col D C A)
                                   (euclidean__axioms.Col C A D))))) =>
-                  logic.and__ind2
+                  logic.and_ind_right
                     (euclidean__axioms.Col A C D)
                     (plth.and
                        (euclidean__axioms.Col C D A)
@@ -2777,7 +2777,7 @@ thm lemma__collinearbetween :
                                (plth.and
                                   (euclidean__axioms.Col D C A)
                                   (euclidean__axioms.Col C A D)))) =>
-                     logic.and__elim_left
+                     logic.and_elim_left
                        (euclidean__axioms.Col C D A)
                        (plth.and
                           (euclidean__axioms.Col D C A)
@@ -2807,7 +2807,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C)))))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (euclidean__axioms.Col F C D)
                (plth.and
                   (euclidean__axioms.Col F D C)
@@ -2825,7 +2825,7 @@ thm lemma__collinearbetween :
                              (plth.and
                                 (euclidean__axioms.Col C D F)
                                 (euclidean__axioms.Col D F C))))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (euclidean__axioms.Col F D C)
                   (plth.and
                      (euclidean__axioms.Col D C F)
@@ -2845,7 +2845,7 @@ thm lemma__collinearbetween :
                             (plth.and
                                (euclidean__axioms.Col A D F)
                                (euclidean__axioms.Col D F A)))))) =>
-            logic.and__ind2
+            logic.and_ind_right
               (euclidean__axioms.Col F A D)
               (plth.and
                  (euclidean__axioms.Col F D A)
@@ -2863,7 +2863,7 @@ thm lemma__collinearbetween :
                             (plth.and
                                (euclidean__axioms.Col A D F)
                                (euclidean__axioms.Col D F A))))) =>
-               logic.and__elim_left
+               logic.and_elim_left
                  (euclidean__axioms.Col F D A)
                  (plth.and
                     (euclidean__axioms.Col D A F)
@@ -2896,7 +2896,7 @@ thm lemma__collinearbetween :
             H8
             H9
             H11))
-        (logic.or__intror
+        (logic.or_intro_right
            (plth.eq euclidean__axioms.Point A H)
            (plth.or
               (plth.eq euclidean__axioms.Point A D)
@@ -2905,22 +2905,22 @@ thm lemma__collinearbetween :
                  (plth.or
                     (euclidean__axioms.BetS H A D)
                     (plth.or (euclidean__axioms.BetS A H D) (euclidean__axioms.BetS A D H)))))
-           (logic.or__intror
+           (logic.or_intro_right
               (plth.eq euclidean__axioms.Point A D)
               (plth.or
                  (plth.eq euclidean__axioms.Point H D)
                  (plth.or
                     (euclidean__axioms.BetS H A D)
                     (plth.or (euclidean__axioms.BetS A H D) (euclidean__axioms.BetS A D H))))
-              (logic.or__intror
+              (logic.or_intro_right
                  (plth.eq euclidean__axioms.Point H D)
                  (plth.or
                     (euclidean__axioms.BetS H A D)
                     (plth.or (euclidean__axioms.BetS A H D) (euclidean__axioms.BetS A D H)))
-                 (logic.or__intror
+                 (logic.or_intro_right
                     (euclidean__axioms.BetS H A D)
                     (plth.or (euclidean__axioms.BetS A H D) (euclidean__axioms.BetS A D H))
-                    (logic.or__introl
+                    (logic.or_intro_left
                        (euclidean__axioms.BetS A H D)
                        (euclidean__axioms.BetS A D H)
                        H7)))))))
@@ -2935,7 +2935,7 @@ thm lemma__collinearbetween :
             (H17:(plth.Prf (plth.eq euclidean__axioms.Point D D)) =>
              (H18:(plth.Prf (euclidean__axioms.Col C D D)) =>
               (H19:(plth.Prf (euclidean__defs.Meet A B C D)) => H6 H19)
-                (logic.ex__intro
+                (logic.ex_intro
                    euclidean__axioms.Point
                    (X:(plth.El euclidean__axioms.Point) =>
                     plth.and
@@ -2946,7 +2946,7 @@ thm lemma__collinearbetween :
                             (euclidean__axioms.Col A B X)
                             (euclidean__axioms.Col C D X))))
                    D
-                   (logic.conj
+                   (logic.and_intro
                       (plth.neq euclidean__axioms.Point A B)
                       (plth.and
                          (plth.neq euclidean__axioms.Point C D)
@@ -2954,18 +2954,18 @@ thm lemma__collinearbetween :
                             (euclidean__axioms.Col A B D)
                             (euclidean__axioms.Col C D D)))
                       H2
-                      (logic.conj
+                      (logic.and_intro
                          (plth.neq euclidean__axioms.Point C D)
                          (plth.and
                             (euclidean__axioms.Col A B D)
                             (euclidean__axioms.Col C D D))
                          H3
-                         (logic.conj
+                         (logic.and_intro
                             (euclidean__axioms.Col A B D)
                             (euclidean__axioms.Col C D D)
                             H16
                             H18)))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point C D)
                   (plth.or
                      (plth.eq euclidean__axioms.Point C D)
@@ -2976,7 +2976,7 @@ thm lemma__collinearbetween :
                            (plth.or
                               (euclidean__axioms.BetS C D D)
                               (euclidean__axioms.BetS C D D)))))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (plth.eq euclidean__axioms.Point C D)
                      (plth.or
                         (plth.eq euclidean__axioms.Point D D)
@@ -2985,7 +2985,7 @@ thm lemma__collinearbetween :
                            (plth.or
                               (euclidean__axioms.BetS C D D)
                               (euclidean__axioms.BetS C D D))))
-                     (logic.or__introl
+                     (logic.or_intro_left
                         (plth.eq euclidean__axioms.Point D D)
                         (plth.or
                            (euclidean__axioms.BetS D C D)
@@ -3012,7 +3012,7 @@ thm lemma__collinearbetween :
                        (plth.and
                           (plth.neq euclidean__axioms.Point A H)
                           (plth.neq euclidean__axioms.Point A D)))) =>
-             logic.and__ind2
+             logic.and_ind_right
                (plth.neq euclidean__axioms.Point H D)
                (plth.and
                   (plth.neq euclidean__axioms.Point A H)
@@ -3022,7 +3022,7 @@ thm lemma__collinearbetween :
                        (plth.and
                           (plth.neq euclidean__axioms.Point A H)
                           (plth.neq euclidean__axioms.Point A D))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point A H)
                   (plth.neq euclidean__axioms.Point A D)
                   H16)
@@ -3038,7 +3038,7 @@ thm lemma__collinearbetween :
                             (plth.and
                                (euclidean__axioms.Col A D H)
                                (euclidean__axioms.Col D H A)))))) =>
-            logic.and__elim_left
+            logic.and_elim_left
               (euclidean__axioms.Col H A D)
               (plth.and
                  (euclidean__axioms.Col H D A)
@@ -3049,7 +3049,7 @@ thm lemma__collinearbetween :
                        (euclidean__axioms.Col D H A))))
               H13)
              (lemma__collinearorder.lemma__collinearorder A H D H12)))
-         (logic.or__intror
+         (logic.or_intro_right
             (plth.eq euclidean__axioms.Point A H)
             (plth.or
                (plth.eq euclidean__axioms.Point A D)
@@ -3060,7 +3060,7 @@ thm lemma__collinearbetween :
                      (plth.or
                         (euclidean__axioms.BetS A H D)
                         (euclidean__axioms.BetS A D H)))))
-            (logic.or__intror
+            (logic.or_intro_right
                (plth.eq euclidean__axioms.Point A D)
                (plth.or
                   (plth.eq euclidean__axioms.Point H D)
@@ -3069,19 +3069,19 @@ thm lemma__collinearbetween :
                      (plth.or
                         (euclidean__axioms.BetS A H D)
                         (euclidean__axioms.BetS A D H))))
-               (logic.or__intror
+               (logic.or_intro_right
                   (plth.eq euclidean__axioms.Point H D)
                   (plth.or
                      (euclidean__axioms.BetS H A D)
                      (plth.or
                         (euclidean__axioms.BetS A H D)
                         (euclidean__axioms.BetS A D H)))
-                  (logic.or__intror
+                  (logic.or_intro_right
                      (euclidean__axioms.BetS H A D)
                      (plth.or
                         (euclidean__axioms.BetS A H D)
                         (euclidean__axioms.BetS A D H))
-                     (logic.or__introl
+                     (logic.or_intro_left
                         (euclidean__axioms.BetS A H D)
                         (euclidean__axioms.BetS A D H)
                         H7))))))
@@ -3095,7 +3095,7 @@ thm lemma__collinearbetween :
                           (plth.and
                              (euclidean__axioms.Col A B H)
                              (euclidean__axioms.Col B H A)))))) =>
-          logic.and__elim_left
+          logic.and_elim_left
             (euclidean__axioms.Col H A B)
             (plth.and
                (euclidean__axioms.Col H B A)

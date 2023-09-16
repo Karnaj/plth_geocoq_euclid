@@ -44,7 +44,7 @@ thm lemma__TTorder :
              plth.and
                (euclidean__axioms.BetS E F J)
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (J:(plth.El euclidean__axioms.Point) =>
       plth.and
@@ -56,14 +56,14 @@ thm lemma__TTorder :
             (plth.and
                (euclidean__axioms.BetS E F J)
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J)))) =>
-      logic.and__ind
+      logic.and_ind
         (euclidean__axioms.BetS E F J)
         (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))
         (euclidean__defs.TT C D A B E F G H)
         (H3:(plth.Prf (euclidean__axioms.BetS E F J)) =>
          H4:(plth.Prf
                (plth.and (euclidean__axioms.Cong F J G H) (euclidean__defs.TG A B C D E J))) =>
-         logic.and__ind
+         logic.and_ind
            (euclidean__axioms.Cong F J G H)
            (euclidean__defs.TG A B C D E J)
            (euclidean__defs.TT C D A B E F G H)
@@ -71,7 +71,7 @@ thm lemma__TTorder :
             H6:(plth.Prf (euclidean__defs.TG A B C D E J)) =>
             (H7:(plth.Prf (euclidean__defs.TG C D A B E J)) =>
              (H8:(plth.Prf (euclidean__defs.TT C D A B E F G H)) => H8)
-               (logic.ex__intro
+               (logic.ex_intro
                   euclidean__axioms.Point
                   (X:(plth.El euclidean__axioms.Point) =>
                    plth.and
@@ -80,13 +80,13 @@ thm lemma__TTorder :
                         (euclidean__axioms.Cong F X G H)
                         (euclidean__defs.TG C D A B E X)))
                   J
-                  (logic.conj
+                  (logic.and_intro
                      (euclidean__axioms.BetS E F J)
                      (plth.and
                         (euclidean__axioms.Cong F J G H)
                         (euclidean__defs.TG C D A B E J))
                      H3
-                     (logic.conj
+                     (logic.and_intro
                         (euclidean__axioms.Cong F J G H)
                         (euclidean__defs.TG C D A B E J)
                         H5

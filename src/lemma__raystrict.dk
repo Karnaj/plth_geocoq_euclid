@@ -20,14 +20,14 @@ thm lemma__raystrict :
             euclidean__axioms.Point
             (J:(plth.El euclidean__axioms.Point) =>
              plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B)))) =>
-   logic.ex__ind
+   logic.ex_elim
      euclidean__axioms.Point
      (J:(plth.El euclidean__axioms.Point) =>
       plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B))
      (plth.neq euclidean__axioms.Point A C)
      (J:(plth.El euclidean__axioms.Point) =>
       H1:(plth.Prf (plth.and (euclidean__axioms.BetS J A C) (euclidean__axioms.BetS J A B))) =>
-      logic.and__ind3
+      logic.and_ind_left
         (euclidean__axioms.BetS J A C)
         (euclidean__axioms.BetS J A B)
         (plth.neq euclidean__axioms.Point A C)
@@ -39,7 +39,7 @@ thm lemma__raystrict :
                       (plth.and
                          (plth.neq euclidean__axioms.Point J A)
                          (plth.neq euclidean__axioms.Point J C)))) =>
-             logic.and__elim_left
+             logic.and_elim_left
                (plth.neq euclidean__axioms.Point A C)
                (plth.and
                   (plth.neq euclidean__axioms.Point J A)

@@ -24,13 +24,13 @@ thm lemma__betweennotequal :
   (H0:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point B C))) =>
    (H1:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A B))) =>
     (H2:(plth.Prf (plth.not (plth.eq euclidean__axioms.Point A C))) =>
-     logic.conj
+     logic.and_intro
        (plth.neq euclidean__axioms.Point B C)
        (plth.and
           (plth.neq euclidean__axioms.Point A B)
           (plth.neq euclidean__axioms.Point A C))
        H0
-       (logic.conj
+       (logic.and_intro
           (plth.neq euclidean__axioms.Point A B)
           (plth.neq euclidean__axioms.Point A C)
           H1

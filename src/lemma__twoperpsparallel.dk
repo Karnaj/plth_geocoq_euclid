@@ -32,7 +32,7 @@ thm lemma__twoperpsparallel :
               euclidean__axioms.Point
               (E:(plth.El euclidean__axioms.Point) =>
                plth.and (euclidean__axioms.BetS B C E) (euclidean__axioms.Cong C E B C)))) =>
-     logic.ex__ind
+     logic.ex_elim
        euclidean__axioms.Point
        (E:(plth.El euclidean__axioms.Point) =>
         plth.and (euclidean__axioms.BetS B C E) (euclidean__axioms.Cong C E B C))
@@ -40,7 +40,7 @@ thm lemma__twoperpsparallel :
        (E:(plth.El euclidean__axioms.Point) =>
         H5:(plth.Prf
               (plth.and (euclidean__axioms.BetS B C E) (euclidean__axioms.Cong C E B C))) =>
-        logic.and__ind3
+        logic.and_ind_left
           (euclidean__axioms.BetS B C E)
           (euclidean__axioms.Cong C E B C)
           (euclidean__defs.Par A B C D)
@@ -135,7 +135,7 @@ thm lemma__twoperpsparallel :
                                               C
                                               A
                                               B)))) =>
-                              logic.and__ind2
+                              logic.and_ind_right
                                 (euclidean__defs.Par
                                    D
                                    C
@@ -169,7 +169,7 @@ thm lemma__twoperpsparallel :
                                               C
                                               A
                                               B))) =>
-                                 logic.and__elim_left
+                                 logic.and_elim_left
                                    (euclidean__defs.Par
                                       C
                                       D
@@ -201,7 +201,7 @@ thm lemma__twoperpsparallel :
                              C
                              H20
                              H1))
-                         (logic.ex__intro
+                         (logic.ex_intro
                             euclidean__axioms.Point
                             (X:(plth.El
                                   euclidean__axioms.Point) =>
@@ -244,7 +244,7 @@ thm lemma__twoperpsparallel :
                                                  Y
                                                  Z)))))))
                             B
-                            (logic.ex__intro
+                            (logic.ex_intro
                                euclidean__axioms.Point
                                (Y:(plth.El
                                      euclidean__axioms.Point) =>
@@ -283,7 +283,7 @@ thm lemma__twoperpsparallel :
                                                  Y
                                                  Z))))))
                                C
-                               (logic.ex__intro
+                               (logic.ex_intro
                                   euclidean__axioms.Point
                                   (Z:(plth.El
                                         euclidean__axioms.Point) =>
@@ -318,7 +318,7 @@ thm lemma__twoperpsparallel :
                                                  C
                                                  Z)))))
                                   E
-                                  (logic.ex__intro
+                                  (logic.ex_intro
                                      euclidean__axioms.Point
                                      (U:(plth.El
                                            euclidean__axioms.Point) =>
@@ -349,7 +349,7 @@ thm lemma__twoperpsparallel :
                                                  C
                                                  E))))
                                      D
-                                     (logic.ex__intro
+                                     (logic.ex_intro
                                         euclidean__axioms.Point
                                         (V:(plth.El
                                               euclidean__axioms.Point) =>
@@ -376,7 +376,7 @@ thm lemma__twoperpsparallel :
                                                  C
                                                  E)))
                                         D
-                                        (logic.conj
+                                        (logic.and_intro
                                            (euclidean__defs.Supp
                                               B
                                               C
@@ -399,7 +399,7 @@ thm lemma__twoperpsparallel :
                                                  C
                                                  E))
                                            H17
-                                           (logic.conj
+                                           (logic.and_intro
                                               (euclidean__defs.CongA
                                                  A
                                                  B
@@ -434,7 +434,7 @@ thm lemma__twoperpsparallel :
                           D
                           H
                           H0))
-                      (logic.conj
+                      (logic.and_intro
                          (euclidean__defs.Out C D D)
                          (euclidean__axioms.BetS B C E)
                          H16
@@ -443,7 +443,7 @@ thm lemma__twoperpsparallel :
                         C
                         D
                         D
-                        (logic.or__intror
+                        (logic.or_intro_right
                            (euclidean__axioms.BetS C D D)
                            (plth.or
                               (plth.eq
@@ -451,7 +451,7 @@ thm lemma__twoperpsparallel :
                                  D
                                  D)
                               (euclidean__axioms.BetS C D D))
-                           (logic.or__introl
+                           (logic.or_intro_left
                               (plth.eq
                                  euclidean__axioms.Point
                                  D
@@ -489,7 +489,7 @@ thm lemma__twoperpsparallel :
                                                euclidean__axioms.Point
                                                D
                                                B))))))) =>
-                      logic.and__ind2
+                      logic.and_ind_right
                         (plth.neq euclidean__axioms.Point B C)
                         (plth.and
                            (plth.neq euclidean__axioms.Point C D)
@@ -538,7 +538,7 @@ thm lemma__twoperpsparallel :
                                                euclidean__axioms.Point
                                                D
                                                B)))))) =>
-                         logic.and__elim_left
+                         logic.and_elim_left
                            (plth.neq euclidean__axioms.Point C D)
                            (plth.and
                               (plth.neq
@@ -577,14 +577,14 @@ thm lemma__twoperpsparallel :
                          (plth.and
                             (plth.neq euclidean__axioms.Point B C)
                             (plth.neq euclidean__axioms.Point B E)))) =>
-                logic.and__elim_left
+                logic.and_elim_left
                   (plth.neq euclidean__axioms.Point C E)
                   (plth.and
                      (plth.neq euclidean__axioms.Point B C)
                      (plth.neq euclidean__axioms.Point B E))
                   H9)
                  (lemma__betweennotequal.lemma__betweennotequal B C E H6)))
-             (logic.or__intror
+             (logic.or_intro_right
                 (plth.eq euclidean__axioms.Point B C)
                 (plth.or
                    (plth.eq euclidean__axioms.Point B E)
@@ -595,7 +595,7 @@ thm lemma__twoperpsparallel :
                          (plth.or
                             (euclidean__axioms.BetS B C E)
                             (euclidean__axioms.BetS B E C)))))
-                (logic.or__intror
+                (logic.or_intro_right
                    (plth.eq euclidean__axioms.Point B E)
                    (plth.or
                       (plth.eq euclidean__axioms.Point C E)
@@ -604,19 +604,19 @@ thm lemma__twoperpsparallel :
                          (plth.or
                             (euclidean__axioms.BetS B C E)
                             (euclidean__axioms.BetS B E C))))
-                   (logic.or__intror
+                   (logic.or_intro_right
                       (plth.eq euclidean__axioms.Point C E)
                       (plth.or
                          (euclidean__axioms.BetS C B E)
                          (plth.or
                             (euclidean__axioms.BetS B C E)
                             (euclidean__axioms.BetS B E C)))
-                      (logic.or__intror
+                      (logic.or_intro_right
                          (euclidean__axioms.BetS C B E)
                          (plth.or
                             (euclidean__axioms.BetS B C E)
                             (euclidean__axioms.BetS B E C))
-                         (logic.or__introl
+                         (logic.or_intro_left
                             (euclidean__axioms.BetS B C E)
                             (euclidean__axioms.BetS B E C)
                             H6))))))
@@ -635,7 +635,7 @@ thm lemma__twoperpsparallel :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C A))))))) =>
-       logic.and__ind2
+       logic.and_ind_right
          (plth.neq euclidean__axioms.Point A B)
          (plth.and
             (plth.neq euclidean__axioms.Point B C)
@@ -657,7 +657,7 @@ thm lemma__twoperpsparallel :
                          (plth.and
                             (plth.neq euclidean__axioms.Point C B)
                             (plth.neq euclidean__axioms.Point C A)))))) =>
-          logic.and__elim_left
+          logic.and_elim_left
             (plth.neq euclidean__axioms.Point B C)
             (plth.and
                (plth.neq euclidean__axioms.Point A C)

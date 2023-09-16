@@ -44,7 +44,7 @@ thm proposition__41 :
                        (plth.or
                           (plth.eq euclidean__axioms.Point A E)
                           (plth.neq euclidean__axioms.Point A E))) =>
-           logic.or__ind
+           logic.or_elim
              (plth.eq euclidean__axioms.Point A E)
              (plth.neq euclidean__axioms.Point A E)
              (euclidean__axioms.ET A B C E B C)
@@ -151,7 +151,7 @@ thm proposition__41 :
                                         B
                                         A
                                         E)))) =>
-                        logic.and__ind2
+                        logic.and_ind_right
                           (euclidean__defs.Par C B E A)
                           (plth.and
                              (euclidean__defs.Par B C A E)
@@ -169,7 +169,7 @@ thm proposition__41 :
                                         B
                                         A
                                         E))) =>
-                           logic.and__elim_left
+                           logic.and_elim_left
                              (euclidean__defs.Par B C A E)
                              (euclidean__defs.Par C B A E)
                              H15)
@@ -199,7 +199,7 @@ thm proposition__41 :
                                (plth.and
                                   (euclidean__defs.Par B C D A)
                                   (euclidean__defs.Par C B D A)))) =>
-                     logic.and__ind2
+                     logic.and_ind_right
                        (euclidean__defs.Par C B A D)
                        (plth.and
                           (euclidean__defs.Par B C D A)
@@ -209,7 +209,7 @@ thm proposition__41 :
                                (plth.and
                                   (euclidean__defs.Par B C D A)
                                   (euclidean__defs.Par C B D A))) =>
-                        logic.and__elim_left
+                        logic.and_elim_left
                           (euclidean__defs.Par B C D A)
                           (euclidean__defs.Par C B D A)
                           H12)
@@ -236,7 +236,7 @@ thm proposition__41 :
                                   (plth.and
                                      (euclidean__axioms.Col A E D)
                                      (euclidean__axioms.Col E D A)))))) =>
-                   logic.and__elim_left
+                   logic.and_elim_left
                      (euclidean__axioms.Col D A E)
                      (plth.and
                         (euclidean__axioms.Col D E A)
@@ -247,7 +247,7 @@ thm proposition__41 :
                               (euclidean__axioms.Col E D A))))
                      H8)
                     (lemma__collinearorder.lemma__collinearorder A D E H0)))
-                (logic.and__elim_right
+                (logic.and_elim_right
                    (euclidean__defs.Par A B C D)
                    (euclidean__defs.Par A D B C)
                    H))
@@ -264,12 +264,12 @@ thm proposition__41 :
                    (plth.and
                       (euclidean__axioms.nCol B C D)
                       (euclidean__axioms.nCol A B D))))) =>
-       logic.and__elim_left
+       logic.and_elim_left
          (euclidean__axioms.nCol A B C)
          (plth.and
             (euclidean__axioms.nCol A C D)
             (plth.and (euclidean__axioms.nCol B C D) (euclidean__axioms.nCol A B D)))
          H2)
         (lemma__parallelNC.lemma__parallelNC A B C D H1)))
-    (logic.and__elim_left (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H).
+    (logic.and_elim_left (euclidean__defs.Par A B C D) (euclidean__defs.Par A D B C) H).
 
