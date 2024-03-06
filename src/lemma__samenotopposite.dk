@@ -100,32 +100,12 @@ thm lemma__samenotopposite :
                                        (plth.and
                                           (euclidean__axioms.Col C D X)
                                           (euclidean__axioms.nCol C D A))))) =>
-                    logic.ex_elim
+                    logic.ex_intro
                       euclidean__axioms.Point
-                      (X:(plth.El euclidean__axioms.Point) =>
-                       plth.and
-                         (euclidean__axioms.BetS A X B)
-                         (plth.and
-                            (euclidean__axioms.Col C D X)
-                            (euclidean__axioms.nCol C D A)))
-                      (plth.ex
-                         euclidean__axioms.Point
-                         (M:(plth.El euclidean__axioms.Point) =>
-                          euclidean__axioms.BetS B M B))
-                      (x00:(plth.El euclidean__axioms.Point) =>
-                       H10:(plth.Prf
-                              (plth.and
-                                 (euclidean__axioms.BetS A x00 B)
-                                 (plth.and
-                                    (euclidean__axioms.Col C D x00)
-                                    (euclidean__axioms.nCol C D A)))) =>
-                       logic.ex_intro
-                         euclidean__axioms.Point
-                         (M:(plth.El euclidean__axioms.Point) =>
-                          euclidean__axioms.BetS B M B)
-                         x
-                         H5)
-                      __TmpHyp0)
+                      (M:(plth.El euclidean__axioms.Point) =>
+                       euclidean__axioms.BetS B M B)
+                      x
+                      H5)
                      H9)
                     H1)
                  H4)
